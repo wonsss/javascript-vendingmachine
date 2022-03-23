@@ -753,48 +753,35 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/index.css */ "./src/css/index.css");
 
-// const routes = {
-//   '/': '../pages/test2.html',
-//   '/test1': '../pages/test1.html',
-// };
-// const getRouteHtml = async () => {
-//   const path = window.location.pathname;
-//   const route = routes[path] || routes[404];
-//   const $contents = document.getElementById('app');
-//   await fetch(route)
-//     .then((response) => {
-//       console.log('test: ', response);
-//       return response.text();
-//     })
-//     .then((text) => {
-//       $contents.innerHTML = text;
-//     });
-// };
-var router = function () {
-    console.log(window.location.pathname);
-    if (window.location.pathname === '/test1') {
+var app = document.querySelector('.tab-result-container');
+var renderProductManage = function () {
+    app.innerHTML = '<h1>TEST1</h1>';
+};
+var renderRecharge = function () {
+    app.innerHTML = '<h1>TEST2</h1>';
+};
+var tabRouter = function () {
+    var pathname = window.location.pathname;
+    if (pathname === '/test1') {
+        renderProductManage();
+        return;
+    }
+    if (pathname === '/test2') {
+        renderRecharge();
+        return;
     }
 };
-var render = function (path) {
-    console.log(window.location.pathname);
-    console.log('render', path);
-};
-// 앵커태그를 클릭할 경우 - pushState -> render
 var handleRoute = function (event) {
     event.preventDefault();
     var path = event.target.pathname;
     console.log('handleRoute', path);
-    window.history.pushState({ path: path }, null, path);
-    render(path);
-    // router();
+    window.history.pushState({}, null, path);
+    tabRouter();
 };
 // url을 작성해서 접속할 경우 - popstate -> render
-window.addEventListener('popstate', function (event) {
-    var path = event.state.path;
-    console.log('popstate', path);
+window.addEventListener('popstate', function () {
+    tabRouter();
 });
-// window.route = handleRoute; // route를 변경한다.
-// getRouteHtml();
 document.getElementById('test1').addEventListener('click', handleRoute);
 document.getElementById('test2').addEventListener('click', handleRoute);
 
