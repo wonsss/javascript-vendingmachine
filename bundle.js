@@ -760,9 +760,8 @@ var renderProductManage = function () {
 var renderRecharge = function () {
     app.innerHTML = '<h1>TEST2</h1>';
 };
-var tabRouter = function (pathname) {
-    // const pathname = window.location.pathname;
-    console.log('tabRouter', pathname);
+var tabRouter = function () {
+    var pathname = window.location.pathname;
     if (pathname === '/test1') {
         renderProductManage();
         return;
@@ -777,12 +776,12 @@ var handleRoute = function (event) {
     var path = event.target.pathname;
     console.log('handleRoute', path);
     window.history.pushState({}, null, path);
-    tabRouter(path);
+    tabRouter();
 };
 // url을 작성해서 접속할 경우 - popstate -> render
-window.addEventListener('popstate', function (event) {
-    console.log('event.state.path', event.state.path);
-    tabRouter(event.state.path);
+window.addEventListener('popstate', function () {
+    console.log('popstate');
+    tabRouter();
 });
 document.getElementById('test1').addEventListener('click', handleRoute);
 document.getElementById('test2').addEventListener('click', handleRoute);
