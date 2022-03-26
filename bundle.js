@@ -704,7 +704,8 @@ var ERROR_MESSAGE = {
     DUPLICATED_PRODUCT: '현재 상품은 이미 자판기에 있습니다. 중복되지 않는 상품명을 입력해주세요.',
     RECHARGE_MONEY_UNIT: '충전할 금액은 10의 배수여야 합니다.',
     EXCEED_HOLDING_MONEY: '보유할 수 있는 최대 금액은 10만원입니다.',
-    UNDER_MIN_RECHARGING_MONEY: '충전할 금액은 10원 이상이어야 합니다.'
+    UNDER_MIN_RECHARGING_MONEY: '충전할 금액은 10원 이상이어야 합니다.',
+    NOT_INTEGER: '정수를 입력하셔야 합니다.'
 };
 var CONFIRM_MESSAGE = {
     DELETE: '정말 삭제하시겠습니까?'
@@ -916,6 +917,9 @@ var checkProductValidation = function (product) {
     }
     if (isOverMaxValue(product.quantity, _constants__WEBPACK_IMPORTED_MODULE_0__.VENDING_MACHINE_RULE.MAX_QUANTITY)) {
         throw new Error(_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.EXCEED_QUANTITY);
+    }
+    if (!Number.isInteger(product.quantity)) {
+        throw new Error(_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.NOT_INTEGER);
     }
 };
 var checkDuplicatedProduct = function (products, name) {
@@ -1230,8 +1234,7 @@ var View = /** @class */ (function () {
                     _this.renderTabResult(_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PURCHASE_PRODUCT);
                 }
             };
-            // routes[url]();
-            routes[url] ? routes[url]() : _this.renderNotFound();
+            routes[url]();
         };
         this.$$tabResultContainers = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$$)('.tab-result-container');
         this.$tabProductManageButton = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#tab-product-manage');
