@@ -919,7 +919,7 @@ var checkProductValidation = function (product) {
     }
 };
 var checkDuplicatedProduct = function (products, name) {
-    if (products.find(function (product) { return product.name === name; })) {
+    if (products.find(function (product) { return product.name === name.trim(); })) {
         throw new Error(_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.DUPLICATED_PRODUCT);
     }
 };
@@ -1041,7 +1041,7 @@ var ProductManageView = /** @class */ (function () {
         this.handleSubmit = function (event) {
             event.preventDefault();
             var input = {
-                name: _this.$productNameInput.value,
+                name: _this.$productNameInput.value.trim(),
                 price: +_this.$productPriceInput.value,
                 quantity: +_this.$productQuantityInput.value
             };
@@ -1211,6 +1211,9 @@ var View = /** @class */ (function () {
             if (containerBranch[id]) {
                 containerBranch[id]();
             }
+            else {
+                throw new Error('????');
+            }
         };
         this.tabRouter = function (url, isPopState) {
             if (isPopState === void 0) { isPopState = false; }
@@ -1227,7 +1230,8 @@ var View = /** @class */ (function () {
                     _this.renderTabResult(_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PURCHASE_PRODUCT);
                 }
             };
-            routes[url]();
+            // routes[url]();
+            routes[url] ? routes[url]() : _this.renderNotFound();
         };
         this.$$tabResultContainers = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$$)('.tab-result-container');
         this.$tabProductManageButton = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#tab-product-manage');
@@ -1251,6 +1255,9 @@ var View = /** @class */ (function () {
             return _this.tabRouter(_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PURCHASE_PRODUCT);
         });
     }
+    View.prototype.renderNotFound = function () {
+        console.log('not found');
+    };
     return View;
 }());
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (View);
