@@ -961,21 +961,17 @@ __webpack_require__.r(__webpack_exports__);
 
 class Router {
     constructor(view) {
-        this.handleRouteTab = (event) => {
-            const url = event.detail;
-            this.tabRouter(url);
-        };
         this.tabRouter = (url, isPopState = false) => {
             if (!isPopState)
                 history.pushState({ url }, null, url);
             const routes = {
-                '/javascript-vendingmachine/#!/product-manage': () => {
+                [_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PRODUCT_MANAGE]: () => {
                     this.view.renderTabResult(_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PRODUCT_MANAGE);
                 },
-                '/javascript-vendingmachine/#!/recharge': () => {
+                [_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.RECHARGE]: () => {
                     this.view.renderTabResult(_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.RECHARGE);
                 },
-                '/javascript-vendingmachine/#!/purchase-product': () => {
+                [_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT]: () => {
                     this.view.renderTabResult(_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT);
                 },
             };
@@ -988,7 +984,9 @@ class Router {
         window.addEventListener('popstate', (event) => {
             this.tabRouter(event.state.url, true);
         });
-        this.view.$navTab.addEventListener('@route-tab', this.handleRouteTab);
+        this.view.$navTab.addEventListener('@route-tab', (event) => {
+            this.tabRouter(event.detail);
+        });
     }
 }
 
@@ -1263,19 +1261,17 @@ class View {
         };
         this.renderUpdatedView = (id) => {
             const containerBranch = {
-                '/javascript-vendingmachine/#!/product-manage': () => {
+                [_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PRODUCT_MANAGE]: () => {
                     this.productManageView.renderProductManage();
                 },
-                '/javascript-vendingmachine/#!/recharge': () => {
+                [_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.RECHARGE]: () => {
                     this.rechargeView.renderRecharge();
                 },
-                '/javascript-vendingmachine/#!/purchase-product': () => {
+                [_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PURCHASE_PRODUCT]: () => {
                     // this.renderPurchaseProduct();
                 },
             };
-            if (containerBranch[id]) {
-                containerBranch[id]();
-            }
+            containerBranch[id]();
         };
         this.vendingMachine = vendingMachine;
         this.productManageView = new _ProductManageView__WEBPACK_IMPORTED_MODULE_2__["default"](this.vendingMachine);
