@@ -851,8 +851,7 @@ class VendingMachine {
             return productToAdd;
         };
         this.deleteProduct = (name) => {
-            const indexToDelete = this.products.findIndex((product) => product.name === name);
-            this.products.splice(indexToDelete, 1);
+            this.products = this.products.filter((product) => product.name !== name);
             localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.PRODUCTS, JSON.stringify(this.products));
         };
         this.editProduct = (name, product) => {
@@ -1103,7 +1102,7 @@ class ProductManageView {
             newTr.className = 'product-row';
             newTr.dataset.name = name;
             newTr.insertAdjacentHTML('beforeend', editTemplate);
-            const targetEdit = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)(`tr[data-name=${name}]`);
+            const targetEdit = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)(`tr[data-name='${name}']`);
             this.$currentProductTable.replaceChild(newTr, targetEdit);
             (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('.edit-confirm-button').addEventListener('click', () => this.handleConfirmEdit(name));
         };
@@ -1124,7 +1123,7 @@ class ProductManageView {
     `;
         };
         this.handleConfirmEdit = (targetName) => {
-            const targetEdit = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)(`tr[data-name=${targetName}]`);
+            const targetEdit = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)(`tr[data-name='${targetName}']`);
             const productToEdit = {
                 name: (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#edit-name-input').value,
                 price: +(0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#edit-price-input').value,
@@ -1177,7 +1176,7 @@ class ProductManageView {
         this.$productNameInput.focus();
     }
     removeProductRow(name) {
-        const targetDelete = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)(`tr[data-name=${name}]`);
+        const targetDelete = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)(`tr[data-name='${name}']`);
         this.$currentProductTable.removeChild(targetDelete);
     }
 }
