@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Roboto);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  font-family: 'Roboto', sans-serif;\r\n  margin: 0;\r\n}\r\n\r\nh1 {\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\nbutton {\r\n  background: var(--primary);\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  border-style: none;\r\n  color: var(--white);\r\n}\r\n\r\nbutton:hover {\r\n  background: var(--primary-darken);\r\n  cursor: pointer;\r\n}\r\n\r\ninput {\r\n  padding: 0 8px;\r\n  border: 1px solid var(--secondary);\r\n  box-sizing: border-box;\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  line-height: 36px;\r\n  font-weight: 400;\r\n  font-size: 16px;\r\n}\r\n\r\ninput::placeholder {\r\n  color: var(--secondary-darken);\r\n}\r\n\r\n.tab-result-container {\r\n  margin: 52px 0;\r\n}\r\n\r\ncaption {\r\n  font-weight: 600;\r\n  font-size: 20px;\r\n  margin: 48px 0 16px;\r\n}\r\n\r\ntable {\r\n  border-collapse: collapse;\r\n  width: 471px;\r\n}\r\n\r\ntr {\r\n  border: 1px solid var(--secondary-lighten);\r\n  border-left: 0;\r\n  border-right: 0;\r\n  text-align: center;\r\n}\r\n\r\ntd,\r\nth {\r\n  padding: 8px;\r\n  font-weight: 400;\r\n}\r\n\r\nth {\r\n  font-weight: 600;\r\n}\r\n\r\n.hide {\r\n  display: none;\r\n}\r\n\r\n.short-button {\r\n  width: 56px;\r\n  margin: 0 0 0 16px;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n}\r\n\r\n.small-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 50px;\r\n}\r\n\r\n.small-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.edit-confirm-button {\r\n  width: 100px;\r\n  height: 32px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/app.css"],"names":[],"mappings":"AAEA;EACE,iCAAiC;EACjC,SAAS;AACX;;AAEA;EACE,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,0BAA0B;EAC1B,kBAAkB;EAClB,YAAY;EACZ,kBAAkB;EAClB,mBAAmB;AACrB;;AAEA;EACE,iCAAiC;EACjC,eAAe;AACjB;;AAEA;EACE,cAAc;EACd,kCAAkC;EAClC,sBAAsB;EACtB,kBAAkB;EAClB,YAAY;EACZ,iBAAiB;EACjB,gBAAgB;EAChB,eAAe;AACjB;;AAEA;EACE,8BAA8B;AAChC;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,gBAAgB;EAChB,eAAe;EACf,mBAAmB;AACrB;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA;EACE,0CAA0C;EAC1C,cAAc;EACd,eAAe;EACf,kBAAkB;AACpB;;AAEA;;EAEE,YAAY;EACZ,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,WAAW;EACX,kBAAkB;EAClB,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,oCAAoC;EACpC,mBAAmB;EACnB,WAAW;AACb;;AAEA;EACE,4BAA4B;AAC9B;;AAEA;EACE,YAAY;EACZ,YAAY;AACd","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Roboto');\r\n\r\nbody {\r\n  font-family: 'Roboto', sans-serif;\r\n  margin: 0;\r\n}\r\n\r\nh1 {\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\nbutton {\r\n  background: var(--primary);\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  border-style: none;\r\n  color: var(--white);\r\n}\r\n\r\nbutton:hover {\r\n  background: var(--primary-darken);\r\n  cursor: pointer;\r\n}\r\n\r\ninput {\r\n  padding: 0 8px;\r\n  border: 1px solid var(--secondary);\r\n  box-sizing: border-box;\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  line-height: 36px;\r\n  font-weight: 400;\r\n  font-size: 16px;\r\n}\r\n\r\ninput::placeholder {\r\n  color: var(--secondary-darken);\r\n}\r\n\r\n.tab-result-container {\r\n  margin: 52px 0;\r\n}\r\n\r\ncaption {\r\n  font-weight: 600;\r\n  font-size: 20px;\r\n  margin: 48px 0 16px;\r\n}\r\n\r\ntable {\r\n  border-collapse: collapse;\r\n  width: 471px;\r\n}\r\n\r\ntr {\r\n  border: 1px solid var(--secondary-lighten);\r\n  border-left: 0;\r\n  border-right: 0;\r\n  text-align: center;\r\n}\r\n\r\ntd,\r\nth {\r\n  padding: 8px;\r\n  font-weight: 400;\r\n}\r\n\r\nth {\r\n  font-weight: 600;\r\n}\r\n\r\n.hide {\r\n  display: none;\r\n}\r\n\r\n.short-button {\r\n  width: 56px;\r\n  margin: 0 0 0 16px;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n}\r\n\r\n.small-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 50px;\r\n}\r\n\r\n.small-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.edit-confirm-button {\r\n  width: 100px;\r\n  height: 32px;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  font-family: 'Roboto', sans-serif;\r\n  margin: 0;\r\n}\r\n\r\nh1 {\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\nbutton {\r\n  background: var(--primary);\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  border-style: none;\r\n  color: var(--white);\r\n}\r\n\r\nbutton:hover {\r\n  background: var(--primary-darken);\r\n  cursor: pointer;\r\n}\r\n\r\ninput {\r\n  padding: 0 8px;\r\n  border: 1px solid var(--secondary);\r\n  box-sizing: border-box;\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  line-height: 36px;\r\n  font-weight: 400;\r\n  font-size: 16px;\r\n}\r\n\r\ninput::placeholder {\r\n  color: var(--secondary-darken);\r\n}\r\n\r\n.tab-result-container {\r\n  margin: 52px 0;\r\n}\r\n\r\ncaption {\r\n  font-weight: 600;\r\n  font-size: 20px;\r\n  margin: 48px 0 16px;\r\n}\r\n\r\ntable {\r\n  border-collapse: collapse;\r\n  width: 471px;\r\n}\r\n\r\ntr {\r\n  border: 1px solid var(--secondary-lighten);\r\n  border-left: 0;\r\n  border-right: 0;\r\n  text-align: center;\r\n}\r\n\r\ntd,\r\nth {\r\n  padding: 8px;\r\n  font-weight: 400;\r\n}\r\n\r\nth {\r\n  font-weight: 600;\r\n}\r\n\r\ncol {\r\n  width: 23%;\r\n}\r\n\r\n.hide {\r\n  display: none;\r\n}\r\n\r\n.short-button {\r\n  width: 56px;\r\n  margin-left: 16px;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n}\r\n\r\n.small-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 50px;\r\n}\r\n\r\n.small-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.edit-confirm-button {\r\n  width: 100px;\r\n  height: 32px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/app.css"],"names":[],"mappings":"AAEA;EACE,iCAAiC;EACjC,SAAS;AACX;;AAEA;EACE,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,0BAA0B;EAC1B,kBAAkB;EAClB,YAAY;EACZ,kBAAkB;EAClB,mBAAmB;AACrB;;AAEA;EACE,iCAAiC;EACjC,eAAe;AACjB;;AAEA;EACE,cAAc;EACd,kCAAkC;EAClC,sBAAsB;EACtB,kBAAkB;EAClB,YAAY;EACZ,iBAAiB;EACjB,gBAAgB;EAChB,eAAe;AACjB;;AAEA;EACE,8BAA8B;AAChC;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,gBAAgB;EAChB,eAAe;EACf,mBAAmB;AACrB;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA;EACE,0CAA0C;EAC1C,cAAc;EACd,eAAe;EACf,kBAAkB;AACpB;;AAEA;;EAEE,YAAY;EACZ,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,UAAU;AACZ;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,WAAW;EACX,iBAAiB;EACjB,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,oCAAoC;EACpC,mBAAmB;EACnB,WAAW;AACb;;AAEA;EACE,4BAA4B;AAC9B;;AAEA;EACE,YAAY;EACZ,YAAY;AACd","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Roboto');\r\n\r\nbody {\r\n  font-family: 'Roboto', sans-serif;\r\n  margin: 0;\r\n}\r\n\r\nh1 {\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\nbutton {\r\n  background: var(--primary);\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  border-style: none;\r\n  color: var(--white);\r\n}\r\n\r\nbutton:hover {\r\n  background: var(--primary-darken);\r\n  cursor: pointer;\r\n}\r\n\r\ninput {\r\n  padding: 0 8px;\r\n  border: 1px solid var(--secondary);\r\n  box-sizing: border-box;\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  line-height: 36px;\r\n  font-weight: 400;\r\n  font-size: 16px;\r\n}\r\n\r\ninput::placeholder {\r\n  color: var(--secondary-darken);\r\n}\r\n\r\n.tab-result-container {\r\n  margin: 52px 0;\r\n}\r\n\r\ncaption {\r\n  font-weight: 600;\r\n  font-size: 20px;\r\n  margin: 48px 0 16px;\r\n}\r\n\r\ntable {\r\n  border-collapse: collapse;\r\n  width: 471px;\r\n}\r\n\r\ntr {\r\n  border: 1px solid var(--secondary-lighten);\r\n  border-left: 0;\r\n  border-right: 0;\r\n  text-align: center;\r\n}\r\n\r\ntd,\r\nth {\r\n  padding: 8px;\r\n  font-weight: 400;\r\n}\r\n\r\nth {\r\n  font-weight: 600;\r\n}\r\n\r\ncol {\r\n  width: 23%;\r\n}\r\n\r\n.hide {\r\n  display: none;\r\n}\r\n\r\n.short-button {\r\n  width: 56px;\r\n  margin-left: 16px;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n}\r\n\r\n.small-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 50px;\r\n}\r\n\r\n.small-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.edit-confirm-button {\r\n  width: 100px;\r\n  height: 32px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -89,7 +89,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".nav-tab {\r\n  display: flex;\r\n  justify-content: center;\r\n  margin: 32px 0 0;\r\n}\r\n\r\n.tab-button {\r\n  width: 0;\r\n  height: 0;\r\n}\r\n\r\n.tab-label {\r\n  display: inline-block;\r\n  text-align: center;\r\n  font-size: 16px;\r\n  height: 36px;\r\n  width: 117px;\r\n  font-weight: 500;\r\n  line-height: 36px;\r\n  background-color: #f5f5f5;\r\n  border-radius: 4px;\r\n}\r\n\r\n.tab-button:checked + label {\r\n  background: rgba(0, 188, 212, 0.16);\r\n}\r\n\r\n.tab-label:hover {\r\n  cursor: pointer;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/nav.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,uBAAuB;EACvB,gBAAgB;AAClB;;AAEA;EACE,QAAQ;EACR,SAAS;AACX;;AAEA;EACE,qBAAqB;EACrB,kBAAkB;EAClB,eAAe;EACf,YAAY;EACZ,YAAY;EACZ,gBAAgB;EAChB,iBAAiB;EACjB,yBAAyB;EACzB,kBAAkB;AACpB;;AAEA;EACE,mCAAmC;AACrC;;AAEA;EACE,eAAe;AACjB","sourcesContent":[".nav-tab {\r\n  display: flex;\r\n  justify-content: center;\r\n  margin: 32px 0 0;\r\n}\r\n\r\n.tab-button {\r\n  width: 0;\r\n  height: 0;\r\n}\r\n\r\n.tab-label {\r\n  display: inline-block;\r\n  text-align: center;\r\n  font-size: 16px;\r\n  height: 36px;\r\n  width: 117px;\r\n  font-weight: 500;\r\n  line-height: 36px;\r\n  background-color: #f5f5f5;\r\n  border-radius: 4px;\r\n}\r\n\r\n.tab-button:checked + label {\r\n  background: rgba(0, 188, 212, 0.16);\r\n}\r\n\r\n.tab-label:hover {\r\n  cursor: pointer;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".nav-tab {\r\n  display: flex;\r\n  justify-content: center;\r\n  margin: 32px 0 0;\r\n}\r\n\r\n.tab-input {\r\n  width: 0;\r\n  height: 0;\r\n}\r\n\r\n.tab-label {\r\n  display: inline-block;\r\n  text-align: center;\r\n  font-size: 16px;\r\n  height: 36px;\r\n  width: 117px;\r\n  font-weight: 500;\r\n  line-height: 36px;\r\n  background-color: #f5f5f5;\r\n  border-radius: 4px;\r\n}\r\n\r\n.tab-input:checked + label {\r\n  background: rgba(0, 188, 212, 0.16);\r\n}\r\n\r\n.tab-label:hover {\r\n  cursor: pointer;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/nav.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,uBAAuB;EACvB,gBAAgB;AAClB;;AAEA;EACE,QAAQ;EACR,SAAS;AACX;;AAEA;EACE,qBAAqB;EACrB,kBAAkB;EAClB,eAAe;EACf,YAAY;EACZ,YAAY;EACZ,gBAAgB;EAChB,iBAAiB;EACjB,yBAAyB;EACzB,kBAAkB;AACpB;;AAEA;EACE,mCAAmC;AACrC;;AAEA;EACE,eAAe;AACjB","sourcesContent":[".nav-tab {\r\n  display: flex;\r\n  justify-content: center;\r\n  margin: 32px 0 0;\r\n}\r\n\r\n.tab-input {\r\n  width: 0;\r\n  height: 0;\r\n}\r\n\r\n.tab-label {\r\n  display: inline-block;\r\n  text-align: center;\r\n  font-size: 16px;\r\n  height: 36px;\r\n  width: 117px;\r\n  font-weight: 500;\r\n  line-height: 36px;\r\n  background-color: #f5f5f5;\r\n  border-radius: 4px;\r\n}\r\n\r\n.tab-input:checked + label {\r\n  background: rgba(0, 188, 212, 0.16);\r\n}\r\n\r\n.tab-label:hover {\r\n  cursor: pointer;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -141,7 +141,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#recharge-input {\r\n  width: 300px;\r\n}\r\n\r\n.recharge-button {\r\n  width: 56px;\r\n}\r\n\r\n.holding-money-wrapper {\r\n  margin: 16px 0 0 0;\r\n}\r\n\r\n.change-table {\r\n  width: 237px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/rechargeTab.css"],"names":[],"mappings":"AAAA;EACE,YAAY;AACd;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,kBAAkB;AACpB;;AAEA;EACE,YAAY;AACd","sourcesContent":["#recharge-input {\r\n  width: 300px;\r\n}\r\n\r\n.recharge-button {\r\n  width: 56px;\r\n}\r\n\r\n.holding-money-wrapper {\r\n  margin: 16px 0 0 0;\r\n}\r\n\r\n.change-table {\r\n  width: 237px;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "#recharge-input {\r\n  width: 300px;\r\n}\r\n\r\n.recharge-button {\r\n  width: 56px;\r\n}\r\n\r\n.holding-money-wrapper {\r\n  margin-top: 16px;\r\n}\r\n\r\n.change-table {\r\n  width: 237px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/rechargeTab.css"],"names":[],"mappings":"AAAA;EACE,YAAY;AACd;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,YAAY;AACd","sourcesContent":["#recharge-input {\r\n  width: 300px;\r\n}\r\n\r\n.recharge-button {\r\n  width: 56px;\r\n}\r\n\r\n.holding-money-wrapper {\r\n  margin-top: 16px;\r\n}\r\n\r\n.change-table {\r\n  width: 237px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -785,6 +785,21 @@ class Product {
     get quantity() {
         return this._quantity;
     }
+    setProduct({ name, price, quantity }) {
+        (0,_validator__WEBPACK_IMPORTED_MODULE_0__.checkProductValidation)({ name, price, quantity });
+        this._name = name;
+        this._price = price;
+        this._quantity = quantity;
+    }
+    set name(name) {
+        this._name = name;
+    }
+    set price(price) {
+        this._price = price;
+    }
+    set quantity(quantity) {
+        this._quantity = quantity;
+    }
 }
 
 
@@ -812,6 +827,42 @@ __webpack_require__.r(__webpack_exports__);
 
 class VendingMachine {
     constructor() {
+        this.rechargeMoney = (money) => {
+            (0,_validator__WEBPACK_IMPORTED_MODULE_2__.checkMoneyValidation)(money, money + this.getHoldingMoney());
+            this.generateRandomCoins(money);
+            localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.MONEY, JSON.stringify(this.moneys));
+        };
+        this.getHoldingMoney = () => {
+            return this.moneys.reduce((holdingMoney, currentMoney) => {
+                return holdingMoney + currentMoney.value * currentMoney.count;
+            }, 0);
+        };
+        this.getCoin = (value) => {
+            return this.moneys.find((coin) => coin.value === value);
+        };
+        this.getProduct = (name) => {
+            return this.products.find((product) => product.name === name);
+        };
+        this.addProduct = (newProduct) => {
+            const productToAdd = new _Product__WEBPACK_IMPORTED_MODULE_0__["default"](newProduct);
+            (0,_validator__WEBPACK_IMPORTED_MODULE_2__.checkDuplicatedProduct)(this.products, productToAdd.name);
+            this.products.push(productToAdd);
+            localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.PRODUCTS, JSON.stringify(this.products));
+            return productToAdd;
+        };
+        this.deleteProduct = (name) => {
+            const indexToDelete = this.products.findIndex((product) => product.name === name);
+            this.products.splice(indexToDelete, 1);
+            localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.PRODUCTS, JSON.stringify(this.products));
+        };
+        this.editProduct = (name, product) => {
+            const indexToEdit = this.products.findIndex((product) => product.name === name);
+            if (this.products[indexToEdit].name !== product.name) {
+                (0,_validator__WEBPACK_IMPORTED_MODULE_2__.checkDuplicatedProduct)(this.products, product.name);
+            }
+            this.products[indexToEdit].setProduct(product);
+            localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.PRODUCTS, JSON.stringify(this.products));
+        };
         this.getProductsFromStorage = (key) => {
             const copy = JSON.parse(localStorage.getItem(key));
             return copy === null || copy === void 0 ? void 0 : copy.map((product) => {
@@ -827,55 +878,18 @@ class VendingMachine {
             const copy = JSON.parse(localStorage.getItem(key));
             return copy === null || copy === void 0 ? void 0 : copy.map((money) => new _Money__WEBPACK_IMPORTED_MODULE_1__["default"](money._value, money._count));
         };
-        this.getCoinByValue = (value) => {
-            return this.money.find((coin) => coin.value === value);
-        };
-        this.getHoldingMoney = () => {
-            return this.money.reduce((holdingMoney, currentMoney) => {
-                return holdingMoney + currentMoney.value * currentMoney.count;
-            }, 0);
-        };
         this.generateRandomCoins = (money) => {
             while (money !== 0) {
-                const coinValue = this.money[(0,_utils__WEBPACK_IMPORTED_MODULE_3__.getRandomNumber)(0, 3)].value;
+                const coinValue = this.moneys[(0,_utils__WEBPACK_IMPORTED_MODULE_3__.getRandomNumber)(0, 3)].value;
                 if (coinValue <= money) {
-                    const index = this.money.findIndex((coin) => coin.value === coinValue);
-                    this.money[index].increaseCount();
+                    const index = this.moneys.findIndex((coin) => coin.value === coinValue);
+                    this.moneys[index].increaseCount();
                     money -= coinValue;
                 }
             }
         };
-        this.rechargeMoney = (money) => {
-            (0,_validator__WEBPACK_IMPORTED_MODULE_2__.checkMoneyValidation)(money, money + this.getHoldingMoney());
-            this.generateRandomCoins(money);
-            localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.MONEY, JSON.stringify(this.money));
-        };
-        this.addProduct = (newProduct) => {
-            const productToAdd = new _Product__WEBPACK_IMPORTED_MODULE_0__["default"](newProduct);
-            (0,_validator__WEBPACK_IMPORTED_MODULE_2__.checkDuplicatedProduct)(this.products, productToAdd.name);
-            this.products.push(productToAdd);
-            localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.PRODUCTS, JSON.stringify(this.products));
-            return productToAdd;
-        };
-        this.deleteProduct = (name) => {
-            const indexToDelete = this.products.findIndex((product) => product.name === name);
-            this.products.splice(indexToDelete, 1);
-            localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.PRODUCTS, JSON.stringify(this.products));
-        };
-        this.getProductByName = (name) => {
-            return this.products.find((product) => product.name === name);
-        };
-        this.editProduct = (targetName, product) => {
-            const indexToEdit = this.products.findIndex((product) => product.name === targetName);
-            const editedProduct = new _Product__WEBPACK_IMPORTED_MODULE_0__["default"](product);
-            if (editedProduct.name !== targetName) {
-                (0,_validator__WEBPACK_IMPORTED_MODULE_2__.checkDuplicatedProduct)(this.products, product.name);
-            }
-            this.products[indexToEdit] = editedProduct;
-            localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.PRODUCTS, JSON.stringify(this.products));
-        };
         this.products = this.getProductsFromStorage(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.PRODUCTS) || [];
-        this.money = this.getMoneyFromStorage(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.MONEY) || [
+        this.moneys = this.getMoneyFromStorage(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.MONEY) || [
             new _Money__WEBPACK_IMPORTED_MODULE_1__["default"](500, 0),
             new _Money__WEBPACK_IMPORTED_MODULE_1__["default"](100, 0),
             new _Money__WEBPACK_IMPORTED_MODULE_1__["default"](50, 0),
@@ -966,13 +980,13 @@ class Router {
                 history.pushState({ url }, null, url);
             const routes = {
                 [_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PRODUCT_MANAGE]: () => {
-                    this.view.renderTabResult(_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PRODUCT_MANAGE);
+                    this.view.renderTabs(_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PRODUCT_MANAGE);
                 },
                 [_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.RECHARGE]: () => {
-                    this.view.renderTabResult(_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.RECHARGE);
+                    this.view.renderTabs(_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.RECHARGE);
                 },
                 [_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT]: () => {
-                    this.view.renderTabResult(_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT);
+                    this.view.renderTabs(_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT);
                 },
             };
             routes[url]();
@@ -980,7 +994,7 @@ class Router {
         this.view = view;
         this.currentTab = localStorage.getItem(_constants__WEBPACK_IMPORTED_MODULE_0__.STORAGE_ID.CURRENT_TAB) || _constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PRODUCT_MANAGE;
         history.replaceState({ url: this.currentTab }, null, this.currentTab);
-        this.view.renderTabResult(this.currentTab);
+        this.view.renderTabs(this.currentTab);
         window.addEventListener('popstate', (event) => {
             this.tabRouter(event.state.url, true);
         });
@@ -1030,73 +1044,15 @@ __webpack_require__.r(__webpack_exports__);
 
 class ProductManageView {
     constructor(vendingMachine) {
-        this.getEditTemplate = ({ name, price, quantity }) => {
-            return `
-      <td class="product-row-name">
-        <input class="edit-input" id="edit-name-input" type="text" size="10" minlength="1" maxlength="10" value="${name}">
-      </td>
-      <td class="product-row-price">
-        <input class="edit-input" id="edit-price-input" type="number" step="10" min="100" max="100000" value="${price}">
-      </td>
-      <td class="product-row-quantity">
-        <input class="edit-input" id="edit-quantity-input" type="number" min="1" max="20" value="${quantity}">
-      </td>
-      <td>
-        <button class="small-button edit-confirm-button" data-name="${name}" >확인</button>
-      </td>
-    `;
-        };
-        this.handleEdit = (target) => {
-            const { name, price, quantity } = this.vendingMachine.getProductByName(target.dataset.name);
-            const editTemplate = this.getEditTemplate({ name, price, quantity });
-            const newTr = document.createElement('tr');
-            newTr.className = 'product-row';
-            newTr.dataset.name = name;
-            newTr.insertAdjacentHTML('beforeend', editTemplate);
-            const targetEdit = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)(`tr[data-name=${name}]`);
-            this.$currentProductTable.replaceChild(newTr, targetEdit);
-            (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('.edit-confirm-button').addEventListener('click', () => this.handleConfirmEdit(name));
-        };
-        this.renderEditedProduct = (productToEdit, targetEdit) => {
-            const editedProduct = this.vendingMachine.getProductByName(productToEdit.name);
-            const newTr = document.createElement('tr');
-            newTr.className = 'product-row';
-            newTr.dataset.name = editedProduct.name;
-            const template = this.getProductTemplate(editedProduct);
-            newTr.insertAdjacentHTML('beforeend', template);
-            this.$currentProductTable.replaceChild(newTr, targetEdit);
-        };
-        this.handleConfirmEdit = (targetName) => {
-            const targetEdit = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)(`tr[data-name=${targetName}]`);
-            const productToEdit = {
-                name: (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#edit-name-input').value,
-                price: +(0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#edit-price-input').value,
-                quantity: +(0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#edit-quantity-input').value,
-            };
-            try {
-                this.vendingMachine.editProduct(targetName, productToEdit);
-                this.renderEditedProduct(productToEdit, targetEdit);
-            }
-            catch (error) {
-                alert(error.message);
-            }
-        };
-        this.handleDelete = (target) => {
-            if (window.confirm(_constants__WEBPACK_IMPORTED_MODULE_1__.CONFIRM_MESSAGE.DELETE)) {
-                const name = target.dataset.name;
-                this.vendingMachine.deleteProduct(name);
-                this.removeProductRow(name);
-            }
-        };
-        this.handleModifierButton = (event) => {
-            const target = event.target;
-            if (target.classList.contains('edit-button')) {
-                this.handleEdit(target);
-                return;
-            }
-            if (target.classList.contains('delete-button')) {
-                this.handleDelete(target);
-            }
+        this.renderProductManage = () => {
+            const $$productRows = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$$)('.product-row');
+            const allProducts = this.vendingMachine.products;
+            allProducts.forEach((product, index) => {
+                ((0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('.product-row-name', $$productRows[index])).textContent = product.name;
+                ((0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('.product-row-price', $$productRows[index])).textContent = String(product.price);
+                ((0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('.product-row-quantity', $$productRows[index])).textContent = String(product.quantity);
+            });
+            this.$productNameInput.focus();
         };
         this.handleSubmit = (event) => {
             event.preventDefault();
@@ -1114,6 +1070,10 @@ class ProductManageView {
                 alert(error.message);
             }
         };
+        this.renderAddedProduct = (addedProduct) => {
+            const template = this.getProductTemplate(addedProduct);
+            this.$currentProductTable.insertAdjacentHTML('beforeend', template);
+        };
         this.getProductTemplate = ({ name, price, quantity }) => {
             return `
       <tr class="product-row" data-name="${name}">
@@ -1127,19 +1087,72 @@ class ProductManageView {
       </tr>
       `;
         };
-        this.renderAddedProduct = (addedProduct) => {
-            const template = this.getProductTemplate(addedProduct);
-            this.$currentProductTable.insertAdjacentHTML('beforeend', template);
+        this.handleModifierButton = (event) => {
+            const target = event.target;
+            if (target.classList.contains('edit-button')) {
+                this.handleEdit(target);
+            }
+            if (target.classList.contains('delete-button')) {
+                this.handleDelete(target);
+            }
         };
-        this.renderProductManage = () => {
-            const $$productRows = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$$)('.product-row');
-            const allProducts = this.vendingMachine.products;
-            allProducts.forEach((product, index) => {
-                ((0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('.product-row-name', $$productRows[index])).textContent = product.name;
-                ((0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('.product-row-price', $$productRows[index])).textContent = String(product.price);
-                ((0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('.product-row-quantity', $$productRows[index])).textContent = String(product.quantity);
-            });
-            this.$productNameInput.focus();
+        this.handleEdit = (target) => {
+            const { name, price, quantity } = this.vendingMachine.getProduct(target.dataset.name);
+            const editTemplate = this.getEditTemplate({ name, price, quantity });
+            const newTr = document.createElement('tr');
+            newTr.className = 'product-row';
+            newTr.dataset.name = name;
+            newTr.insertAdjacentHTML('beforeend', editTemplate);
+            const targetEdit = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)(`tr[data-name=${name}]`);
+            this.$currentProductTable.replaceChild(newTr, targetEdit);
+            (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('.edit-confirm-button').addEventListener('click', () => this.handleConfirmEdit(name));
+        };
+        this.getEditTemplate = ({ name, price, quantity }) => {
+            return `
+      <td class="product-row-name">
+        <input class="edit-input" id="edit-name-input" type="text" size="10" minlength="1" maxlength="10" value="${name}">
+      </td>
+      <td class="product-row-price">
+        <input class="edit-input" id="edit-price-input" type="number" step="10" min="100" max="100000" value="${price}">
+      </td>
+      <td class="product-row-quantity">
+        <input class="edit-input" id="edit-quantity-input" type="number" min="1" max="20" value="${quantity}">
+      </td>
+      <td>
+        <button class="small-button edit-confirm-button" data-name="${name}" >확인</button>
+      </td>
+    `;
+        };
+        this.handleConfirmEdit = (targetName) => {
+            const targetEdit = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)(`tr[data-name=${targetName}]`);
+            const productToEdit = {
+                name: (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#edit-name-input').value,
+                price: +(0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#edit-price-input').value,
+                quantity: +(0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#edit-quantity-input').value,
+            };
+            try {
+                this.vendingMachine.editProduct(targetName, productToEdit);
+                this.renderEditedProduct(productToEdit, targetEdit);
+            }
+            catch (error) {
+                alert(error.message);
+            }
+        };
+        this.renderEditedProduct = (productToEdit, targetEdit) => {
+            const editedProduct = this.vendingMachine.getProduct(productToEdit.name);
+            const newTr = document.createElement('tr');
+            newTr.className = 'product-row';
+            newTr.dataset.name = editedProduct.name;
+            const template = this.getProductTemplate(editedProduct);
+            newTr.insertAdjacentHTML('beforeend', template);
+            this.$currentProductTable.replaceChild(newTr, targetEdit);
+        };
+        this.handleDelete = (target) => {
+            if (window.confirm(_constants__WEBPACK_IMPORTED_MODULE_1__.CONFIRM_MESSAGE.DELETE)) {
+                const name = target.dataset.name;
+                this.vendingMachine.deleteProduct(name);
+                this.removeProductRow(name);
+            }
         };
         this.renderInitialProductManage = () => {
             const template = this.vendingMachine.products
@@ -1150,22 +1163,22 @@ class ProductManageView {
         this.$productNameInput = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#product-name');
         this.$productPriceInput = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#product-price');
         this.$productQuantityInput = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#product-quantity');
-        this.$productManageForm = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('.product-manage-form');
+        this.$productManageForm = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#product-manage-form');
         this.$currentProductTable = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#current-product-table');
         this.vendingMachine = vendingMachine;
         this.$productManageForm.addEventListener('submit', this.handleSubmit);
         this.$currentProductTable.addEventListener('click', this.handleModifierButton);
         this.renderInitialProductManage();
     }
-    removeProductRow(name) {
-        const targetDelete = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)(`tr[data-name=${name}]`);
-        this.$currentProductTable.removeChild(targetDelete);
-    }
     resetProductManageForm() {
         this.$productNameInput.value = '';
         this.$productPriceInput.value = '';
         this.$productQuantityInput.value = '';
         this.$productNameInput.focus();
+    }
+    removeProductRow(name) {
+        const targetDelete = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)(`tr[data-name=${name}]`);
+        this.$currentProductTable.removeChild(targetDelete);
     }
 }
 
@@ -1186,12 +1199,6 @@ __webpack_require__.r(__webpack_exports__);
 
 class RechargeView {
     constructor(vendingMachine) {
-        this.renderCoinTable = () => {
-            this.$coin500.textContent = String(this.vendingMachine.getCoinByValue(500).count);
-            this.$coin100.textContent = String(this.vendingMachine.getCoinByValue(100).count);
-            this.$coin50.textContent = String(this.vendingMachine.getCoinByValue(50).count);
-            this.$coin10.textContent = String(this.vendingMachine.getCoinByValue(10).count);
-        };
         this.renderRecharge = () => {
             this.renderHoldingMoney();
             this.renderCoinTable();
@@ -1199,6 +1206,12 @@ class RechargeView {
         };
         this.renderHoldingMoney = () => {
             this.$currentHoldingMoney.textContent = String(this.vendingMachine.getHoldingMoney());
+        };
+        this.renderCoinTable = () => {
+            this.$coin500.textContent = String(this.vendingMachine.getCoin(500).count);
+            this.$coin100.textContent = String(this.vendingMachine.getCoin(100).count);
+            this.$coin50.textContent = String(this.vendingMachine.getCoin(50).count);
+            this.$coin10.textContent = String(this.vendingMachine.getCoin(10).count);
         };
         this.handleSubmit = (event) => {
             event.preventDefault();
@@ -1212,9 +1225,9 @@ class RechargeView {
                 alert(error.message);
             }
         };
-        this.$rechargeForm = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('.recharge-form');
-        this.$currentHoldingMoney = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#current-holding-money');
+        this.$rechargeForm = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#recharge-form');
         this.$rechargeInput = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#recharge-input', this.$rechargeForm);
+        this.$currentHoldingMoney = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#current-holding-money');
         this.$coin500 = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#coin-500');
         this.$coin100 = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#coin-100');
         this.$coin50 = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#coin-50');
@@ -1247,7 +1260,7 @@ __webpack_require__.r(__webpack_exports__);
 
 class View {
     constructor(vendingMachine) {
-        this.renderTabResult = (id) => {
+        this.renderTabs = (id) => {
             this.$$tabResultContainers.forEach((container, index) => {
                 if (container.id === id) {
                     container.classList.remove('hide');
@@ -1281,7 +1294,7 @@ class View {
         this.$tabProductManageButton = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#tab-product-manage');
         this.$tabRechargeButton = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#tab-recharge');
         this.$tabPurchaseProductButton = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#tab-purchase-product');
-        this.$$tabButtons = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$$)('.tab-button');
+        this.$$tabButtons = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$$)('.tab-input');
         this.$tabProductManageButton.addEventListener('click', () => this.handleClickTabButton(_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PRODUCT_MANAGE));
         this.$tabRechargeButton.addEventListener('click', () => this.handleClickTabButton(_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.RECHARGE));
         this.$tabPurchaseProductButton.addEventListener('click', () => this.handleClickTabButton(_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PURCHASE_PRODUCT));

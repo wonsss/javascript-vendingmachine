@@ -12,11 +12,11 @@
 
       <nav class="nav-tab">
         <form>
-          <input class="tab-button" type="radio" id="tab-product-manage" name="tab" checked />
+          <input class="tab-input" type="radio" id="tab-product-manage" name="tab" checked />
           <label class="tab-label" for="tab-product-manage">상품 관리</label>
-          <input class="tab-button" type="radio" id="tab-recharge" name="tab" />
+          <input class="tab-input" type="radio" id="tab-recharge" name="tab" />
           <label class="tab-label" for="tab-recharge">잔돈 충전</label>
-          <input class="tab-button" type="radio" id="tab-purchase-product" name="tab" />
+          <input class="tab-input" type="radio" id="tab-purchase-product" name="tab" />
           <label class="tab-label" for="tab-purchase-product">상품 구매</label>
         </form>
       </nav>
@@ -24,7 +24,7 @@
       <section class="tab-result-container" id="/javascript-vendingmachine/#!/product-manage">
         <h2 hidden>상품 관리</h2>
         <div class="tab-result-wrapper">
-          <form class="product-manage-form">
+          <form id="product-manage-form">
             <div class="label-wrapper">
               <label for="product-name">추가할 상품 정보를 입력해주세요.</label>
             </div>
@@ -35,9 +35,9 @@
           </form>
           <table>
             <colgroup>
-              <col style="width:23%"></col>
-              <col style="width:23%"></col>
-              <col style="width:23%"></col>
+              <col></col>
+              <col></col>
+              <col></col>
             </colgroup>
             <caption>
               상품 현황
@@ -58,7 +58,7 @@
       <section class="tab-result-container hide" id="/javascript-vendingmachine/#!/recharge">
         <h2 hidden>잔돈 충전</h2>
         <div class="tab-result-wrapper">
-          <form class="recharge-form">
+          <form id="recharge-form">
             <div class="label-wrapper">
               <label for="recharge-input">자판기가 보유할 금액을 입력해주세요</label>
             </div>
