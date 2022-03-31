@@ -1024,10 +1024,10 @@ class VendingMachine {
         };
         this.generateRandomCoins = (money) => {
             while (money !== 0) {
-                const coinValue = this.moneys[(0,_utils__WEBPACK_IMPORTED_MODULE_3__.getRandomNumber)(0, 3)].value;
+                const moneyRandomIndex = (0,_utils__WEBPACK_IMPORTED_MODULE_3__.getRandomNumber)(0, 3);
+                const coinValue = this.moneys[moneyRandomIndex].value;
                 if (coinValue <= money) {
-                    const index = this.moneys.findIndex((coin) => coin.value === coinValue);
-                    this.moneys[index].increaseCount();
+                    this.moneys[moneyRandomIndex].increaseCount();
                     money -= coinValue;
                 }
             }
