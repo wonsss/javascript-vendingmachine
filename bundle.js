@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Roboto);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  font-family: 'Roboto', sans-serif;\r\n  margin: 0;\r\n}\r\n\r\nh1 {\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\nbutton {\r\n  background: var(--primary);\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  border-style: none;\r\n  color: var(--white);\r\n}\r\n\r\nbutton:hover {\r\n  background: var(--primary-darken);\r\n  cursor: pointer;\r\n}\r\n\r\ninput {\r\n  padding: 0 8px;\r\n  border: 1px solid var(--secondary);\r\n  box-sizing: border-box;\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  line-height: 36px;\r\n  font-weight: 400;\r\n  font-size: 16px;\r\n}\r\n\r\ninput::placeholder {\r\n  color: var(--secondary-darken);\r\n}\r\n\r\n.tab-result-container {\r\n  margin: 52px 0;\r\n}\r\n\r\ncaption {\r\n  font-weight: 600;\r\n  font-size: 20px;\r\n  margin: 48px 0 16px;\r\n}\r\n\r\ntable {\r\n  border-collapse: collapse;\r\n  width: 471px;\r\n}\r\n\r\ntr {\r\n  border: 1px solid var(--secondary-lighten);\r\n  border-left: 0;\r\n  border-right: 0;\r\n  text-align: center;\r\n}\r\n\r\ntd,\r\nth {\r\n  padding: 8px;\r\n  font-weight: 400;\r\n}\r\n\r\nth {\r\n  font-weight: 600;\r\n}\r\n\r\ncol {\r\n  width: 23%;\r\n}\r\n\r\n.hide {\r\n  display: none !important;\r\n}\r\n\r\n.short-button {\r\n  width: 56px;\r\n  margin-left: 16px;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n}\r\n\r\n.small-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 50px;\r\n}\r\n\r\n.small-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.edit-confirm-button {\r\n  width: 100px;\r\n  height: 32px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/app.css"],"names":[],"mappings":"AAEA;EACE,iCAAiC;EACjC,SAAS;AACX;;AAEA;EACE,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,0BAA0B;EAC1B,kBAAkB;EAClB,YAAY;EACZ,kBAAkB;EAClB,mBAAmB;AACrB;;AAEA;EACE,iCAAiC;EACjC,eAAe;AACjB;;AAEA;EACE,cAAc;EACd,kCAAkC;EAClC,sBAAsB;EACtB,kBAAkB;EAClB,YAAY;EACZ,iBAAiB;EACjB,gBAAgB;EAChB,eAAe;AACjB;;AAEA;EACE,8BAA8B;AAChC;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,gBAAgB;EAChB,eAAe;EACf,mBAAmB;AACrB;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA;EACE,0CAA0C;EAC1C,cAAc;EACd,eAAe;EACf,kBAAkB;AACpB;;AAEA;;EAEE,YAAY;EACZ,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,UAAU;AACZ;;AAEA;EACE,wBAAwB;AAC1B;;AAEA;EACE,WAAW;EACX,iBAAiB;EACjB,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,oCAAoC;EACpC,mBAAmB;EACnB,WAAW;AACb;;AAEA;EACE,4BAA4B;AAC9B;;AAEA;EACE,YAAY;EACZ,YAAY;AACd","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Roboto');\r\n\r\nbody {\r\n  font-family: 'Roboto', sans-serif;\r\n  margin: 0;\r\n}\r\n\r\nh1 {\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\nbutton {\r\n  background: var(--primary);\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  border-style: none;\r\n  color: var(--white);\r\n}\r\n\r\nbutton:hover {\r\n  background: var(--primary-darken);\r\n  cursor: pointer;\r\n}\r\n\r\ninput {\r\n  padding: 0 8px;\r\n  border: 1px solid var(--secondary);\r\n  box-sizing: border-box;\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  line-height: 36px;\r\n  font-weight: 400;\r\n  font-size: 16px;\r\n}\r\n\r\ninput::placeholder {\r\n  color: var(--secondary-darken);\r\n}\r\n\r\n.tab-result-container {\r\n  margin: 52px 0;\r\n}\r\n\r\ncaption {\r\n  font-weight: 600;\r\n  font-size: 20px;\r\n  margin: 48px 0 16px;\r\n}\r\n\r\ntable {\r\n  border-collapse: collapse;\r\n  width: 471px;\r\n}\r\n\r\ntr {\r\n  border: 1px solid var(--secondary-lighten);\r\n  border-left: 0;\r\n  border-right: 0;\r\n  text-align: center;\r\n}\r\n\r\ntd,\r\nth {\r\n  padding: 8px;\r\n  font-weight: 400;\r\n}\r\n\r\nth {\r\n  font-weight: 600;\r\n}\r\n\r\ncol {\r\n  width: 23%;\r\n}\r\n\r\n.hide {\r\n  display: none !important;\r\n}\r\n\r\n.short-button {\r\n  width: 56px;\r\n  margin-left: 16px;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n}\r\n\r\n.small-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 50px;\r\n}\r\n\r\n.small-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.edit-confirm-button {\r\n  width: 100px;\r\n  height: 32px;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  font-family: 'Roboto', sans-serif;\r\n  margin: 0;\r\n}\r\n\r\nh1 {\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\nbutton {\r\n  background: var(--primary);\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  border-style: none;\r\n  color: var(--white);\r\n}\r\n\r\nbutton:hover {\r\n  background: var(--primary-darken);\r\n  cursor: pointer;\r\n}\r\n\r\ninput {\r\n  padding: 0 8px;\r\n  border: 1px solid var(--secondary);\r\n  box-sizing: border-box;\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  line-height: 36px;\r\n  font-weight: 400;\r\n  font-size: 16px;\r\n}\r\n\r\ninput::placeholder {\r\n  color: var(--secondary-darken);\r\n}\r\n\r\n.tab-result-container {\r\n  margin: 52px 0;\r\n}\r\n\r\ncaption {\r\n  font-weight: 600;\r\n  font-size: 20px;\r\n  margin: 48px 0 16px;\r\n}\r\n\r\ntable {\r\n  border-collapse: collapse;\r\n  width: 471px;\r\n}\r\n\r\ntr {\r\n  border: 1px solid var(--secondary-lighten);\r\n  border-left: 0;\r\n  border-right: 0;\r\n  text-align: center;\r\n}\r\n\r\ntd,\r\nth {\r\n  padding: 8px;\r\n  font-weight: 400;\r\n}\r\n\r\nth {\r\n  font-weight: 600;\r\n}\r\n\r\ncol {\r\n  width: 23%;\r\n}\r\n\r\n.hide {\r\n  display: none !important;\r\n}\r\n\r\n.short-button {\r\n  width: 56px;\r\n  margin-left: 16px;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n}\r\n\r\n.small-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 50px;\r\n}\r\n\r\n.small-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.long-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 100px;\r\n  margin: 23px;\r\n}\r\n\r\n.long-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.edit-confirm-button {\r\n  width: 100px;\r\n  height: 32px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/app.css"],"names":[],"mappings":"AAEA;EACE,iCAAiC;EACjC,SAAS;AACX;;AAEA;EACE,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,0BAA0B;EAC1B,kBAAkB;EAClB,YAAY;EACZ,kBAAkB;EAClB,mBAAmB;AACrB;;AAEA;EACE,iCAAiC;EACjC,eAAe;AACjB;;AAEA;EACE,cAAc;EACd,kCAAkC;EAClC,sBAAsB;EACtB,kBAAkB;EAClB,YAAY;EACZ,iBAAiB;EACjB,gBAAgB;EAChB,eAAe;AACjB;;AAEA;EACE,8BAA8B;AAChC;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,gBAAgB;EAChB,eAAe;EACf,mBAAmB;AACrB;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA;EACE,0CAA0C;EAC1C,cAAc;EACd,eAAe;EACf,kBAAkB;AACpB;;AAEA;;EAEE,YAAY;EACZ,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,UAAU;AACZ;;AAEA;EACE,wBAAwB;AAC1B;;AAEA;EACE,WAAW;EACX,iBAAiB;EACjB,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,oCAAoC;EACpC,mBAAmB;EACnB,WAAW;AACb;;AAEA;EACE,4BAA4B;AAC9B;;AAEA;EACE,oCAAoC;EACpC,mBAAmB;EACnB,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,4BAA4B;AAC9B;;AAEA;EACE,YAAY;EACZ,YAAY;AACd","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Roboto');\r\n\r\nbody {\r\n  font-family: 'Roboto', sans-serif;\r\n  margin: 0;\r\n}\r\n\r\nh1 {\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\nbutton {\r\n  background: var(--primary);\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  border-style: none;\r\n  color: var(--white);\r\n}\r\n\r\nbutton:hover {\r\n  background: var(--primary-darken);\r\n  cursor: pointer;\r\n}\r\n\r\ninput {\r\n  padding: 0 8px;\r\n  border: 1px solid var(--secondary);\r\n  box-sizing: border-box;\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  line-height: 36px;\r\n  font-weight: 400;\r\n  font-size: 16px;\r\n}\r\n\r\ninput::placeholder {\r\n  color: var(--secondary-darken);\r\n}\r\n\r\n.tab-result-container {\r\n  margin: 52px 0;\r\n}\r\n\r\ncaption {\r\n  font-weight: 600;\r\n  font-size: 20px;\r\n  margin: 48px 0 16px;\r\n}\r\n\r\ntable {\r\n  border-collapse: collapse;\r\n  width: 471px;\r\n}\r\n\r\ntr {\r\n  border: 1px solid var(--secondary-lighten);\r\n  border-left: 0;\r\n  border-right: 0;\r\n  text-align: center;\r\n}\r\n\r\ntd,\r\nth {\r\n  padding: 8px;\r\n  font-weight: 400;\r\n}\r\n\r\nth {\r\n  font-weight: 600;\r\n}\r\n\r\ncol {\r\n  width: 23%;\r\n}\r\n\r\n.hide {\r\n  display: none !important;\r\n}\r\n\r\n.short-button {\r\n  width: 56px;\r\n  margin-left: 16px;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n}\r\n\r\n.small-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 50px;\r\n}\r\n\r\n.small-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.long-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 100px;\r\n  margin: 23px;\r\n}\r\n\r\n.long-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.edit-confirm-button {\r\n  width: 100px;\r\n  height: 32px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -170,7 +170,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#recharge-input {\r\n  width: 300px;\r\n}\r\n\r\n.recharge-button {\r\n  width: 56px;\r\n}\r\n\r\n.holding-money-wrapper {\r\n  margin-top: 16px;\r\n}\r\n\r\n.change-table {\r\n  width: 237px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/rechargeTab.css"],"names":[],"mappings":"AAAA;EACE,YAAY;AACd;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,YAAY;AACd","sourcesContent":["#recharge-input {\r\n  width: 300px;\r\n}\r\n\r\n.recharge-button {\r\n  width: 56px;\r\n}\r\n\r\n.holding-money-wrapper {\r\n  margin-top: 16px;\r\n}\r\n\r\n.change-table {\r\n  width: 237px;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".long-input {\r\n  width: 300px;\r\n}\r\n\r\n.recharge-button {\r\n  width: 56px;\r\n}\r\n\r\n.holding-money-wrapper {\r\n  margin-top: 16px;\r\n}\r\n\r\n.change-table {\r\n  width: 237px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/rechargeTab.css"],"names":[],"mappings":"AAAA;EACE,YAAY;AACd;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,YAAY;AACd","sourcesContent":[".long-input {\r\n  width: 300px;\r\n}\r\n\r\n.recharge-button {\r\n  width: 56px;\r\n}\r\n\r\n.holding-money-wrapper {\r\n  margin-top: 16px;\r\n}\r\n\r\n.change-table {\r\n  width: 237px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -874,12 +874,18 @@ const ERROR_MESSAGE = {
     EXCEED_HOLDING_MONEY: '보유할 수 있는 최대 금액은 10만원입니다.',
     UNDER_MIN_RECHARGING_MONEY: '충전할 금액은 10원 이상이어야 합니다.',
     NOT_INTEGER: '정수를 입력하셔야 합니다.',
+    INSERT_MONEY_UNIT: '투입할 금액은 10의 배수여야 합니다.',
+    EXCEED_INSERTED_HOLDING_MONEY: '투입할 수 있는 최대 금액은 1만원입니다.',
+    UNDER_MIN_INSERTED_HOLDING_MONEY: '투입 금액은 10원 이상이어야 합니다.',
+    SOLD_OUT: '해당 상품에 재고가 없습니다.',
+    INSUFFICIENT_MONEY: '해당 상품을 구입하기에 투입한 돈이 충분하지 않습니다.',
 };
 const SUCCESS_MESSAGE = {
     PRODUCT_REGISTERED: '입력하신 상품 정보가 등록되었습니다.',
     PRODUCT_EDITED: '선택하신 상품 정보가 수정되었습니다.',
     PRODUCT_DELETED: '선택하신 상품 정보가 삭제되었습니다.',
     MONEY_RECHARGED: '충전하신 금액만큼 동전을 보충하였습니다.',
+    PURCHASE: '해당 상품을 구매하였습니다.',
 };
 const CONFIRM_MESSAGE = {
     DELETE: '정말 삭제하시겠습니까?',
@@ -892,6 +898,8 @@ const VENDING_MACHINE_RULE = {
     UNIT: 10,
     MAX_HOLDING_MONEY: 100000,
     MIN_RECHARGING_MONEY: 10,
+    MAX_INSERTED_HOLDING_MONEY: 10000,
+    MIN_INSERTING_MONEY: 10,
 };
 const STORAGE_ID = {
     MONEY: 'money',
@@ -1001,40 +1009,69 @@ __webpack_require__.r(__webpack_exports__);
 
 class VendingMachine {
     constructor() {
+        this.resetProducts = () => {
+            this._products = [];
+        };
+        this.resetMoneys = () => {
+            this._moneys = [new _Money__WEBPACK_IMPORTED_MODULE_1__["default"](500, 0), new _Money__WEBPACK_IMPORTED_MODULE_1__["default"](100, 0), new _Money__WEBPACK_IMPORTED_MODULE_1__["default"](50, 0), new _Money__WEBPACK_IMPORTED_MODULE_1__["default"](10, 0)];
+        };
+        this.resetInsertedMoney = () => {
+            this._insertedMoney = 0;
+        };
         this.rechargeMoney = (money) => {
             (0,_validator__WEBPACK_IMPORTED_MODULE_2__.checkMoneyValidation)(money, money + this.getHoldingMoney());
             this.generateRandomCoins(money);
-            localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.MONEY, JSON.stringify(this.moneys));
+            localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.MONEY, JSON.stringify(this._moneys));
         };
         this.getHoldingMoney = () => {
-            return this.moneys.reduce((holdingMoney, currentMoney) => {
+            return this._moneys.reduce((holdingMoney, currentMoney) => {
                 return holdingMoney + currentMoney.value * currentMoney.count;
             }, 0);
         };
         this.getCoin = (value) => {
-            return this.moneys.find((coin) => coin.value === value);
+            return this._moneys.find((coin) => coin.value === value);
         };
         this.getProduct = (name) => {
-            return this.products.find((product) => product.name === name);
+            return this._products.find((product) => product.name === name);
         };
         this.addProduct = (newProduct) => {
             const productToAdd = new _Product__WEBPACK_IMPORTED_MODULE_0__["default"](newProduct);
-            (0,_validator__WEBPACK_IMPORTED_MODULE_2__.checkDuplicatedProduct)(this.products, productToAdd.name);
-            this.products.push(productToAdd);
-            localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.PRODUCTS, JSON.stringify(this.products));
+            (0,_validator__WEBPACK_IMPORTED_MODULE_2__.checkDuplicatedProduct)(this._products, productToAdd.name);
+            this._products.push(productToAdd);
+            localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.PRODUCTS, JSON.stringify(this._products));
             return productToAdd;
         };
         this.deleteProduct = (name) => {
-            this.products = this.products.filter((product) => product.name !== name);
-            localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.PRODUCTS, JSON.stringify(this.products));
+            this._products = this._products.filter((product) => product.name !== name);
+            localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.PRODUCTS, JSON.stringify(this._products));
         };
         this.editProduct = (name, product) => {
-            const indexToEdit = this.products.findIndex((product) => product.name === name);
-            if (this.products[indexToEdit].name !== product.name) {
-                (0,_validator__WEBPACK_IMPORTED_MODULE_2__.checkDuplicatedProduct)(this.products, product.name);
+            const targetIndex = this.findIndexByName(name);
+            if (this._products[targetIndex].name !== product.name) {
+                (0,_validator__WEBPACK_IMPORTED_MODULE_2__.checkDuplicatedProduct)(this._products, product.name);
             }
-            this.products[indexToEdit].setProduct(product);
-            localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.PRODUCTS, JSON.stringify(this.products));
+            this._products[targetIndex].setProduct(product);
+            localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.PRODUCTS, JSON.stringify(this._products));
+        };
+        this.decreaseProductQuantity = (name) => {
+            const targetIndex = this.findIndexByName(name);
+            if (this._products[targetIndex].quantity <= 0) {
+                throw new Error(_constants__WEBPACK_IMPORTED_MODULE_4__.ERROR_MESSAGE.SOLD_OUT);
+            }
+            this._products[targetIndex].quantity -= 1;
+            localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.PRODUCTS, JSON.stringify(this._products));
+        };
+        this.deductInsertedMoney = (name) => {
+            const targetPrice = this._products[this.findIndexByName(name)].price;
+            if (this._insertedMoney - targetPrice < 0) {
+                throw new Error(_constants__WEBPACK_IMPORTED_MODULE_4__.ERROR_MESSAGE.INSUFFICIENT_MONEY);
+            }
+            this._insertedMoney -= targetPrice;
+            localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.PRODUCTS, JSON.stringify(this._products));
+            return this._insertedMoney;
+        };
+        this.findIndexByName = (name) => {
+            return this._products.findIndex((product) => product.name === name);
         };
         this.getProductsFromStorage = (key) => {
             const copy = JSON.parse(localStorage.getItem(key));
@@ -1054,20 +1091,35 @@ class VendingMachine {
         this.generateRandomCoins = (money) => {
             while (money !== 0) {
                 const moneyRandomIndex = (0,_utils__WEBPACK_IMPORTED_MODULE_3__.getRandomNumber)(0, 3);
-                const coinValue = this.moneys[moneyRandomIndex].value;
+                const coinValue = this._moneys[moneyRandomIndex].value;
                 if (coinValue <= money) {
-                    this.moneys[moneyRandomIndex].increaseCount();
+                    this._moneys[moneyRandomIndex].increaseCount();
                     money -= coinValue;
                 }
             }
         };
-        this.products = this.getProductsFromStorage(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.PRODUCTS) || [];
-        this.moneys = this.getMoneyFromStorage(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.MONEY) || [
+        this.addInsertedMoney = (money) => {
+            (0,_validator__WEBPACK_IMPORTED_MODULE_2__.checkInsertedMoneyValidation)(money, this._insertedMoney);
+            this._insertedMoney = this._insertedMoney + money;
+            return this._insertedMoney;
+        };
+        this._products = this.getProductsFromStorage(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.PRODUCTS) || [];
+        this._moneys = this.getMoneyFromStorage(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.MONEY) || [
             new _Money__WEBPACK_IMPORTED_MODULE_1__["default"](500, 0),
             new _Money__WEBPACK_IMPORTED_MODULE_1__["default"](100, 0),
             new _Money__WEBPACK_IMPORTED_MODULE_1__["default"](50, 0),
             new _Money__WEBPACK_IMPORTED_MODULE_1__["default"](10, 0),
         ];
+        this._insertedMoney = 0;
+    }
+    get products() {
+        return this._products;
+    }
+    get moneys() {
+        return this.moneys;
+    }
+    get insertedMoney() {
+        return this._insertedMoney;
     }
 }
 
@@ -1084,14 +1136,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "checkProductValidation": () => (/* binding */ checkProductValidation),
 /* harmony export */   "checkDuplicatedProduct": () => (/* binding */ checkDuplicatedProduct),
-/* harmony export */   "checkMoneyValidation": () => (/* binding */ checkMoneyValidation)
+/* harmony export */   "checkMoneyValidation": () => (/* binding */ checkMoneyValidation),
+/* harmony export */   "checkInsertedMoneyValidation": () => (/* binding */ checkInsertedMoneyValidation)
 /* harmony export */ });
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
 
 const isEmptyName = (name) => name.trim().length === 0;
 const isOverNameMinLength = (name) => name.length > _constants__WEBPACK_IMPORTED_MODULE_0__.VENDING_MACHINE_RULE.MAX_NAME_LENGTH;
 const isOutOfPriceRange = (price) => price < _constants__WEBPACK_IMPORTED_MODULE_0__.VENDING_MACHINE_RULE.MIN_PRICE || price > _constants__WEBPACK_IMPORTED_MODULE_0__.VENDING_MACHINE_RULE.MAX_PRICE;
-const isInvalidUnit = (price) => price % _constants__WEBPACK_IMPORTED_MODULE_0__.VENDING_MACHINE_RULE.UNIT !== 0;
+const isInvalidUnit = (price, unit) => price % unit !== 0;
 const isOverMaxValue = (value, max) => value > max;
 const isUnderMinValue = (value, min) => value < min;
 const checkProductValidation = (product) => {
@@ -1104,7 +1157,7 @@ const checkProductValidation = (product) => {
     if (isOutOfPriceRange(product.price)) {
         throw new Error(_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.PRICE_RANGE);
     }
-    if (isInvalidUnit(product.price)) {
+    if (isInvalidUnit(product.price, _constants__WEBPACK_IMPORTED_MODULE_0__.VENDING_MACHINE_RULE.UNIT)) {
         throw new Error(_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.PRICE_UNIT);
     }
     if (isOverMaxValue(product.quantity, _constants__WEBPACK_IMPORTED_MODULE_0__.VENDING_MACHINE_RULE.MAX_QUANTITY)) {
@@ -1120,7 +1173,7 @@ const checkDuplicatedProduct = (products, name) => {
     }
 };
 const checkMoneyValidation = (money, holdingMoney) => {
-    if (isInvalidUnit(money)) {
+    if (isInvalidUnit(money, _constants__WEBPACK_IMPORTED_MODULE_0__.VENDING_MACHINE_RULE.UNIT)) {
         throw new Error(_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.RECHARGE_MONEY_UNIT);
     }
     if (isOverMaxValue(holdingMoney, _constants__WEBPACK_IMPORTED_MODULE_0__.VENDING_MACHINE_RULE.MAX_HOLDING_MONEY)) {
@@ -1128,6 +1181,17 @@ const checkMoneyValidation = (money, holdingMoney) => {
     }
     if (isUnderMinValue(money, _constants__WEBPACK_IMPORTED_MODULE_0__.VENDING_MACHINE_RULE.MIN_RECHARGING_MONEY)) {
         throw new Error(_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.UNDER_MIN_RECHARGING_MONEY);
+    }
+};
+const checkInsertedMoneyValidation = (money, holdingMoney) => {
+    if (isInvalidUnit(money, _constants__WEBPACK_IMPORTED_MODULE_0__.VENDING_MACHINE_RULE.UNIT)) {
+        throw new Error(_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.INSERT_MONEY_UNIT);
+    }
+    if (isOverMaxValue(money + holdingMoney, _constants__WEBPACK_IMPORTED_MODULE_0__.VENDING_MACHINE_RULE.MAX_INSERTED_HOLDING_MONEY)) {
+        throw new Error(_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.EXCEED_INSERTED_HOLDING_MONEY);
+    }
+    if (isUnderMinValue(money, _constants__WEBPACK_IMPORTED_MODULE_0__.VENDING_MACHINE_RULE.MIN_INSERTING_MONEY)) {
+        throw new Error(_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.UNDER_MIN_INSERTED_HOLDING_MONEY);
     }
 };
 
@@ -1211,11 +1275,11 @@ __webpack_require__.r(__webpack_exports__);
 
 class ProductManageView {
     constructor(vendingMachine) {
-        this.renderProductManage = () => {
+        this.renderProductManageTab = () => {
+            this.$currentProductTable.textContent = '';
             const tableTemplate = this.vendingMachine.products
                 .map((product) => this.getProductTemplate(product))
                 .join('');
-            this.$currentProductTable.textContent = '';
             this.$currentProductTable.insertAdjacentHTML('beforeend', tableTemplate);
             this.$productNameInput.focus();
         };
@@ -1322,22 +1386,16 @@ class ProductManageView {
                 (0,_components_ToastNotification__WEBPACK_IMPORTED_MODULE_2__.renderToastModal)('success', _constants__WEBPACK_IMPORTED_MODULE_1__.SUCCESS_MESSAGE.PRODUCT_DELETED);
             }
         };
-        this.renderInitialProductManage = () => {
-            const template = this.vendingMachine.products
-                .map((product) => this.getProductTemplate(product))
-                .join('');
-            this.$currentProductTable.insertAdjacentHTML('beforeend', template);
-        };
+        this.vendingMachine = vendingMachine;
         this.$productNameInput = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#product-name');
         this.$productPriceInput = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#product-price');
         this.$productQuantityInput = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#product-quantity');
         this.$productManageForm = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#product-manage-form');
         this.$currentProductTable = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#current-product-table');
         this.$toastModal = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('toast-modal');
-        this.vendingMachine = vendingMachine;
         this.$productManageForm.addEventListener('submit', this.handleSubmit);
         this.$currentProductTable.addEventListener('click', this.handleModifierButton);
-        this.renderInitialProductManage();
+        this.renderProductManageTab();
     }
     resetProductManageForm() {
         this.$productNameInput.value = '';
@@ -1348,6 +1406,101 @@ class ProductManageView {
     removeProductRow(name) {
         const targetDelete = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)(`tr[data-name='${name}']`);
         this.$currentProductTable.removeChild(targetDelete);
+    }
+}
+
+
+/***/ }),
+
+/***/ "./src/ts/view/PurchaseView.ts":
+/*!*************************************!*\
+  !*** ./src/ts/view/PurchaseView.ts ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ PurchaseView)
+/* harmony export */ });
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils */ "./src/ts/utils.ts");
+/* harmony import */ var _components_ToastNotification__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/ToastNotification */ "./src/ts/components/ToastNotification.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
+
+
+
+class PurchaseView {
+    constructor(vendingMachine) {
+        this.renderPurchaseTab = () => {
+            this.renderPurchaseTable();
+            this.renderRefundTable();
+            this.$insertMoneyInput.focus();
+        };
+        this.renderPurchaseTable = () => {
+            this.$purchasableProductTable.textContent = '';
+            const template = this.vendingMachine.products
+                .map((product) => this.getProductTemplate(product))
+                .join('');
+            this.$purchasableProductTable.insertAdjacentHTML('beforeend', template);
+        };
+        this.getProductTemplate = ({ name, price, quantity }) => {
+            return `
+      <tr class="product-row" data-name="${name}">
+        <td class="product-row-name">${name}</td>
+        <td class="product-row-price">${price}</td>
+        <td class="product-row-quantity">${quantity}</td>
+        <td>
+          <button class="small-button purchase-button" data-name="${name}">구매</button>
+        </td>
+      </tr>
+      `;
+        };
+        this.handlePurchaseButton = (event) => {
+            const target = event.target;
+            if (!target.classList.contains('purchase-button')) {
+                return;
+            }
+            const productName = target.dataset.name;
+            try {
+                const currentInsertedMoney = String(this.vendingMachine.deductInsertedMoney(productName));
+                this.renderInsertedMoney(currentInsertedMoney);
+                this.vendingMachine.decreaseProductQuantity(productName);
+                this.renderPurchaseTable();
+                (0,_components_ToastNotification__WEBPACK_IMPORTED_MODULE_1__.renderToastModal)('success', _constants__WEBPACK_IMPORTED_MODULE_2__.SUCCESS_MESSAGE.PURCHASE);
+            }
+            catch (error) {
+                (0,_components_ToastNotification__WEBPACK_IMPORTED_MODULE_1__.renderToastModal)('error', error.message);
+            }
+        };
+        this.renderRefundTable = () => { };
+        this.handleInsertMoneyForm = (event) => {
+            event.preventDefault();
+            try {
+                const insertedMoney = String(this.vendingMachine.addInsertedMoney(+this.$insertMoneyInput.value));
+                this.renderInsertedMoney(insertedMoney);
+            }
+            catch (error) {
+                (0,_components_ToastNotification__WEBPACK_IMPORTED_MODULE_1__.renderToastModal)('error', error.message);
+            }
+        };
+        this.renderInsertedMoney = (money) => {
+            this.$currentInsertedMoney.textContent = money;
+        };
+        this.handleRefundButton = () => { };
+        this.vendingMachine = vendingMachine;
+        this.$insertMoneyForm = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#insert-money-form');
+        this.$insertMoneyInput = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#insert-money-input');
+        this.$currentInsertedMoney = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#current-inserted-money');
+        this.$purchasableProductTable = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#purchasable-product-table');
+        this.$coin500 = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#purchase-tab-coin-500');
+        this.$coin100 = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#purchase-tab-coin-100');
+        this.$coin50 = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#purchase-tab-coin-50');
+        this.$coin10 = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#purchase-tab-coin-10');
+        this.$refundButton = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#refund-button');
+        // 투입버튼 이벤트 바인딩
+        this.$insertMoneyForm.addEventListener('submit', this.handleInsertMoneyForm);
+        this.$purchasableProductTable.addEventListener('click', this.handlePurchaseButton);
+        // 반환버튼 이벤트 바인딩
+        this.$refundButton.addEventListener('click', this.handleRefundButton);
     }
 }
 
@@ -1372,7 +1525,7 @@ __webpack_require__.r(__webpack_exports__);
 
 class RechargeView {
     constructor(vendingMachine) {
-        this.renderRecharge = () => {
+        this.renderRechargeTab = () => {
             this.renderHoldingMoney();
             this.renderCoinTable();
             this.$rechargeInput.focus();
@@ -1391,7 +1544,7 @@ class RechargeView {
             const moneyToRecharge = +this.$rechargeInput.value;
             try {
                 this.vendingMachine.rechargeMoney(moneyToRecharge);
-                this.renderRecharge();
+                this.renderRechargeTab();
                 this.$rechargeInput.value = '';
                 (0,_components_ToastNotification__WEBPACK_IMPORTED_MODULE_2__.renderToastModal)('success', _constants__WEBPACK_IMPORTED_MODULE_0__.SUCCESS_MESSAGE.MONEY_RECHARGED);
             }
@@ -1428,6 +1581,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
 /* harmony import */ var _ProductManageView__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductManageView */ "./src/ts/view/ProductManageView.ts");
 /* harmony import */ var _RechargeView__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./RechargeView */ "./src/ts/view/RechargeView.ts");
+/* harmony import */ var _PurchaseView__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./PurchaseView */ "./src/ts/view/PurchaseView.ts");
+
 
 
 
@@ -1450,13 +1605,13 @@ class View {
         this.renderUpdatedView = (url) => {
             switch (url) {
                 case _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PRODUCT_MANAGE:
-                    this.productManageView.renderProductManage();
+                    this.productManageView.renderProductManageTab();
                     break;
                 case _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.RECHARGE:
-                    this.rechargeView.renderRecharge();
+                    this.rechargeView.renderRechargeTab();
                     break;
                 case _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PURCHASE_PRODUCT:
-                    // this.purchaseView.renderPurchase();
+                    this.purchaseView.renderPurchaseTab();
                     break;
                 default:
                     break;
@@ -1465,6 +1620,7 @@ class View {
         this.vendingMachine = vendingMachine;
         this.productManageView = new _ProductManageView__WEBPACK_IMPORTED_MODULE_2__["default"](this.vendingMachine);
         this.rechargeView = new _RechargeView__WEBPACK_IMPORTED_MODULE_3__["default"](this.vendingMachine);
+        this.purchaseView = new _PurchaseView__WEBPACK_IMPORTED_MODULE_4__["default"](this.vendingMachine);
         this.$notFound = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#not-found');
         this.$navTab = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('.nav-tab');
         this.$$tabResultContainers = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$$)('.tab-result-container');
