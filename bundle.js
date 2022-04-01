@@ -828,7 +828,6 @@ class ToastNotification extends HTMLElement {
 customElements.define('toast-modal', ToastNotification);
 let hideTimeout = null;
 function hideToast(toastDiv) {
-    console.log(hideTimeout);
     clearTimeout(hideTimeout);
     hideTimeout = setTimeout(() => {
         toastDiv.classList.remove('toast--visible');
@@ -1213,14 +1212,11 @@ __webpack_require__.r(__webpack_exports__);
 class ProductManageView {
     constructor(vendingMachine) {
         this.renderProductManage = () => {
-            const $$productRows = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$$)('.product-row');
-            const allProducts = this.vendingMachine.products;
-            console.log(allProducts);
-            allProducts.forEach((product, index) => {
-                ((0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('.product-row-name', $$productRows[index])).textContent = product.name;
-                ((0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('.product-row-price', $$productRows[index])).textContent = String(product.price);
-                ((0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('.product-row-quantity', $$productRows[index])).textContent = String(product.quantity);
-            });
+            const tableTemplate = this.vendingMachine.products
+                .map((product) => this.getProductTemplate(product))
+                .join('');
+            this.$currentProductTable.textContent = '';
+            this.$currentProductTable.insertAdjacentHTML('beforeend', tableTemplate);
             this.$productNameInput.focus();
         };
         this.handleSubmit = (event) => {
@@ -1438,21 +1434,21 @@ __webpack_require__.r(__webpack_exports__);
 
 class View {
     constructor(vendingMachine) {
-        this.renderTabs = (id) => {
+        this.renderTabs = (url) => {
             this.$$tabResultContainers.forEach((container, index) => {
-                if (container.id === id) {
+                if (container.id === url) {
                     container.classList.remove('hide');
                     this.$$tabButtons[index].checked = true;
-                    localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_1__.STORAGE_ID.CURRENT_TAB, id);
+                    localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_1__.STORAGE_ID.CURRENT_TAB, url);
                     return;
                 }
                 container.classList.add('hide');
             });
-            this.renderUpdatedView(id);
+            this.$notFound.classList.toggle('hide', url !== _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.NOT_FOUND);
+            this.renderUpdatedView(url);
         };
-        this.renderUpdatedView = (id) => {
-            this.$notFound.classList.toggle('hide', id !== _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.NOT_FOUND);
-            switch (id) {
+        this.renderUpdatedView = (url) => {
+            switch (url) {
                 case _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PRODUCT_MANAGE:
                     this.productManageView.renderProductManage();
                     break;
