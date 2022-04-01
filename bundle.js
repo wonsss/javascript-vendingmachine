@@ -833,6 +833,7 @@ const PATH_ID = {
     PRODUCT_MANAGE: '/javascript-vendingmachine/#!/product-manage',
     RECHARGE: '/javascript-vendingmachine/#!/recharge',
     PURCHASE_PRODUCT: '/javascript-vendingmachine/#!/purchase-product',
+    NOT_FOUND: '/javascript-vendingmachine/#!/not-found',
 };
 const ERROR_MESSAGE = {
     NAME_EMPTY: '상품명은 최소 한 글자 이상이어야 합니다.',
@@ -1123,28 +1124,19 @@ class Router {
             if (!isPopState && url !== location.pathname + location.hash) {
                 history.pushState({ url }, null, url);
             }
-            const routes = {
-                [_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PRODUCT_MANAGE]: () => {
-                    this.view.renderTabs(_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PRODUCT_MANAGE);
-                },
-                [_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.RECHARGE]: () => {
-                    this.view.renderTabs(_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.RECHARGE);
-                },
-                [_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT]: () => {
-                    this.view.renderTabs(_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT);
-                },
-            };
-            routes[url]();
+            this.view.renderTabs(url);
         };
         this.view = view;
         this.currentTab = localStorage.getItem(_constants__WEBPACK_IMPORTED_MODULE_0__.STORAGE_ID.CURRENT_TAB) || _constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PRODUCT_MANAGE;
         history.replaceState({ url: this.currentTab }, null, this.currentTab);
         this.view.renderTabs(this.currentTab);
         window.addEventListener('popstate', (event) => {
-            this.tabRouter(event.state.url, true);
+            const url = event.state ? event.state.url : _constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.NOT_FOUND;
+            this.tabRouter(url, true);
         });
         this.view.$navTab.addEventListener('@route-tab', (event) => {
-            this.tabRouter(event.detail, false);
+            const url = event.detail;
+            this.tabRouter(url, false);
         });
     }
 }
@@ -1194,6 +1186,7 @@ class ProductManageView {
         this.renderProductManage = () => {
             const $$productRows = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$$)('.product-row');
             const allProducts = this.vendingMachine.products;
+            console.log(allProducts);
             allProducts.forEach((product, index) => {
                 ((0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('.product-row-name', $$productRows[index])).textContent = product.name;
                 ((0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('.product-row-price', $$productRows[index])).textContent = String(product.price);
@@ -1421,30 +1414,36 @@ class View {
                 if (container.id === id) {
                     container.classList.remove('hide');
                     this.$$tabButtons[index].checked = true;
-                    this.renderUpdatedView(id);
+                    localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_1__.STORAGE_ID.CURRENT_TAB, id);
                     return;
                 }
                 container.classList.add('hide');
             });
-            localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_1__.STORAGE_ID.CURRENT_TAB, id);
+            this.renderUpdatedView(id);
         };
         this.renderUpdatedView = (id) => {
-            const containerBranch = {
-                [_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PRODUCT_MANAGE]: () => {
+            switch (id) {
+                case _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PRODUCT_MANAGE:
                     this.productManageView.renderProductManage();
-                },
-                [_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.RECHARGE]: () => {
+                    break;
+                case _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.RECHARGE:
                     this.rechargeView.renderRecharge();
-                },
-                [_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PURCHASE_PRODUCT]: () => {
-                    // this.renderPurchaseProduct();
-                },
-            };
-            containerBranch[id]();
+                    break;
+                case _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PURCHASE_PRODUCT:
+                    // this.purchaseView.renderPurchase();
+                    break;
+                default:
+                    this.renderNotFound();
+                    break;
+            }
+        };
+        this.renderNotFound = () => {
+            this.$app.innerHTML = `<h1>404 에러<br>페이지를 찾을 수 없습니다.</h1>`;
         };
         this.vendingMachine = vendingMachine;
         this.productManageView = new _ProductManageView__WEBPACK_IMPORTED_MODULE_2__["default"](this.vendingMachine);
         this.rechargeView = new _RechargeView__WEBPACK_IMPORTED_MODULE_3__["default"](this.vendingMachine);
+        this.$app = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#app');
         this.$navTab = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('.nav-tab');
         this.$$tabResultContainers = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$$)('.tab-result-container');
         this.$tabProductManageButton = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#tab-product-manage');
