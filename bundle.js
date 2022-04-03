@@ -799,7 +799,7 @@ class Login extends HTMLElement {
             const email = this.shadowRoot.querySelector("input[type='email']").value;
             const password = this.shadowRoot.querySelector("input[type='password']")
                 .value;
-            const url = 'http://localhost:3000/login/';
+            const url = 'https://json-server-marco.herokuapp.com/login/';
             const data = {
                 email,
                 password,
@@ -931,7 +931,7 @@ class ProfileEdit extends HTMLElement {
             const email = this.shadowRoot.querySelector("input[type='email']").value;
             const password = this.shadowRoot.querySelector("input[type='password']")
                 .value;
-            const url = 'http://localhost:3000/signup/';
+            const url = 'https://json-server-marco.herokuapp.com/users/signup/';
             const data = {
                 email,
                 password,
@@ -1057,7 +1057,7 @@ class Signup extends HTMLElement {
             const email = this.shadowRoot.querySelector("input[type='email']").value;
             const password = this.shadowRoot.querySelector("input[type='password']")
                 .value;
-            const url = 'http://localhost:3000/signup/';
+            const url = 'https://json-server-marco.herokuapp.com/signup/';
             const data = {
                 email,
                 password,
@@ -1317,7 +1317,7 @@ class UserMenu extends HTMLElement {
             }
             const id = userAuth.id;
             const accessToken = `Bearer ${userAuth.accessToken}`;
-            const url = `http://localhost:3000/600/users/${id}`;
+            const url = `https://json-server-marco.herokuapp.com/users/${id}`;
             const renderUpdatedUserInfo = (response) => {
                 console.log(response);
                 const name = response.name;
