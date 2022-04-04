@@ -1383,10 +1383,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "STORAGE_ID": () => (/* binding */ STORAGE_ID)
 /* harmony export */ });
 const PATH_ID = {
-    PRODUCT_MANAGE: '/javascript-vendingmachine/#!/product-manage',
-    RECHARGE: '/javascript-vendingmachine/#!/recharge',
-    PURCHASE_PRODUCT: '/javascript-vendingmachine/#!/purchase-product',
-    NOT_FOUND: '/javascript-vendingmachine/#!/not-found',
+    PRODUCT_MANAGE: '/#!/product-manage',
+    RECHARGE: '/#!/recharge',
+    PURCHASE_PRODUCT: '/#!/purchase-product',
+    NOT_FOUND: '/#!/not-found',
 };
 const ERROR_MESSAGE = {
     NAME_EMPTY: '상품명은 최소 한 글자 이상이어야 합니다.',
