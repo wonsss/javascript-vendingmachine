@@ -2331,6 +2331,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ts_components_ProfileEdit__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_ts_components_ProfileEdit__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _ts_components_UserMenu__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ts/components/UserMenu */ "./src/ts/components/UserMenu.ts");
 /* harmony import */ var _ts_components_UserMenu__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_ts_components_UserMenu__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _ts_constants__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ts/constants */ "./src/ts/constants.ts");
+
 
 
 
@@ -2343,6 +2345,7 @@ __webpack_require__.r(__webpack_exports__);
 const vendingMachine = new _ts_domain_VendingMachine__WEBPACK_IMPORTED_MODULE_2__["default"]();
 const view = new _ts_view_View__WEBPACK_IMPORTED_MODULE_1__["default"](vendingMachine);
 new _ts_router__WEBPACK_IMPORTED_MODULE_3__["default"](view);
+console.log(_ts_constants__WEBPACK_IMPORTED_MODULE_9__.PATH_ID);
 
 })();
 
