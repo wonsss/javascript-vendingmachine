@@ -1382,19 +1382,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "VENDING_MACHINE_RULE": () => (/* binding */ VENDING_MACHINE_RULE),
 /* harmony export */   "STORAGE_ID": () => (/* binding */ STORAGE_ID)
 /* harmony export */ });
-const PATH_ID = "development".includes('dev')
-    ? {
-        PRODUCT_MANAGE: '/#!/product-manage',
-        RECHARGE: '/#!/recharge',
-        PURCHASE_PRODUCT: '/#!/purchase-product',
-        NOT_FOUND: '/#!/not-found',
-    }
-    : {
-        PRODUCT_MANAGE: '/javascript-vendingmachine/#!/product-manage',
-        RECHARGE: '/javascript-vendingmachine/#!/recharge',
-        PURCHASE_PRODUCT: '/javascript-vendingmachine/#!/purchase-product',
-        NOT_FOUND: '/javascript-vendingmachine/#!/not-found',
-    };
+const PATH_ID = {
+    PRODUCT_MANAGE: '/javascript-vendingmachine/#!/product-manage',
+    RECHARGE: '/javascript-vendingmachine/#!/recharge',
+    PURCHASE_PRODUCT: '/javascript-vendingmachine/#!/purchase-product',
+    NOT_FOUND: '/javascript-vendingmachine/#!/not-found',
+};
 const ERROR_MESSAGE = {
     NAME_EMPTY: '상품명은 최소 한 글자 이상이어야 합니다.',
     NAME_LENGTH: '상품명은 최대 10글자까지 가능합니다. 상품명을 10글자 이하로 입력해주세요.',
@@ -2331,8 +2324,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ts_components_ProfileEdit__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_ts_components_ProfileEdit__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _ts_components_UserMenu__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ts/components/UserMenu */ "./src/ts/components/UserMenu.ts");
 /* harmony import */ var _ts_components_UserMenu__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_ts_components_UserMenu__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _ts_constants__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ts/constants */ "./src/ts/constants.ts");
-
 
 
 
@@ -2345,7 +2336,6 @@ __webpack_require__.r(__webpack_exports__);
 const vendingMachine = new _ts_domain_VendingMachine__WEBPACK_IMPORTED_MODULE_2__["default"]();
 const view = new _ts_view_View__WEBPACK_IMPORTED_MODULE_1__["default"](vendingMachine);
 new _ts_router__WEBPACK_IMPORTED_MODULE_3__["default"](view);
-console.log(_ts_constants__WEBPACK_IMPORTED_MODULE_9__.PATH_ID);
 
 })();
 
