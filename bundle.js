@@ -1382,12 +1382,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "VENDING_MACHINE_RULE": () => (/* binding */ VENDING_MACHINE_RULE),
 /* harmony export */   "STORAGE_ID": () => (/* binding */ STORAGE_ID)
 /* harmony export */ });
-const PATH_ID = {
-    PRODUCT_MANAGE: '/#!/product-manage',
-    RECHARGE: '/#!/recharge',
-    PURCHASE_PRODUCT: '/#!/purchase-product',
-    NOT_FOUND: '/#!/not-found',
-};
+const PATH_ID = "development".includes('dev')
+    ? {
+        PRODUCT_MANAGE: '/#!/product-manage',
+        RECHARGE: '/#!/recharge',
+        PURCHASE_PRODUCT: '/#!/purchase-product',
+        NOT_FOUND: '/#!/not-found',
+    }
+    : {
+        PRODUCT_MANAGE: '/javascript-vendingmachine/#!/product-manage',
+        RECHARGE: '/javascript-vendingmachine/#!/recharge',
+        PURCHASE_PRODUCT: '/javascript-vendingmachine/#!/purchase-product',
+        NOT_FOUND: '/javascript-vendingmachine/#!/not-found',
+    };
 const ERROR_MESSAGE = {
     NAME_EMPTY: '상품명은 최소 한 글자 이상이어야 합니다.',
     NAME_LENGTH: '상품명은 최대 10글자까지 가능합니다. 상품명을 10글자 이하로 입력해주세요.',
