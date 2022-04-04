@@ -1,4 +1,5 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/css/app.css":
@@ -7,7 +8,6 @@
   \***************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -35,7 +35,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  font-family: 'Roboto', san
   \*****************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -80,7 +79,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, "\r\n", "",{"version":3,"sources":[],"n
   \***************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -107,7 +105,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".nav-tab {\r\n  display: flex;\r\n  ju
   \********************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -134,7 +131,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, "#not-found {\r\n  display: flex;\r\n  
   \****************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -161,7 +157,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".tab-result-wrapper {\r\n  display: fl
   \***********************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -188,7 +183,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".long-input {\r\n  width: 300px;\r\n}\
   \****************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -215,7 +209,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, ":root {\r\n  --primary: #00bcd4;\r\n  
   \*****************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 /*
@@ -327,7 +320,6 @@ module.exports = function (cssWithMappingToString) {
   \************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 module.exports = function (item) {
@@ -359,7 +351,6 @@ module.exports = function (item) {
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -414,7 +405,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \****************************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 var stylesInDOM = [];
@@ -528,7 +518,6 @@ module.exports = function (list, options) {
   \********************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 var memo = {};
@@ -577,7 +566,6 @@ module.exports = insertBySelector;
   \**********************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 /* istanbul ignore next  */
@@ -598,7 +586,6 @@ module.exports = insertStyleElement;
   \**********************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 
 
 /* istanbul ignore next  */
@@ -620,7 +607,6 @@ module.exports = setAttributesWithoutAttributes;
   \***************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 /* istanbul ignore next  */
@@ -700,7 +686,6 @@ module.exports = domAPI;
   \*********************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 /* istanbul ignore next  */
@@ -724,7 +709,12 @@ module.exports = styleTagTransform;
 /*!************************************!*\
   !*** ./src/ts/components/Login.ts ***!
   \************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
+/* harmony import */ var _ToastNotification__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ToastNotification */ "./src/ts/components/ToastNotification.ts");
+
 
 const loginTemplate = document.createElement('template');
 loginTemplate.innerHTML = `
@@ -815,8 +805,10 @@ loginTemplate.innerHTML = `
       width: 300px;
     }
 
-    .signup-link {
-
+    #signup-span {
+      cursor: pointer;
+      color: blue;
+      text-decoration: underline
     }
 
   </style>
@@ -834,7 +826,7 @@ loginTemplate.innerHTML = `
           <input type="password" placeholder="비밀번호를 입력해주세요" />
           <button type="submit">확인</button>
         </form>
-        <span>아직 회원이 아닌가요?<a href="/">회원가입</a></span>
+        <span>아직 회원이 아닌가요?<span id="signup-span">회원가입</span></span>
       </section>
     </div>
   </div>
@@ -880,11 +872,18 @@ class Login extends HTMLElement {
                 console.log('login, 로그인 성공');
                 localStorage.setItem('userAuth', JSON.stringify(userAuth));
                 this.emitRouteLogin();
+                (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_1__.renderToastModal)('success', _constants__WEBPACK_IMPORTED_MODULE_0__.SUCCESS_MESSAGE.LOGIN_COMPLETE);
             })
-                .catch((error) => console.error('에러', error));
+                .catch((error) => (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_1__.renderToastModal)('error', _constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.LOGIN_FAILED));
         };
         this.emitRouteLogin = () => {
+            this.remove();
             const event = new CustomEvent('@route-login', {});
+            window.dispatchEvent(event);
+        };
+        this.emitRenderSignup = () => {
+            this.remove();
+            const event = new CustomEvent('@render-signup', {});
             window.dispatchEvent(event);
         };
         this.attachShadow({ mode: 'open' });
@@ -894,6 +893,7 @@ class Login extends HTMLElement {
         this.shadowRoot.querySelector('form').addEventListener('submit', this.login);
         this.shadowRoot.querySelector('.x-shape').addEventListener('click', this.closeModal);
         this.shadowRoot.addEventListener('click', this.closeModalDimmer);
+        this.shadowRoot.querySelector('#signup-span').addEventListener('click', this.emitRenderSignup);
     }
     disconnectedCallback() {
         this.shadowRoot.querySelector('form').removeEventListener('submit', this.login);
@@ -910,12 +910,67 @@ customElements.define('log-in', Login);
 /*!******************************************!*\
   !*** ./src/ts/components/ProfileEdit.ts ***!
   \******************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// TODO: 회원가입 컴포넌트와 동일함. 회원정보수정 기능으로 변경할 것
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
+/* harmony import */ var _domain_validator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../domain/validator */ "./src/ts/domain/validator.ts");
+/* harmony import */ var _ToastNotification__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ToastNotification */ "./src/ts/components/ToastNotification.ts");
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
+
+
 const profileEditTemplate = document.createElement('template');
 profileEditTemplate.innerHTML = `
   <style>
+    .modal-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: transparent;
+    }
+
+    .hide {
+      display: none !important;
+    }
+
+    .dimmer {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+    }
+
+    .modal-inner {
+      height: 500px;
+      position: relative;
+      background: var(--white);
+      border: 1px solid var(--secondary);
+      border-radius: 4px;
+      padding: 20px 30px;
+    }
+
+    .x-shape {
+      box-sizing: border-box;
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+      cursor: pointer;
+    }
+
     section {
       font-family: 'Roboto', sans-serif;
       margin: 10px;
@@ -962,77 +1017,100 @@ profileEditTemplate.innerHTML = `
     }
   </style>
 
-  <section>
-    <h1>회원 정보 수정</h1>
-    <form>
-      <label>이메일</label>
-      <input type="email" placeholder="이메일 주소를 입력해주세요" />
-      <label>이름</label>
-      <input type="text" placeholder="이름을 입력해주세요" />
-      <label>비밀번호</label>
-      <input type="password" placeholder="비밀번호를 입력해주세요" />
-      <label>비밀번호 확인</label>
-      <input type="password" placeholder="비밀번호를 입력해주세요" />
-      <button type="submit">확인</button>
-    </form>
-    <h3>👋🏼 <span id="welcome-name"></span>님 안녕하세요.</h3>
-    <h4>이름</h4>
-    <p id="name">마르코</p>
-    <h4>이메일</h4>
-    <p id="email">nextjws@gmail.com</p>
-    <button id="logout-button">로그아웃</button>
-  </section>
+  <div class="modal-container" >
+    <div class="dimmer"></div>
+    <div class="modal-inner" role="dialog">
+      <div class="x-shape">X</div>
+      <section>
+        <h1>회원 정보 수정</h1>
+        <form>
+          <label for="email-edit-input">이메일</label>
+          <input id="email-edit-input" type="email" disabled/>
+          <label for="name-edit-input">이름</label>
+          <input id="name-edit-input" type="text" placeholder="이름을 입력해주세요" />
+          <label for="password-edit-input">비밀번호</label>
+          <input id="password-edit-input" type="password" placeholder="비밀번호를 입력해주세요" />
+          <label for="password-check-edit-input">비밀번호 확인</label>
+          <input id="password-check-edit-input" type="password" placeholder="비밀번호를 입력해주세요" />
+          <button id="submit-edit-button" type="submit">확인</button>
+        </form>
+      </section>
+    </div>
+  </div>
 `;
 class ProfileEdit extends HTMLElement {
     constructor() {
         super();
-        this.signup = (event) => {
+        this.edit = (event, url, accessToken) => {
             event.preventDefault();
-            const name = this.shadowRoot.querySelector("input[type='text']").value;
-            const email = this.shadowRoot.querySelector("input[type='email']").value;
-            const password = this.shadowRoot.querySelector("input[type='password']")
-                .value;
-            const url = 'https://json-server-marco.herokuapp.com/users/signup/';
-            const data = {
-                email,
-                password,
-                name,
-            };
-            fetch(url, {
-                method: 'POST',
-                body: JSON.stringify(data),
+            const name = this.nameEditInput.value;
+            const password = this.passwordEditInput.value;
+            const passwordCheck = this.passwordCheckEditInput.value;
+            try {
+                (0,_domain_validator__WEBPACK_IMPORTED_MODULE_1__.checkValidProfile)(name, password, passwordCheck);
+                fetch(url, {
+                    method: 'PATCH',
+                    body: JSON.stringify({ name, password }),
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': accessToken,
+                    },
+                }).then(() => {
+                    this.closeModal();
+                    const event = new CustomEvent('@route-login', {});
+                    window.dispatchEvent(event);
+                    (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_2__.renderToastModal)('success', _constants__WEBPACK_IMPORTED_MODULE_0__.SUCCESS_MESSAGE.EDIT_COMPLETE);
+                });
+            }
+            catch (error) {
+                (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_2__.renderToastModal)('error', error.message);
+            }
+        };
+        this.getUserData = (url, accessToken) => {
+            const userData = fetch(url, {
+                method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Authorization': accessToken,
                 },
             })
-                .then((res) => {
-                if (!res.ok) {
-                    console.log('회원정보 수정 실패');
-                    return;
-                }
-                return res.json();
-            })
+                .then((res) => res.json())
                 .then((response) => {
-                const userAuth = {
-                    accessToken: response.accessToken,
-                    id: response.user.id,
-                };
-                localStorage.setItem('userAuth', JSON.stringify(userAuth));
-                console.log('회원정보 수정 성공');
-                // TODO 회원정보 수정 성공 후 라우트
-            })
-                .catch((error) => console.error('에러', error));
+                return { email: response.email, name: response.name };
+            });
+            return userData;
+        };
+        this.closeModalDimmer = (event) => {
+            event.target === this.shadowRoot.querySelector('.dimmer') ? this.closeModal() : false;
+        };
+        this.closeModal = () => {
+            this.remove();
         };
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.appendChild(profileEditTemplate.content.cloneNode(true));
+        this.emailEditInput = this.shadowRoot.getElementById('email-edit-input');
+        this.nameEditInput = this.shadowRoot.getElementById('name-edit-input');
+        this.passwordEditInput = (this.shadowRoot.getElementById('password-edit-input'));
+        this.passwordCheckEditInput = (this.shadowRoot.getElementById('password-check-edit-input'));
+        this.userAuth = JSON.parse(localStorage.getItem('userAuth'));
     }
     connectedCallback() {
-        // 이벤트 추가
-        this.shadowRoot.querySelector('form').addEventListener('submit', this.signup);
+        return __awaiter(this, void 0, void 0, function* () {
+            const accessToken = `Bearer ${this.userAuth.accessToken}`;
+            const url = `https://json-server-marco.herokuapp.com/users/${this.userAuth.id}`;
+            const { email, name } = yield this.getUserData(url, accessToken);
+            this.emailEditInput.value = String(email);
+            this.nameEditInput.value = String(name);
+            this.shadowRoot
+                .querySelector('form')
+                .addEventListener('submit', (event) => this.edit(event, url, accessToken));
+            this.shadowRoot.querySelector('.x-shape').addEventListener('click', this.closeModal);
+            this.shadowRoot.addEventListener('click', this.closeModalDimmer);
+        });
     }
     disconnectedCallback() {
-        // 이벤트 삭제
-        this.shadowRoot.querySelector('form').removeEventListener('submit', this.signup);
+        this.shadowRoot.querySelector('.x-shape').removeEventListener('click', this.closeModal);
+        this.shadowRoot.removeEventListener('click', this.closeModalDimmer);
     }
 }
 customElements.define('profile-edit', ProfileEdit);
@@ -1044,11 +1122,58 @@ customElements.define('profile-edit', ProfileEdit);
 /*!*************************************!*\
   !*** ./src/ts/components/Signup.ts ***!
   \*************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
+/* harmony import */ var _domain_validator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../domain/validator */ "./src/ts/domain/validator.ts");
+/* harmony import */ var _ToastNotification__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ToastNotification */ "./src/ts/components/ToastNotification.ts");
+
+
 
 const signupTemplate = document.createElement('template');
 signupTemplate.innerHTML = `
   <style>
+    .modal-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: transparent;
+    }
+
+    .hide {
+      display: none !important;
+    }
+
+    .dimmer {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+    }
+
+    .modal-inner {
+      height: 500px;
+      position: relative;
+      background: var(--white);
+      border: 1px solid var(--secondary);
+      border-radius: 4px;
+      padding: 20px 30px;
+    }
+
+    .x-shape {
+      box-sizing: border-box;
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+      cursor: pointer;
+    }
+
     section {
       font-family: 'Roboto', sans-serif;
       margin: 10px;
@@ -1095,47 +1220,54 @@ signupTemplate.innerHTML = `
     }
   </style>
 
-  <section>
-    <h1>회원가입</h1>
-    <form>
-      <label>이메일</label>
-      <input type="email" placeholder="이메일 주소를 입력해주세요" />
-      <label>이름</label>
-      <input type="text" placeholder="이름을 입력해주세요" />
-      <label>비밀번호</label>
-      <input type="password" placeholder="비밀번호를 입력해주세요" />
-      <label>비밀번호 확인</label>
-      <input type="password" placeholder="비밀번호를 입력해주세요" />
-      <button type="submit">확인</button>
-    </form>
-  </section>
+  <div class="modal-container" >
+    <div class="dimmer"></div>
+    <div class="modal-inner" role="dialog">
+      <div class="x-shape">X</div>
+      <section>
+        <h1>회원가입</h1>
+        <form>
+          <label for="email-input">이메일</label>
+          <input id="email-input" type="email" placeholder="이메일을 입력해주세요"/>
+          <label for="name-input">이름</label>
+          <input id="name-input" type="text" placeholder="이름을 입력해주세요" />
+          <label for="password-input">비밀번호</label>
+          <input id="password-input" type="password" placeholder="비밀번호를 입력해주세요" />
+          <label for="password-check-input">비밀번호 확인</label>
+          <input id="password-check-input" type="password" placeholder="비밀번호를 입력해주세요" />
+          <button id="submit-button" type="submit">확인</button>
+        </form>
+      </section>
+    </div>
+  </div>
 `;
 class Signup extends HTMLElement {
     constructor() {
         super();
+        this.closeModalDimmer = (event) => {
+            event.target === this.shadowRoot.querySelector('.dimmer') ? this.closeModal() : false;
+        };
+        this.closeModal = () => {
+            this.remove();
+        };
         this.signup = (event) => {
             event.preventDefault();
-            const name = this.shadowRoot.querySelector("input[type='text']").value;
-            const email = this.shadowRoot.querySelector("input[type='email']").value;
-            const password = this.shadowRoot.querySelector("input[type='password']")
-                .value;
+            const email = this.emailInput.value;
+            const name = this.nameInput.value;
+            const password = this.passwordInput.value;
+            const passwordCheck = this.passwordCheckInput.value;
             const url = 'https://json-server-marco.herokuapp.com/signup/';
-            const data = {
-                email,
-                password,
-                name,
-            };
             fetch(url, {
                 method: 'POST',
-                body: JSON.stringify(data),
+                body: JSON.stringify({ email, password, name }),
                 headers: {
                     'Content-Type': 'application/json',
                 },
             })
                 .then((res) => {
+                (0,_domain_validator__WEBPACK_IMPORTED_MODULE_1__.checkValidProfile)(name, password, passwordCheck);
                 if (!res.ok) {
-                    console.log('회원가입 실패');
-                    return;
+                    throw new Error('이미 가입된 이메일입니다. 다른 이메일을 입력해주세요.');
                 }
                 return res.json();
             })
@@ -1145,21 +1277,34 @@ class Signup extends HTMLElement {
                     id: response.user.id,
                 };
                 localStorage.setItem('userAuth', JSON.stringify(userAuth));
-                console.log('회원가입 성공');
-                // TODO 회원가입 성공 후 라우트
+                this.closeModal();
+                this.emitRouteLogin();
+                (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_2__.renderToastModal)('success', _constants__WEBPACK_IMPORTED_MODULE_0__.SUCCESS_MESSAGE.SIGNUP_COMPLETE);
             })
-                .catch((error) => console.error('에러', error));
+                .catch((error) => (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_2__.renderToastModal)('error', error.message));
+        };
+        this.emitRouteLogin = () => {
+            const event = new CustomEvent('@route-login', {});
+            window.dispatchEvent(event);
         };
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.appendChild(signupTemplate.content.cloneNode(true));
+        this.emailInput = this.shadowRoot.getElementById('email-input');
+        this.nameInput = this.shadowRoot.getElementById('name-input');
+        this.passwordInput = this.shadowRoot.getElementById('password-input');
+        this.passwordCheckInput = (this.shadowRoot.getElementById('password-check-input'));
     }
     connectedCallback() {
         // 이벤트 추가
         this.shadowRoot.querySelector('form').addEventListener('submit', this.signup);
+        this.shadowRoot.querySelector('.x-shape').addEventListener('click', this.closeModal);
+        this.shadowRoot.addEventListener('click', this.closeModalDimmer);
     }
     disconnectedCallback() {
         // 이벤트 삭제
         this.shadowRoot.querySelector('form').removeEventListener('submit', this.signup);
+        this.shadowRoot.querySelector('.x-shape').removeEventListener('click', this.closeModal);
+        this.shadowRoot.removeEventListener('click', this.closeModalDimmer);
     }
 }
 customElements.define('sign-up', Signup);
@@ -1173,7 +1318,6 @@ customElements.define('sign-up', Signup);
   \************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "renderToastModal": () => (/* binding */ renderToastModal)
@@ -1306,11 +1450,13 @@ const renderToastModal = (state, message) => {
 /*!***************************************!*\
   !*** ./src/ts/components/UserMenu.ts ***!
   \***************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// TODO 유저 메뉴 컴포넌트
-// - [ ] 로그인한 유저의 이름 중 첫번째 글자를 썸네일처럼 만든다.
-// - [ ] 로그인한 유저의 썸네일을 클릭하면 select box로 `회원정보수정`과 `로그아웃` 메뉴가 표시된다.
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
+/* harmony import */ var _ToastNotification__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ToastNotification */ "./src/ts/components/ToastNotification.ts");
+
+
 const userMenuTemplate = document.createElement('template');
 userMenuTemplate.innerHTML = `
   <style>
@@ -1441,14 +1587,12 @@ class UserMenu extends HTMLElement {
         this.checkLoginStatus = () => {
             const userAuth = JSON.parse(localStorage.getItem('userAuth'));
             if (!userAuth) {
-                console.log('user-menu, 로컬스토리지 없음, 로그인 실패');
                 this.renderLoginButton();
                 return;
             }
             const id = userAuth.id;
             const accessToken = `Bearer ${userAuth.accessToken}`;
             const url = `https://json-server-marco.herokuapp.com/users/${id}`;
-            // 로그인
             fetch(url, {
                 method: 'GET',
                 headers: {
@@ -1458,17 +1602,15 @@ class UserMenu extends HTMLElement {
             })
                 .then((res) => {
                 if (!res.ok) {
-                    console.log('user-menu, 로컬스토리지 있으나 시간만료, 로그인 실패');
                     this.renderLoginButton();
                     return;
                 }
                 return res.json();
             })
                 .then((response) => {
-                console.log('user-menu, 로그인 성공');
                 this.renderUserThumbnail(response.name[0]);
             })
-                .catch((error) => console.error('에러', error));
+                .catch((error) => (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_1__.renderToastModal)('error', error.message));
         };
         this.renderLoginButton = () => {
             this.loginButton.classList.remove('hide');
@@ -1483,13 +1625,16 @@ class UserMenu extends HTMLElement {
         this.toggleMenu = () => {
             this.menu.classList.toggle('hide');
         };
-        this.renderProfileEdit = () => {
+        this.emitRenderProfileEdit = () => {
             console.log('회원정보 수정 버튼 호출');
+            const event = new CustomEvent('@render-profile-edit', {});
+            window.dispatchEvent(event);
         };
         this.logout = () => {
             localStorage.removeItem('userAuth');
             const event = new CustomEvent('@route-logout', {});
             window.dispatchEvent(event);
+            (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_1__.renderToastModal)('success', _constants__WEBPACK_IMPORTED_MODULE_0__.SUCCESS_MESSAGE.LOGOUT_COMPLETE);
         };
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.appendChild(userMenuTemplate.content.cloneNode(true));
@@ -1506,13 +1651,13 @@ class UserMenu extends HTMLElement {
     connectedCallback() {
         this.loginButton.addEventListener('click', this.renderLoginModal);
         this.thumbnail.addEventListener('click', this.toggleMenu);
-        this.profileEditButton.addEventListener('click', this.renderProfileEdit);
+        this.profileEditButton.addEventListener('click', this.emitRenderProfileEdit);
         this.logoutButton.addEventListener('click', this.logout);
     }
     disconnectedCallback() {
         this.shadowRoot.removeEventListener('click', this.renderLoginModal);
         this.thumbnail.removeEventListener('click', this.toggleMenu);
-        this.profileEditButton.removeEventListener('click', this.renderProfileEdit);
+        this.profileEditButton.removeEventListener('click', this.emitRenderProfileEdit);
         this.logoutButton.removeEventListener('click', this.logout);
     }
     attributeChangedCallback(name, oldValue, newValue) {
@@ -1530,7 +1675,6 @@ customElements.define('user-menu', UserMenu);
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "PATH_ID": () => (/* binding */ PATH_ID),
@@ -1562,6 +1706,10 @@ const ERROR_MESSAGE = {
     UNDER_MIN_INSERTED_HOLDING_MONEY: '투입 금액은 10원 이상이어야 합니다.',
     SOLD_OUT: '해당 상품에 재고가 없습니다.',
     INSUFFICIENT_MONEY: '해당 상품을 구입하기에 투입한 돈이 충분하지 않습니다.',
+    OUT_OF_NAME_LENGTH: '유효하지 않은 이름을 입력하셨습니다. 이름은 2글자에서 6글자 사이여야 합니다.',
+    DIFFERENT_PASSWORD: '유효하지 않은 비밀번호를 입력하셨습니다. 비밀번호 확인 칸에 동일한 비밀번호를 입력하세요.',
+    INVALID_PASSWORD: '유효하지 않은 비밀번호를 입력하셨습니다.  password는 8자리에서 16자리 사이여야 하며, 영어, 숫자, 특수문자 각각 최소 1개 이상 조합이어야 한다.',
+    LOGIN_FAILED: '로그인에 실패하였습니다. 가입하신 정확한 아이디와 비밀번호를 입력해주세요.',
 };
 const SUCCESS_MESSAGE = {
     PRODUCT_REGISTERED: '입력하신 상품 정보가 등록되었습니다.',
@@ -1570,6 +1718,10 @@ const SUCCESS_MESSAGE = {
     MONEY_RECHARGED: '충전하신 금액만큼 동전을 보충하였습니다.',
     PURCHASE: '해당 상품을 구매하였습니다.',
     MONEY_INSERTED: '입력하신 금액이 투입되었습니다.',
+    LOGIN_COMPLETE: '로그인 되었습니다.',
+    EDIT_COMPLETE: '회원정보가 수정되었습니다.',
+    SIGNUP_COMPLETE: '회원가입이 완료되었습니다.',
+    LOGOUT_COMPLETE: '로그아웃 되었습니다.',
 };
 const CONFIRM_MESSAGE = {
     DELETE: '정말 삭제하시겠습니까?',
@@ -1600,7 +1752,6 @@ const STORAGE_ID = {
   \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Money)
@@ -1633,7 +1784,6 @@ class Money {
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Product)
@@ -1682,7 +1832,6 @@ class Product {
   \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ VendingMachine)
@@ -1840,13 +1989,13 @@ class VendingMachine {
   \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "checkProductValidation": () => (/* binding */ checkProductValidation),
 /* harmony export */   "checkDuplicatedProduct": () => (/* binding */ checkDuplicatedProduct),
 /* harmony export */   "checkMoneyValidation": () => (/* binding */ checkMoneyValidation),
-/* harmony export */   "checkInsertedMoneyValidation": () => (/* binding */ checkInsertedMoneyValidation)
+/* harmony export */   "checkInsertedMoneyValidation": () => (/* binding */ checkInsertedMoneyValidation),
+/* harmony export */   "checkValidProfile": () => (/* binding */ checkValidProfile)
 /* harmony export */ });
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
 
@@ -1856,6 +2005,12 @@ const isOutOfPriceRange = (price) => price < _constants__WEBPACK_IMPORTED_MODULE
 const isInvalidUnit = (price, unit) => price % unit !== 0;
 const isOverMaxValue = (value, max) => value > max;
 const isUnderMinValue = (value, min) => value < min;
+const isOutOfNameLength = (name) => name.length < 2 || name.length > 6;
+const isInvalidPassword = (password) => {
+    const regExp = /^(?=.*[a-zA-Z])((?=.*\d)(?=.*\W)).{8,16}$/;
+    return !regExp.test(password);
+};
+const isDifferentPassword = (password, passwordCheck) => password !== passwordCheck;
 const checkProductValidation = (product) => {
     if (isEmptyName(product.name)) {
         throw new Error(_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.NAME_EMPTY);
@@ -1903,6 +2058,17 @@ const checkInsertedMoneyValidation = (money, holdingMoney) => {
         throw new Error(_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.UNDER_MIN_INSERTED_HOLDING_MONEY);
     }
 };
+const checkValidProfile = (name, password, passwordCheck) => {
+    if (isOutOfNameLength(name)) {
+        throw new Error(_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.OUT_OF_NAME_LENGTH);
+    }
+    if (isInvalidPassword(password)) {
+        throw new Error(_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.INVALID_PASSWORD);
+    }
+    if (isDifferentPassword(password, passwordCheck)) {
+        throw new Error(_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.DIFFERENT_PASSWORD);
+    }
+};
 
 
 /***/ }),
@@ -1913,7 +2079,6 @@ const checkInsertedMoneyValidation = (money, holdingMoney) => {
   \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Router)
@@ -1963,7 +2128,6 @@ class Router {
   \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "$": () => (/* binding */ $),
@@ -1985,7 +2149,6 @@ const getRandomNumber = (min, max) => {
   \******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ ProductManageView)
@@ -2141,7 +2304,6 @@ class ProductManageView {
   \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ PurchaseView)
@@ -2273,7 +2435,6 @@ class PurchaseView {
   \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ RechargeView)
@@ -2334,7 +2495,6 @@ class RechargeView {
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ View)
@@ -2354,10 +2514,15 @@ class View {
         this.renderLoginModal = (event) => {
             document.body.appendChild(event.detail);
         };
+        this.renderSignupModal = () => {
+            document.body.appendChild(document.createElement('sign-up'));
+        };
+        this.renderProfileEdit = () => {
+            document.body.appendChild(document.createElement('profile-edit'));
+        };
         this.renderUserPrivatePage = () => {
             console.log('renderUserPrivatePage');
             (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('.nav-tab').classList.remove('hide');
-            (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('log-in').remove();
             (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('user-menu').setAttribute('auth', 'login');
         };
         this.renderPublicPage = () => {
@@ -2415,6 +2580,8 @@ class View {
         this.$tabPurchaseProductButton.addEventListener('click', () => this.handleClickTabButton(_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PURCHASE_PRODUCT));
         // 웹컴포넌트에서 보낸 커스텀 이벤트
         window.addEventListener('@render-login', this.renderLoginModal);
+        window.addEventListener('@render-signup', this.renderSignupModal);
+        window.addEventListener('@render-profile-edit', this.renderProfileEdit);
     }
 }
 
@@ -2490,9 +2657,8 @@ class View {
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-"use strict";
 /*!**********************!*\
   !*** ./src/index.ts ***!
   \**********************/
@@ -2503,13 +2669,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ts_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ts/router */ "./src/ts/router.ts");
 /* harmony import */ var _ts_components_ToastNotification__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ts/components/ToastNotification */ "./src/ts/components/ToastNotification.ts");
 /* harmony import */ var _ts_components_Signup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ts/components/Signup */ "./src/ts/components/Signup.ts");
-/* harmony import */ var _ts_components_Signup__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_ts_components_Signup__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _ts_components_Login__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ts/components/Login */ "./src/ts/components/Login.ts");
-/* harmony import */ var _ts_components_Login__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_ts_components_Login__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _ts_components_ProfileEdit__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ts/components/ProfileEdit */ "./src/ts/components/ProfileEdit.ts");
-/* harmony import */ var _ts_components_ProfileEdit__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_ts_components_ProfileEdit__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _ts_components_UserMenu__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ts/components/UserMenu */ "./src/ts/components/UserMenu.ts");
-/* harmony import */ var _ts_components_UserMenu__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_ts_components_UserMenu__WEBPACK_IMPORTED_MODULE_8__);
 
 
 
