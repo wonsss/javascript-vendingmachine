@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Roboto);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n  font-family: 'Roboto', sans-serif;\n  margin: 0;\n}\n\nh1 {\n  display: flex;\n  justify-content: center;\n}\n\nbutton {\n  background: var(--primary);\n  border-radius: 4px;\n  height: 36px;\n  border-style: none;\n  color: var(--white);\n}\n\nbutton:hover {\n  background: var(--primary-darken);\n  cursor: pointer;\n}\n\ninput {\n  padding: 0 8px;\n  border: 1px solid var(--secondary);\n  box-sizing: border-box;\n  border-radius: 4px;\n  height: 36px;\n  line-height: 36px;\n  font-weight: 400;\n  font-size: 16px;\n}\n\ninput::placeholder {\n  color: var(--secondary-darken);\n}\n\n.tab-result-container {\n  margin: 52px 0;\n}\n\ncaption {\n  font-weight: 600;\n  font-size: 20px;\n  margin: 48px 0 16px;\n}\n\ntable {\n  border-collapse: collapse;\n  width: 471px;\n}\n\ntr {\n  border: 1px solid var(--secondary-lighten);\n  border-left: 0;\n  border-right: 0;\n  text-align: center;\n}\n\ntd,\nth {\n  padding: 8px;\n  font-weight: 400;\n}\n\nth {\n  font-weight: 600;\n}\n\ncol {\n  width: 23%;\n}\n\n.hide {\n  display: none !important;\n}\n\n.short-button {\n  width: 56px;\n  margin-left: 16px;\n  font-size: 14px;\n  font-weight: 700;\n}\n\n.small-button {\n  background: var(--secondary-lighten);\n  color: var(--black);\n  width: 50px;\n}\n\n.small-button:hover {\n  background: var(--secondary);\n}\n\n.long-button {\n  background: var(--secondary-lighten);\n  color: var(--black);\n  width: 100px;\n  margin: 23px;\n}\n\n.long-button:hover {\n  background: var(--secondary);\n}\n\n.edit-confirm-button {\n  width: 100px;\n  height: 32px;\n}\n\n.paper-money-wrapper {\n  margin-top: 20px;\n}\n", "",{"version":3,"sources":["webpack://./src/css/app.css"],"names":[],"mappings":"AAEA;EACE,iCAAiC;EACjC,SAAS;AACX;;AAEA;EACE,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,0BAA0B;EAC1B,kBAAkB;EAClB,YAAY;EACZ,kBAAkB;EAClB,mBAAmB;AACrB;;AAEA;EACE,iCAAiC;EACjC,eAAe;AACjB;;AAEA;EACE,cAAc;EACd,kCAAkC;EAClC,sBAAsB;EACtB,kBAAkB;EAClB,YAAY;EACZ,iBAAiB;EACjB,gBAAgB;EAChB,eAAe;AACjB;;AAEA;EACE,8BAA8B;AAChC;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,gBAAgB;EAChB,eAAe;EACf,mBAAmB;AACrB;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA;EACE,0CAA0C;EAC1C,cAAc;EACd,eAAe;EACf,kBAAkB;AACpB;;AAEA;;EAEE,YAAY;EACZ,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,UAAU;AACZ;;AAEA;EACE,wBAAwB;AAC1B;;AAEA;EACE,WAAW;EACX,iBAAiB;EACjB,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,oCAAoC;EACpC,mBAAmB;EACnB,WAAW;AACb;;AAEA;EACE,4BAA4B;AAC9B;;AAEA;EACE,oCAAoC;EACpC,mBAAmB;EACnB,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,4BAA4B;AAC9B;;AAEA;EACE,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,gBAAgB;AAClB","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Roboto');\n\nbody {\n  font-family: 'Roboto', sans-serif;\n  margin: 0;\n}\n\nh1 {\n  display: flex;\n  justify-content: center;\n}\n\nbutton {\n  background: var(--primary);\n  border-radius: 4px;\n  height: 36px;\n  border-style: none;\n  color: var(--white);\n}\n\nbutton:hover {\n  background: var(--primary-darken);\n  cursor: pointer;\n}\n\ninput {\n  padding: 0 8px;\n  border: 1px solid var(--secondary);\n  box-sizing: border-box;\n  border-radius: 4px;\n  height: 36px;\n  line-height: 36px;\n  font-weight: 400;\n  font-size: 16px;\n}\n\ninput::placeholder {\n  color: var(--secondary-darken);\n}\n\n.tab-result-container {\n  margin: 52px 0;\n}\n\ncaption {\n  font-weight: 600;\n  font-size: 20px;\n  margin: 48px 0 16px;\n}\n\ntable {\n  border-collapse: collapse;\n  width: 471px;\n}\n\ntr {\n  border: 1px solid var(--secondary-lighten);\n  border-left: 0;\n  border-right: 0;\n  text-align: center;\n}\n\ntd,\nth {\n  padding: 8px;\n  font-weight: 400;\n}\n\nth {\n  font-weight: 600;\n}\n\ncol {\n  width: 23%;\n}\n\n.hide {\n  display: none !important;\n}\n\n.short-button {\n  width: 56px;\n  margin-left: 16px;\n  font-size: 14px;\n  font-weight: 700;\n}\n\n.small-button {\n  background: var(--secondary-lighten);\n  color: var(--black);\n  width: 50px;\n}\n\n.small-button:hover {\n  background: var(--secondary);\n}\n\n.long-button {\n  background: var(--secondary-lighten);\n  color: var(--black);\n  width: 100px;\n  margin: 23px;\n}\n\n.long-button:hover {\n  background: var(--secondary);\n}\n\n.edit-confirm-button {\n  width: 100px;\n  height: 32px;\n}\n\n.paper-money-wrapper {\n  margin-top: 20px;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  font-family: 'Roboto', sans-serif;\r\n  margin: 0;\r\n}\r\n\r\nh1 {\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\nbutton {\r\n  background: var(--primary);\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  border-style: none;\r\n  color: var(--white);\r\n}\r\n\r\nbutton:hover {\r\n  background: var(--primary-darken);\r\n  cursor: pointer;\r\n}\r\n\r\ninput {\r\n  padding: 0 8px;\r\n  border: 1px solid var(--secondary);\r\n  box-sizing: border-box;\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  line-height: 36px;\r\n  font-weight: 400;\r\n  font-size: 16px;\r\n}\r\n\r\ninput::placeholder {\r\n  color: var(--secondary-darken);\r\n}\r\n\r\n.tab-result-container {\r\n  margin: 52px 0;\r\n}\r\n\r\ncaption {\r\n  font-weight: 600;\r\n  font-size: 20px;\r\n  margin: 48px 0 16px;\r\n}\r\n\r\ntable {\r\n  border-collapse: collapse;\r\n  width: 471px;\r\n}\r\n\r\ntr {\r\n  border: 1px solid var(--secondary-lighten);\r\n  border-left: 0;\r\n  border-right: 0;\r\n  text-align: center;\r\n}\r\n\r\ntd,\r\nth {\r\n  padding: 8px;\r\n  font-weight: 400;\r\n}\r\n\r\nth {\r\n  font-weight: 600;\r\n}\r\n\r\ncol {\r\n  width: 23%;\r\n}\r\n\r\n.hide {\r\n  display: none !important;\r\n}\r\n\r\n.short-button {\r\n  width: 56px;\r\n  margin-left: 16px;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n}\r\n\r\n.small-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 50px;\r\n}\r\n\r\n.small-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.long-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 100px;\r\n  margin: 23px;\r\n}\r\n\r\n.long-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.edit-confirm-button {\r\n  width: 100px;\r\n  height: 32px;\r\n}\r\n\r\n.paper-money-wrapper {\r\n  margin-top: 20px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/app.css"],"names":[],"mappings":"AAEA;EACE,iCAAiC;EACjC,SAAS;AACX;;AAEA;EACE,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,0BAA0B;EAC1B,kBAAkB;EAClB,YAAY;EACZ,kBAAkB;EAClB,mBAAmB;AACrB;;AAEA;EACE,iCAAiC;EACjC,eAAe;AACjB;;AAEA;EACE,cAAc;EACd,kCAAkC;EAClC,sBAAsB;EACtB,kBAAkB;EAClB,YAAY;EACZ,iBAAiB;EACjB,gBAAgB;EAChB,eAAe;AACjB;;AAEA;EACE,8BAA8B;AAChC;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,gBAAgB;EAChB,eAAe;EACf,mBAAmB;AACrB;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA;EACE,0CAA0C;EAC1C,cAAc;EACd,eAAe;EACf,kBAAkB;AACpB;;AAEA;;EAEE,YAAY;EACZ,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,UAAU;AACZ;;AAEA;EACE,wBAAwB;AAC1B;;AAEA;EACE,WAAW;EACX,iBAAiB;EACjB,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,oCAAoC;EACpC,mBAAmB;EACnB,WAAW;AACb;;AAEA;EACE,4BAA4B;AAC9B;;AAEA;EACE,oCAAoC;EACpC,mBAAmB;EACnB,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,4BAA4B;AAC9B;;AAEA;EACE,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,gBAAgB;AAClB","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Roboto');\r\n\r\nbody {\r\n  font-family: 'Roboto', sans-serif;\r\n  margin: 0;\r\n}\r\n\r\nh1 {\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\nbutton {\r\n  background: var(--primary);\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  border-style: none;\r\n  color: var(--white);\r\n}\r\n\r\nbutton:hover {\r\n  background: var(--primary-darken);\r\n  cursor: pointer;\r\n}\r\n\r\ninput {\r\n  padding: 0 8px;\r\n  border: 1px solid var(--secondary);\r\n  box-sizing: border-box;\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  line-height: 36px;\r\n  font-weight: 400;\r\n  font-size: 16px;\r\n}\r\n\r\ninput::placeholder {\r\n  color: var(--secondary-darken);\r\n}\r\n\r\n.tab-result-container {\r\n  margin: 52px 0;\r\n}\r\n\r\ncaption {\r\n  font-weight: 600;\r\n  font-size: 20px;\r\n  margin: 48px 0 16px;\r\n}\r\n\r\ntable {\r\n  border-collapse: collapse;\r\n  width: 471px;\r\n}\r\n\r\ntr {\r\n  border: 1px solid var(--secondary-lighten);\r\n  border-left: 0;\r\n  border-right: 0;\r\n  text-align: center;\r\n}\r\n\r\ntd,\r\nth {\r\n  padding: 8px;\r\n  font-weight: 400;\r\n}\r\n\r\nth {\r\n  font-weight: 600;\r\n}\r\n\r\ncol {\r\n  width: 23%;\r\n}\r\n\r\n.hide {\r\n  display: none !important;\r\n}\r\n\r\n.short-button {\r\n  width: 56px;\r\n  margin-left: 16px;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n}\r\n\r\n.small-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 50px;\r\n}\r\n\r\n.small-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.long-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 100px;\r\n  margin: 23px;\r\n}\r\n\r\n.long-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.edit-confirm-button {\r\n  width: 100px;\r\n  height: 32px;\r\n}\r\n\r\n.paper-money-wrapper {\r\n  margin-top: 20px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -67,7 +67,7 @@ ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_rechargeTab_css__
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_app_css__WEBPACK_IMPORTED_MODULE_6__["default"]);
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_notFound_css__WEBPACK_IMPORTED_MODULE_7__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n", "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "\r\n", "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -94,7 +94,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".nav-tab {\n  display: flex;\n  justify-content: center;\n  margin: 32px 0 0;\n}\n\n.tab-input {\n  width: 0;\n  height: 0;\n}\n\n.tab-label {\n  display: inline-block;\n  text-align: center;\n  font-size: 16px;\n  height: 36px;\n  width: 117px;\n  font-weight: 500;\n  line-height: 36px;\n  background-color: #f5f5f5;\n  border-radius: 4px;\n}\n\n.tab-input:checked + label {\n  background: rgba(0, 188, 212, 0.16);\n}\n\n.tab-label:hover {\n  cursor: pointer;\n}\n", "",{"version":3,"sources":["webpack://./src/css/nav.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,uBAAuB;EACvB,gBAAgB;AAClB;;AAEA;EACE,QAAQ;EACR,SAAS;AACX;;AAEA;EACE,qBAAqB;EACrB,kBAAkB;EAClB,eAAe;EACf,YAAY;EACZ,YAAY;EACZ,gBAAgB;EAChB,iBAAiB;EACjB,yBAAyB;EACzB,kBAAkB;AACpB;;AAEA;EACE,mCAAmC;AACrC;;AAEA;EACE,eAAe;AACjB","sourcesContent":[".nav-tab {\n  display: flex;\n  justify-content: center;\n  margin: 32px 0 0;\n}\n\n.tab-input {\n  width: 0;\n  height: 0;\n}\n\n.tab-label {\n  display: inline-block;\n  text-align: center;\n  font-size: 16px;\n  height: 36px;\n  width: 117px;\n  font-weight: 500;\n  line-height: 36px;\n  background-color: #f5f5f5;\n  border-radius: 4px;\n}\n\n.tab-input:checked + label {\n  background: rgba(0, 188, 212, 0.16);\n}\n\n.tab-label:hover {\n  cursor: pointer;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".nav-tab {\r\n  display: flex;\r\n  justify-content: center;\r\n  margin: 32px 0 0;\r\n}\r\n\r\n.tab-input {\r\n  width: 0;\r\n  height: 0;\r\n}\r\n\r\n.tab-label {\r\n  display: inline-block;\r\n  text-align: center;\r\n  font-size: 16px;\r\n  height: 36px;\r\n  width: 117px;\r\n  font-weight: 500;\r\n  line-height: 36px;\r\n  background-color: #f5f5f5;\r\n  border-radius: 4px;\r\n}\r\n\r\n.tab-input:checked + label {\r\n  background: rgba(0, 188, 212, 0.16);\r\n}\r\n\r\n.tab-label:hover {\r\n  cursor: pointer;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/nav.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,uBAAuB;EACvB,gBAAgB;AAClB;;AAEA;EACE,QAAQ;EACR,SAAS;AACX;;AAEA;EACE,qBAAqB;EACrB,kBAAkB;EAClB,eAAe;EACf,YAAY;EACZ,YAAY;EACZ,gBAAgB;EAChB,iBAAiB;EACjB,yBAAyB;EACzB,kBAAkB;AACpB;;AAEA;EACE,mCAAmC;AACrC;;AAEA;EACE,eAAe;AACjB","sourcesContent":[".nav-tab {\r\n  display: flex;\r\n  justify-content: center;\r\n  margin: 32px 0 0;\r\n}\r\n\r\n.tab-input {\r\n  width: 0;\r\n  height: 0;\r\n}\r\n\r\n.tab-label {\r\n  display: inline-block;\r\n  text-align: center;\r\n  font-size: 16px;\r\n  height: 36px;\r\n  width: 117px;\r\n  font-weight: 500;\r\n  line-height: 36px;\r\n  background-color: #f5f5f5;\r\n  border-radius: 4px;\r\n}\r\n\r\n.tab-input:checked + label {\r\n  background: rgba(0, 188, 212, 0.16);\r\n}\r\n\r\n.tab-label:hover {\r\n  cursor: pointer;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -121,7 +121,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#not-found {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  top: 0;\n  left: 0;\n  background-color: white;\n}\n", "",{"version":3,"sources":["webpack://./src/css/notFound.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,YAAY;EACZ,aAAa;EACb,eAAe;EACf,MAAM;EACN,OAAO;EACP,uBAAuB;AACzB","sourcesContent":["#not-found {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  top: 0;\n  left: 0;\n  background-color: white;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "#not-found {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  width: 100vw;\r\n  height: 100vh;\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  background-color: white;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/notFound.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,YAAY;EACZ,aAAa;EACb,eAAe;EACf,MAAM;EACN,OAAO;EACP,uBAAuB;AACzB","sourcesContent":["#not-found {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  width: 100vw;\r\n  height: 100vh;\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  background-color: white;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -148,7 +148,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".tab-result-wrapper {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n.label-wrapper {\n  margin: 10px 0;\n}\n\n.product-manage-input {\n  width: 120px;\n}\n\n.edit-form {\n  display: flex;\n}\n\n.edit-input {\n  width: 84px;\n}\n", "",{"version":3,"sources":["webpack://./src/css/productManageTab.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,WAAW;AACb","sourcesContent":[".tab-result-wrapper {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n.label-wrapper {\n  margin: 10px 0;\n}\n\n.product-manage-input {\n  width: 120px;\n}\n\n.edit-form {\n  display: flex;\n}\n\n.edit-input {\n  width: 84px;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".tab-result-wrapper {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n\r\n.label-wrapper {\r\n  margin: 10px 0;\r\n}\r\n\r\n.product-manage-input {\r\n  width: 120px;\r\n}\r\n\r\n.edit-form {\r\n  display: flex;\r\n}\r\n\r\n.edit-input {\r\n  width: 84px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/productManageTab.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,WAAW;AACb","sourcesContent":[".tab-result-wrapper {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n\r\n.label-wrapper {\r\n  margin: 10px 0;\r\n}\r\n\r\n.product-manage-input {\r\n  width: 120px;\r\n}\r\n\r\n.edit-form {\r\n  display: flex;\r\n}\r\n\r\n.edit-input {\r\n  width: 84px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -175,7 +175,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".long-input {\n  width: 300px;\n}\n\n.recharge-button {\n  width: 56px;\n}\n\n.holding-money-wrapper {\n  margin-top: 16px;\n}\n\n.change-table {\n  width: 237px;\n}\n", "",{"version":3,"sources":["webpack://./src/css/rechargeTab.css"],"names":[],"mappings":"AAAA;EACE,YAAY;AACd;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,YAAY;AACd","sourcesContent":[".long-input {\n  width: 300px;\n}\n\n.recharge-button {\n  width: 56px;\n}\n\n.holding-money-wrapper {\n  margin-top: 16px;\n}\n\n.change-table {\n  width: 237px;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".long-input {\r\n  width: 300px;\r\n}\r\n\r\n.recharge-button {\r\n  width: 56px;\r\n}\r\n\r\n.holding-money-wrapper {\r\n  margin-top: 16px;\r\n}\r\n\r\n.change-table {\r\n  width: 237px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/rechargeTab.css"],"names":[],"mappings":"AAAA;EACE,YAAY;AACd;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,YAAY;AACd","sourcesContent":[".long-input {\r\n  width: 300px;\r\n}\r\n\r\n.recharge-button {\r\n  width: 56px;\r\n}\r\n\r\n.holding-money-wrapper {\r\n  margin-top: 16px;\r\n}\r\n\r\n.change-table {\r\n  width: 237px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -202,7 +202,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --primary: #00bcd4;\n  --primary-lighten: #80deea;\n  --primary-darken: #009eb3;\n  --secondary: #b4b4b4;\n  --secondary-lighten: #f5f5f5;\n  --secondary-darken: #8b8b8b;\n  --white: #fff;\n  --black: #000;\n}\n", "",{"version":3,"sources":["webpack://./src/css/root.css"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,0BAA0B;EAC1B,yBAAyB;EACzB,oBAAoB;EACpB,4BAA4B;EAC5B,2BAA2B;EAC3B,aAAa;EACb,aAAa;AACf","sourcesContent":[":root {\n  --primary: #00bcd4;\n  --primary-lighten: #80deea;\n  --primary-darken: #009eb3;\n  --secondary: #b4b4b4;\n  --secondary-lighten: #f5f5f5;\n  --secondary-darken: #8b8b8b;\n  --white: #fff;\n  --black: #000;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\r\n  --primary: #00bcd4;\r\n  --primary-lighten: #80deea;\r\n  --primary-darken: #009eb3;\r\n  --secondary: #b4b4b4;\r\n  --secondary-lighten: #f5f5f5;\r\n  --secondary-darken: #8b8b8b;\r\n  --white: #fff;\r\n  --black: #000;\r\n  --dimmer: rgba(0, 0, 0, 0.5);\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/root.css"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,0BAA0B;EAC1B,yBAAyB;EACzB,oBAAoB;EACpB,4BAA4B;EAC5B,2BAA2B;EAC3B,aAAa;EACb,aAAa;EACb,4BAA4B;AAC9B","sourcesContent":[":root {\r\n  --primary: #00bcd4;\r\n  --primary-lighten: #80deea;\r\n  --primary-darken: #009eb3;\r\n  --secondary: #b4b4b4;\r\n  --secondary-lighten: #f5f5f5;\r\n  --secondary-darken: #8b8b8b;\r\n  --white: #fff;\r\n  --black: #000;\r\n  --dimmer: rgba(0, 0, 0, 0.5);\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -729,6 +729,47 @@ module.exports = styleTagTransform;
 const loginTemplate = document.createElement('template');
 loginTemplate.innerHTML = `
   <style>
+    .modal-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: transparent;
+    }
+
+    .hide {
+      display: none !important;
+    }
+
+    .dimmer {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+    }
+
+    .modal-inner {
+      height: 500px;
+      position: relative;
+      background: var(--white);
+      border: 1px solid var(--secondary);
+      border-radius: 4px;
+      padding: 20px 30px;
+    }
+
+    .x-shape {
+      box-sizing: border-box;
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+      cursor: pointer;
+    }
+
+
     section {
       font-family: 'Roboto', sans-serif;
       margin: 10px;
@@ -777,23 +818,36 @@ loginTemplate.innerHTML = `
     .signup-link {
 
     }
+
   </style>
 
-  <section>
-    <h1>로그인</h1>
-    <form>
-      <label>이메일</label>
-      <input type="email" placeholder="woowacourse@gmail.com" />
-      <label>비밀번호</label>
-      <input type="password" placeholder="비밀번호를 입력해주세요" />
-      <button type="submit">확인</button>
-    </form>
-    <span>아직 회원이 아닌가요?<a href="/">회원가입</a></span>
-  </section>
+  <div class="modal-container" >
+    <div class="dimmer"></div>
+    <div class="modal-inner" role="dialog">
+      <div class="x-shape">X</div>
+      <section>
+        <h1>로그인</h1>
+        <form>
+          <label>이메일</label>
+          <input type="email" placeholder="woowacourse@gmail.com" />
+          <label>비밀번호</label>
+          <input type="password" placeholder="비밀번호를 입력해주세요" />
+          <button type="submit">확인</button>
+        </form>
+        <span>아직 회원이 아닌가요?<a href="/">회원가입</a></span>
+      </section>
+    </div>
+  </div>
 `;
 class Login extends HTMLElement {
     constructor() {
         super();
+        this.closeModalDimmer = (event) => {
+            event.target === this.shadowRoot.querySelector('.dimmer') ? this.closeModal() : false;
+        };
+        this.closeModal = () => {
+            this.remove();
+        };
         this.login = (event) => {
             event.preventDefault();
             const email = this.shadowRoot.querySelector("input[type='email']").value;
@@ -813,7 +867,7 @@ class Login extends HTMLElement {
             })
                 .then((res) => {
                 if (!res.ok) {
-                    alert('로그인 정보 잘 쓰세요.>ㅇ<');
+                    console.log('login, 로그인 실패');
                     return;
                 }
                 return res.json();
@@ -823,21 +877,28 @@ class Login extends HTMLElement {
                     accessToken: response.accessToken,
                     id: response.user.id,
                 };
+                console.log('login, 로그인 성공');
                 localStorage.setItem('userAuth', JSON.stringify(userAuth));
-                // location.replace('../user.html');
+                this.emitRouteLogin();
             })
                 .catch((error) => console.error('에러', error));
+        };
+        this.emitRouteLogin = () => {
+            const event = new CustomEvent('@route-login', {});
+            window.dispatchEvent(event);
         };
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.appendChild(loginTemplate.content.cloneNode(true));
     }
     connectedCallback() {
-        // 이벤트 추가
         this.shadowRoot.querySelector('form').addEventListener('submit', this.login);
+        this.shadowRoot.querySelector('.x-shape').addEventListener('click', this.closeModal);
+        this.shadowRoot.addEventListener('click', this.closeModalDimmer);
     }
     disconnectedCallback() {
-        // 이벤트 삭제
         this.shadowRoot.querySelector('form').removeEventListener('submit', this.login);
+        this.shadowRoot.querySelector('.x-shape').removeEventListener('click', this.closeModal);
+        this.shadowRoot.removeEventListener('click', this.closeModalDimmer);
     }
 }
 customElements.define('log-in', Login);
@@ -946,7 +1007,7 @@ class ProfileEdit extends HTMLElement {
             })
                 .then((res) => {
                 if (!res.ok) {
-                    alert('회원가입 잘 쓰세요.>ㅇ<');
+                    console.log('회원정보 수정 실패');
                     return;
                 }
                 return res.json();
@@ -957,7 +1018,8 @@ class ProfileEdit extends HTMLElement {
                     id: response.user.id,
                 };
                 localStorage.setItem('userAuth', JSON.stringify(userAuth));
-                // location.replace('../user.html');
+                console.log('회원정보 수정 성공');
+                // TODO 회원정보 수정 성공 후 라우트
             })
                 .catch((error) => console.error('에러', error));
         };
@@ -1072,7 +1134,7 @@ class Signup extends HTMLElement {
             })
                 .then((res) => {
                 if (!res.ok) {
-                    alert('회원가입 잘 쓰세요.>ㅇ<');
+                    console.log('회원가입 실패');
                     return;
                 }
                 return res.json();
@@ -1083,7 +1145,8 @@ class Signup extends HTMLElement {
                     id: response.user.id,
                 };
                 localStorage.setItem('userAuth', JSON.stringify(userAuth));
-                // location.replace('../user.html');
+                console.log('회원가입 성공');
+                // TODO 회원가입 성공 후 라우트
             })
                 .catch((error) => console.error('에러', error));
         };
@@ -1251,7 +1314,7 @@ const renderToastModal = (state, message) => {
 const userMenuTemplate = document.createElement('template');
 userMenuTemplate.innerHTML = `
   <style>
-    section {
+    #thumbnail {
       font-family: 'Roboto', sans-serif;
       margin: 10px;
       display: flex;
@@ -1295,37 +1358,96 @@ userMenuTemplate.innerHTML = `
       flex-direction: column;
       width: 300px;
     }
-  </style>
 
-  <section>
-    <h2 hidden>유저 메뉴</h2>
-    <h3>👋🏼 <span id="welcome-name"></span>님 안녕하세요.</h3>
-    <h4>이름</h4>
-    <p id="name">마르코</p>
-    <h4>이메일</h4>
-    <p id="email">nextjws@gmail.com</p>
-    <button id="logout-button">로그아웃</button>
-  </section>
+    #login-button {
+      position: absolute;
+      top: 0;
+      right: 10px;
+    }
+
+    #menu-wrapper {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    #thumbnail {
+      border-radius: 100%;
+      width: 40px;
+      height: 40px;
+      background-color: var(--primary);
+      font-weight: bold;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      color: #fff;
+    }
+
+    #thumbnail:hover {
+      background-color: var(--primary-darken);
+    }
+
+    .hide {
+      display: none;
+    }
+
+    #menu {
+      background: var(--secondary);
+      color: var(--white);
+      border-radius: 5px;
+      padding: 0;
+      width: 120px;
+      position: absolute;
+      right: 0;
+    }
+
+    .menu-item {
+      margin: 0;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .menu-item:hover {
+      background-color: var(--secondary-darken);
+      border-radius: 5px;
+    }
+
+    hr {
+      border: 1px solid var(--white);
+      margin: 0;
+    }
+  </style>
+  <button id="login-button">로그인</button>
+  <div id="menu-wrapper" class="hide">
+    <div id="thumbnail">
+    </div>
+    <div class="hide" id="menu">
+      <div class="menu-item" id="profile-edit-button">회원정보 수정</div>
+      <hr>
+      <div class="menu-item" id="logout-button">로그아웃</div>
+    </div>
+  </div>
 `;
 class UserMenu extends HTMLElement {
     constructor() {
         super();
-        this.renderUserMenu = () => {
+        this.renderLoginModal = () => {
+            const detail = document.createElement('log-in');
+            const event = new CustomEvent('@render-login', { detail });
+            window.dispatchEvent(event);
+        };
+        this.checkLoginStatus = () => {
             const userAuth = JSON.parse(localStorage.getItem('userAuth'));
             if (!userAuth) {
+                console.log('user-menu, 로컬스토리지 없음, 로그인 실패');
+                this.renderLoginButton();
                 return;
             }
             const id = userAuth.id;
             const accessToken = `Bearer ${userAuth.accessToken}`;
             const url = `https://json-server-marco.herokuapp.com/users/${id}`;
-            const renderUpdatedUserInfo = (response) => {
-                console.log(response);
-                const name = response.name;
-                this.shadowRoot.getElementById('name').textContent = name;
-                this.shadowRoot.getElementById('welcome-name').textContent = name;
-                const email = response.email;
-                this.shadowRoot.getElementById('email').textContent = email;
-            };
             // 로그인
             fetch(url, {
                 method: 'GET',
@@ -1336,29 +1458,65 @@ class UserMenu extends HTMLElement {
             })
                 .then((res) => {
                 if (!res.ok) {
-                    alert('로그인 안 돼셨어요.>ㅇ<');
+                    console.log('user-menu, 로컬스토리지 있으나 시간만료, 로그인 실패');
+                    this.renderLoginButton();
                     return;
                 }
                 return res.json();
             })
-                .then((response) => renderUpdatedUserInfo(response))
+                .then((response) => {
+                console.log('user-menu, 로그인 성공');
+                this.renderUserThumbnail(response.name[0]);
+            })
                 .catch((error) => console.error('에러', error));
+        };
+        this.renderLoginButton = () => {
+            this.loginButton.classList.remove('hide');
+            this.menuWrapper.classList.add('hide');
+        };
+        this.renderUserThumbnail = (firstName) => {
+            this.thumbnail.textContent = firstName;
+            this.loginButton.classList.add('hide');
+            this.menuWrapper.classList.remove('hide');
+            this.menu.classList.add('hide');
+        };
+        this.toggleMenu = () => {
+            this.menu.classList.toggle('hide');
+        };
+        this.renderProfileEdit = () => {
+            console.log('회원정보 수정 버튼 호출');
         };
         this.logout = () => {
             localStorage.removeItem('userAuth');
-            // location.replace('../index.html');
+            const event = new CustomEvent('@route-logout', {});
+            window.dispatchEvent(event);
         };
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.appendChild(userMenuTemplate.content.cloneNode(true));
+        this.loginButton = this.shadowRoot.querySelector('#login-button');
+        this.thumbnail = this.shadowRoot.querySelector('#thumbnail');
+        this.profileEditButton = this.shadowRoot.querySelector('#profile-edit-button');
+        this.logoutButton = this.shadowRoot.querySelector('#logout-button');
+        this.menuWrapper = this.shadowRoot.querySelector('#menu-wrapper');
+        this.menu = this.shadowRoot.querySelector('#menu');
+    }
+    static get observedAttributes() {
+        return ['auth'];
     }
     connectedCallback() {
-        // 이벤트 추가
-        this.renderUserMenu();
-        this.shadowRoot.querySelector('#logout-button').addEventListener('click', this.logout);
+        this.loginButton.addEventListener('click', this.renderLoginModal);
+        this.thumbnail.addEventListener('click', this.toggleMenu);
+        this.profileEditButton.addEventListener('click', this.renderProfileEdit);
+        this.logoutButton.addEventListener('click', this.logout);
     }
     disconnectedCallback() {
-        // 이벤트 삭제
-        this.shadowRoot.querySelector('#logout-button').removeEventListener('click', this.logout);
+        this.shadowRoot.removeEventListener('click', this.renderLoginModal);
+        this.thumbnail.removeEventListener('click', this.toggleMenu);
+        this.profileEditButton.removeEventListener('click', this.renderProfileEdit);
+        this.logoutButton.removeEventListener('click', this.logout);
+    }
+    attributeChangedCallback(name, oldValue, newValue) {
+        this.checkLoginStatus();
     }
 }
 customElements.define('user-menu', UserMenu);
@@ -1764,6 +1922,14 @@ __webpack_require__.r(__webpack_exports__);
 
 class Router {
     constructor(view) {
+        this.routeLogin = () => {
+            this.tabRouter(_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PRODUCT_MANAGE, false);
+            this.view.renderUserPrivatePage();
+        };
+        this.routeLogout = () => {
+            this.tabRouter(_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT, false);
+            this.view.renderPublicPage();
+        };
         this.tabRouter = (url, isPopState = false) => {
             if (!isPopState && url !== location.pathname + location.hash) {
                 history.pushState({ url }, null, url);
@@ -1782,6 +1948,9 @@ class Router {
             const url = event.detail;
             this.tabRouter(url, false);
         });
+        // 웹컴포넌트에서 보낸 커스텀 이벤트
+        window.addEventListener('@route-login', this.routeLogin);
+        window.addEventListener('@route-logout', this.routeLogout);
     }
 }
 
@@ -2182,6 +2351,25 @@ __webpack_require__.r(__webpack_exports__);
 
 class View {
     constructor(vendingMachine) {
+        this.renderLoginModal = (event) => {
+            document.body.appendChild(event.detail);
+        };
+        this.renderUserPrivatePage = () => {
+            console.log('renderUserPrivatePage');
+            (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('.nav-tab').classList.remove('hide');
+            (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('log-in').remove();
+            (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('user-menu').setAttribute('auth', 'login');
+        };
+        this.renderPublicPage = () => {
+            console.log('renderPublicPage');
+            (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('.nav-tab').classList.add('hide');
+            (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('user-menu').setAttribute('auth', 'logout');
+        };
+        this.handleClickTabButton = (url) => {
+            const detail = url;
+            const event = new CustomEvent('@route-tab', { detail });
+            this.$navTab.dispatchEvent(event);
+        };
         this.renderTabs = (url) => {
             this.$$tabResultContainers.forEach((container, index) => {
                 if (container.id === url) {
@@ -2214,6 +2402,7 @@ class View {
         this.productManageView = new _ProductManageView__WEBPACK_IMPORTED_MODULE_2__["default"](this.vendingMachine);
         this.rechargeView = new _RechargeView__WEBPACK_IMPORTED_MODULE_3__["default"](this.vendingMachine);
         this.purchaseView = new _PurchaseView__WEBPACK_IMPORTED_MODULE_4__["default"](this.vendingMachine);
+        this.$app = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#app');
         this.$notFound = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#not-found');
         this.$navTab = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('.nav-tab');
         this.$$tabResultContainers = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$$)('.tab-result-container');
@@ -2224,11 +2413,8 @@ class View {
         this.$tabProductManageButton.addEventListener('click', () => this.handleClickTabButton(_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PRODUCT_MANAGE));
         this.$tabRechargeButton.addEventListener('click', () => this.handleClickTabButton(_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.RECHARGE));
         this.$tabPurchaseProductButton.addEventListener('click', () => this.handleClickTabButton(_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PURCHASE_PRODUCT));
-    }
-    handleClickTabButton(url) {
-        const detail = url;
-        const event = new CustomEvent('@route-tab', { detail });
-        this.$navTab.dispatchEvent(event);
+        // 웹컴포넌트에서 보낸 커스텀 이벤트
+        window.addEventListener('@render-login', this.renderLoginModal);
     }
 }
 
