@@ -1,6 +1,354 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/ts/auth.js":
+/*!************************!*\
+  !*** ./src/ts/auth.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getUserAuth": () => (/* binding */ getUserAuth),
+/* harmony export */   "deleteUserAuth": () => (/* binding */ deleteUserAuth),
+/* harmony export */   "getUserData": () => (/* binding */ getUserData),
+/* harmony export */   "signupAuth": () => (/* binding */ signupAuth),
+/* harmony export */   "loginAuth": () => (/* binding */ loginAuth),
+/* harmony export */   "editProfileAuth": () => (/* binding */ editProfileAuth),
+/* harmony export */   "getUserFirstName": () => (/* binding */ getUserFirstName)
+/* harmony export */ });
+/* harmony import */ var _domains_validator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./domains/validator */ "./src/ts/domains/validator.ts");
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
+
+var setUserAuth = function setUserAuth(userAuth) {
+  localStorage.setItem('userAuth', JSON.stringify(userAuth));
+};
+
+var getUserAuth = function getUserAuth() {
+  return JSON.parse(localStorage.getItem('userAuth'));
+};
+
+var getUserTokenId = function getUserTokenId() {
+  var userAuth = getUserAuth();
+  return {
+    accessToken: "Bearer ".concat(userAuth.accessToken),
+    userUrl: "".concat("https://json-server-marco.herokuapp.com", "/users/").concat(userAuth.id)
+  };
+};
+
+var deleteUserAuth = function deleteUserAuth() {
+  localStorage.removeItem('userAuth');
+};
+var getUserData = /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+    var _getUserTokenId, accessToken, userUrl, response, data;
+
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _getUserTokenId = getUserTokenId(), accessToken = _getUserTokenId.accessToken, userUrl = _getUserTokenId.userUrl;
+            _context.next = 3;
+            return fetch(userUrl, {
+              method: 'GET',
+              headers: {
+                'Content-Type': 'application/json',
+                'Authorization': accessToken
+              }
+            });
+
+          case 3:
+            response = _context.sent;
+
+            if (response.ok) {
+              _context.next = 12;
+              break;
+            }
+
+            _context.t0 = Error;
+            _context.t1 = "API\uC5D0\uB7EC: ";
+            _context.next = 9;
+            return response.text();
+
+          case 9:
+            _context.t2 = _context.sent;
+            _context.t3 = _context.t1.concat.call(_context.t1, _context.t2);
+            throw new _context.t0(_context.t3);
+
+          case 12:
+            _context.next = 14;
+            return response.json();
+
+          case 14:
+            data = _context.sent;
+            return _context.abrupt("return", {
+              email: data.email,
+              name: data.name
+            });
+
+          case 16:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+
+  return function getUserData() {
+    return _ref.apply(this, arguments);
+  };
+}();
+var signupAuth = /*#__PURE__*/function () {
+  var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(_ref2) {
+    var email, name, password, passwordCheck, response;
+    return regeneratorRuntime.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            email = _ref2.email, name = _ref2.name, password = _ref2.password, passwordCheck = _ref2.passwordCheck;
+
+            if (!(0,_domains_validator__WEBPACK_IMPORTED_MODULE_0__.checkValidProfile)(name, password, passwordCheck)) {
+              _context2.next = 14;
+              break;
+            }
+
+            _context2.next = 4;
+            return fetch("".concat("https://json-server-marco.herokuapp.com", "/signup"), {
+              method: 'POST',
+              body: JSON.stringify({
+                email: email,
+                password: password,
+                name: name
+              }),
+              headers: {
+                'Content-Type': 'application/json'
+              }
+            });
+
+          case 4:
+            response = _context2.sent;
+
+            if (response.ok) {
+              _context2.next = 13;
+              break;
+            }
+
+            _context2.t0 = Error;
+            _context2.t1 = "API\uC5D0\uB7EC: ";
+            _context2.next = 10;
+            return response.text();
+
+          case 10:
+            _context2.t2 = _context2.sent;
+            _context2.t3 = _context2.t1.concat.call(_context2.t1, _context2.t2);
+            throw new _context2.t0(_context2.t3);
+
+          case 13:
+            return _context2.abrupt("return", true);
+
+          case 14:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+  }));
+
+  return function signupAuth(_x) {
+    return _ref3.apply(this, arguments);
+  };
+}();
+var loginAuth = /*#__PURE__*/function () {
+  var _ref5 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(_ref4) {
+    var email, password, response, data, userAuth;
+    return regeneratorRuntime.wrap(function _callee3$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            email = _ref4.email, password = _ref4.password;
+            _context3.next = 3;
+            return fetch("".concat("https://json-server-marco.herokuapp.com", "/login"), {
+              method: 'POST',
+              body: JSON.stringify({
+                email: email,
+                password: password
+              }),
+              headers: {
+                'Content-Type': 'application/json'
+              }
+            });
+
+          case 3:
+            response = _context3.sent;
+
+            if (response.ok) {
+              _context3.next = 12;
+              break;
+            }
+
+            _context3.t0 = Error;
+            _context3.t1 = "API\uC5D0\uB7EC: ";
+            _context3.next = 9;
+            return response.text();
+
+          case 9:
+            _context3.t2 = _context3.sent;
+            _context3.t3 = _context3.t1.concat.call(_context3.t1, _context3.t2);
+            throw new _context3.t0(_context3.t3);
+
+          case 12:
+            _context3.next = 14;
+            return response.json();
+
+          case 14:
+            data = _context3.sent;
+            userAuth = {
+              accessToken: data.accessToken,
+              id: data.user.id
+            };
+            setUserAuth(userAuth);
+            return _context3.abrupt("return", true);
+
+          case 18:
+          case "end":
+            return _context3.stop();
+        }
+      }
+    }, _callee3);
+  }));
+
+  return function loginAuth(_x2) {
+    return _ref5.apply(this, arguments);
+  };
+}();
+var editProfileAuth = /*#__PURE__*/function () {
+  var _ref7 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4(_ref6) {
+    var name, password, passwordCheck, _getUserTokenId2, accessToken, userUrl, response;
+
+    return regeneratorRuntime.wrap(function _callee4$(_context4) {
+      while (1) {
+        switch (_context4.prev = _context4.next) {
+          case 0:
+            name = _ref6.name, password = _ref6.password, passwordCheck = _ref6.passwordCheck;
+
+            if (!(0,_domains_validator__WEBPACK_IMPORTED_MODULE_0__.checkValidProfile)(name, password, passwordCheck)) {
+              _context4.next = 15;
+              break;
+            }
+
+            _getUserTokenId2 = getUserTokenId(), accessToken = _getUserTokenId2.accessToken, userUrl = _getUserTokenId2.userUrl;
+            _context4.next = 5;
+            return fetch(userUrl, {
+              method: 'PATCH',
+              body: JSON.stringify({
+                name: name,
+                password: password
+              }),
+              headers: {
+                'Content-Type': 'application/json',
+                'Authorization': accessToken
+              }
+            });
+
+          case 5:
+            response = _context4.sent;
+
+            if (response.ok) {
+              _context4.next = 14;
+              break;
+            }
+
+            _context4.t0 = Error;
+            _context4.t1 = "API\uC5D0\uB7EC: ";
+            _context4.next = 11;
+            return response.text();
+
+          case 11:
+            _context4.t2 = _context4.sent;
+            _context4.t3 = _context4.t1.concat.call(_context4.t1, _context4.t2);
+            throw new _context4.t0(_context4.t3);
+
+          case 14:
+            return _context4.abrupt("return", true);
+
+          case 15:
+          case "end":
+            return _context4.stop();
+        }
+      }
+    }, _callee4);
+  }));
+
+  return function editProfileAuth(_x3) {
+    return _ref7.apply(this, arguments);
+  };
+}();
+var getUserFirstName = /*#__PURE__*/function () {
+  var _ref8 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee5() {
+    var _getUserTokenId3, accessToken, userUrl, response, data;
+
+    return regeneratorRuntime.wrap(function _callee5$(_context5) {
+      while (1) {
+        switch (_context5.prev = _context5.next) {
+          case 0:
+            _getUserTokenId3 = getUserTokenId(), accessToken = _getUserTokenId3.accessToken, userUrl = _getUserTokenId3.userUrl;
+            console.log(userUrl, accessToken);
+
+            if (!(!userUrl || !accessToken)) {
+              _context5.next = 4;
+              break;
+            }
+
+            return _context5.abrupt("return");
+
+          case 4:
+            _context5.next = 6;
+            return fetch(userUrl, {
+              method: 'GET',
+              headers: {
+                'Content-Type': 'application/json',
+                'Authorization': accessToken
+              }
+            });
+
+          case 6:
+            response = _context5.sent;
+
+            if (response.ok) {
+              _context5.next = 10;
+              break;
+            }
+
+            deleteUserAuth();
+            return _context5.abrupt("return", false);
+
+          case 10:
+            _context5.next = 12;
+            return response.json();
+
+          case 12:
+            data = _context5.sent;
+            return _context5.abrupt("return", data.name[0]);
+
+          case 14:
+          case "end":
+            return _context5.stop();
+        }
+      }
+    }, _callee5);
+  }));
+
+  return function getUserFirstName() {
+    return _ref8.apply(this, arguments);
+  };
+}();
+
+/***/ }),
 
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/css/app.css":
 /*!***************************************************************!*\
@@ -8,6 +356,7 @@
   \***************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -22,7 +371,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Roboto);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n  font-family: 'Roboto', sans-serif;\n  margin: 0;\n}\n\nh1 {\n  display: flex;\n  justify-content: center;\n}\n\nbutton {\n  background: var(--primary);\n  border-radius: 4px;\n  height: 36px;\n  border-style: none;\n  color: var(--white);\n}\n\nbutton:hover {\n  background: var(--primary-darken);\n  cursor: pointer;\n}\n\ninput {\n  padding: 0 8px;\n  border: 1px solid var(--secondary);\n  box-sizing: border-box;\n  border-radius: 4px;\n  height: 36px;\n  line-height: 36px;\n  font-weight: 400;\n  font-size: 16px;\n}\n\ninput::placeholder {\n  color: var(--secondary-darken);\n}\n\n.tab-result-container {\n  margin: 52px 0;\n}\n\ncaption {\n  font-weight: 600;\n  font-size: 20px;\n  margin: 48px 0 16px;\n}\n\ntable {\n  border-collapse: collapse;\n  width: 471px;\n}\n\ntr {\n  border: 1px solid var(--secondary-lighten);\n  border-left: 0;\n  border-right: 0;\n  text-align: center;\n}\n\ntd,\nth {\n  padding: 8px;\n  font-weight: 400;\n}\n\nth {\n  font-weight: 600;\n}\n\ncol {\n  width: 23%;\n}\n\n.hide {\n  display: none !important;\n}\n\n.short-button {\n  width: 56px;\n  margin-left: 16px;\n  font-size: 14px;\n  font-weight: 700;\n}\n\n.small-button {\n  background: var(--secondary-lighten);\n  color: var(--black);\n  width: 50px;\n}\n\n.small-button:hover {\n  background: var(--secondary);\n}\n\n.long-button {\n  background: var(--secondary-lighten);\n  color: var(--black);\n  width: 100px;\n  margin: 23px;\n}\n\n.long-button:hover {\n  background: var(--secondary);\n}\n\n.edit-confirm-button {\n  width: 100px;\n  height: 32px;\n}\n\n.paper-money-wrapper {\n  margin-top: 20px;\n}\n", "",{"version":3,"sources":["webpack://./src/css/app.css"],"names":[],"mappings":"AAEA;EACE,iCAAiC;EACjC,SAAS;AACX;;AAEA;EACE,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,0BAA0B;EAC1B,kBAAkB;EAClB,YAAY;EACZ,kBAAkB;EAClB,mBAAmB;AACrB;;AAEA;EACE,iCAAiC;EACjC,eAAe;AACjB;;AAEA;EACE,cAAc;EACd,kCAAkC;EAClC,sBAAsB;EACtB,kBAAkB;EAClB,YAAY;EACZ,iBAAiB;EACjB,gBAAgB;EAChB,eAAe;AACjB;;AAEA;EACE,8BAA8B;AAChC;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,gBAAgB;EAChB,eAAe;EACf,mBAAmB;AACrB;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA;EACE,0CAA0C;EAC1C,cAAc;EACd,eAAe;EACf,kBAAkB;AACpB;;AAEA;;EAEE,YAAY;EACZ,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,UAAU;AACZ;;AAEA;EACE,wBAAwB;AAC1B;;AAEA;EACE,WAAW;EACX,iBAAiB;EACjB,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,oCAAoC;EACpC,mBAAmB;EACnB,WAAW;AACb;;AAEA;EACE,4BAA4B;AAC9B;;AAEA;EACE,oCAAoC;EACpC,mBAAmB;EACnB,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,4BAA4B;AAC9B;;AAEA;EACE,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,gBAAgB;AAClB","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Roboto');\n\nbody {\n  font-family: 'Roboto', sans-serif;\n  margin: 0;\n}\n\nh1 {\n  display: flex;\n  justify-content: center;\n}\n\nbutton {\n  background: var(--primary);\n  border-radius: 4px;\n  height: 36px;\n  border-style: none;\n  color: var(--white);\n}\n\nbutton:hover {\n  background: var(--primary-darken);\n  cursor: pointer;\n}\n\ninput {\n  padding: 0 8px;\n  border: 1px solid var(--secondary);\n  box-sizing: border-box;\n  border-radius: 4px;\n  height: 36px;\n  line-height: 36px;\n  font-weight: 400;\n  font-size: 16px;\n}\n\ninput::placeholder {\n  color: var(--secondary-darken);\n}\n\n.tab-result-container {\n  margin: 52px 0;\n}\n\ncaption {\n  font-weight: 600;\n  font-size: 20px;\n  margin: 48px 0 16px;\n}\n\ntable {\n  border-collapse: collapse;\n  width: 471px;\n}\n\ntr {\n  border: 1px solid var(--secondary-lighten);\n  border-left: 0;\n  border-right: 0;\n  text-align: center;\n}\n\ntd,\nth {\n  padding: 8px;\n  font-weight: 400;\n}\n\nth {\n  font-weight: 600;\n}\n\ncol {\n  width: 23%;\n}\n\n.hide {\n  display: none !important;\n}\n\n.short-button {\n  width: 56px;\n  margin-left: 16px;\n  font-size: 14px;\n  font-weight: 700;\n}\n\n.small-button {\n  background: var(--secondary-lighten);\n  color: var(--black);\n  width: 50px;\n}\n\n.small-button:hover {\n  background: var(--secondary);\n}\n\n.long-button {\n  background: var(--secondary-lighten);\n  color: var(--black);\n  width: 100px;\n  margin: 23px;\n}\n\n.long-button:hover {\n  background: var(--secondary);\n}\n\n.edit-confirm-button {\n  width: 100px;\n  height: 32px;\n}\n\n.paper-money-wrapper {\n  margin-top: 20px;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  font-family: 'Roboto', sans-serif;\r\n  margin: 0;\r\n}\r\n\r\nh1 {\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\nbutton {\r\n  background: var(--primary);\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  border-style: none;\r\n  color: var(--white);\r\n}\r\n\r\nbutton:hover {\r\n  background: var(--primary-darken);\r\n  cursor: pointer;\r\n}\r\n\r\ninput {\r\n  padding: 0 8px;\r\n  border: 1px solid var(--secondary);\r\n  box-sizing: border-box;\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  line-height: 36px;\r\n  font-weight: 400;\r\n  font-size: 16px;\r\n}\r\n\r\ninput::placeholder {\r\n  color: var(--secondary-darken);\r\n}\r\n\r\n.tab-result-container {\r\n  margin: 52px 0;\r\n}\r\n\r\ncaption {\r\n  font-weight: 600;\r\n  font-size: 20px;\r\n  margin: 48px 0 16px;\r\n}\r\n\r\ntable {\r\n  border-collapse: collapse;\r\n  width: 471px;\r\n}\r\n\r\ntr {\r\n  border: 1px solid var(--secondary-lighten);\r\n  border-left: 0;\r\n  border-right: 0;\r\n  text-align: center;\r\n}\r\n\r\ntd,\r\nth {\r\n  padding: 8px;\r\n  font-weight: 400;\r\n}\r\n\r\nth {\r\n  font-weight: 600;\r\n}\r\n\r\ncol {\r\n  width: 23%;\r\n}\r\n\r\n.hide {\r\n  display: none !important;\r\n}\r\n\r\n.short-button {\r\n  width: 56px;\r\n  margin-left: 16px;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n}\r\n\r\n.small-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 50px;\r\n}\r\n\r\n.small-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.long-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 100px;\r\n  margin: 23px;\r\n}\r\n\r\n.long-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.edit-confirm-button {\r\n  width: 100px;\r\n  height: 32px;\r\n}\r\n\r\n.paper-money-wrapper {\r\n  margin-top: 20px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/app.css"],"names":[],"mappings":"AAEA;EACE,iCAAiC;EACjC,SAAS;AACX;;AAEA;EACE,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,0BAA0B;EAC1B,kBAAkB;EAClB,YAAY;EACZ,kBAAkB;EAClB,mBAAmB;AACrB;;AAEA;EACE,iCAAiC;EACjC,eAAe;AACjB;;AAEA;EACE,cAAc;EACd,kCAAkC;EAClC,sBAAsB;EACtB,kBAAkB;EAClB,YAAY;EACZ,iBAAiB;EACjB,gBAAgB;EAChB,eAAe;AACjB;;AAEA;EACE,8BAA8B;AAChC;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,gBAAgB;EAChB,eAAe;EACf,mBAAmB;AACrB;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA;EACE,0CAA0C;EAC1C,cAAc;EACd,eAAe;EACf,kBAAkB;AACpB;;AAEA;;EAEE,YAAY;EACZ,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,UAAU;AACZ;;AAEA;EACE,wBAAwB;AAC1B;;AAEA;EACE,WAAW;EACX,iBAAiB;EACjB,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,oCAAoC;EACpC,mBAAmB;EACnB,WAAW;AACb;;AAEA;EACE,4BAA4B;AAC9B;;AAEA;EACE,oCAAoC;EACpC,mBAAmB;EACnB,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,4BAA4B;AAC9B;;AAEA;EACE,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,gBAAgB;AAClB","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Roboto');\r\n\r\nbody {\r\n  font-family: 'Roboto', sans-serif;\r\n  margin: 0;\r\n}\r\n\r\nh1 {\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\nbutton {\r\n  background: var(--primary);\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  border-style: none;\r\n  color: var(--white);\r\n}\r\n\r\nbutton:hover {\r\n  background: var(--primary-darken);\r\n  cursor: pointer;\r\n}\r\n\r\ninput {\r\n  padding: 0 8px;\r\n  border: 1px solid var(--secondary);\r\n  box-sizing: border-box;\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  line-height: 36px;\r\n  font-weight: 400;\r\n  font-size: 16px;\r\n}\r\n\r\ninput::placeholder {\r\n  color: var(--secondary-darken);\r\n}\r\n\r\n.tab-result-container {\r\n  margin: 52px 0;\r\n}\r\n\r\ncaption {\r\n  font-weight: 600;\r\n  font-size: 20px;\r\n  margin: 48px 0 16px;\r\n}\r\n\r\ntable {\r\n  border-collapse: collapse;\r\n  width: 471px;\r\n}\r\n\r\ntr {\r\n  border: 1px solid var(--secondary-lighten);\r\n  border-left: 0;\r\n  border-right: 0;\r\n  text-align: center;\r\n}\r\n\r\ntd,\r\nth {\r\n  padding: 8px;\r\n  font-weight: 400;\r\n}\r\n\r\nth {\r\n  font-weight: 600;\r\n}\r\n\r\ncol {\r\n  width: 23%;\r\n}\r\n\r\n.hide {\r\n  display: none !important;\r\n}\r\n\r\n.short-button {\r\n  width: 56px;\r\n  margin-left: 16px;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n}\r\n\r\n.small-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 50px;\r\n}\r\n\r\n.small-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.long-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 100px;\r\n  margin: 23px;\r\n}\r\n\r\n.long-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.edit-confirm-button {\r\n  width: 100px;\r\n  height: 32px;\r\n}\r\n\r\n.paper-money-wrapper {\r\n  margin-top: 20px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -35,6 +384,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, "body {\n  font-family: 'Roboto', sans-
   \*****************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -66,7 +416,7 @@ ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_rechargeTab_css__
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_app_css__WEBPACK_IMPORTED_MODULE_6__["default"]);
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_notFound_css__WEBPACK_IMPORTED_MODULE_7__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n", "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "\r\n", "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -79,6 +429,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, "\n", "",{"version":3,"sources":[],"nam
   \***************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -92,7 +443,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".nav-tab {\n  display: flex;\n  justify-content: center;\n  margin: 32px 0 0;\n}\n\n.tab-input {\n  width: 0;\n  height: 0;\n}\n\n.tab-label {\n  display: inline-block;\n  text-align: center;\n  font-size: 16px;\n  height: 36px;\n  width: 117px;\n  font-weight: 500;\n  line-height: 36px;\n  background-color: #f5f5f5;\n  border-radius: 4px;\n}\n\n.tab-input:checked + label {\n  background: rgba(0, 188, 212, 0.16);\n}\n\n.tab-label:hover {\n  cursor: pointer;\n}\n", "",{"version":3,"sources":["webpack://./src/css/nav.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,uBAAuB;EACvB,gBAAgB;AAClB;;AAEA;EACE,QAAQ;EACR,SAAS;AACX;;AAEA;EACE,qBAAqB;EACrB,kBAAkB;EAClB,eAAe;EACf,YAAY;EACZ,YAAY;EACZ,gBAAgB;EAChB,iBAAiB;EACjB,yBAAyB;EACzB,kBAAkB;AACpB;;AAEA;EACE,mCAAmC;AACrC;;AAEA;EACE,eAAe;AACjB","sourcesContent":[".nav-tab {\n  display: flex;\n  justify-content: center;\n  margin: 32px 0 0;\n}\n\n.tab-input {\n  width: 0;\n  height: 0;\n}\n\n.tab-label {\n  display: inline-block;\n  text-align: center;\n  font-size: 16px;\n  height: 36px;\n  width: 117px;\n  font-weight: 500;\n  line-height: 36px;\n  background-color: #f5f5f5;\n  border-radius: 4px;\n}\n\n.tab-input:checked + label {\n  background: rgba(0, 188, 212, 0.16);\n}\n\n.tab-label:hover {\n  cursor: pointer;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".nav-tab {\r\n  display: flex;\r\n  justify-content: center;\r\n  margin: 32px 0 0;\r\n}\r\n\r\n.tab-input {\r\n  width: 0;\r\n  height: 0;\r\n}\r\n\r\n.tab-label {\r\n  display: inline-block;\r\n  text-align: center;\r\n  font-size: 16px;\r\n  height: 36px;\r\n  width: 117px;\r\n  font-weight: 500;\r\n  line-height: 36px;\r\n  background-color: #f5f5f5;\r\n  border-radius: 4px;\r\n}\r\n\r\n.tab-input:checked + label {\r\n  background: rgba(0, 188, 212, 0.16);\r\n}\r\n\r\n.tab-label:hover {\r\n  cursor: pointer;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/nav.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,uBAAuB;EACvB,gBAAgB;AAClB;;AAEA;EACE,QAAQ;EACR,SAAS;AACX;;AAEA;EACE,qBAAqB;EACrB,kBAAkB;EAClB,eAAe;EACf,YAAY;EACZ,YAAY;EACZ,gBAAgB;EAChB,iBAAiB;EACjB,yBAAyB;EACzB,kBAAkB;AACpB;;AAEA;EACE,mCAAmC;AACrC;;AAEA;EACE,eAAe;AACjB","sourcesContent":[".nav-tab {\r\n  display: flex;\r\n  justify-content: center;\r\n  margin: 32px 0 0;\r\n}\r\n\r\n.tab-input {\r\n  width: 0;\r\n  height: 0;\r\n}\r\n\r\n.tab-label {\r\n  display: inline-block;\r\n  text-align: center;\r\n  font-size: 16px;\r\n  height: 36px;\r\n  width: 117px;\r\n  font-weight: 500;\r\n  line-height: 36px;\r\n  background-color: #f5f5f5;\r\n  border-radius: 4px;\r\n}\r\n\r\n.tab-input:checked + label {\r\n  background: rgba(0, 188, 212, 0.16);\r\n}\r\n\r\n.tab-label:hover {\r\n  cursor: pointer;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -105,6 +456,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".nav-tab {\n  display: flex;\n  justif
   \********************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -118,7 +470,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#not-found {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  top: 0;\n  left: 0;\n  background-color: white;\n}\n", "",{"version":3,"sources":["webpack://./src/css/notFound.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,YAAY;EACZ,aAAa;EACb,eAAe;EACf,MAAM;EACN,OAAO;EACP,uBAAuB;AACzB","sourcesContent":["#not-found {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  top: 0;\n  left: 0;\n  background-color: white;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "#not-found {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  width: 100vw;\r\n  height: 100vh;\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  background-color: white;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/notFound.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,YAAY;EACZ,aAAa;EACb,eAAe;EACf,MAAM;EACN,OAAO;EACP,uBAAuB;AACzB","sourcesContent":["#not-found {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  width: 100vw;\r\n  height: 100vh;\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  background-color: white;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -131,6 +483,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, "#not-found {\n  display: flex;\n  alig
   \****************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -144,7 +497,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".tab-result-wrapper {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n.label-wrapper {\n  margin: 10px 0;\n}\n\n.product-manage-input {\n  width: 120px;\n}\n\n.edit-form {\n  display: flex;\n}\n\n.edit-input {\n  width: 84px;\n}\n", "",{"version":3,"sources":["webpack://./src/css/productManageTab.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,WAAW;AACb","sourcesContent":[".tab-result-wrapper {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n.label-wrapper {\n  margin: 10px 0;\n}\n\n.product-manage-input {\n  width: 120px;\n}\n\n.edit-form {\n  display: flex;\n}\n\n.edit-input {\n  width: 84px;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".tab-result-wrapper {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n\r\n.label-wrapper {\r\n  margin: 10px 0;\r\n}\r\n\r\n.product-manage-input {\r\n  width: 120px;\r\n}\r\n\r\n.edit-form {\r\n  display: flex;\r\n}\r\n\r\n.edit-input {\r\n  width: 84px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/productManageTab.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,WAAW;AACb","sourcesContent":[".tab-result-wrapper {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n\r\n.label-wrapper {\r\n  margin: 10px 0;\r\n}\r\n\r\n.product-manage-input {\r\n  width: 120px;\r\n}\r\n\r\n.edit-form {\r\n  display: flex;\r\n}\r\n\r\n.edit-input {\r\n  width: 84px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -157,6 +510,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".tab-result-wrapper {\n  display: flex
   \***********************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -170,7 +524,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".long-input {\n  width: 300px;\n}\n\n.recharge-button {\n  width: 56px;\n}\n\n.holding-money-wrapper {\n  margin-top: 16px;\n}\n\n.change-table {\n  width: 237px;\n}\n", "",{"version":3,"sources":["webpack://./src/css/rechargeTab.css"],"names":[],"mappings":"AAAA;EACE,YAAY;AACd;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,YAAY;AACd","sourcesContent":[".long-input {\n  width: 300px;\n}\n\n.recharge-button {\n  width: 56px;\n}\n\n.holding-money-wrapper {\n  margin-top: 16px;\n}\n\n.change-table {\n  width: 237px;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".long-input {\r\n  width: 300px;\r\n}\r\n\r\n.recharge-button {\r\n  width: 56px;\r\n}\r\n\r\n.holding-money-wrapper {\r\n  margin-top: 16px;\r\n}\r\n\r\n.change-table {\r\n  width: 237px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/rechargeTab.css"],"names":[],"mappings":"AAAA;EACE,YAAY;AACd;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,YAAY;AACd","sourcesContent":[".long-input {\r\n  width: 300px;\r\n}\r\n\r\n.recharge-button {\r\n  width: 56px;\r\n}\r\n\r\n.holding-money-wrapper {\r\n  margin-top: 16px;\r\n}\r\n\r\n.change-table {\r\n  width: 237px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -183,6 +537,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".long-input {\n  width: 300px;\n}\n\n.
   \****************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -196,7 +551,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --primary: #00bcd4;\n  --primary-lighten: #80deea;\n  --primary-darken: #009eb3;\n  --secondary: #b4b4b4;\n  --secondary-lighten: #f5f5f5;\n  --secondary-darken: #8b8b8b;\n  --white: #fff;\n  --black: #000;\n  --dimmer: rgba(0, 0, 0, 0.5);\n}\n", "",{"version":3,"sources":["webpack://./src/css/root.css"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,0BAA0B;EAC1B,yBAAyB;EACzB,oBAAoB;EACpB,4BAA4B;EAC5B,2BAA2B;EAC3B,aAAa;EACb,aAAa;EACb,4BAA4B;AAC9B","sourcesContent":[":root {\n  --primary: #00bcd4;\n  --primary-lighten: #80deea;\n  --primary-darken: #009eb3;\n  --secondary: #b4b4b4;\n  --secondary-lighten: #f5f5f5;\n  --secondary-darken: #8b8b8b;\n  --white: #fff;\n  --black: #000;\n  --dimmer: rgba(0, 0, 0, 0.5);\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\r\n  --primary: #00bcd4;\r\n  --primary-lighten: #80deea;\r\n  --primary-darken: #009eb3;\r\n  --secondary: #b4b4b4;\r\n  --secondary-lighten: #f5f5f5;\r\n  --secondary-darken: #8b8b8b;\r\n  --white: #fff;\r\n  --black: #000;\r\n  --dimmer: rgba(0, 0, 0, 0.5);\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/root.css"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,0BAA0B;EAC1B,yBAAyB;EACzB,oBAAoB;EACpB,4BAA4B;EAC5B,2BAA2B;EAC3B,aAAa;EACb,aAAa;EACb,4BAA4B;AAC9B","sourcesContent":[":root {\r\n  --primary: #00bcd4;\r\n  --primary-lighten: #80deea;\r\n  --primary-darken: #009eb3;\r\n  --secondary: #b4b4b4;\r\n  --secondary-lighten: #f5f5f5;\r\n  --secondary-darken: #8b8b8b;\r\n  --white: #fff;\r\n  --black: #000;\r\n  --dimmer: rgba(0, 0, 0, 0.5);\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -209,6 +564,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --primary: #00bcd4;\n  --pr
   \*****************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /*
@@ -320,6 +676,7 @@ module.exports = function (cssWithMappingToString) {
   \************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 module.exports = function (item) {
@@ -345,12 +702,777 @@ module.exports = function (item) {
 
 /***/ }),
 
+/***/ "./node_modules/regenerator-runtime/runtime.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/regenerator-runtime/runtime.js ***!
+  \*****************************************************/
+/***/ ((module) => {
+
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+var runtime = (function (exports) {
+  "use strict";
+
+  var Op = Object.prototype;
+  var hasOwn = Op.hasOwnProperty;
+  var undefined; // More compressible than void 0.
+  var $Symbol = typeof Symbol === "function" ? Symbol : {};
+  var iteratorSymbol = $Symbol.iterator || "@@iterator";
+  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
+  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+
+  function define(obj, key, value) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+    return obj[key];
+  }
+  try {
+    // IE 8 has a broken Object.defineProperty that only works on DOM objects.
+    define({}, "");
+  } catch (err) {
+    define = function(obj, key, value) {
+      return obj[key] = value;
+    };
+  }
+
+  function wrap(innerFn, outerFn, self, tryLocsList) {
+    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
+    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
+    var generator = Object.create(protoGenerator.prototype);
+    var context = new Context(tryLocsList || []);
+
+    // The ._invoke method unifies the implementations of the .next,
+    // .throw, and .return methods.
+    generator._invoke = makeInvokeMethod(innerFn, self, context);
+
+    return generator;
+  }
+  exports.wrap = wrap;
+
+  // Try/catch helper to minimize deoptimizations. Returns a completion
+  // record like context.tryEntries[i].completion. This interface could
+  // have been (and was previously) designed to take a closure to be
+  // invoked without arguments, but in all the cases we care about we
+  // already have an existing method we want to call, so there's no need
+  // to create a new function object. We can even get away with assuming
+  // the method takes exactly one argument, since that happens to be true
+  // in every case, so we don't have to touch the arguments object. The
+  // only additional allocation required is the completion record, which
+  // has a stable shape and so hopefully should be cheap to allocate.
+  function tryCatch(fn, obj, arg) {
+    try {
+      return { type: "normal", arg: fn.call(obj, arg) };
+    } catch (err) {
+      return { type: "throw", arg: err };
+    }
+  }
+
+  var GenStateSuspendedStart = "suspendedStart";
+  var GenStateSuspendedYield = "suspendedYield";
+  var GenStateExecuting = "executing";
+  var GenStateCompleted = "completed";
+
+  // Returning this object from the innerFn has the same effect as
+  // breaking out of the dispatch switch statement.
+  var ContinueSentinel = {};
+
+  // Dummy constructor functions that we use as the .constructor and
+  // .constructor.prototype properties for functions that return Generator
+  // objects. For full spec compliance, you may wish to configure your
+  // minifier not to mangle the names of these two functions.
+  function Generator() {}
+  function GeneratorFunction() {}
+  function GeneratorFunctionPrototype() {}
+
+  // This is a polyfill for %IteratorPrototype% for environments that
+  // don't natively support it.
+  var IteratorPrototype = {};
+  define(IteratorPrototype, iteratorSymbol, function () {
+    return this;
+  });
+
+  var getProto = Object.getPrototypeOf;
+  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+  if (NativeIteratorPrototype &&
+      NativeIteratorPrototype !== Op &&
+      hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
+    // This environment has a native %IteratorPrototype%; use it instead
+    // of the polyfill.
+    IteratorPrototype = NativeIteratorPrototype;
+  }
+
+  var Gp = GeneratorFunctionPrototype.prototype =
+    Generator.prototype = Object.create(IteratorPrototype);
+  GeneratorFunction.prototype = GeneratorFunctionPrototype;
+  define(Gp, "constructor", GeneratorFunctionPrototype);
+  define(GeneratorFunctionPrototype, "constructor", GeneratorFunction);
+  GeneratorFunction.displayName = define(
+    GeneratorFunctionPrototype,
+    toStringTagSymbol,
+    "GeneratorFunction"
+  );
+
+  // Helper for defining the .next, .throw, and .return methods of the
+  // Iterator interface in terms of a single ._invoke method.
+  function defineIteratorMethods(prototype) {
+    ["next", "throw", "return"].forEach(function(method) {
+      define(prototype, method, function(arg) {
+        return this._invoke(method, arg);
+      });
+    });
+  }
+
+  exports.isGeneratorFunction = function(genFun) {
+    var ctor = typeof genFun === "function" && genFun.constructor;
+    return ctor
+      ? ctor === GeneratorFunction ||
+        // For the native GeneratorFunction constructor, the best we can
+        // do is to check its .name property.
+        (ctor.displayName || ctor.name) === "GeneratorFunction"
+      : false;
+  };
+
+  exports.mark = function(genFun) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
+    } else {
+      genFun.__proto__ = GeneratorFunctionPrototype;
+      define(genFun, toStringTagSymbol, "GeneratorFunction");
+    }
+    genFun.prototype = Object.create(Gp);
+    return genFun;
+  };
+
+  // Within the body of any async function, `await x` is transformed to
+  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
+  // `hasOwn.call(value, "__await")` to determine if the yielded value is
+  // meant to be awaited.
+  exports.awrap = function(arg) {
+    return { __await: arg };
+  };
+
+  function AsyncIterator(generator, PromiseImpl) {
+    function invoke(method, arg, resolve, reject) {
+      var record = tryCatch(generator[method], generator, arg);
+      if (record.type === "throw") {
+        reject(record.arg);
+      } else {
+        var result = record.arg;
+        var value = result.value;
+        if (value &&
+            typeof value === "object" &&
+            hasOwn.call(value, "__await")) {
+          return PromiseImpl.resolve(value.__await).then(function(value) {
+            invoke("next", value, resolve, reject);
+          }, function(err) {
+            invoke("throw", err, resolve, reject);
+          });
+        }
+
+        return PromiseImpl.resolve(value).then(function(unwrapped) {
+          // When a yielded Promise is resolved, its final value becomes
+          // the .value of the Promise<{value,done}> result for the
+          // current iteration.
+          result.value = unwrapped;
+          resolve(result);
+        }, function(error) {
+          // If a rejected Promise was yielded, throw the rejection back
+          // into the async generator function so it can be handled there.
+          return invoke("throw", error, resolve, reject);
+        });
+      }
+    }
+
+    var previousPromise;
+
+    function enqueue(method, arg) {
+      function callInvokeWithMethodAndArg() {
+        return new PromiseImpl(function(resolve, reject) {
+          invoke(method, arg, resolve, reject);
+        });
+      }
+
+      return previousPromise =
+        // If enqueue has been called before, then we want to wait until
+        // all previous Promises have been resolved before calling invoke,
+        // so that results are always delivered in the correct order. If
+        // enqueue has not been called before, then it is important to
+        // call invoke immediately, without waiting on a callback to fire,
+        // so that the async generator function has the opportunity to do
+        // any necessary setup in a predictable way. This predictability
+        // is why the Promise constructor synchronously invokes its
+        // executor callback, and why async functions synchronously
+        // execute code before the first await. Since we implement simple
+        // async functions in terms of async generators, it is especially
+        // important to get this right, even though it requires care.
+        previousPromise ? previousPromise.then(
+          callInvokeWithMethodAndArg,
+          // Avoid propagating failures to Promises returned by later
+          // invocations of the iterator.
+          callInvokeWithMethodAndArg
+        ) : callInvokeWithMethodAndArg();
+    }
+
+    // Define the unified helper method that is used to implement .next,
+    // .throw, and .return (see defineIteratorMethods).
+    this._invoke = enqueue;
+  }
+
+  defineIteratorMethods(AsyncIterator.prototype);
+  define(AsyncIterator.prototype, asyncIteratorSymbol, function () {
+    return this;
+  });
+  exports.AsyncIterator = AsyncIterator;
+
+  // Note that simple async functions are implemented on top of
+  // AsyncIterator objects; they just return a Promise for the value of
+  // the final result produced by the iterator.
+  exports.async = function(innerFn, outerFn, self, tryLocsList, PromiseImpl) {
+    if (PromiseImpl === void 0) PromiseImpl = Promise;
+
+    var iter = new AsyncIterator(
+      wrap(innerFn, outerFn, self, tryLocsList),
+      PromiseImpl
+    );
+
+    return exports.isGeneratorFunction(outerFn)
+      ? iter // If outerFn is a generator, return the full iterator.
+      : iter.next().then(function(result) {
+          return result.done ? result.value : iter.next();
+        });
+  };
+
+  function makeInvokeMethod(innerFn, self, context) {
+    var state = GenStateSuspendedStart;
+
+    return function invoke(method, arg) {
+      if (state === GenStateExecuting) {
+        throw new Error("Generator is already running");
+      }
+
+      if (state === GenStateCompleted) {
+        if (method === "throw") {
+          throw arg;
+        }
+
+        // Be forgiving, per 25.3.3.3.3 of the spec:
+        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
+        return doneResult();
+      }
+
+      context.method = method;
+      context.arg = arg;
+
+      while (true) {
+        var delegate = context.delegate;
+        if (delegate) {
+          var delegateResult = maybeInvokeDelegate(delegate, context);
+          if (delegateResult) {
+            if (delegateResult === ContinueSentinel) continue;
+            return delegateResult;
+          }
+        }
+
+        if (context.method === "next") {
+          // Setting context._sent for legacy support of Babel's
+          // function.sent implementation.
+          context.sent = context._sent = context.arg;
+
+        } else if (context.method === "throw") {
+          if (state === GenStateSuspendedStart) {
+            state = GenStateCompleted;
+            throw context.arg;
+          }
+
+          context.dispatchException(context.arg);
+
+        } else if (context.method === "return") {
+          context.abrupt("return", context.arg);
+        }
+
+        state = GenStateExecuting;
+
+        var record = tryCatch(innerFn, self, context);
+        if (record.type === "normal") {
+          // If an exception is thrown from innerFn, we leave state ===
+          // GenStateExecuting and loop back for another invocation.
+          state = context.done
+            ? GenStateCompleted
+            : GenStateSuspendedYield;
+
+          if (record.arg === ContinueSentinel) {
+            continue;
+          }
+
+          return {
+            value: record.arg,
+            done: context.done
+          };
+
+        } else if (record.type === "throw") {
+          state = GenStateCompleted;
+          // Dispatch the exception by looping back around to the
+          // context.dispatchException(context.arg) call above.
+          context.method = "throw";
+          context.arg = record.arg;
+        }
+      }
+    };
+  }
+
+  // Call delegate.iterator[context.method](context.arg) and handle the
+  // result, either by returning a { value, done } result from the
+  // delegate iterator, or by modifying context.method and context.arg,
+  // setting context.delegate to null, and returning the ContinueSentinel.
+  function maybeInvokeDelegate(delegate, context) {
+    var method = delegate.iterator[context.method];
+    if (method === undefined) {
+      // A .throw or .return when the delegate iterator has no .throw
+      // method always terminates the yield* loop.
+      context.delegate = null;
+
+      if (context.method === "throw") {
+        // Note: ["return"] must be used for ES3 parsing compatibility.
+        if (delegate.iterator["return"]) {
+          // If the delegate iterator has a return method, give it a
+          // chance to clean up.
+          context.method = "return";
+          context.arg = undefined;
+          maybeInvokeDelegate(delegate, context);
+
+          if (context.method === "throw") {
+            // If maybeInvokeDelegate(context) changed context.method from
+            // "return" to "throw", let that override the TypeError below.
+            return ContinueSentinel;
+          }
+        }
+
+        context.method = "throw";
+        context.arg = new TypeError(
+          "The iterator does not provide a 'throw' method");
+      }
+
+      return ContinueSentinel;
+    }
+
+    var record = tryCatch(method, delegate.iterator, context.arg);
+
+    if (record.type === "throw") {
+      context.method = "throw";
+      context.arg = record.arg;
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    var info = record.arg;
+
+    if (! info) {
+      context.method = "throw";
+      context.arg = new TypeError("iterator result is not an object");
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    if (info.done) {
+      // Assign the result of the finished delegate to the temporary
+      // variable specified by delegate.resultName (see delegateYield).
+      context[delegate.resultName] = info.value;
+
+      // Resume execution at the desired location (see delegateYield).
+      context.next = delegate.nextLoc;
+
+      // If context.method was "throw" but the delegate handled the
+      // exception, let the outer generator proceed normally. If
+      // context.method was "next", forget context.arg since it has been
+      // "consumed" by the delegate iterator. If context.method was
+      // "return", allow the original .return call to continue in the
+      // outer generator.
+      if (context.method !== "return") {
+        context.method = "next";
+        context.arg = undefined;
+      }
+
+    } else {
+      // Re-yield the result returned by the delegate method.
+      return info;
+    }
+
+    // The delegate iterator is finished, so forget it and continue with
+    // the outer generator.
+    context.delegate = null;
+    return ContinueSentinel;
+  }
+
+  // Define Generator.prototype.{next,throw,return} in terms of the
+  // unified ._invoke helper method.
+  defineIteratorMethods(Gp);
+
+  define(Gp, toStringTagSymbol, "Generator");
+
+  // A Generator should always return itself as the iterator object when the
+  // @@iterator function is called on it. Some browsers' implementations of the
+  // iterator prototype chain incorrectly implement this, causing the Generator
+  // object to not be returned from this call. This ensures that doesn't happen.
+  // See https://github.com/facebook/regenerator/issues/274 for more details.
+  define(Gp, iteratorSymbol, function() {
+    return this;
+  });
+
+  define(Gp, "toString", function() {
+    return "[object Generator]";
+  });
+
+  function pushTryEntry(locs) {
+    var entry = { tryLoc: locs[0] };
+
+    if (1 in locs) {
+      entry.catchLoc = locs[1];
+    }
+
+    if (2 in locs) {
+      entry.finallyLoc = locs[2];
+      entry.afterLoc = locs[3];
+    }
+
+    this.tryEntries.push(entry);
+  }
+
+  function resetTryEntry(entry) {
+    var record = entry.completion || {};
+    record.type = "normal";
+    delete record.arg;
+    entry.completion = record;
+  }
+
+  function Context(tryLocsList) {
+    // The root entry object (effectively a try statement without a catch
+    // or a finally block) gives us a place to store values thrown from
+    // locations where there is no enclosing try statement.
+    this.tryEntries = [{ tryLoc: "root" }];
+    tryLocsList.forEach(pushTryEntry, this);
+    this.reset(true);
+  }
+
+  exports.keys = function(object) {
+    var keys = [];
+    for (var key in object) {
+      keys.push(key);
+    }
+    keys.reverse();
+
+    // Rather than returning an object with a next method, we keep
+    // things simple and return the next function itself.
+    return function next() {
+      while (keys.length) {
+        var key = keys.pop();
+        if (key in object) {
+          next.value = key;
+          next.done = false;
+          return next;
+        }
+      }
+
+      // To avoid creating an additional object, we just hang the .value
+      // and .done properties off the next function object itself. This
+      // also ensures that the minifier will not anonymize the function.
+      next.done = true;
+      return next;
+    };
+  };
+
+  function values(iterable) {
+    if (iterable) {
+      var iteratorMethod = iterable[iteratorSymbol];
+      if (iteratorMethod) {
+        return iteratorMethod.call(iterable);
+      }
+
+      if (typeof iterable.next === "function") {
+        return iterable;
+      }
+
+      if (!isNaN(iterable.length)) {
+        var i = -1, next = function next() {
+          while (++i < iterable.length) {
+            if (hasOwn.call(iterable, i)) {
+              next.value = iterable[i];
+              next.done = false;
+              return next;
+            }
+          }
+
+          next.value = undefined;
+          next.done = true;
+
+          return next;
+        };
+
+        return next.next = next;
+      }
+    }
+
+    // Return an iterator with no values.
+    return { next: doneResult };
+  }
+  exports.values = values;
+
+  function doneResult() {
+    return { value: undefined, done: true };
+  }
+
+  Context.prototype = {
+    constructor: Context,
+
+    reset: function(skipTempReset) {
+      this.prev = 0;
+      this.next = 0;
+      // Resetting context._sent for legacy support of Babel's
+      // function.sent implementation.
+      this.sent = this._sent = undefined;
+      this.done = false;
+      this.delegate = null;
+
+      this.method = "next";
+      this.arg = undefined;
+
+      this.tryEntries.forEach(resetTryEntry);
+
+      if (!skipTempReset) {
+        for (var name in this) {
+          // Not sure about the optimal order of these conditions:
+          if (name.charAt(0) === "t" &&
+              hasOwn.call(this, name) &&
+              !isNaN(+name.slice(1))) {
+            this[name] = undefined;
+          }
+        }
+      }
+    },
+
+    stop: function() {
+      this.done = true;
+
+      var rootEntry = this.tryEntries[0];
+      var rootRecord = rootEntry.completion;
+      if (rootRecord.type === "throw") {
+        throw rootRecord.arg;
+      }
+
+      return this.rval;
+    },
+
+    dispatchException: function(exception) {
+      if (this.done) {
+        throw exception;
+      }
+
+      var context = this;
+      function handle(loc, caught) {
+        record.type = "throw";
+        record.arg = exception;
+        context.next = loc;
+
+        if (caught) {
+          // If the dispatched exception was caught by a catch block,
+          // then let that catch block handle the exception normally.
+          context.method = "next";
+          context.arg = undefined;
+        }
+
+        return !! caught;
+      }
+
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        var record = entry.completion;
+
+        if (entry.tryLoc === "root") {
+          // Exception thrown outside of any try block that could handle
+          // it, so set the completion value of the entire function to
+          // throw the exception.
+          return handle("end");
+        }
+
+        if (entry.tryLoc <= this.prev) {
+          var hasCatch = hasOwn.call(entry, "catchLoc");
+          var hasFinally = hasOwn.call(entry, "finallyLoc");
+
+          if (hasCatch && hasFinally) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            } else if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else if (hasCatch) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            }
+
+          } else if (hasFinally) {
+            if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else {
+            throw new Error("try statement without catch or finally");
+          }
+        }
+      }
+    },
+
+    abrupt: function(type, arg) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc <= this.prev &&
+            hasOwn.call(entry, "finallyLoc") &&
+            this.prev < entry.finallyLoc) {
+          var finallyEntry = entry;
+          break;
+        }
+      }
+
+      if (finallyEntry &&
+          (type === "break" ||
+           type === "continue") &&
+          finallyEntry.tryLoc <= arg &&
+          arg <= finallyEntry.finallyLoc) {
+        // Ignore the finally entry if control is not jumping to a
+        // location outside the try/catch block.
+        finallyEntry = null;
+      }
+
+      var record = finallyEntry ? finallyEntry.completion : {};
+      record.type = type;
+      record.arg = arg;
+
+      if (finallyEntry) {
+        this.method = "next";
+        this.next = finallyEntry.finallyLoc;
+        return ContinueSentinel;
+      }
+
+      return this.complete(record);
+    },
+
+    complete: function(record, afterLoc) {
+      if (record.type === "throw") {
+        throw record.arg;
+      }
+
+      if (record.type === "break" ||
+          record.type === "continue") {
+        this.next = record.arg;
+      } else if (record.type === "return") {
+        this.rval = this.arg = record.arg;
+        this.method = "return";
+        this.next = "end";
+      } else if (record.type === "normal" && afterLoc) {
+        this.next = afterLoc;
+      }
+
+      return ContinueSentinel;
+    },
+
+    finish: function(finallyLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.finallyLoc === finallyLoc) {
+          this.complete(entry.completion, entry.afterLoc);
+          resetTryEntry(entry);
+          return ContinueSentinel;
+        }
+      }
+    },
+
+    "catch": function(tryLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc === tryLoc) {
+          var record = entry.completion;
+          if (record.type === "throw") {
+            var thrown = record.arg;
+            resetTryEntry(entry);
+          }
+          return thrown;
+        }
+      }
+
+      // The context.catch method must only be called with a location
+      // argument that corresponds to a known catch block.
+      throw new Error("illegal catch attempt");
+    },
+
+    delegateYield: function(iterable, resultName, nextLoc) {
+      this.delegate = {
+        iterator: values(iterable),
+        resultName: resultName,
+        nextLoc: nextLoc
+      };
+
+      if (this.method === "next") {
+        // Deliberately forget the last sent value so that we don't
+        // accidentally pass it on to the delegate.
+        this.arg = undefined;
+      }
+
+      return ContinueSentinel;
+    }
+  };
+
+  // Regardless of whether this script is executing as a CommonJS module
+  // or not, return the runtime object so that we can declare the variable
+  // regeneratorRuntime in the outer scope, which allows this module to be
+  // injected easily by `bin/regenerator --include-runtime script.js`.
+  return exports;
+
+}(
+  // If this script is executing as a CommonJS module, use module.exports
+  // as the regeneratorRuntime namespace. Otherwise create a new empty
+  // object. Either way, the resulting object will be used to initialize
+  // the regeneratorRuntime variable at the top of this file.
+   true ? module.exports : 0
+));
+
+try {
+  regeneratorRuntime = runtime;
+} catch (accidentalStrictMode) {
+  // This module should not be running in strict mode, so the above
+  // assignment should always work unless something is misconfigured. Just
+  // in case runtime.js accidentally runs in strict mode, in modern engines
+  // we can explicitly access globalThis. In older engines we can escape
+  // strict mode using a global Function call. This could conceivably fail
+  // if a Content Security Policy forbids using Function, but in that case
+  // the proper solution is to fix the accidental strict mode problem. If
+  // you've misconfigured your bundler to force strict mode and applied a
+  // CSP to forbid Function, and you're not willing to fix either of those
+  // problems, please detail your unique predicament in a GitHub issue.
+  if (typeof globalThis === "object") {
+    globalThis.regeneratorRuntime = runtime;
+  } else {
+    Function("r", "regeneratorRuntime = r")(runtime);
+  }
+}
+
+
+/***/ }),
+
 /***/ "./src/css/index.css":
 /*!***************************!*\
   !*** ./src/css/index.css ***!
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -405,6 +1527,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \****************************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 var stylesInDOM = [];
@@ -518,6 +1641,7 @@ module.exports = function (list, options) {
   \********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 var memo = {};
@@ -566,6 +1690,7 @@ module.exports = insertBySelector;
   \**********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -586,6 +1711,7 @@ module.exports = insertStyleElement;
   \**********************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -607,6 +1733,7 @@ module.exports = setAttributesWithoutAttributes;
   \***************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -686,6 +1813,7 @@ module.exports = domAPI;
   \*********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -705,147 +1833,15 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ "./src/ts/auth.ts":
-/*!************************!*\
-  !*** ./src/ts/auth.ts ***!
-  \************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "getUserAuth": () => (/* binding */ getUserAuth),
-/* harmony export */   "deleteUserAuth": () => (/* binding */ deleteUserAuth),
-/* harmony export */   "getUserData": () => (/* binding */ getUserData),
-/* harmony export */   "signupAuth": () => (/* binding */ signupAuth),
-/* harmony export */   "loginAuth": () => (/* binding */ loginAuth),
-/* harmony export */   "editProfileAuth": () => (/* binding */ editProfileAuth),
-/* harmony export */   "getUserFirstName": () => (/* binding */ getUserFirstName)
-/* harmony export */ });
-/* harmony import */ var _domains_validator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./domains/validator */ "./src/ts/domains/validator.ts");
-var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-
-const apiUrl = 'https://json-server-marco.herokuapp.com';
-const setUserAuth = (userAuth) => {
-    localStorage.setItem('userAuth', JSON.stringify(userAuth));
-};
-const getUserAuth = () => {
-    return JSON.parse(localStorage.getItem('userAuth'));
-};
-const getUserTokenId = () => {
-    const userAuth = getUserAuth();
-    return {
-        accessToken: `Bearer ${userAuth.accessToken}`,
-        userUrl: `${apiUrl}/users/${userAuth.id}`,
-    };
-};
-const deleteUserAuth = () => {
-    localStorage.removeItem('userAuth');
-};
-const getUserData = () => __awaiter(void 0, void 0, void 0, function* () {
-    const { accessToken, userUrl } = getUserTokenId();
-    const response = yield fetch(userUrl, {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': accessToken,
-        },
-    });
-    if (!response.ok) {
-        throw new Error(`API에러: ${yield response.text()}`);
-    }
-    const data = yield response.json();
-    return { email: data.email, name: data.name };
-});
-const signupAuth = ({ email, name, password, passwordCheck }) => __awaiter(void 0, void 0, void 0, function* () {
-    if ((0,_domains_validator__WEBPACK_IMPORTED_MODULE_0__.checkValidProfile)(name, password, passwordCheck)) {
-        const response = yield fetch(`${apiUrl}/signup`, {
-            method: 'POST',
-            body: JSON.stringify({ email, password, name }),
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
-        if (!response.ok) {
-            throw new Error(`API에러: ${yield response.text()}`);
-        }
-        return true;
-    }
-});
-const loginAuth = ({ email, password }) => __awaiter(void 0, void 0, void 0, function* () {
-    const response = yield fetch(`${apiUrl}/login`, {
-        method: 'POST',
-        body: JSON.stringify({ email, password }),
-        headers: {
-            'Content-Type': 'application/json',
-        },
-    });
-    if (!response.ok) {
-        throw new Error(`API에러: ${yield response.text()}`);
-    }
-    const data = yield response.json();
-    const userAuth = {
-        accessToken: data.accessToken,
-        id: data.user.id,
-    };
-    setUserAuth(userAuth);
-    return true;
-});
-const editProfileAuth = ({ name, password, passwordCheck }) => __awaiter(void 0, void 0, void 0, function* () {
-    if ((0,_domains_validator__WEBPACK_IMPORTED_MODULE_0__.checkValidProfile)(name, password, passwordCheck)) {
-        const { accessToken, userUrl } = getUserTokenId();
-        const response = yield fetch(userUrl, {
-            method: 'PATCH',
-            body: JSON.stringify({ name, password }),
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': accessToken,
-            },
-        });
-        if (!response.ok) {
-            throw new Error(`API에러: ${yield response.text()}`);
-        }
-        return true;
-    }
-});
-const getUserFirstName = () => __awaiter(void 0, void 0, void 0, function* () {
-    const { accessToken, userUrl } = getUserTokenId();
-    console.log(userUrl, accessToken);
-    if (!userUrl || !accessToken) {
-        return;
-    }
-    const response = yield fetch(userUrl, {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': accessToken,
-        },
-    });
-    if (!response.ok) {
-        return false;
-    }
-    const data = yield response.json();
-    return data.name[0];
-});
-
-
-/***/ }),
-
 /***/ "./src/ts/components/Login.ts":
 /*!************************************!*\
   !*** ./src/ts/components/Login.ts ***!
   \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../auth */ "./src/ts/auth.ts");
+/* harmony import */ var _auth_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../auth.js */ "./src/ts/auth.js");
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
 /* harmony import */ var _ToastNotification__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ToastNotification */ "./src/ts/components/ToastNotification.ts");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
@@ -991,7 +1987,7 @@ class Login extends HTMLElement {
                 password: this.passwordInput.value,
             };
             try {
-                const isLogin = yield (0,_auth__WEBPACK_IMPORTED_MODULE_0__.loginAuth)(payload);
+                const isLogin = yield (0,_auth_js__WEBPACK_IMPORTED_MODULE_0__.loginAuth)(payload);
                 if (!isLogin) {
                     return;
                 }
@@ -1040,8 +2036,9 @@ customElements.define('log-in', Login);
   \******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../auth */ "./src/ts/auth.ts");
+/* harmony import */ var _auth_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../auth.js */ "./src/ts/auth.js");
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
 /* harmony import */ var _ToastNotification__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ToastNotification */ "./src/ts/components/ToastNotification.ts");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
@@ -1177,7 +2174,7 @@ class ProfileEdit extends HTMLElement {
                 passwordCheck: this.passwordCheckEditInput.value,
             };
             try {
-                const isEdited = yield (0,_auth__WEBPACK_IMPORTED_MODULE_0__.editProfileAuth)(payload);
+                const isEdited = yield (0,_auth_js__WEBPACK_IMPORTED_MODULE_0__.editProfileAuth)(payload);
                 if (!isEdited) {
                     return;
                 }
@@ -1204,7 +2201,7 @@ class ProfileEdit extends HTMLElement {
     }
     connectedCallback() {
         return __awaiter(this, void 0, void 0, function* () {
-            const { email, name } = yield (0,_auth__WEBPACK_IMPORTED_MODULE_0__.getUserData)();
+            const { email, name } = yield (0,_auth_js__WEBPACK_IMPORTED_MODULE_0__.getUserData)();
             this.emailEditInput.value = String(email);
             this.nameEditInput.value = String(name);
             this.shadowRoot.querySelector('form').addEventListener('submit', this.edit);
@@ -1228,8 +2225,9 @@ customElements.define('profile-edit', ProfileEdit);
   \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../auth */ "./src/ts/auth.ts");
+/* harmony import */ var _auth_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../auth.js */ "./src/ts/auth.js");
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
 /* harmony import */ var _renderer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./renderer */ "./src/ts/components/renderer.ts");
 /* harmony import */ var _ToastNotification__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ToastNotification */ "./src/ts/components/ToastNotification.ts");
@@ -1374,7 +2372,7 @@ class Signup extends HTMLElement {
                 passwordCheck: this.passwordCheckInput.value,
             };
             try {
-                const isSignup = yield (0,_auth__WEBPACK_IMPORTED_MODULE_0__.signupAuth)(payload);
+                const isSignup = yield (0,_auth_js__WEBPACK_IMPORTED_MODULE_0__.signupAuth)(payload);
                 if (!isSignup) {
                     return;
                 }
@@ -1415,6 +2413,7 @@ customElements.define('sign-up', Signup);
   \************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "renderToastModal": () => (/* binding */ renderToastModal)
@@ -1549,8 +2548,9 @@ const renderToastModal = (state, message) => {
   \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../auth */ "./src/ts/auth.ts");
+/* harmony import */ var _auth_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../auth.js */ "./src/ts/auth.js");
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
 /* harmony import */ var _ToastNotification__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ToastNotification */ "./src/ts/components/ToastNotification.ts");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
@@ -1692,11 +2692,11 @@ class UserMenu extends HTMLElement {
             window.dispatchEvent(event);
         };
         this.checkLoginStatus = () => __awaiter(this, void 0, void 0, function* () {
-            if (!(0,_auth__WEBPACK_IMPORTED_MODULE_0__.getUserAuth)()) {
+            if (!(0,_auth_js__WEBPACK_IMPORTED_MODULE_0__.getUserAuth)()) {
                 this.renderLoginButton();
                 return;
             }
-            const userFirstName = yield (0,_auth__WEBPACK_IMPORTED_MODULE_0__.getUserFirstName)();
+            const userFirstName = yield (0,_auth_js__WEBPACK_IMPORTED_MODULE_0__.getUserFirstName)();
             if (!userFirstName) {
                 this.renderLoginButton();
                 return;
@@ -1721,7 +2721,7 @@ class UserMenu extends HTMLElement {
             window.dispatchEvent(new CustomEvent('@render-profile-edit', {}));
         };
         this.logout = () => {
-            (0,_auth__WEBPACK_IMPORTED_MODULE_0__.deleteUserAuth)();
+            (0,_auth_js__WEBPACK_IMPORTED_MODULE_0__.deleteUserAuth)();
             window.dispatchEvent(new CustomEvent('@route-logout', {}));
             (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_2__.renderToastModal)('success', _constants__WEBPACK_IMPORTED_MODULE_1__.SUCCESS_MESSAGE.LOGOUT_COMPLETE);
         };
@@ -1764,6 +2764,7 @@ customElements.define('user-menu', UserMenu);
   \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "renderComponent": () => (/* binding */ renderComponent),
@@ -1793,6 +2794,7 @@ const renderPublicPage = () => {
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "PATH_ID": () => (/* binding */ PATH_ID),
@@ -1870,6 +2872,7 @@ const STORAGE_ID = {
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Money)
@@ -1902,6 +2905,7 @@ class Money {
   \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Product)
@@ -1950,6 +2954,7 @@ class Product {
   \******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ VendingMachine)
@@ -2107,6 +3112,7 @@ class VendingMachine {
   \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "checkProductValidation": () => (/* binding */ checkProductValidation),
@@ -2198,6 +3204,7 @@ const checkValidProfile = (name, password, passwordCheck) => {
   \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Router)
@@ -2249,6 +3256,7 @@ class Router {
   \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "$": () => (/* binding */ $),
@@ -2270,6 +3278,7 @@ const getRandomNumber = (min, max) => {
   \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ ProductManageView)
@@ -2425,6 +3434,7 @@ class ProductManageView {
   \**************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ PurchaseView)
@@ -2556,6 +3566,7 @@ class PurchaseView {
   \**************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ RechargeView)
@@ -2616,6 +3627,7 @@ class RechargeView {
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ View)
@@ -2774,21 +3786,24 @@ class View {
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
+"use strict";
 /*!**********************!*\
   !*** ./src/index.ts ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/index.css */ "./src/css/index.css");
-/* harmony import */ var _ts_views_View__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ts/views/View */ "./src/ts/views/View.ts");
-/* harmony import */ var _ts_domains_VendingMachine__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ts/domains/VendingMachine */ "./src/ts/domains/VendingMachine.ts");
-/* harmony import */ var _ts_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ts/router */ "./src/ts/router.ts");
-/* harmony import */ var _ts_components_ToastNotification__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ts/components/ToastNotification */ "./src/ts/components/ToastNotification.ts");
-/* harmony import */ var _ts_components_Signup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ts/components/Signup */ "./src/ts/components/Signup.ts");
-/* harmony import */ var _ts_components_Login__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ts/components/Login */ "./src/ts/components/Login.ts");
-/* harmony import */ var _ts_components_ProfileEdit__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ts/components/ProfileEdit */ "./src/ts/components/ProfileEdit.ts");
-/* harmony import */ var _ts_components_UserMenu__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ts/components/UserMenu */ "./src/ts/components/UserMenu.ts");
+/* harmony import */ var regenerator_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
+/* harmony import */ var regenerator_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/index.css */ "./src/css/index.css");
+/* harmony import */ var _ts_views_View__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ts/views/View */ "./src/ts/views/View.ts");
+/* harmony import */ var _ts_domains_VendingMachine__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ts/domains/VendingMachine */ "./src/ts/domains/VendingMachine.ts");
+/* harmony import */ var _ts_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ts/router */ "./src/ts/router.ts");
+/* harmony import */ var _ts_components_ToastNotification__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ts/components/ToastNotification */ "./src/ts/components/ToastNotification.ts");
+/* harmony import */ var _ts_components_Signup__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ts/components/Signup */ "./src/ts/components/Signup.ts");
+/* harmony import */ var _ts_components_Login__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ts/components/Login */ "./src/ts/components/Login.ts");
+/* harmony import */ var _ts_components_ProfileEdit__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ts/components/ProfileEdit */ "./src/ts/components/ProfileEdit.ts");
+/* harmony import */ var _ts_components_UserMenu__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ts/components/UserMenu */ "./src/ts/components/UserMenu.ts");
 
 
 
@@ -2798,9 +3813,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const vendingMachine = new _ts_domains_VendingMachine__WEBPACK_IMPORTED_MODULE_2__["default"]();
-const view = new _ts_views_View__WEBPACK_IMPORTED_MODULE_1__["default"](vendingMachine);
-new _ts_router__WEBPACK_IMPORTED_MODULE_3__["default"](view);
+
+const vendingMachine = new _ts_domains_VendingMachine__WEBPACK_IMPORTED_MODULE_3__["default"]();
+const view = new _ts_views_View__WEBPACK_IMPORTED_MODULE_2__["default"](vendingMachine);
+new _ts_router__WEBPACK_IMPORTED_MODULE_4__["default"](view);
 
 })();
 
