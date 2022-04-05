@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Roboto);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  font-family: 'Roboto', sans-serif;\r\n  margin: 0;\r\n}\r\n\r\nh1 {\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\nbutton {\r\n  background: var(--primary);\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  border-style: none;\r\n  color: var(--white);\r\n}\r\n\r\nbutton:hover {\r\n  background: var(--primary-darken);\r\n  cursor: pointer;\r\n}\r\n\r\ninput {\r\n  padding: 0 8px;\r\n  border: 1px solid var(--secondary);\r\n  box-sizing: border-box;\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  line-height: 36px;\r\n  font-weight: 400;\r\n  font-size: 16px;\r\n}\r\n\r\ninput::placeholder {\r\n  color: var(--secondary-darken);\r\n}\r\n\r\n.tab-result-container {\r\n  margin: 52px 0;\r\n}\r\n\r\ncaption {\r\n  font-weight: 600;\r\n  font-size: 20px;\r\n  margin: 48px 0 16px;\r\n}\r\n\r\ntable {\r\n  border-collapse: collapse;\r\n  width: 471px;\r\n}\r\n\r\ntr {\r\n  border: 1px solid var(--secondary-lighten);\r\n  border-left: 0;\r\n  border-right: 0;\r\n  text-align: center;\r\n}\r\n\r\ntd,\r\nth {\r\n  padding: 8px;\r\n  font-weight: 400;\r\n}\r\n\r\nth {\r\n  font-weight: 600;\r\n}\r\n\r\ncol {\r\n  width: 23%;\r\n}\r\n\r\n.hide {\r\n  display: none !important;\r\n}\r\n\r\n.short-button {\r\n  width: 56px;\r\n  margin-left: 16px;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n}\r\n\r\n.small-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 50px;\r\n}\r\n\r\n.small-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.long-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 100px;\r\n  margin: 23px;\r\n}\r\n\r\n.long-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.edit-confirm-button {\r\n  width: 100px;\r\n  height: 32px;\r\n}\r\n\r\n.paper-money-wrapper {\r\n  margin-top: 20px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/app.css"],"names":[],"mappings":"AAEA;EACE,iCAAiC;EACjC,SAAS;AACX;;AAEA;EACE,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,0BAA0B;EAC1B,kBAAkB;EAClB,YAAY;EACZ,kBAAkB;EAClB,mBAAmB;AACrB;;AAEA;EACE,iCAAiC;EACjC,eAAe;AACjB;;AAEA;EACE,cAAc;EACd,kCAAkC;EAClC,sBAAsB;EACtB,kBAAkB;EAClB,YAAY;EACZ,iBAAiB;EACjB,gBAAgB;EAChB,eAAe;AACjB;;AAEA;EACE,8BAA8B;AAChC;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,gBAAgB;EAChB,eAAe;EACf,mBAAmB;AACrB;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA;EACE,0CAA0C;EAC1C,cAAc;EACd,eAAe;EACf,kBAAkB;AACpB;;AAEA;;EAEE,YAAY;EACZ,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,UAAU;AACZ;;AAEA;EACE,wBAAwB;AAC1B;;AAEA;EACE,WAAW;EACX,iBAAiB;EACjB,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,oCAAoC;EACpC,mBAAmB;EACnB,WAAW;AACb;;AAEA;EACE,4BAA4B;AAC9B;;AAEA;EACE,oCAAoC;EACpC,mBAAmB;EACnB,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,4BAA4B;AAC9B;;AAEA;EACE,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,gBAAgB;AAClB","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Roboto');\r\n\r\nbody {\r\n  font-family: 'Roboto', sans-serif;\r\n  margin: 0;\r\n}\r\n\r\nh1 {\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\nbutton {\r\n  background: var(--primary);\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  border-style: none;\r\n  color: var(--white);\r\n}\r\n\r\nbutton:hover {\r\n  background: var(--primary-darken);\r\n  cursor: pointer;\r\n}\r\n\r\ninput {\r\n  padding: 0 8px;\r\n  border: 1px solid var(--secondary);\r\n  box-sizing: border-box;\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  line-height: 36px;\r\n  font-weight: 400;\r\n  font-size: 16px;\r\n}\r\n\r\ninput::placeholder {\r\n  color: var(--secondary-darken);\r\n}\r\n\r\n.tab-result-container {\r\n  margin: 52px 0;\r\n}\r\n\r\ncaption {\r\n  font-weight: 600;\r\n  font-size: 20px;\r\n  margin: 48px 0 16px;\r\n}\r\n\r\ntable {\r\n  border-collapse: collapse;\r\n  width: 471px;\r\n}\r\n\r\ntr {\r\n  border: 1px solid var(--secondary-lighten);\r\n  border-left: 0;\r\n  border-right: 0;\r\n  text-align: center;\r\n}\r\n\r\ntd,\r\nth {\r\n  padding: 8px;\r\n  font-weight: 400;\r\n}\r\n\r\nth {\r\n  font-weight: 600;\r\n}\r\n\r\ncol {\r\n  width: 23%;\r\n}\r\n\r\n.hide {\r\n  display: none !important;\r\n}\r\n\r\n.short-button {\r\n  width: 56px;\r\n  margin-left: 16px;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n}\r\n\r\n.small-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 50px;\r\n}\r\n\r\n.small-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.long-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 100px;\r\n  margin: 23px;\r\n}\r\n\r\n.long-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.edit-confirm-button {\r\n  width: 100px;\r\n  height: 32px;\r\n}\r\n\r\n.paper-money-wrapper {\r\n  margin-top: 20px;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n  font-family: 'Roboto', sans-serif;\n  margin: 0;\n}\n\nh1 {\n  display: flex;\n  justify-content: center;\n}\n\nbutton {\n  background: var(--primary);\n  border-radius: 4px;\n  height: 36px;\n  border-style: none;\n  color: var(--white);\n}\n\nbutton:hover {\n  background: var(--primary-darken);\n  cursor: pointer;\n}\n\ninput {\n  padding: 0 8px;\n  border: 1px solid var(--secondary);\n  box-sizing: border-box;\n  border-radius: 4px;\n  height: 36px;\n  line-height: 36px;\n  font-weight: 400;\n  font-size: 16px;\n}\n\ninput::placeholder {\n  color: var(--secondary-darken);\n}\n\n.tab-result-container {\n  margin: 52px 0;\n}\n\ncaption {\n  font-weight: 600;\n  font-size: 20px;\n  margin: 48px 0 16px;\n}\n\ntable {\n  border-collapse: collapse;\n  width: 471px;\n}\n\ntr {\n  border: 1px solid var(--secondary-lighten);\n  border-left: 0;\n  border-right: 0;\n  text-align: center;\n}\n\ntd,\nth {\n  padding: 8px;\n  font-weight: 400;\n}\n\nth {\n  font-weight: 600;\n}\n\ncol {\n  width: 23%;\n}\n\n.hide {\n  display: none !important;\n}\n\n.short-button {\n  width: 56px;\n  margin-left: 16px;\n  font-size: 14px;\n  font-weight: 700;\n}\n\n.small-button {\n  background: var(--secondary-lighten);\n  color: var(--black);\n  width: 50px;\n}\n\n.small-button:hover {\n  background: var(--secondary);\n}\n\n.long-button {\n  background: var(--secondary-lighten);\n  color: var(--black);\n  width: 100px;\n  margin: 23px;\n}\n\n.long-button:hover {\n  background: var(--secondary);\n}\n\n.edit-confirm-button {\n  width: 100px;\n  height: 32px;\n}\n\n.paper-money-wrapper {\n  margin-top: 20px;\n}\n", "",{"version":3,"sources":["webpack://./src/css/app.css"],"names":[],"mappings":"AAEA;EACE,iCAAiC;EACjC,SAAS;AACX;;AAEA;EACE,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,0BAA0B;EAC1B,kBAAkB;EAClB,YAAY;EACZ,kBAAkB;EAClB,mBAAmB;AACrB;;AAEA;EACE,iCAAiC;EACjC,eAAe;AACjB;;AAEA;EACE,cAAc;EACd,kCAAkC;EAClC,sBAAsB;EACtB,kBAAkB;EAClB,YAAY;EACZ,iBAAiB;EACjB,gBAAgB;EAChB,eAAe;AACjB;;AAEA;EACE,8BAA8B;AAChC;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,gBAAgB;EAChB,eAAe;EACf,mBAAmB;AACrB;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA;EACE,0CAA0C;EAC1C,cAAc;EACd,eAAe;EACf,kBAAkB;AACpB;;AAEA;;EAEE,YAAY;EACZ,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,UAAU;AACZ;;AAEA;EACE,wBAAwB;AAC1B;;AAEA;EACE,WAAW;EACX,iBAAiB;EACjB,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,oCAAoC;EACpC,mBAAmB;EACnB,WAAW;AACb;;AAEA;EACE,4BAA4B;AAC9B;;AAEA;EACE,oCAAoC;EACpC,mBAAmB;EACnB,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,4BAA4B;AAC9B;;AAEA;EACE,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,gBAAgB;AAClB","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Roboto');\n\nbody {\n  font-family: 'Roboto', sans-serif;\n  margin: 0;\n}\n\nh1 {\n  display: flex;\n  justify-content: center;\n}\n\nbutton {\n  background: var(--primary);\n  border-radius: 4px;\n  height: 36px;\n  border-style: none;\n  color: var(--white);\n}\n\nbutton:hover {\n  background: var(--primary-darken);\n  cursor: pointer;\n}\n\ninput {\n  padding: 0 8px;\n  border: 1px solid var(--secondary);\n  box-sizing: border-box;\n  border-radius: 4px;\n  height: 36px;\n  line-height: 36px;\n  font-weight: 400;\n  font-size: 16px;\n}\n\ninput::placeholder {\n  color: var(--secondary-darken);\n}\n\n.tab-result-container {\n  margin: 52px 0;\n}\n\ncaption {\n  font-weight: 600;\n  font-size: 20px;\n  margin: 48px 0 16px;\n}\n\ntable {\n  border-collapse: collapse;\n  width: 471px;\n}\n\ntr {\n  border: 1px solid var(--secondary-lighten);\n  border-left: 0;\n  border-right: 0;\n  text-align: center;\n}\n\ntd,\nth {\n  padding: 8px;\n  font-weight: 400;\n}\n\nth {\n  font-weight: 600;\n}\n\ncol {\n  width: 23%;\n}\n\n.hide {\n  display: none !important;\n}\n\n.short-button {\n  width: 56px;\n  margin-left: 16px;\n  font-size: 14px;\n  font-weight: 700;\n}\n\n.small-button {\n  background: var(--secondary-lighten);\n  color: var(--black);\n  width: 50px;\n}\n\n.small-button:hover {\n  background: var(--secondary);\n}\n\n.long-button {\n  background: var(--secondary-lighten);\n  color: var(--black);\n  width: 100px;\n  margin: 23px;\n}\n\n.long-button:hover {\n  background: var(--secondary);\n}\n\n.edit-confirm-button {\n  width: 100px;\n  height: 32px;\n}\n\n.paper-money-wrapper {\n  margin-top: 20px;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -66,7 +66,7 @@ ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_rechargeTab_css__
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_app_css__WEBPACK_IMPORTED_MODULE_6__["default"]);
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_notFound_css__WEBPACK_IMPORTED_MODULE_7__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\r\n", "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n", "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -92,7 +92,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".nav-tab {\r\n  display: flex;\r\n  justify-content: center;\r\n  margin: 32px 0 0;\r\n}\r\n\r\n.tab-input {\r\n  width: 0;\r\n  height: 0;\r\n}\r\n\r\n.tab-label {\r\n  display: inline-block;\r\n  text-align: center;\r\n  font-size: 16px;\r\n  height: 36px;\r\n  width: 117px;\r\n  font-weight: 500;\r\n  line-height: 36px;\r\n  background-color: #f5f5f5;\r\n  border-radius: 4px;\r\n}\r\n\r\n.tab-input:checked + label {\r\n  background: rgba(0, 188, 212, 0.16);\r\n}\r\n\r\n.tab-label:hover {\r\n  cursor: pointer;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/nav.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,uBAAuB;EACvB,gBAAgB;AAClB;;AAEA;EACE,QAAQ;EACR,SAAS;AACX;;AAEA;EACE,qBAAqB;EACrB,kBAAkB;EAClB,eAAe;EACf,YAAY;EACZ,YAAY;EACZ,gBAAgB;EAChB,iBAAiB;EACjB,yBAAyB;EACzB,kBAAkB;AACpB;;AAEA;EACE,mCAAmC;AACrC;;AAEA;EACE,eAAe;AACjB","sourcesContent":[".nav-tab {\r\n  display: flex;\r\n  justify-content: center;\r\n  margin: 32px 0 0;\r\n}\r\n\r\n.tab-input {\r\n  width: 0;\r\n  height: 0;\r\n}\r\n\r\n.tab-label {\r\n  display: inline-block;\r\n  text-align: center;\r\n  font-size: 16px;\r\n  height: 36px;\r\n  width: 117px;\r\n  font-weight: 500;\r\n  line-height: 36px;\r\n  background-color: #f5f5f5;\r\n  border-radius: 4px;\r\n}\r\n\r\n.tab-input:checked + label {\r\n  background: rgba(0, 188, 212, 0.16);\r\n}\r\n\r\n.tab-label:hover {\r\n  cursor: pointer;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".nav-tab {\n  display: flex;\n  justify-content: center;\n  margin: 32px 0 0;\n}\n\n.tab-input {\n  width: 0;\n  height: 0;\n}\n\n.tab-label {\n  display: inline-block;\n  text-align: center;\n  font-size: 16px;\n  height: 36px;\n  width: 117px;\n  font-weight: 500;\n  line-height: 36px;\n  background-color: #f5f5f5;\n  border-radius: 4px;\n}\n\n.tab-input:checked + label {\n  background: rgba(0, 188, 212, 0.16);\n}\n\n.tab-label:hover {\n  cursor: pointer;\n}\n", "",{"version":3,"sources":["webpack://./src/css/nav.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,uBAAuB;EACvB,gBAAgB;AAClB;;AAEA;EACE,QAAQ;EACR,SAAS;AACX;;AAEA;EACE,qBAAqB;EACrB,kBAAkB;EAClB,eAAe;EACf,YAAY;EACZ,YAAY;EACZ,gBAAgB;EAChB,iBAAiB;EACjB,yBAAyB;EACzB,kBAAkB;AACpB;;AAEA;EACE,mCAAmC;AACrC;;AAEA;EACE,eAAe;AACjB","sourcesContent":[".nav-tab {\n  display: flex;\n  justify-content: center;\n  margin: 32px 0 0;\n}\n\n.tab-input {\n  width: 0;\n  height: 0;\n}\n\n.tab-label {\n  display: inline-block;\n  text-align: center;\n  font-size: 16px;\n  height: 36px;\n  width: 117px;\n  font-weight: 500;\n  line-height: 36px;\n  background-color: #f5f5f5;\n  border-radius: 4px;\n}\n\n.tab-input:checked + label {\n  background: rgba(0, 188, 212, 0.16);\n}\n\n.tab-label:hover {\n  cursor: pointer;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -118,7 +118,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#not-found {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  width: 100vw;\r\n  height: 100vh;\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  background-color: white;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/notFound.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,YAAY;EACZ,aAAa;EACb,eAAe;EACf,MAAM;EACN,OAAO;EACP,uBAAuB;AACzB","sourcesContent":["#not-found {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  width: 100vw;\r\n  height: 100vh;\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  background-color: white;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "#not-found {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  top: 0;\n  left: 0;\n  background-color: white;\n}\n", "",{"version":3,"sources":["webpack://./src/css/notFound.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,YAAY;EACZ,aAAa;EACb,eAAe;EACf,MAAM;EACN,OAAO;EACP,uBAAuB;AACzB","sourcesContent":["#not-found {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  top: 0;\n  left: 0;\n  background-color: white;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -144,7 +144,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".tab-result-wrapper {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n\r\n.label-wrapper {\r\n  margin: 10px 0;\r\n}\r\n\r\n.product-manage-input {\r\n  width: 120px;\r\n}\r\n\r\n.edit-form {\r\n  display: flex;\r\n}\r\n\r\n.edit-input {\r\n  width: 84px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/productManageTab.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,WAAW;AACb","sourcesContent":[".tab-result-wrapper {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n\r\n.label-wrapper {\r\n  margin: 10px 0;\r\n}\r\n\r\n.product-manage-input {\r\n  width: 120px;\r\n}\r\n\r\n.edit-form {\r\n  display: flex;\r\n}\r\n\r\n.edit-input {\r\n  width: 84px;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".tab-result-wrapper {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n.label-wrapper {\n  margin: 10px 0;\n}\n\n.product-manage-input {\n  width: 120px;\n}\n\n.edit-form {\n  display: flex;\n}\n\n.edit-input {\n  width: 84px;\n}\n", "",{"version":3,"sources":["webpack://./src/css/productManageTab.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,WAAW;AACb","sourcesContent":[".tab-result-wrapper {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n.label-wrapper {\n  margin: 10px 0;\n}\n\n.product-manage-input {\n  width: 120px;\n}\n\n.edit-form {\n  display: flex;\n}\n\n.edit-input {\n  width: 84px;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -170,7 +170,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".long-input {\r\n  width: 300px;\r\n}\r\n\r\n.recharge-button {\r\n  width: 56px;\r\n}\r\n\r\n.holding-money-wrapper {\r\n  margin-top: 16px;\r\n}\r\n\r\n.change-table {\r\n  width: 237px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/rechargeTab.css"],"names":[],"mappings":"AAAA;EACE,YAAY;AACd;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,YAAY;AACd","sourcesContent":[".long-input {\r\n  width: 300px;\r\n}\r\n\r\n.recharge-button {\r\n  width: 56px;\r\n}\r\n\r\n.holding-money-wrapper {\r\n  margin-top: 16px;\r\n}\r\n\r\n.change-table {\r\n  width: 237px;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".long-input {\n  width: 300px;\n}\n\n.recharge-button {\n  width: 56px;\n}\n\n.holding-money-wrapper {\n  margin-top: 16px;\n}\n\n.change-table {\n  width: 237px;\n}\n", "",{"version":3,"sources":["webpack://./src/css/rechargeTab.css"],"names":[],"mappings":"AAAA;EACE,YAAY;AACd;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,YAAY;AACd","sourcesContent":[".long-input {\n  width: 300px;\n}\n\n.recharge-button {\n  width: 56px;\n}\n\n.holding-money-wrapper {\n  margin-top: 16px;\n}\n\n.change-table {\n  width: 237px;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -196,7 +196,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ":root {\r\n  --primary: #00bcd4;\r\n  --primary-lighten: #80deea;\r\n  --primary-darken: #009eb3;\r\n  --secondary: #b4b4b4;\r\n  --secondary-lighten: #f5f5f5;\r\n  --secondary-darken: #8b8b8b;\r\n  --white: #fff;\r\n  --black: #000;\r\n  --dimmer: rgba(0, 0, 0, 0.5);\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/root.css"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,0BAA0B;EAC1B,yBAAyB;EACzB,oBAAoB;EACpB,4BAA4B;EAC5B,2BAA2B;EAC3B,aAAa;EACb,aAAa;EACb,4BAA4B;AAC9B","sourcesContent":[":root {\r\n  --primary: #00bcd4;\r\n  --primary-lighten: #80deea;\r\n  --primary-darken: #009eb3;\r\n  --secondary: #b4b4b4;\r\n  --secondary-lighten: #f5f5f5;\r\n  --secondary-darken: #8b8b8b;\r\n  --white: #fff;\r\n  --black: #000;\r\n  --dimmer: rgba(0, 0, 0, 0.5);\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --primary: #00bcd4;\n  --primary-lighten: #80deea;\n  --primary-darken: #009eb3;\n  --secondary: #b4b4b4;\n  --secondary-lighten: #f5f5f5;\n  --secondary-darken: #8b8b8b;\n  --white: #fff;\n  --black: #000;\n  --dimmer: rgba(0, 0, 0, 0.5);\n}\n", "",{"version":3,"sources":["webpack://./src/css/root.css"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,0BAA0B;EAC1B,yBAAyB;EACzB,oBAAoB;EACpB,4BAA4B;EAC5B,2BAA2B;EAC3B,aAAa;EACb,aAAa;EACb,4BAA4B;AAC9B","sourcesContent":[":root {\n  --primary: #00bcd4;\n  --primary-lighten: #80deea;\n  --primary-darken: #009eb3;\n  --secondary: #b4b4b4;\n  --secondary-lighten: #f5f5f5;\n  --secondary-darken: #8b8b8b;\n  --white: #fff;\n  --black: #000;\n  --dimmer: rgba(0, 0, 0, 0.5);\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -705,6 +705,139 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/ts/auth.ts":
+/*!************************!*\
+  !*** ./src/ts/auth.ts ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getUserAuth": () => (/* binding */ getUserAuth),
+/* harmony export */   "deleteUserAuth": () => (/* binding */ deleteUserAuth),
+/* harmony export */   "getUserData": () => (/* binding */ getUserData),
+/* harmony export */   "signupAuth": () => (/* binding */ signupAuth),
+/* harmony export */   "loginAuth": () => (/* binding */ loginAuth),
+/* harmony export */   "editProfileAuth": () => (/* binding */ editProfileAuth),
+/* harmony export */   "getUserFirstName": () => (/* binding */ getUserFirstName)
+/* harmony export */ });
+/* harmony import */ var _domains_validator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./domains/validator */ "./src/ts/domains/validator.ts");
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
+const apiUrl = 'https://json-server-marco.herokuapp.com';
+const setUserAuth = (userAuth) => {
+    localStorage.setItem('userAuth', JSON.stringify(userAuth));
+};
+const getUserAuth = () => {
+    return JSON.parse(localStorage.getItem('userAuth'));
+};
+const getUserTokenId = () => {
+    const userAuth = getUserAuth();
+    return {
+        accessToken: `Bearer ${userAuth.accessToken}`,
+        userUrl: `${apiUrl}/users/${userAuth.id}`,
+    };
+};
+const deleteUserAuth = () => {
+    localStorage.removeItem('userAuth');
+};
+const getUserData = () => __awaiter(void 0, void 0, void 0, function* () {
+    const { accessToken, userUrl } = getUserTokenId();
+    const response = yield fetch(userUrl, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': accessToken,
+        },
+    });
+    if (!response.ok) {
+        throw new Error(`API에러: ${yield response.text()}`);
+    }
+    const data = yield response.json();
+    return { email: data.email, name: data.name };
+});
+const signupAuth = ({ email, name, password, passwordCheck }) => __awaiter(void 0, void 0, void 0, function* () {
+    if ((0,_domains_validator__WEBPACK_IMPORTED_MODULE_0__.checkValidProfile)(name, password, passwordCheck)) {
+        const response = yield fetch(`${apiUrl}/signup`, {
+            method: 'POST',
+            body: JSON.stringify({ email, password, name }),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+        if (!response.ok) {
+            throw new Error(`API에러: ${yield response.text()}`);
+        }
+        return true;
+    }
+});
+const loginAuth = ({ email, password }) => __awaiter(void 0, void 0, void 0, function* () {
+    const response = yield fetch(`${apiUrl}/login`, {
+        method: 'POST',
+        body: JSON.stringify({ email, password }),
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    });
+    if (!response.ok) {
+        throw new Error(`API에러: ${yield response.text()}`);
+    }
+    const data = yield response.json();
+    const userAuth = {
+        accessToken: data.accessToken,
+        id: data.user.id,
+    };
+    setUserAuth(userAuth);
+    return true;
+});
+const editProfileAuth = ({ name, password, passwordCheck }) => __awaiter(void 0, void 0, void 0, function* () {
+    if ((0,_domains_validator__WEBPACK_IMPORTED_MODULE_0__.checkValidProfile)(name, password, passwordCheck)) {
+        const { accessToken, userUrl } = getUserTokenId();
+        const response = yield fetch(userUrl, {
+            method: 'PATCH',
+            body: JSON.stringify({ name, password }),
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': accessToken,
+            },
+        });
+        if (!response.ok) {
+            throw new Error(`API에러: ${yield response.text()}`);
+        }
+        return true;
+    }
+});
+const getUserFirstName = () => __awaiter(void 0, void 0, void 0, function* () {
+    const { accessToken, userUrl } = getUserTokenId();
+    console.log(userUrl, accessToken);
+    if (!userUrl || !accessToken) {
+        return;
+    }
+    const response = yield fetch(userUrl, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': accessToken,
+        },
+    });
+    if (!response.ok) {
+        return false;
+    }
+    const data = yield response.json();
+    return data.name[0];
+});
+
+
+/***/ }),
+
 /***/ "./src/ts/components/Login.ts":
 /*!************************************!*\
   !*** ./src/ts/components/Login.ts ***!
@@ -712,8 +845,19 @@ module.exports = styleTagTransform;
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
-/* harmony import */ var _ToastNotification__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ToastNotification */ "./src/ts/components/ToastNotification.ts");
+/* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../auth */ "./src/ts/auth.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
+/* harmony import */ var _ToastNotification__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ToastNotification */ "./src/ts/components/ToastNotification.ts");
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
 
 
 const loginTemplate = document.createElement('template');
@@ -821,9 +965,9 @@ loginTemplate.innerHTML = `
         <h1>로그인</h1>
         <form>
           <label>이메일</label>
-          <input type="email" placeholder="woowacourse@gmail.com" />
+          <input id="email-input" type="email" placeholder="woowacourse@gmail.com" />
           <label>비밀번호</label>
-          <input type="password" placeholder="비밀번호를 입력해주세요" />
+          <input id="password-input" type="password" placeholder="비밀번호를 입력해주세요" />
           <button type="submit">확인</button>
         </form>
         <span>아직 회원이 아닌가요?<span id="signup-span">회원가입</span></span>
@@ -840,54 +984,38 @@ class Login extends HTMLElement {
         this.closeModal = () => {
             this.remove();
         };
-        this.login = (event) => {
+        this.login = (event) => __awaiter(this, void 0, void 0, function* () {
             event.preventDefault();
-            const email = this.shadowRoot.querySelector("input[type='email']").value;
-            const password = this.shadowRoot.querySelector("input[type='password']")
-                .value;
-            const url = 'https://json-server-marco.herokuapp.com/login/';
-            const data = {
-                email,
-                password,
+            const payload = {
+                email: this.emailInput.value,
+                password: this.passwordInput.value,
             };
-            fetch(url, {
-                method: 'POST',
-                body: JSON.stringify(data),
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            })
-                .then((res) => {
-                if (!res.ok) {
-                    console.log('login, 로그인 실패');
+            try {
+                const isLogin = yield (0,_auth__WEBPACK_IMPORTED_MODULE_0__.loginAuth)(payload);
+                if (!isLogin) {
                     return;
                 }
-                return res.json();
-            })
-                .then((response) => {
-                const userAuth = {
-                    accessToken: response.accessToken,
-                    id: response.user.id,
-                };
-                console.log('login, 로그인 성공');
-                localStorage.setItem('userAuth', JSON.stringify(userAuth));
                 this.emitRouteLogin();
-                (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_1__.renderToastModal)('success', _constants__WEBPACK_IMPORTED_MODULE_0__.SUCCESS_MESSAGE.LOGIN_COMPLETE);
-            })
-                .catch((error) => (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_1__.renderToastModal)('error', _constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.LOGIN_FAILED));
-        };
+                (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_2__.renderToastModal)('success', _constants__WEBPACK_IMPORTED_MODULE_1__.SUCCESS_MESSAGE.LOGIN_COMPLETE);
+            }
+            catch (error) {
+                (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_2__.renderToastModal)('error', _constants__WEBPACK_IMPORTED_MODULE_1__.ERROR_MESSAGE.LOGIN_FAILED);
+            }
+        });
         this.emitRouteLogin = () => {
-            this.remove();
+            this.closeModal();
             const event = new CustomEvent('@route-login', {});
             window.dispatchEvent(event);
         };
         this.emitRenderSignup = () => {
-            this.remove();
+            this.closeModal();
             const event = new CustomEvent('@render-signup', {});
             window.dispatchEvent(event);
         };
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.appendChild(loginTemplate.content.cloneNode(true));
+        this.emailInput = this.shadowRoot.getElementById('email-input');
+        this.passwordInput = this.shadowRoot.getElementById('password-input');
     }
     connectedCallback() {
         this.shadowRoot.querySelector('form').addEventListener('submit', this.login);
@@ -913,8 +1041,8 @@ customElements.define('log-in', Login);
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
-/* harmony import */ var _domain_validator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../domain/validator */ "./src/ts/domain/validator.ts");
+/* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../auth */ "./src/ts/auth.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
 /* harmony import */ var _ToastNotification__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ToastNotification */ "./src/ts/components/ToastNotification.ts");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -1041,45 +1169,26 @@ profileEditTemplate.innerHTML = `
 class ProfileEdit extends HTMLElement {
     constructor() {
         super();
-        this.edit = (event, url, accessToken) => {
+        this.edit = (event) => __awaiter(this, void 0, void 0, function* () {
             event.preventDefault();
-            const name = this.nameEditInput.value;
-            const password = this.passwordEditInput.value;
-            const passwordCheck = this.passwordCheckEditInput.value;
+            const payload = {
+                name: this.nameEditInput.value,
+                password: this.passwordEditInput.value,
+                passwordCheck: this.passwordCheckEditInput.value,
+            };
             try {
-                (0,_domain_validator__WEBPACK_IMPORTED_MODULE_1__.checkValidProfile)(name, password, passwordCheck);
-                fetch(url, {
-                    method: 'PATCH',
-                    body: JSON.stringify({ name, password }),
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': accessToken,
-                    },
-                }).then(() => {
-                    this.closeModal();
-                    const event = new CustomEvent('@route-login', {});
-                    window.dispatchEvent(event);
-                    (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_2__.renderToastModal)('success', _constants__WEBPACK_IMPORTED_MODULE_0__.SUCCESS_MESSAGE.EDIT_COMPLETE);
-                });
+                const isEdited = yield (0,_auth__WEBPACK_IMPORTED_MODULE_0__.editProfileAuth)(payload);
+                if (!isEdited) {
+                    return;
+                }
+                this.closeModal();
+                window.dispatchEvent(new CustomEvent('@route-login', {}));
+                (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_2__.renderToastModal)('success', _constants__WEBPACK_IMPORTED_MODULE_1__.SUCCESS_MESSAGE.EDIT_COMPLETE);
             }
             catch (error) {
                 (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_2__.renderToastModal)('error', error.message);
             }
-        };
-        this.getUserData = (url, accessToken) => {
-            const userData = fetch(url, {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': accessToken,
-                },
-            })
-                .then((res) => res.json())
-                .then((response) => {
-                return { email: response.email, name: response.name };
-            });
-            return userData;
-        };
+        });
         this.closeModalDimmer = (event) => {
             event.target === this.shadowRoot.querySelector('.dimmer') ? this.closeModal() : false;
         };
@@ -1092,18 +1201,13 @@ class ProfileEdit extends HTMLElement {
         this.nameEditInput = this.shadowRoot.getElementById('name-edit-input');
         this.passwordEditInput = (this.shadowRoot.getElementById('password-edit-input'));
         this.passwordCheckEditInput = (this.shadowRoot.getElementById('password-check-edit-input'));
-        this.userAuth = JSON.parse(localStorage.getItem('userAuth'));
     }
     connectedCallback() {
         return __awaiter(this, void 0, void 0, function* () {
-            const accessToken = `Bearer ${this.userAuth.accessToken}`;
-            const url = `https://json-server-marco.herokuapp.com/users/${this.userAuth.id}`;
-            const { email, name } = yield this.getUserData(url, accessToken);
+            const { email, name } = yield (0,_auth__WEBPACK_IMPORTED_MODULE_0__.getUserData)();
             this.emailEditInput.value = String(email);
             this.nameEditInput.value = String(name);
-            this.shadowRoot
-                .querySelector('form')
-                .addEventListener('submit', (event) => this.edit(event, url, accessToken));
+            this.shadowRoot.querySelector('form').addEventListener('submit', this.edit);
             this.shadowRoot.querySelector('.x-shape').addEventListener('click', this.closeModal);
             this.shadowRoot.addEventListener('click', this.closeModalDimmer);
         });
@@ -1125,9 +1229,20 @@ customElements.define('profile-edit', ProfileEdit);
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
-/* harmony import */ var _domain_validator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../domain/validator */ "./src/ts/domain/validator.ts");
-/* harmony import */ var _ToastNotification__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ToastNotification */ "./src/ts/components/ToastNotification.ts");
+/* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../auth */ "./src/ts/auth.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
+/* harmony import */ var _renderer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./renderer */ "./src/ts/components/renderer.ts");
+/* harmony import */ var _ToastNotification__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ToastNotification */ "./src/ts/components/ToastNotification.ts");
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
 
 
 
@@ -1250,43 +1365,27 @@ class Signup extends HTMLElement {
         this.closeModal = () => {
             this.remove();
         };
-        this.signup = (event) => {
+        this.signup = (event) => __awaiter(this, void 0, void 0, function* () {
             event.preventDefault();
-            const email = this.emailInput.value;
-            const name = this.nameInput.value;
-            const password = this.passwordInput.value;
-            const passwordCheck = this.passwordCheckInput.value;
-            const url = 'https://json-server-marco.herokuapp.com/signup/';
-            fetch(url, {
-                method: 'POST',
-                body: JSON.stringify({ email, password, name }),
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            })
-                .then((res) => {
-                (0,_domain_validator__WEBPACK_IMPORTED_MODULE_1__.checkValidProfile)(name, password, passwordCheck);
-                if (!res.ok) {
-                    throw new Error('이미 가입된 이메일입니다. 다른 이메일을 입력해주세요.');
+            const payload = {
+                email: this.emailInput.value,
+                name: this.nameInput.value,
+                password: this.passwordInput.value,
+                passwordCheck: this.passwordCheckInput.value,
+            };
+            try {
+                const isSignup = yield (0,_auth__WEBPACK_IMPORTED_MODULE_0__.signupAuth)(payload);
+                if (!isSignup) {
+                    return;
                 }
-                return res.json();
-            })
-                .then((response) => {
-                const userAuth = {
-                    accessToken: response.accessToken,
-                    id: response.user.id,
-                };
-                localStorage.setItem('userAuth', JSON.stringify(userAuth));
                 this.closeModal();
-                this.emitRouteLogin();
-                (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_2__.renderToastModal)('success', _constants__WEBPACK_IMPORTED_MODULE_0__.SUCCESS_MESSAGE.SIGNUP_COMPLETE);
-            })
-                .catch((error) => (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_2__.renderToastModal)('error', error.message));
-        };
-        this.emitRouteLogin = () => {
-            const event = new CustomEvent('@route-login', {});
-            window.dispatchEvent(event);
-        };
+                (0,_renderer__WEBPACK_IMPORTED_MODULE_2__.renderComponent)('log-in');
+                (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_3__.renderToastModal)('success', _constants__WEBPACK_IMPORTED_MODULE_1__.SUCCESS_MESSAGE.SIGNUP_COMPLETE);
+            }
+            catch (error) {
+                (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_3__.renderToastModal)('error', error.message);
+            }
+        });
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.appendChild(signupTemplate.content.cloneNode(true));
         this.emailInput = this.shadowRoot.getElementById('email-input');
@@ -1295,13 +1394,11 @@ class Signup extends HTMLElement {
         this.passwordCheckInput = (this.shadowRoot.getElementById('password-check-input'));
     }
     connectedCallback() {
-        // 이벤트 추가
         this.shadowRoot.querySelector('form').addEventListener('submit', this.signup);
         this.shadowRoot.querySelector('.x-shape').addEventListener('click', this.closeModal);
         this.shadowRoot.addEventListener('click', this.closeModalDimmer);
     }
     disconnectedCallback() {
-        // 이벤트 삭제
         this.shadowRoot.querySelector('form').removeEventListener('submit', this.signup);
         this.shadowRoot.querySelector('.x-shape').removeEventListener('click', this.closeModal);
         this.shadowRoot.removeEventListener('click', this.closeModalDimmer);
@@ -1453,8 +1550,19 @@ const renderToastModal = (state, message) => {
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
-/* harmony import */ var _ToastNotification__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ToastNotification */ "./src/ts/components/ToastNotification.ts");
+/* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../auth */ "./src/ts/auth.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
+/* harmony import */ var _ToastNotification__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ToastNotification */ "./src/ts/components/ToastNotification.ts");
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
 
 
 const userMenuTemplate = document.createElement('template');
@@ -1579,39 +1687,22 @@ userMenuTemplate.innerHTML = `
 class UserMenu extends HTMLElement {
     constructor() {
         super();
-        this.renderLoginModal = () => {
-            const detail = document.createElement('log-in');
-            const event = new CustomEvent('@render-login', { detail });
+        this.handleLoginButton = () => {
+            const event = new CustomEvent('@render-login', {});
             window.dispatchEvent(event);
         };
-        this.checkLoginStatus = () => {
-            const userAuth = JSON.parse(localStorage.getItem('userAuth'));
-            if (!userAuth) {
+        this.checkLoginStatus = () => __awaiter(this, void 0, void 0, function* () {
+            if (!(0,_auth__WEBPACK_IMPORTED_MODULE_0__.getUserAuth)()) {
                 this.renderLoginButton();
                 return;
             }
-            const id = userAuth.id;
-            const accessToken = `Bearer ${userAuth.accessToken}`;
-            const url = `https://json-server-marco.herokuapp.com/users/${id}`;
-            fetch(url, {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': accessToken,
-                },
-            })
-                .then((res) => {
-                if (!res.ok) {
-                    this.renderLoginButton();
-                    return;
-                }
-                return res.json();
-            })
-                .then((response) => {
-                this.renderUserThumbnail(response.name[0]);
-            })
-                .catch((error) => (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_1__.renderToastModal)('error', error.message));
-        };
+            const userFirstName = yield (0,_auth__WEBPACK_IMPORTED_MODULE_0__.getUserFirstName)();
+            if (!userFirstName) {
+                this.renderLoginButton();
+                return;
+            }
+            this.renderUserThumbnail(userFirstName);
+        });
         this.renderLoginButton = () => {
             this.loginButton.classList.remove('hide');
             this.menuWrapper.classList.add('hide');
@@ -1626,15 +1717,13 @@ class UserMenu extends HTMLElement {
             this.menu.classList.toggle('hide');
         };
         this.emitRenderProfileEdit = () => {
-            console.log('회원정보 수정 버튼 호출');
-            const event = new CustomEvent('@render-profile-edit', {});
-            window.dispatchEvent(event);
+            this.menu.classList.add('hide');
+            window.dispatchEvent(new CustomEvent('@render-profile-edit', {}));
         };
         this.logout = () => {
-            localStorage.removeItem('userAuth');
-            const event = new CustomEvent('@route-logout', {});
-            window.dispatchEvent(event);
-            (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_1__.renderToastModal)('success', _constants__WEBPACK_IMPORTED_MODULE_0__.SUCCESS_MESSAGE.LOGOUT_COMPLETE);
+            (0,_auth__WEBPACK_IMPORTED_MODULE_0__.deleteUserAuth)();
+            window.dispatchEvent(new CustomEvent('@route-logout', {}));
+            (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_2__.renderToastModal)('success', _constants__WEBPACK_IMPORTED_MODULE_1__.SUCCESS_MESSAGE.LOGOUT_COMPLETE);
         };
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.appendChild(userMenuTemplate.content.cloneNode(true));
@@ -1649,13 +1738,13 @@ class UserMenu extends HTMLElement {
         return ['auth'];
     }
     connectedCallback() {
-        this.loginButton.addEventListener('click', this.renderLoginModal);
+        this.loginButton.addEventListener('click', this.handleLoginButton);
         this.thumbnail.addEventListener('click', this.toggleMenu);
         this.profileEditButton.addEventListener('click', this.emitRenderProfileEdit);
         this.logoutButton.addEventListener('click', this.logout);
     }
     disconnectedCallback() {
-        this.shadowRoot.removeEventListener('click', this.renderLoginModal);
+        this.shadowRoot.removeEventListener('click', this.handleLoginButton);
         this.thumbnail.removeEventListener('click', this.toggleMenu);
         this.profileEditButton.removeEventListener('click', this.emitRenderProfileEdit);
         this.logoutButton.removeEventListener('click', this.logout);
@@ -1665,6 +1754,35 @@ class UserMenu extends HTMLElement {
     }
 }
 customElements.define('user-menu', UserMenu);
+
+
+/***/ }),
+
+/***/ "./src/ts/components/renderer.ts":
+/*!***************************************!*\
+  !*** ./src/ts/components/renderer.ts ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "renderComponent": () => (/* binding */ renderComponent),
+/* harmony export */   "renderUserPrivatePage": () => (/* binding */ renderUserPrivatePage),
+/* harmony export */   "renderPublicPage": () => (/* binding */ renderPublicPage)
+/* harmony export */ });
+const renderComponent = (tagName) => {
+    document.body.appendChild(document.createElement(tagName));
+};
+const renderUserPrivatePage = () => {
+    console.log('renderUserPrivatePage');
+    document.querySelector('.nav-tab').classList.remove('hide');
+    document.querySelector('user-menu').setAttribute('auth', 'login');
+};
+const renderPublicPage = () => {
+    console.log('renderPublicPage');
+    document.querySelector('.nav-tab').classList.add('hide');
+    document.querySelector('user-menu').setAttribute('auth', 'logout');
+};
 
 
 /***/ }),
@@ -1720,7 +1838,7 @@ const SUCCESS_MESSAGE = {
     MONEY_INSERTED: '입력하신 금액이 투입되었습니다.',
     LOGIN_COMPLETE: '로그인 되었습니다.',
     EDIT_COMPLETE: '회원정보가 수정되었습니다.',
-    SIGNUP_COMPLETE: '회원가입이 완료되었습니다.',
+    SIGNUP_COMPLETE: '회원가입이 완료되었습니다. 로그인 하시기 바랍니다.',
     LOGOUT_COMPLETE: '로그아웃 되었습니다.',
 };
 const CONFIRM_MESSAGE = {
@@ -1746,10 +1864,10 @@ const STORAGE_ID = {
 
 /***/ }),
 
-/***/ "./src/ts/domain/Money.ts":
-/*!********************************!*\
-  !*** ./src/ts/domain/Money.ts ***!
-  \********************************/
+/***/ "./src/ts/domains/Money.ts":
+/*!*********************************!*\
+  !*** ./src/ts/domains/Money.ts ***!
+  \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1778,17 +1896,17 @@ class Money {
 
 /***/ }),
 
-/***/ "./src/ts/domain/Product.ts":
-/*!**********************************!*\
-  !*** ./src/ts/domain/Product.ts ***!
-  \**********************************/
+/***/ "./src/ts/domains/Product.ts":
+/*!***********************************!*\
+  !*** ./src/ts/domains/Product.ts ***!
+  \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Product)
 /* harmony export */ });
-/* harmony import */ var _validator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./validator */ "./src/ts/domain/validator.ts");
+/* harmony import */ var _validator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./validator */ "./src/ts/domains/validator.ts");
 
 class Product {
     constructor({ name, price, quantity }) {
@@ -1826,19 +1944,19 @@ class Product {
 
 /***/ }),
 
-/***/ "./src/ts/domain/VendingMachine.ts":
-/*!*****************************************!*\
-  !*** ./src/ts/domain/VendingMachine.ts ***!
-  \*****************************************/
+/***/ "./src/ts/domains/VendingMachine.ts":
+/*!******************************************!*\
+  !*** ./src/ts/domains/VendingMachine.ts ***!
+  \******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ VendingMachine)
 /* harmony export */ });
-/* harmony import */ var _Product__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Product */ "./src/ts/domain/Product.ts");
-/* harmony import */ var _Money__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Money */ "./src/ts/domain/Money.ts");
-/* harmony import */ var _validator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./validator */ "./src/ts/domain/validator.ts");
+/* harmony import */ var _Product__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Product */ "./src/ts/domains/Product.ts");
+/* harmony import */ var _Money__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Money */ "./src/ts/domains/Money.ts");
+/* harmony import */ var _validator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./validator */ "./src/ts/domains/validator.ts");
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils */ "./src/ts/utils.ts");
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
 
@@ -1983,10 +2101,10 @@ class VendingMachine {
 
 /***/ }),
 
-/***/ "./src/ts/domain/validator.ts":
-/*!************************************!*\
-  !*** ./src/ts/domain/validator.ts ***!
-  \************************************/
+/***/ "./src/ts/domains/validator.ts":
+/*!*************************************!*\
+  !*** ./src/ts/domains/validator.ts ***!
+  \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2068,6 +2186,7 @@ const checkValidProfile = (name, password, passwordCheck) => {
     if (isDifferentPassword(password, passwordCheck)) {
         throw new Error(_constants__WEBPACK_IMPORTED_MODULE_0__.ERROR_MESSAGE.DIFFERENT_PASSWORD);
     }
+    return true;
 };
 
 
@@ -2084,16 +2203,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Router)
 /* harmony export */ });
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants */ "./src/ts/constants.ts");
+/* harmony import */ var _components_renderer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/renderer */ "./src/ts/components/renderer.ts");
+
 
 class Router {
     constructor(view) {
         this.routeLogin = () => {
             this.tabRouter(_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PRODUCT_MANAGE, false);
-            this.view.renderUserPrivatePage();
+            (0,_components_renderer__WEBPACK_IMPORTED_MODULE_1__.renderUserPrivatePage)();
         };
         this.routeLogout = () => {
             this.tabRouter(_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT, false);
-            this.view.renderPublicPage();
+            (0,_components_renderer__WEBPACK_IMPORTED_MODULE_1__.renderPublicPage)();
         };
         this.tabRouter = (url, isPopState = false) => {
             if (!isPopState && url !== location.pathname + location.hash) {
@@ -2143,10 +2264,10 @@ const getRandomNumber = (min, max) => {
 
 /***/ }),
 
-/***/ "./src/ts/view/ProductManageView.ts":
-/*!******************************************!*\
-  !*** ./src/ts/view/ProductManageView.ts ***!
-  \******************************************/
+/***/ "./src/ts/views/ProductManageView.ts":
+/*!*******************************************!*\
+  !*** ./src/ts/views/ProductManageView.ts ***!
+  \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2298,10 +2419,10 @@ class ProductManageView {
 
 /***/ }),
 
-/***/ "./src/ts/view/PurchaseView.ts":
-/*!*************************************!*\
-  !*** ./src/ts/view/PurchaseView.ts ***!
-  \*************************************/
+/***/ "./src/ts/views/PurchaseView.ts":
+/*!**************************************!*\
+  !*** ./src/ts/views/PurchaseView.ts ***!
+  \**************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2429,10 +2550,10 @@ class PurchaseView {
 
 /***/ }),
 
-/***/ "./src/ts/view/RechargeView.ts":
-/*!*************************************!*\
-  !*** ./src/ts/view/RechargeView.ts ***!
-  \*************************************/
+/***/ "./src/ts/views/RechargeView.ts":
+/*!**************************************!*\
+  !*** ./src/ts/views/RechargeView.ts ***!
+  \**************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2489,10 +2610,10 @@ class RechargeView {
 
 /***/ }),
 
-/***/ "./src/ts/view/View.ts":
-/*!*****************************!*\
-  !*** ./src/ts/view/View.ts ***!
-  \*****************************/
+/***/ "./src/ts/views/View.ts":
+/*!******************************!*\
+  !*** ./src/ts/views/View.ts ***!
+  \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2501,9 +2622,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils */ "./src/ts/utils.ts");
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
-/* harmony import */ var _ProductManageView__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductManageView */ "./src/ts/view/ProductManageView.ts");
-/* harmony import */ var _RechargeView__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./RechargeView */ "./src/ts/view/RechargeView.ts");
-/* harmony import */ var _PurchaseView__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./PurchaseView */ "./src/ts/view/PurchaseView.ts");
+/* harmony import */ var _ProductManageView__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductManageView */ "./src/ts/views/ProductManageView.ts");
+/* harmony import */ var _RechargeView__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./RechargeView */ "./src/ts/views/RechargeView.ts");
+/* harmony import */ var _PurchaseView__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./PurchaseView */ "./src/ts/views/PurchaseView.ts");
+/* harmony import */ var _components_renderer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/renderer */ "./src/ts/components/renderer.ts");
+
 
 
 
@@ -2511,24 +2634,10 @@ __webpack_require__.r(__webpack_exports__);
 
 class View {
     constructor(vendingMachine) {
-        this.renderLoginModal = (event) => {
-            document.body.appendChild(event.detail);
-        };
-        this.renderSignupModal = () => {
-            document.body.appendChild(document.createElement('sign-up'));
-        };
-        this.renderProfileEdit = () => {
-            document.body.appendChild(document.createElement('profile-edit'));
-        };
-        this.renderUserPrivatePage = () => {
-            console.log('renderUserPrivatePage');
-            (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('.nav-tab').classList.remove('hide');
-            (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('user-menu').setAttribute('auth', 'login');
-        };
-        this.renderPublicPage = () => {
-            console.log('renderPublicPage');
-            (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('.nav-tab').classList.add('hide');
-            (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('user-menu').setAttribute('auth', 'logout');
+        this.hideMenu = (event) => {
+            event.target === this.$userMenu
+                ? false
+                : this.$userMenu.shadowRoot.querySelector('#menu').classList.add('hide');
         };
         this.handleClickTabButton = (url) => {
             const detail = url;
@@ -2575,13 +2684,21 @@ class View {
         this.$tabRechargeButton = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#tab-recharge');
         this.$tabPurchaseProductButton = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#tab-purchase-product');
         this.$$tabButtons = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$$)('.tab-input');
+        this.$userMenu = document.querySelector('user-menu');
         this.$tabProductManageButton.addEventListener('click', () => this.handleClickTabButton(_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PRODUCT_MANAGE));
         this.$tabRechargeButton.addEventListener('click', () => this.handleClickTabButton(_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.RECHARGE));
         this.$tabPurchaseProductButton.addEventListener('click', () => this.handleClickTabButton(_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PURCHASE_PRODUCT));
         // 웹컴포넌트에서 보낸 커스텀 이벤트
-        window.addEventListener('@render-login', this.renderLoginModal);
-        window.addEventListener('@render-signup', this.renderSignupModal);
-        window.addEventListener('@render-profile-edit', this.renderProfileEdit);
+        window.addEventListener('@render-login', () => {
+            (0,_components_renderer__WEBPACK_IMPORTED_MODULE_5__.renderComponent)('log-in');
+        });
+        window.addEventListener('@render-signup', () => {
+            (0,_components_renderer__WEBPACK_IMPORTED_MODULE_5__.renderComponent)('sign-up');
+        });
+        window.addEventListener('@render-profile-edit', () => {
+            (0,_components_renderer__WEBPACK_IMPORTED_MODULE_5__.renderComponent)('profile-edit');
+        });
+        this.$app.addEventListener('click', this.hideMenu);
     }
 }
 
@@ -2664,8 +2781,8 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/index.css */ "./src/css/index.css");
-/* harmony import */ var _ts_view_View__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ts/view/View */ "./src/ts/view/View.ts");
-/* harmony import */ var _ts_domain_VendingMachine__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ts/domain/VendingMachine */ "./src/ts/domain/VendingMachine.ts");
+/* harmony import */ var _ts_views_View__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ts/views/View */ "./src/ts/views/View.ts");
+/* harmony import */ var _ts_domains_VendingMachine__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ts/domains/VendingMachine */ "./src/ts/domains/VendingMachine.ts");
 /* harmony import */ var _ts_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ts/router */ "./src/ts/router.ts");
 /* harmony import */ var _ts_components_ToastNotification__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ts/components/ToastNotification */ "./src/ts/components/ToastNotification.ts");
 /* harmony import */ var _ts_components_Signup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ts/components/Signup */ "./src/ts/components/Signup.ts");
@@ -2681,8 +2798,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const vendingMachine = new _ts_domain_VendingMachine__WEBPACK_IMPORTED_MODULE_2__["default"]();
-const view = new _ts_view_View__WEBPACK_IMPORTED_MODULE_1__["default"](vendingMachine);
+const vendingMachine = new _ts_domains_VendingMachine__WEBPACK_IMPORTED_MODULE_2__["default"]();
+const view = new _ts_views_View__WEBPACK_IMPORTED_MODULE_1__["default"](vendingMachine);
 new _ts_router__WEBPACK_IMPORTED_MODULE_3__["default"](view);
 
 })();
