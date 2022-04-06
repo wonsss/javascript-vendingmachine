@@ -1994,10 +1994,7 @@ loginTemplate.innerHTML = `
     }
 
     .x-shape {
-      box-sizing: border-box;
-      display: flex;
-      width: 100%;
-      justify-content: flex-end;
+      float: right;
       cursor: pointer;
     }
 
@@ -2192,10 +2189,7 @@ profileEditTemplate.innerHTML = `
     }
 
     .x-shape {
-      box-sizing: border-box;
-      display: flex;
-      width: 100%;
-      justify-content: flex-end;
+      float: right;
       cursor: pointer;
     }
 
@@ -2383,10 +2377,7 @@ signupTemplate.innerHTML = `
     }
 
     .x-shape {
-      box-sizing: border-box;
-      display: flex;
-      width: 100%;
-      justify-content: flex-end;
+      float: right;
       cursor: pointer;
     }
 
@@ -2909,6 +2900,7 @@ const ERROR_MESSAGE = {
     INSERT_MONEY_UNIT: '투입할 금액은 10의 배수여야 합니다.',
     EXCEED_INSERTED_HOLDING_MONEY: '투입할 수 있는 최대 금액은 1만원입니다.',
     UNDER_MIN_INSERTED_HOLDING_MONEY: '투입 금액은 10원 이상이어야 합니다.',
+    NOT_INSERTED_HOLDING_MONEY: '투입된 돈이 없으므로, 잔돈을 반환할 수 없습니다.',
     SOLD_OUT: '해당 상품에 재고가 없습니다.',
     INSUFFICIENT_MONEY: '해당 상품을 구입하기에 투입한 돈이 충분하지 않습니다.',
     OUT_OF_NAME_LENGTH: '유효하지 않은 이름을 입력하셨습니다. 이름은 2글자에서 6글자 사이여야 합니다.',
@@ -2927,6 +2919,7 @@ const SUCCESS_MESSAGE = {
     EDIT_COMPLETE: '회원정보가 수정되었습니다.',
     SIGNUP_COMPLETE: '회원가입이 완료되었습니다. 로그인 하시기 바랍니다.',
     LOGOUT_COMPLETE: '로그아웃 되었습니다.',
+    REFUND_COMPLETE: '모든 잔돈을 반환하였습니다.',
 };
 const CONFIRM_MESSAGE = {
     DELETE: '정말 삭제하시겠습니까?',
@@ -2941,6 +2934,7 @@ const VENDING_MACHINE_RULE = {
     MIN_RECHARGING_MONEY: 10,
     MAX_INSERTED_HOLDING_MONEY: 10000,
     MIN_INSERTING_MONEY: 10,
+    COIN_VALUES: [500, 100, 50, 10],
 };
 const STORAGE_ID = {
     MONEY: 'money',
@@ -3157,16 +3151,21 @@ class VendingMachine {
             this.getCoin(10).deductCount(coin10Count);
             localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.MONEY, JSON.stringify(this._moneys));
         };
-        this.getRefundableCoins = (coinValues) => {
-            let targetAmount = this._insertedMoney % 1000;
+        this.getRefundableCoins = () => {
+            let targetAmount = this._insertedMoney;
             const getRefundableCoin = (value) => {
                 const coinCount = this.getCoin(value).count >= Math.floor(targetAmount / value)
                     ? Math.floor(targetAmount / value)
                     : this.getCoin(value).count;
-                targetAmount = targetAmount - value * coinCount; // 0
+                targetAmount = targetAmount - value * coinCount;
                 return coinCount;
             };
-            return coinValues.map((value) => getRefundableCoin(value));
+            return _constants__WEBPACK_IMPORTED_MODULE_4__.VENDING_MACHINE_RULE.COIN_VALUES.map((value) => getRefundableCoin(value));
+        };
+        this.getNonRefundableCoinMoney = () => {
+            const refundableCoins = this.getRefundableCoins();
+            return (this.insertedMoney -
+                refundableCoins.reduce((totalMoney, coinCount, index) => totalMoney + coinCount * _constants__WEBPACK_IMPORTED_MODULE_4__.VENDING_MACHINE_RULE.COIN_VALUES[index], 0));
         };
         this._products = this.getProductsFromStorage(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.PRODUCTS) || [];
         this._moneys = this.getMoneyFromStorage(_constants__WEBPACK_IMPORTED_MODULE_4__.STORAGE_ID.MONEY) || [
@@ -3317,7 +3316,7 @@ class Router {
             this.view.renderTabs(url);
         };
         this.view = view;
-        this.currentTab = localStorage.getItem(_constants__WEBPACK_IMPORTED_MODULE_0__.STORAGE_ID.CURRENT_TAB) || _constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PRODUCT_MANAGE;
+        this.currentTab = localStorage.getItem(_constants__WEBPACK_IMPORTED_MODULE_0__.STORAGE_ID.CURRENT_TAB) || _constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT;
         history.replaceState({ url: this.currentTab }, null, this.currentTab);
         this.routeLogin(this.currentTab);
         window.addEventListener('popstate', (event) => {
@@ -3596,35 +3595,31 @@ class PurchaseView {
         };
         this.handleRefundButton = () => {
             if (this.vendingMachine.insertedMoney === 0) {
-                (0,_components_ToastNotification__WEBPACK_IMPORTED_MODULE_1__.renderToastModal)('error', '투입된 돈이 없으므로, 잔돈을 반환할 수 없습니다.');
-                this.renderRefundableCoinTable([0, 0, 0, 0]);
+                (0,_components_ToastNotification__WEBPACK_IMPORTED_MODULE_1__.renderToastModal)('error', _constants__WEBPACK_IMPORTED_MODULE_2__.ERROR_MESSAGE.NOT_INSERTED_HOLDING_MONEY);
+                const initializedCoins = [0, 0, 0, 0];
+                this.renderRefundableCoinTable(initializedCoins);
                 return;
             }
-            const coinValues = [500, 100, 50, 10];
-            const refundableCoins = this.vendingMachine.getRefundableCoins(coinValues);
-            const paperMoneyCount = Math.floor(this.vendingMachine.insertedMoney / 1000);
-            this.$paperMoneyWrapper.classList.toggle('hide', paperMoneyCount === 0);
-            this.renderRefundableCoinTable(refundableCoins, paperMoneyCount);
-            this.renderRefundMoneyToastModal(refundableCoins, coinValues);
+            const refundableCoins = this.vendingMachine.getRefundableCoins();
+            this.renderRefundableCoinTable(refundableCoins);
+            const nonRefundableCoinMoney = this.vendingMachine.getNonRefundableCoinMoney();
+            this.renderRefundMoneyToastModal(nonRefundableCoinMoney);
             this.renderInsertedMoney('0');
             this.vendingMachine.deductRefundableCoins(refundableCoins);
             this.vendingMachine.resetInsertedMoney();
         };
-        this.renderRefundableCoinTable = ([coin500Count, coin100Count, coin50Count, coin10Count], paperMoneyCount = 0) => {
+        this.renderRefundableCoinTable = ([coin500Count, coin100Count, coin50Count, coin10Count,]) => {
             this.$coin500.textContent = String(coin500Count);
             this.$coin100.textContent = String(coin100Count);
             this.$coin50.textContent = String(coin50Count);
             this.$coin10.textContent = String(coin10Count);
-            this.$paperMoney.textContent = String(paperMoneyCount);
         };
-        this.renderRefundMoneyToastModal = (refundableCoins, coinValues) => {
-            const nonRefundableCoinMoney = (this.vendingMachine.insertedMoney % 1000) -
-                refundableCoins.reduce((totalMoney, coinCount, index) => totalMoney + coinCount * coinValues[index], 0);
+        this.renderRefundMoneyToastModal = (nonRefundableCoinMoney) => {
             if (nonRefundableCoinMoney > 0) {
-                (0,_components_ToastNotification__WEBPACK_IMPORTED_MODULE_1__.renderToastModal)('error', `${nonRefundableCoinMoney}원은 반환하지 못하였습니다.`);
+                (0,_components_ToastNotification__WEBPACK_IMPORTED_MODULE_1__.renderToastModal)('error', `보유 중인 잔돈이 부족하여, ${nonRefundableCoinMoney}원은 반환하지 못하였습니다.`);
             }
             else {
-                (0,_components_ToastNotification__WEBPACK_IMPORTED_MODULE_1__.renderToastModal)('success', `모든 잔돈을 반환하였습니다.`);
+                (0,_components_ToastNotification__WEBPACK_IMPORTED_MODULE_1__.renderToastModal)('success', _constants__WEBPACK_IMPORTED_MODULE_2__.SUCCESS_MESSAGE.REFUND_COMPLETE);
             }
         };
         this.vendingMachine = vendingMachine;
@@ -3636,8 +3631,6 @@ class PurchaseView {
         this.$coin100 = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#purchase-tab-coin-100');
         this.$coin50 = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#purchase-tab-coin-50');
         this.$coin10 = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#purchase-tab-coin-10');
-        this.$paperMoney = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#paper-money');
-        this.$paperMoneyWrapper = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('.paper-money-wrapper');
         this.$refundButton = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#refund-button');
         // 투입버튼 이벤트 바인딩
         this.$insertMoneyForm.addEventListener('submit', this.handleInsertMoneyForm);
@@ -3759,6 +3752,7 @@ class View {
         };
         this.renderTabs = (url) => __awaiter(this, void 0, void 0, function* () {
             this.$notFound.classList.toggle('hide', url !== _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.NOT_FOUND);
+            this.renderUpdatedView(url);
             if (!_Auth_js__WEBPACK_IMPORTED_MODULE_6__["default"].isLoggedIn) {
                 return;
             }
@@ -3771,7 +3765,6 @@ class View {
                 }
                 container.classList.add('hide');
             });
-            this.renderUpdatedView(url);
         });
         this.renderUpdatedView = (url) => {
             switch (url) {
@@ -3801,6 +3794,9 @@ class View {
         this.$tabPurchaseProductButton = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#tab-purchase-product');
         this.$$tabButtons = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$$)('.tab-input');
         this.$userMenu = document.querySelector('user-menu');
+        // this.$purchaseProductContainer = <HTMLDivElement>(
+        //   document.getElementById('/javascript-vendingmachine/#!/purchase-product')
+        // );
         this.$tabProductManageButton.addEventListener('click', () => this.handleClickTabButton(_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PRODUCT_MANAGE));
         this.$tabRechargeButton.addEventListener('click', () => this.handleClickTabButton(_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.RECHARGE));
         this.$tabPurchaseProductButton.addEventListener('click', () => this.handleClickTabButton(_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PURCHASE_PRODUCT));
