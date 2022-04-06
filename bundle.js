@@ -3758,6 +3758,7 @@ class View {
             this.$navTab.dispatchEvent(event);
         };
         this.renderTabs = (url) => __awaiter(this, void 0, void 0, function* () {
+            this.$notFound.classList.toggle('hide', url !== _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.NOT_FOUND);
             if (!_Auth_js__WEBPACK_IMPORTED_MODULE_6__["default"].isLoggedIn) {
                 return;
             }
@@ -3770,7 +3771,6 @@ class View {
                 }
                 container.classList.add('hide');
             });
-            this.$notFound.classList.toggle('hide', url !== _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.NOT_FOUND);
             this.renderUpdatedView(url);
         });
         this.renderUpdatedView = (url) => {
