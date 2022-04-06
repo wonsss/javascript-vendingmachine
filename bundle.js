@@ -1,352 +1,453 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/ts/auth.js":
+/***/ "./src/ts/Auth.js":
 /*!************************!*\
-  !*** ./src/ts/auth.js ***!
+  !*** ./src/ts/Auth.js ***!
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "getUserAuth": () => (/* binding */ getUserAuth),
-/* harmony export */   "deleteUserAuth": () => (/* binding */ deleteUserAuth),
-/* harmony export */   "getUserData": () => (/* binding */ getUserData),
-/* harmony export */   "signupAuth": () => (/* binding */ signupAuth),
-/* harmony export */   "loginAuth": () => (/* binding */ loginAuth),
-/* harmony export */   "editProfileAuth": () => (/* binding */ editProfileAuth),
-/* harmony export */   "getUserFirstName": () => (/* binding */ getUserFirstName)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _domains_validator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./domains/validator */ "./src/ts/domains/validator.ts");
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classPrivateFieldInitSpec(obj, privateMap, value) { _checkPrivateRedeclaration(obj, privateMap); privateMap.set(obj, value); }
+
+function _checkPrivateRedeclaration(obj, privateCollection) { if (privateCollection.has(obj)) { throw new TypeError("Cannot initialize the same private elements twice on an object"); } }
+
+function _classPrivateFieldGet(receiver, privateMap) { var descriptor = _classExtractFieldDescriptor(receiver, privateMap, "get"); return _classApplyDescriptorGet(receiver, descriptor); }
+
+function _classApplyDescriptorGet(receiver, descriptor) { if (descriptor.get) { return descriptor.get.call(receiver); } return descriptor.value; }
+
+function _classPrivateFieldSet(receiver, privateMap, value) { var descriptor = _classExtractFieldDescriptor(receiver, privateMap, "set"); _classApplyDescriptorSet(receiver, descriptor, value); return value; }
+
+function _classExtractFieldDescriptor(receiver, privateMap, action) { if (!privateMap.has(receiver)) { throw new TypeError("attempted to " + action + " private field on non-instance"); } return privateMap.get(receiver); }
+
+function _classApplyDescriptorSet(receiver, descriptor, value) { if (descriptor.set) { descriptor.set.call(receiver, value); } else { if (!descriptor.writable) { throw new TypeError("attempted to set read only private field"); } descriptor.value = value; } }
 
 
-var setUserAuth = function setUserAuth(userAuth) {
-  localStorage.setItem('userAuth', JSON.stringify(userAuth));
-};
 
-var getUserAuth = function getUserAuth() {
-  return JSON.parse(localStorage.getItem('userAuth'));
-};
+var _isLoggedIn = /*#__PURE__*/new WeakMap();
 
-var getUserTokenId = function getUserTokenId() {
-  var userAuth = getUserAuth();
-  return {
-    accessToken: "Bearer ".concat(userAuth.accessToken),
-    userUrl: "".concat("https://json-server-marco.herokuapp.com", "/users/").concat(userAuth.id)
-  };
-};
+var _setUserAuth = /*#__PURE__*/new WeakMap();
 
-var deleteUserAuth = function deleteUserAuth() {
-  localStorage.removeItem('userAuth');
-};
-var getUserData = /*#__PURE__*/function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-    var _getUserTokenId, accessToken, userUrl, response, data;
+var _getUserTokenId = /*#__PURE__*/new WeakMap();
 
-    return regeneratorRuntime.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            _getUserTokenId = getUserTokenId(), accessToken = _getUserTokenId.accessToken, userUrl = _getUserTokenId.userUrl;
-            _context.next = 3;
-            return fetch(userUrl, {
-              method: 'GET',
-              headers: {
-                'Content-Type': 'application/json',
-                'Authorization': accessToken
-              }
-            });
+var Auth = /*#__PURE__*/function () {
+  function Auth() {
+    var _this = this;
 
-          case 3:
-            response = _context.sent;
+    _classCallCheck(this, Auth);
 
-            if (response.ok) {
-              _context.next = 12;
-              break;
-            }
+    _classPrivateFieldInitSpec(this, _isLoggedIn, {
+      writable: true,
+      value: void 0
+    });
 
-            _context.t0 = Error;
-            _context.t1 = "API\uC5D0\uB7EC: ";
-            _context.next = 9;
-            return response.text();
-
-          case 9:
-            _context.t2 = _context.sent;
-            _context.t3 = _context.t1.concat.call(_context.t1, _context.t2);
-            throw new _context.t0(_context.t3);
-
-          case 12:
-            _context.next = 14;
-            return response.json();
-
-          case 14:
-            data = _context.sent;
-            return _context.abrupt("return", {
-              email: data.email,
-              name: data.name
-            });
-
-          case 16:
-          case "end":
-            return _context.stop();
-        }
+    _classPrivateFieldInitSpec(this, _setUserAuth, {
+      writable: true,
+      value: function value(userAuth) {
+        localStorage.setItem('userAuth', JSON.stringify(userAuth));
       }
-    }, _callee);
-  }));
+    });
 
-  return function getUserData() {
-    return _ref.apply(this, arguments);
-  };
-}();
-var signupAuth = /*#__PURE__*/function () {
-  var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(_ref2) {
-    var email, name, password, passwordCheck, response;
-    return regeneratorRuntime.wrap(function _callee2$(_context2) {
-      while (1) {
-        switch (_context2.prev = _context2.next) {
-          case 0:
-            email = _ref2.email, name = _ref2.name, password = _ref2.password, passwordCheck = _ref2.passwordCheck;
+    _defineProperty(this, "getUserAuth", function () {
+      return JSON.parse(localStorage.getItem('userAuth'));
+    });
 
-            if (!(0,_domains_validator__WEBPACK_IMPORTED_MODULE_0__.checkValidProfile)(name, password, passwordCheck)) {
-              _context2.next = 14;
-              break;
-            }
+    _classPrivateFieldInitSpec(this, _getUserTokenId, {
+      writable: true,
+      value: function value() {
+        var userAuth = _this.getUserAuth();
 
-            _context2.next = 4;
-            return fetch("".concat("https://json-server-marco.herokuapp.com", "/signup"), {
-              method: 'POST',
-              body: JSON.stringify({
-                email: email,
-                password: password,
-                name: name
-              }),
-              headers: {
-                'Content-Type': 'application/json'
-              }
-            });
-
-          case 4:
-            response = _context2.sent;
-
-            if (response.ok) {
-              _context2.next = 13;
-              break;
-            }
-
-            _context2.t0 = Error;
-            _context2.t1 = "API\uC5D0\uB7EC: ";
-            _context2.next = 10;
-            return response.text();
-
-          case 10:
-            _context2.t2 = _context2.sent;
-            _context2.t3 = _context2.t1.concat.call(_context2.t1, _context2.t2);
-            throw new _context2.t0(_context2.t3);
-
-          case 13:
-            return _context2.abrupt("return", true);
-
-          case 14:
-          case "end":
-            return _context2.stop();
-        }
+        return {
+          accessToken: "Bearer ".concat(userAuth.accessToken),
+          userUrl: "".concat("https://json-server-marco.herokuapp.com", "/664/users/").concat(userAuth.id)
+        };
       }
-    }, _callee2);
-  }));
+    });
 
-  return function signupAuth(_x) {
-    return _ref3.apply(this, arguments);
-  };
-}();
-var loginAuth = /*#__PURE__*/function () {
-  var _ref5 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(_ref4) {
-    var email, password, response, data, userAuth;
-    return regeneratorRuntime.wrap(function _callee3$(_context3) {
-      while (1) {
-        switch (_context3.prev = _context3.next) {
-          case 0:
-            email = _ref4.email, password = _ref4.password;
-            _context3.next = 3;
-            return fetch("".concat("https://json-server-marco.herokuapp.com", "/login"), {
-              method: 'POST',
-              body: JSON.stringify({
-                email: email,
-                password: password
-              }),
-              headers: {
-                'Content-Type': 'application/json'
+    _defineProperty(this, "deleteUserAuth", function () {
+      _classPrivateFieldSet(_this, _isLoggedIn, false);
+
+      localStorage.removeItem('userAuth');
+    });
+
+    _defineProperty(this, "getUserData", /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+      var _classPrivateFieldGet2, accessToken, userUrl, response, data;
+
+      return regeneratorRuntime.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _classPrivateFieldGet2 = _classPrivateFieldGet(_this, _getUserTokenId).call(_this), accessToken = _classPrivateFieldGet2.accessToken, userUrl = _classPrivateFieldGet2.userUrl;
+              _context.next = 3;
+              return fetch(userUrl, {
+                method: 'GET',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Authorization': accessToken
+                }
+              });
+
+            case 3:
+              response = _context.sent;
+
+              if (response.ok) {
+                _context.next = 12;
+                break;
               }
-            });
 
-          case 3:
-            response = _context3.sent;
+              _context.t0 = Error;
+              _context.t1 = "API\uC5D0\uB7EC: ";
+              _context.next = 9;
+              return response.text();
 
-            if (response.ok) {
-              _context3.next = 12;
-              break;
-            }
+            case 9:
+              _context.t2 = _context.sent;
+              _context.t3 = _context.t1.concat.call(_context.t1, _context.t2);
+              throw new _context.t0(_context.t3);
 
-            _context3.t0 = Error;
-            _context3.t1 = "API\uC5D0\uB7EC: ";
-            _context3.next = 9;
-            return response.text();
+            case 12:
+              _context.next = 14;
+              return response.json();
 
-          case 9:
-            _context3.t2 = _context3.sent;
-            _context3.t3 = _context3.t1.concat.call(_context3.t1, _context3.t2);
-            throw new _context3.t0(_context3.t3);
+            case 14:
+              data = _context.sent;
+              return _context.abrupt("return", {
+                email: data.email,
+                name: data.name
+              });
 
-          case 12:
-            _context3.next = 14;
-            return response.json();
-
-          case 14:
-            data = _context3.sent;
-            userAuth = {
-              accessToken: data.accessToken,
-              id: data.user.id
-            };
-            setUserAuth(userAuth);
-            return _context3.abrupt("return", true);
-
-          case 18:
-          case "end":
-            return _context3.stop();
+            case 16:
+            case "end":
+              return _context.stop();
+          }
         }
-      }
-    }, _callee3);
-  }));
+      }, _callee);
+    })));
 
-  return function loginAuth(_x2) {
-    return _ref5.apply(this, arguments);
-  };
-}();
-var editProfileAuth = /*#__PURE__*/function () {
-  var _ref7 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4(_ref6) {
-    var name, password, passwordCheck, _getUserTokenId2, accessToken, userUrl, response;
+    _defineProperty(this, "checkUserLoginStatus", /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+      var userAuth, accessToken, userUrl, response;
+      return regeneratorRuntime.wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              userAuth = _this.getUserAuth();
 
-    return regeneratorRuntime.wrap(function _callee4$(_context4) {
-      while (1) {
-        switch (_context4.prev = _context4.next) {
-          case 0:
-            name = _ref6.name, password = _ref6.password, passwordCheck = _ref6.passwordCheck;
-
-            if (!(0,_domains_validator__WEBPACK_IMPORTED_MODULE_0__.checkValidProfile)(name, password, passwordCheck)) {
-              _context4.next = 15;
-              break;
-            }
-
-            _getUserTokenId2 = getUserTokenId(), accessToken = _getUserTokenId2.accessToken, userUrl = _getUserTokenId2.userUrl;
-            _context4.next = 5;
-            return fetch(userUrl, {
-              method: 'PATCH',
-              body: JSON.stringify({
-                name: name,
-                password: password
-              }),
-              headers: {
-                'Content-Type': 'application/json',
-                'Authorization': accessToken
+              if (userAuth) {
+                _context2.next = 4;
+                break;
               }
-            });
 
-          case 5:
-            response = _context4.sent;
+              _classPrivateFieldSet(_this, _isLoggedIn, false);
 
-            if (response.ok) {
-              _context4.next = 14;
-              break;
-            }
+              return _context2.abrupt("return");
 
-            _context4.t0 = Error;
-            _context4.t1 = "API\uC5D0\uB7EC: ";
-            _context4.next = 11;
-            return response.text();
+            case 4:
+              accessToken = "Bearer ".concat(userAuth.accessToken);
+              userUrl = "".concat("https://json-server-marco.herokuapp.com", "/440/users/").concat(userAuth.id);
+              _context2.next = 8;
+              return fetch(userUrl, {
+                method: 'GET',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Authorization': accessToken
+                }
+              });
 
-          case 11:
-            _context4.t2 = _context4.sent;
-            _context4.t3 = _context4.t1.concat.call(_context4.t1, _context4.t2);
-            throw new _context4.t0(_context4.t3);
+            case 8:
+              response = _context2.sent;
 
-          case 14:
-            return _context4.abrupt("return", true);
-
-          case 15:
-          case "end":
-            return _context4.stop();
-        }
-      }
-    }, _callee4);
-  }));
-
-  return function editProfileAuth(_x3) {
-    return _ref7.apply(this, arguments);
-  };
-}();
-var getUserFirstName = /*#__PURE__*/function () {
-  var _ref8 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee5() {
-    var _getUserTokenId3, accessToken, userUrl, response, data;
-
-    return regeneratorRuntime.wrap(function _callee5$(_context5) {
-      while (1) {
-        switch (_context5.prev = _context5.next) {
-          case 0:
-            _getUserTokenId3 = getUserTokenId(), accessToken = _getUserTokenId3.accessToken, userUrl = _getUserTokenId3.userUrl;
-            console.log(userUrl, accessToken);
-
-            if (!(!userUrl || !accessToken)) {
-              _context5.next = 4;
-              break;
-            }
-
-            return _context5.abrupt("return");
-
-          case 4:
-            _context5.next = 6;
-            return fetch(userUrl, {
-              method: 'GET',
-              headers: {
-                'Content-Type': 'application/json',
-                'Authorization': accessToken
+              if (!response.ok) {
+                _classPrivateFieldSet(_this, _isLoggedIn, false);
               }
-            });
 
-          case 6:
-            response = _context5.sent;
+              _classPrivateFieldSet(_this, _isLoggedIn, true);
 
-            if (response.ok) {
-              _context5.next = 10;
-              break;
-            }
-
-            deleteUserAuth();
-            return _context5.abrupt("return", false);
-
-          case 10:
-            _context5.next = 12;
-            return response.json();
-
-          case 12:
-            data = _context5.sent;
-            return _context5.abrupt("return", data.name[0]);
-
-          case 14:
-          case "end":
-            return _context5.stop();
+            case 11:
+            case "end":
+              return _context2.stop();
+          }
         }
-      }
-    }, _callee5);
-  }));
+      }, _callee2);
+    })));
 
-  return function getUserFirstName() {
-    return _ref8.apply(this, arguments);
-  };
+    _defineProperty(this, "signupAuth", /*#__PURE__*/function () {
+      var _ref4 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(_ref3) {
+        var email, name, password, passwordCheck, response;
+        return regeneratorRuntime.wrap(function _callee3$(_context3) {
+          while (1) {
+            switch (_context3.prev = _context3.next) {
+              case 0:
+                email = _ref3.email, name = _ref3.name, password = _ref3.password, passwordCheck = _ref3.passwordCheck;
+
+                if (!(0,_domains_validator__WEBPACK_IMPORTED_MODULE_0__.checkValidProfile)(name, password, passwordCheck)) {
+                  _context3.next = 14;
+                  break;
+                }
+
+                _context3.next = 4;
+                return fetch("".concat("https://json-server-marco.herokuapp.com", "/signup"), {
+                  method: 'POST',
+                  body: JSON.stringify({
+                    email: email,
+                    password: password,
+                    name: name
+                  }),
+                  headers: {
+                    'Content-Type': 'application/json'
+                  }
+                });
+
+              case 4:
+                response = _context3.sent;
+
+                if (response.ok) {
+                  _context3.next = 13;
+                  break;
+                }
+
+                _context3.t0 = Error;
+                _context3.t1 = "API\uC5D0\uB7EC: ";
+                _context3.next = 10;
+                return response.text();
+
+              case 10:
+                _context3.t2 = _context3.sent;
+                _context3.t3 = _context3.t1.concat.call(_context3.t1, _context3.t2);
+                throw new _context3.t0(_context3.t3);
+
+              case 13:
+                return _context3.abrupt("return", true);
+
+              case 14:
+              case "end":
+                return _context3.stop();
+            }
+          }
+        }, _callee3);
+      }));
+
+      return function (_x) {
+        return _ref4.apply(this, arguments);
+      };
+    }());
+
+    _defineProperty(this, "loginAuth", /*#__PURE__*/function () {
+      var _ref6 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4(_ref5) {
+        var email, password, response, data, userAuth;
+        return regeneratorRuntime.wrap(function _callee4$(_context4) {
+          while (1) {
+            switch (_context4.prev = _context4.next) {
+              case 0:
+                email = _ref5.email, password = _ref5.password;
+                _context4.next = 3;
+                return fetch("".concat("https://json-server-marco.herokuapp.com", "/login"), {
+                  method: 'POST',
+                  body: JSON.stringify({
+                    email: email,
+                    password: password
+                  }),
+                  headers: {
+                    'Content-Type': 'application/json'
+                  }
+                });
+
+              case 3:
+                response = _context4.sent;
+
+                if (response.ok) {
+                  _context4.next = 12;
+                  break;
+                }
+
+                _context4.t0 = Error;
+                _context4.t1 = "API\uC5D0\uB7EC: ";
+                _context4.next = 9;
+                return response.text();
+
+              case 9:
+                _context4.t2 = _context4.sent;
+                _context4.t3 = _context4.t1.concat.call(_context4.t1, _context4.t2);
+                throw new _context4.t0(_context4.t3);
+
+              case 12:
+                _context4.next = 14;
+                return response.json();
+
+              case 14:
+                data = _context4.sent;
+                userAuth = {
+                  accessToken: data.accessToken,
+                  id: data.user.id
+                };
+
+                _classPrivateFieldGet(_this, _setUserAuth).call(_this, userAuth);
+
+                _classPrivateFieldSet(_this, _isLoggedIn, true);
+
+                return _context4.abrupt("return", true);
+
+              case 19:
+              case "end":
+                return _context4.stop();
+            }
+          }
+        }, _callee4);
+      }));
+
+      return function (_x2) {
+        return _ref6.apply(this, arguments);
+      };
+    }());
+
+    _defineProperty(this, "editProfileAuth", /*#__PURE__*/function () {
+      var _ref8 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee5(_ref7) {
+        var name, password, passwordCheck, _classPrivateFieldGet3, accessToken, userUrl, response;
+
+        return regeneratorRuntime.wrap(function _callee5$(_context5) {
+          while (1) {
+            switch (_context5.prev = _context5.next) {
+              case 0:
+                name = _ref7.name, password = _ref7.password, passwordCheck = _ref7.passwordCheck;
+
+                if (!(0,_domains_validator__WEBPACK_IMPORTED_MODULE_0__.checkValidProfile)(name, password, passwordCheck)) {
+                  _context5.next = 15;
+                  break;
+                }
+
+                _classPrivateFieldGet3 = _classPrivateFieldGet(_this, _getUserTokenId).call(_this), accessToken = _classPrivateFieldGet3.accessToken, userUrl = _classPrivateFieldGet3.userUrl;
+                _context5.next = 5;
+                return fetch(userUrl, {
+                  method: 'PATCH',
+                  body: JSON.stringify({
+                    name: name,
+                    password: password
+                  }),
+                  headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': accessToken
+                  }
+                });
+
+              case 5:
+                response = _context5.sent;
+
+                if (response.ok) {
+                  _context5.next = 14;
+                  break;
+                }
+
+                _context5.t0 = Error;
+                _context5.t1 = "API\uC5D0\uB7EC: ";
+                _context5.next = 11;
+                return response.text();
+
+              case 11:
+                _context5.t2 = _context5.sent;
+                _context5.t3 = _context5.t1.concat.call(_context5.t1, _context5.t2);
+                throw new _context5.t0(_context5.t3);
+
+              case 14:
+                return _context5.abrupt("return", true);
+
+              case 15:
+              case "end":
+                return _context5.stop();
+            }
+          }
+        }, _callee5);
+      }));
+
+      return function (_x3) {
+        return _ref8.apply(this, arguments);
+      };
+    }());
+
+    _defineProperty(this, "getUserFirstName", /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee6() {
+      var _classPrivateFieldGet4, accessToken, userUrl, response, data;
+
+      return regeneratorRuntime.wrap(function _callee6$(_context6) {
+        while (1) {
+          switch (_context6.prev = _context6.next) {
+            case 0:
+              _classPrivateFieldGet4 = _classPrivateFieldGet(_this, _getUserTokenId).call(_this), accessToken = _classPrivateFieldGet4.accessToken, userUrl = _classPrivateFieldGet4.userUrl;
+
+              if (!(!userUrl || !accessToken)) {
+                _context6.next = 3;
+                break;
+              }
+
+              return _context6.abrupt("return");
+
+            case 3:
+              _context6.next = 5;
+              return fetch(userUrl, {
+                method: 'GET',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Authorization': accessToken
+                }
+              });
+
+            case 5:
+              response = _context6.sent;
+
+              if (response.ok) {
+                _context6.next = 9;
+                break;
+              }
+
+              _this.deleteUserAuth();
+
+              return _context6.abrupt("return", false);
+
+            case 9:
+              _context6.next = 11;
+              return response.json();
+
+            case 11:
+              data = _context6.sent;
+              return _context6.abrupt("return", data.name[0]);
+
+            case 13:
+            case "end":
+              return _context6.stop();
+          }
+        }
+      }, _callee6);
+    })));
+
+    _classPrivateFieldSet(this, _isLoggedIn, false);
+  }
+
+  _createClass(Auth, [{
+    key: "isLoggedIn",
+    get: function get() {
+      return _classPrivateFieldGet(this, _isLoggedIn);
+    }
+  }]);
+
+  return Auth;
 }();
+
+var auth = new Auth();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (auth);
 
 /***/ }),
 
@@ -371,7 +472,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Roboto);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  font-family: 'Roboto', sans-serif;\r\n  margin: 0;\r\n}\r\n\r\nh1 {\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\nbutton {\r\n  background: var(--primary);\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  border-style: none;\r\n  color: var(--white);\r\n}\r\n\r\nbutton:hover {\r\n  background: var(--primary-darken);\r\n  cursor: pointer;\r\n}\r\n\r\ninput {\r\n  padding: 0 8px;\r\n  border: 1px solid var(--secondary);\r\n  box-sizing: border-box;\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  line-height: 36px;\r\n  font-weight: 400;\r\n  font-size: 16px;\r\n}\r\n\r\ninput::placeholder {\r\n  color: var(--secondary-darken);\r\n}\r\n\r\n.tab-result-container {\r\n  margin: 52px 0;\r\n}\r\n\r\ncaption {\r\n  font-weight: 600;\r\n  font-size: 20px;\r\n  margin: 48px 0 16px;\r\n}\r\n\r\ntable {\r\n  border-collapse: collapse;\r\n  width: 471px;\r\n}\r\n\r\ntr {\r\n  border: 1px solid var(--secondary-lighten);\r\n  border-left: 0;\r\n  border-right: 0;\r\n  text-align: center;\r\n}\r\n\r\ntd,\r\nth {\r\n  padding: 8px;\r\n  font-weight: 400;\r\n}\r\n\r\nth {\r\n  font-weight: 600;\r\n}\r\n\r\ncol {\r\n  width: 23%;\r\n}\r\n\r\n.hide {\r\n  display: none !important;\r\n}\r\n\r\n.short-button {\r\n  width: 56px;\r\n  margin-left: 16px;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n}\r\n\r\n.small-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 50px;\r\n}\r\n\r\n.small-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.long-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 100px;\r\n  margin: 23px;\r\n}\r\n\r\n.long-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.edit-confirm-button {\r\n  width: 100px;\r\n  height: 32px;\r\n}\r\n\r\n.paper-money-wrapper {\r\n  margin-top: 20px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/app.css"],"names":[],"mappings":"AAEA;EACE,iCAAiC;EACjC,SAAS;AACX;;AAEA;EACE,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,0BAA0B;EAC1B,kBAAkB;EAClB,YAAY;EACZ,kBAAkB;EAClB,mBAAmB;AACrB;;AAEA;EACE,iCAAiC;EACjC,eAAe;AACjB;;AAEA;EACE,cAAc;EACd,kCAAkC;EAClC,sBAAsB;EACtB,kBAAkB;EAClB,YAAY;EACZ,iBAAiB;EACjB,gBAAgB;EAChB,eAAe;AACjB;;AAEA;EACE,8BAA8B;AAChC;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,gBAAgB;EAChB,eAAe;EACf,mBAAmB;AACrB;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA;EACE,0CAA0C;EAC1C,cAAc;EACd,eAAe;EACf,kBAAkB;AACpB;;AAEA;;EAEE,YAAY;EACZ,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,UAAU;AACZ;;AAEA;EACE,wBAAwB;AAC1B;;AAEA;EACE,WAAW;EACX,iBAAiB;EACjB,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,oCAAoC;EACpC,mBAAmB;EACnB,WAAW;AACb;;AAEA;EACE,4BAA4B;AAC9B;;AAEA;EACE,oCAAoC;EACpC,mBAAmB;EACnB,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,4BAA4B;AAC9B;;AAEA;EACE,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,gBAAgB;AAClB","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Roboto');\r\n\r\nbody {\r\n  font-family: 'Roboto', sans-serif;\r\n  margin: 0;\r\n}\r\n\r\nh1 {\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\nbutton {\r\n  background: var(--primary);\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  border-style: none;\r\n  color: var(--white);\r\n}\r\n\r\nbutton:hover {\r\n  background: var(--primary-darken);\r\n  cursor: pointer;\r\n}\r\n\r\ninput {\r\n  padding: 0 8px;\r\n  border: 1px solid var(--secondary);\r\n  box-sizing: border-box;\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  line-height: 36px;\r\n  font-weight: 400;\r\n  font-size: 16px;\r\n}\r\n\r\ninput::placeholder {\r\n  color: var(--secondary-darken);\r\n}\r\n\r\n.tab-result-container {\r\n  margin: 52px 0;\r\n}\r\n\r\ncaption {\r\n  font-weight: 600;\r\n  font-size: 20px;\r\n  margin: 48px 0 16px;\r\n}\r\n\r\ntable {\r\n  border-collapse: collapse;\r\n  width: 471px;\r\n}\r\n\r\ntr {\r\n  border: 1px solid var(--secondary-lighten);\r\n  border-left: 0;\r\n  border-right: 0;\r\n  text-align: center;\r\n}\r\n\r\ntd,\r\nth {\r\n  padding: 8px;\r\n  font-weight: 400;\r\n}\r\n\r\nth {\r\n  font-weight: 600;\r\n}\r\n\r\ncol {\r\n  width: 23%;\r\n}\r\n\r\n.hide {\r\n  display: none !important;\r\n}\r\n\r\n.short-button {\r\n  width: 56px;\r\n  margin-left: 16px;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n}\r\n\r\n.small-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 50px;\r\n}\r\n\r\n.small-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.long-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 100px;\r\n  margin: 23px;\r\n}\r\n\r\n.long-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.edit-confirm-button {\r\n  width: 100px;\r\n  height: 32px;\r\n}\r\n\r\n.paper-money-wrapper {\r\n  margin-top: 20px;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  font-family: 'Roboto', sans-serif;\r\n  margin: 0;\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\nh1 {\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\nbutton {\r\n  background: var(--primary);\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  border-style: none;\r\n  color: var(--white);\r\n}\r\n\r\nbutton:hover {\r\n  background: var(--primary-darken);\r\n  cursor: pointer;\r\n}\r\n\r\ninput {\r\n  padding: 0 8px;\r\n  border: 1px solid var(--secondary);\r\n  box-sizing: border-box;\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  line-height: 36px;\r\n  font-weight: 400;\r\n  font-size: 16px;\r\n}\r\n\r\ninput::placeholder {\r\n  color: var(--secondary-darken);\r\n}\r\n\r\n.tab-result-container {\r\n  margin: 52px 0;\r\n}\r\n\r\ncaption {\r\n  font-weight: 600;\r\n  font-size: 20px;\r\n  margin: 48px 0 16px;\r\n}\r\n\r\ntable {\r\n  border-collapse: collapse;\r\n  width: 471px;\r\n}\r\n\r\ntr {\r\n  border: 1px solid var(--secondary-lighten);\r\n  border-left: 0;\r\n  border-right: 0;\r\n  text-align: center;\r\n}\r\n\r\ntd,\r\nth {\r\n  padding: 8px;\r\n  font-weight: 400;\r\n}\r\n\r\nth {\r\n  font-weight: 600;\r\n}\r\n\r\ncol {\r\n  width: 23%;\r\n}\r\n\r\n.hide {\r\n  display: none !important;\r\n}\r\n\r\n.short-button {\r\n  width: 56px;\r\n  margin-left: 16px;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n}\r\n\r\n.small-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 50px;\r\n}\r\n\r\n.small-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.long-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 100px;\r\n  margin: 23px;\r\n}\r\n\r\n.long-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.edit-confirm-button {\r\n  width: 100px;\r\n  height: 32px;\r\n}\r\n\r\n.paper-money-wrapper {\r\n  margin-top: 20px;\r\n}\r\n\r\n#app {\r\n  width: 450px;\r\n}\r\n\r\n.header-wrapper {\r\n  width: 100%;\r\n  position: relative;\r\n  margin: 20px 0;\r\n}\r\n\r\nuser-menu {\r\n  margin: 10px 3px;\r\n  position: absolute;\r\n  right: 0;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/app.css"],"names":[],"mappings":"AAEA;EACE,iCAAiC;EACjC,SAAS;EACT,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,0BAA0B;EAC1B,kBAAkB;EAClB,YAAY;EACZ,kBAAkB;EAClB,mBAAmB;AACrB;;AAEA;EACE,iCAAiC;EACjC,eAAe;AACjB;;AAEA;EACE,cAAc;EACd,kCAAkC;EAClC,sBAAsB;EACtB,kBAAkB;EAClB,YAAY;EACZ,iBAAiB;EACjB,gBAAgB;EAChB,eAAe;AACjB;;AAEA;EACE,8BAA8B;AAChC;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,gBAAgB;EAChB,eAAe;EACf,mBAAmB;AACrB;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA;EACE,0CAA0C;EAC1C,cAAc;EACd,eAAe;EACf,kBAAkB;AACpB;;AAEA;;EAEE,YAAY;EACZ,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,UAAU;AACZ;;AAEA;EACE,wBAAwB;AAC1B;;AAEA;EACE,WAAW;EACX,iBAAiB;EACjB,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,oCAAoC;EACpC,mBAAmB;EACnB,WAAW;AACb;;AAEA;EACE,4BAA4B;AAC9B;;AAEA;EACE,oCAAoC;EACpC,mBAAmB;EACnB,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,4BAA4B;AAC9B;;AAEA;EACE,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,WAAW;EACX,kBAAkB;EAClB,cAAc;AAChB;;AAEA;EACE,gBAAgB;EAChB,kBAAkB;EAClB,QAAQ;AACV","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Roboto');\r\n\r\nbody {\r\n  font-family: 'Roboto', sans-serif;\r\n  margin: 0;\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\nh1 {\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\nbutton {\r\n  background: var(--primary);\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  border-style: none;\r\n  color: var(--white);\r\n}\r\n\r\nbutton:hover {\r\n  background: var(--primary-darken);\r\n  cursor: pointer;\r\n}\r\n\r\ninput {\r\n  padding: 0 8px;\r\n  border: 1px solid var(--secondary);\r\n  box-sizing: border-box;\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  line-height: 36px;\r\n  font-weight: 400;\r\n  font-size: 16px;\r\n}\r\n\r\ninput::placeholder {\r\n  color: var(--secondary-darken);\r\n}\r\n\r\n.tab-result-container {\r\n  margin: 52px 0;\r\n}\r\n\r\ncaption {\r\n  font-weight: 600;\r\n  font-size: 20px;\r\n  margin: 48px 0 16px;\r\n}\r\n\r\ntable {\r\n  border-collapse: collapse;\r\n  width: 471px;\r\n}\r\n\r\ntr {\r\n  border: 1px solid var(--secondary-lighten);\r\n  border-left: 0;\r\n  border-right: 0;\r\n  text-align: center;\r\n}\r\n\r\ntd,\r\nth {\r\n  padding: 8px;\r\n  font-weight: 400;\r\n}\r\n\r\nth {\r\n  font-weight: 600;\r\n}\r\n\r\ncol {\r\n  width: 23%;\r\n}\r\n\r\n.hide {\r\n  display: none !important;\r\n}\r\n\r\n.short-button {\r\n  width: 56px;\r\n  margin-left: 16px;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n}\r\n\r\n.small-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 50px;\r\n}\r\n\r\n.small-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.long-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 100px;\r\n  margin: 23px;\r\n}\r\n\r\n.long-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.edit-confirm-button {\r\n  width: 100px;\r\n  height: 32px;\r\n}\r\n\r\n.paper-money-wrapper {\r\n  margin-top: 20px;\r\n}\r\n\r\n#app {\r\n  width: 450px;\r\n}\r\n\r\n.header-wrapper {\r\n  width: 100%;\r\n  position: relative;\r\n  margin: 20px 0;\r\n}\r\n\r\nuser-menu {\r\n  margin: 10px 3px;\r\n  position: absolute;\r\n  right: 0;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1841,7 +1942,7 @@ module.exports = styleTagTransform;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _auth_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../auth.js */ "./src/ts/auth.js");
+/* harmony import */ var _Auth_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Auth.js */ "./src/ts/Auth.js");
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
 /* harmony import */ var _ToastNotification__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ToastNotification */ "./src/ts/components/ToastNotification.ts");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
@@ -1853,6 +1954,7 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+// import { loginAuth } from '../Auth.js';
 
 
 
@@ -1987,7 +2089,7 @@ class Login extends HTMLElement {
                 password: this.passwordInput.value,
             };
             try {
-                const isLogin = yield (0,_auth_js__WEBPACK_IMPORTED_MODULE_0__.loginAuth)(payload);
+                const isLogin = yield _Auth_js__WEBPACK_IMPORTED_MODULE_0__["default"].loginAuth(payload);
                 if (!isLogin) {
                     return;
                 }
@@ -2038,7 +2140,7 @@ customElements.define('log-in', Login);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _auth_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../auth.js */ "./src/ts/auth.js");
+/* harmony import */ var _Auth_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Auth.js */ "./src/ts/Auth.js");
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
 /* harmony import */ var _ToastNotification__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ToastNotification */ "./src/ts/components/ToastNotification.ts");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
@@ -2050,6 +2152,7 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+// import { editProfileAuth, getUserData } from '../Auth.js';
 
 
 
@@ -2174,7 +2277,7 @@ class ProfileEdit extends HTMLElement {
                 passwordCheck: this.passwordCheckEditInput.value,
             };
             try {
-                const isEdited = yield (0,_auth_js__WEBPACK_IMPORTED_MODULE_0__.editProfileAuth)(payload);
+                const isEdited = yield _Auth_js__WEBPACK_IMPORTED_MODULE_0__["default"].editProfileAuth(payload);
                 if (!isEdited) {
                     return;
                 }
@@ -2201,7 +2304,7 @@ class ProfileEdit extends HTMLElement {
     }
     connectedCallback() {
         return __awaiter(this, void 0, void 0, function* () {
-            const { email, name } = yield (0,_auth_js__WEBPACK_IMPORTED_MODULE_0__.getUserData)();
+            const { email, name } = yield _Auth_js__WEBPACK_IMPORTED_MODULE_0__["default"].getUserData();
             this.emailEditInput.value = String(email);
             this.nameEditInput.value = String(name);
             this.shadowRoot.querySelector('form').addEventListener('submit', this.edit);
@@ -2227,7 +2330,7 @@ customElements.define('profile-edit', ProfileEdit);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _auth_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../auth.js */ "./src/ts/auth.js");
+/* harmony import */ var _Auth_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Auth.js */ "./src/ts/Auth.js");
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
 /* harmony import */ var _renderer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./renderer */ "./src/ts/components/renderer.ts");
 /* harmony import */ var _ToastNotification__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ToastNotification */ "./src/ts/components/ToastNotification.ts");
@@ -2372,7 +2475,7 @@ class Signup extends HTMLElement {
                 passwordCheck: this.passwordCheckInput.value,
             };
             try {
-                const isSignup = yield (0,_auth_js__WEBPACK_IMPORTED_MODULE_0__.signupAuth)(payload);
+                const isSignup = yield _Auth_js__WEBPACK_IMPORTED_MODULE_0__["default"].signupAuth(payload);
                 if (!isSignup) {
                     return;
                 }
@@ -2550,7 +2653,7 @@ const renderToastModal = (state, message) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _auth_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../auth.js */ "./src/ts/auth.js");
+/* harmony import */ var _Auth_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Auth.js */ "./src/ts/Auth.js");
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
 /* harmony import */ var _ToastNotification__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ToastNotification */ "./src/ts/components/ToastNotification.ts");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
@@ -2583,7 +2686,10 @@ userMenuTemplate.innerHTML = `
       height: 36px;
       border-style: none;
       color: var(--white);
-      margin: 20px 0;
+      width: 56px;
+      margin-left: 16px;
+      font-size: 14px;
+      font-weight: 700;
     }
 
     button:hover {
@@ -2591,21 +2697,6 @@ userMenuTemplate.innerHTML = `
       cursor: pointer;
     }
 
-    input {
-      padding: 0 8px;
-      border: 1px solid var(--secondary);
-      box-sizing: border-box;
-      border-radius: 4px;
-      height: 36px;
-      line-height: 36px;
-      font-weight: 400;
-      font-size: 16px;
-      margin: 7px 0;
-    }
-
-    input::placeholder {
-      color: var(--secondary-darken);
-    }
 
     form {
       display: flex;
@@ -2614,15 +2705,10 @@ userMenuTemplate.innerHTML = `
     }
 
     #login-button {
-      position: absolute;
-      top: 0;
-      right: 10px;
+      margin: 0;
     }
 
     #menu-wrapper {
-      position: absolute;
-      top: 10px;
-      right: 10px;
       cursor: pointer;
     }
 
@@ -2651,14 +2737,15 @@ userMenuTemplate.innerHTML = `
       color: var(--white);
       border-radius: 5px;
       padding: 0;
-      width: 120px;
+      width: 110px;
       position: absolute;
       right: 0;
     }
 
     .menu-item {
       margin: 0;
-      padding: 10px;
+      font-size: 13px;
+      padding: 6px;
       text-align: center;
       font-weight: bold;
     }
@@ -2692,11 +2779,11 @@ class UserMenu extends HTMLElement {
             window.dispatchEvent(event);
         };
         this.checkLoginStatus = () => __awaiter(this, void 0, void 0, function* () {
-            if (!(0,_auth_js__WEBPACK_IMPORTED_MODULE_0__.getUserAuth)()) {
+            if (!_Auth_js__WEBPACK_IMPORTED_MODULE_0__["default"].getUserAuth()) {
                 this.renderLoginButton();
                 return;
             }
-            const userFirstName = yield (0,_auth_js__WEBPACK_IMPORTED_MODULE_0__.getUserFirstName)();
+            const userFirstName = yield _Auth_js__WEBPACK_IMPORTED_MODULE_0__["default"].getUserFirstName();
             if (!userFirstName) {
                 this.renderLoginButton();
                 return;
@@ -2721,7 +2808,7 @@ class UserMenu extends HTMLElement {
             window.dispatchEvent(new CustomEvent('@render-profile-edit', {}));
         };
         this.logout = () => {
-            (0,_auth_js__WEBPACK_IMPORTED_MODULE_0__.deleteUserAuth)();
+            _Auth_js__WEBPACK_IMPORTED_MODULE_0__["default"].deleteUserAuth();
             window.dispatchEvent(new CustomEvent('@route-logout', {}));
             (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_2__.renderToastModal)('success', _constants__WEBPACK_IMPORTED_MODULE_1__.SUCCESS_MESSAGE.LOGOUT_COMPLETE);
         };
@@ -2775,12 +2862,10 @@ const renderComponent = (tagName) => {
     document.body.appendChild(document.createElement(tagName));
 };
 const renderUserPrivatePage = () => {
-    console.log('renderUserPrivatePage');
     document.querySelector('.nav-tab').classList.remove('hide');
     document.querySelector('user-menu').setAttribute('auth', 'login');
 };
 const renderPublicPage = () => {
-    console.log('renderPublicPage');
     document.querySelector('.nav-tab').classList.add('hide');
     document.querySelector('user-menu').setAttribute('auth', 'logout');
 };
@@ -3211,12 +3296,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants */ "./src/ts/constants.ts");
 /* harmony import */ var _components_renderer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/renderer */ "./src/ts/components/renderer.ts");
+/* harmony import */ var _Auth_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Auth.js */ "./src/ts/Auth.js");
+
 
 
 class Router {
     constructor(view) {
-        this.routeLogin = () => {
-            this.tabRouter(_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PRODUCT_MANAGE, false);
+        this.routeLogin = (url) => {
+            this.tabRouter(url, false);
             (0,_components_renderer__WEBPACK_IMPORTED_MODULE_1__.renderUserPrivatePage)();
         };
         this.routeLogout = () => {
@@ -3232,7 +3319,7 @@ class Router {
         this.view = view;
         this.currentTab = localStorage.getItem(_constants__WEBPACK_IMPORTED_MODULE_0__.STORAGE_ID.CURRENT_TAB) || _constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PRODUCT_MANAGE;
         history.replaceState({ url: this.currentTab }, null, this.currentTab);
-        this.view.renderTabs(this.currentTab);
+        this.routeLogin(this.currentTab);
         window.addEventListener('popstate', (event) => {
             const url = event.state ? event.state.url : _constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.NOT_FOUND;
             this.tabRouter(url, true);
@@ -3241,8 +3328,11 @@ class Router {
             const url = event.detail;
             this.tabRouter(url, false);
         });
+        _Auth_js__WEBPACK_IMPORTED_MODULE_2__["default"].isLoggedIn ? (0,_components_renderer__WEBPACK_IMPORTED_MODULE_1__.renderUserPrivatePage)() : (0,_components_renderer__WEBPACK_IMPORTED_MODULE_1__.renderPublicPage)();
         // 웹컴포넌트에서 보낸 커스텀 이벤트
-        window.addEventListener('@route-login', this.routeLogin);
+        window.addEventListener('@route-login', () => {
+            this.routeLogin(_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PRODUCT_MANAGE);
+        });
         window.addEventListener('@route-logout', this.routeLogout);
     }
 }
@@ -3638,6 +3728,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _RechargeView__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./RechargeView */ "./src/ts/views/RechargeView.ts");
 /* harmony import */ var _PurchaseView__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./PurchaseView */ "./src/ts/views/PurchaseView.ts");
 /* harmony import */ var _components_renderer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/renderer */ "./src/ts/components/renderer.ts");
+/* harmony import */ var _Auth_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Auth.js */ "./src/ts/Auth.js");
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
 
 
 
@@ -3656,7 +3757,10 @@ class View {
             const event = new CustomEvent('@route-tab', { detail });
             this.$navTab.dispatchEvent(event);
         };
-        this.renderTabs = (url) => {
+        this.renderTabs = (url) => __awaiter(this, void 0, void 0, function* () {
+            if (!_Auth_js__WEBPACK_IMPORTED_MODULE_6__["default"].isLoggedIn) {
+                return;
+            }
             this.$$tabResultContainers.forEach((container, index) => {
                 if (container.id === url) {
                     container.classList.remove('hide');
@@ -3668,7 +3772,7 @@ class View {
             });
             this.$notFound.classList.toggle('hide', url !== _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.NOT_FOUND);
             this.renderUpdatedView(url);
-        };
+        });
         this.renderUpdatedView = (url) => {
             switch (url) {
                 case _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PRODUCT_MANAGE:
@@ -3799,11 +3903,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ts_views_View__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ts/views/View */ "./src/ts/views/View.ts");
 /* harmony import */ var _ts_domains_VendingMachine__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ts/domains/VendingMachine */ "./src/ts/domains/VendingMachine.ts");
 /* harmony import */ var _ts_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ts/router */ "./src/ts/router.ts");
-/* harmony import */ var _ts_components_ToastNotification__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ts/components/ToastNotification */ "./src/ts/components/ToastNotification.ts");
-/* harmony import */ var _ts_components_Signup__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ts/components/Signup */ "./src/ts/components/Signup.ts");
-/* harmony import */ var _ts_components_Login__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ts/components/Login */ "./src/ts/components/Login.ts");
-/* harmony import */ var _ts_components_ProfileEdit__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ts/components/ProfileEdit */ "./src/ts/components/ProfileEdit.ts");
-/* harmony import */ var _ts_components_UserMenu__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ts/components/UserMenu */ "./src/ts/components/UserMenu.ts");
+/* harmony import */ var _ts_Auth_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ts/Auth.js */ "./src/ts/Auth.js");
+/* harmony import */ var _ts_components_ToastNotification__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ts/components/ToastNotification */ "./src/ts/components/ToastNotification.ts");
+/* harmony import */ var _ts_components_Signup__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ts/components/Signup */ "./src/ts/components/Signup.ts");
+/* harmony import */ var _ts_components_Login__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ts/components/Login */ "./src/ts/components/Login.ts");
+/* harmony import */ var _ts_components_ProfileEdit__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ts/components/ProfileEdit */ "./src/ts/components/ProfileEdit.ts");
+/* harmony import */ var _ts_components_UserMenu__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./ts/components/UserMenu */ "./src/ts/components/UserMenu.ts");
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 
 
 
@@ -3814,9 +3928,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const vendingMachine = new _ts_domains_VendingMachine__WEBPACK_IMPORTED_MODULE_3__["default"]();
-const view = new _ts_views_View__WEBPACK_IMPORTED_MODULE_2__["default"](vendingMachine);
-new _ts_router__WEBPACK_IMPORTED_MODULE_4__["default"](view);
+
+(() => __awaiter(void 0, void 0, void 0, function* () {
+    yield _ts_Auth_js__WEBPACK_IMPORTED_MODULE_5__["default"].checkUserLoginStatus();
+    const vendingMachine = new _ts_domains_VendingMachine__WEBPACK_IMPORTED_MODULE_3__["default"]();
+    const view = new _ts_views_View__WEBPACK_IMPORTED_MODULE_2__["default"](vendingMachine);
+    new _ts_router__WEBPACK_IMPORTED_MODULE_4__["default"](view);
+}))();
 
 })();
 
