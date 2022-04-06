@@ -3318,7 +3318,6 @@ class Router {
         this.view = view;
         this.currentTab = localStorage.getItem(_constants__WEBPACK_IMPORTED_MODULE_0__.STORAGE_ID.CURRENT_TAB) || _constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT;
         history.replaceState({ url: this.currentTab }, null, this.currentTab);
-        // this.routeLogin(this.currentTab);
         window.addEventListener('popstate', (event) => {
             const url = event.state ? event.state.url : _constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.NOT_FOUND;
             this.tabRouter(url, true);
