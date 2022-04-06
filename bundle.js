@@ -2799,7 +2799,6 @@ class UserMenu extends HTMLElement {
             this.menu.classList.toggle('hide');
         };
         this.emitRenderProfileEdit = () => {
-            // TODO
             const url = _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.EDIT_PROFILE;
             history.pushState({ url }, null, url);
             this.menu.classList.add('hide');
@@ -3336,7 +3335,6 @@ class Router {
         this.view.$navTab.addEventListener('@route-tab', (event) => {
             const url = event.detail;
             this.tabRouter(url, false);
-            console.log('navTab', url);
         });
         _Auth_js__WEBPACK_IMPORTED_MODULE_2__["default"].isLoggedIn ? (0,_components_renderer__WEBPACK_IMPORTED_MODULE_1__.renderUserPrivatePage)() : (0,_components_renderer__WEBPACK_IMPORTED_MODULE_1__.renderPublicPage)();
         // 웹컴포넌트에서 보낸 커스텀 이벤트
@@ -3762,8 +3760,14 @@ class View {
             this.$navTab.dispatchEvent(event);
         };
         this.renderTabs = (url) => __awaiter(this, void 0, void 0, function* () {
-            this.$notFound.classList.toggle('hide', url === _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.NOT_FOUND);
-            this.renderUpdatedView(url);
+            const checkNotFoundUrl = (url) => {
+                if (Object.values(_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID).includes(url)) {
+                    return true;
+                }
+                return false;
+            };
+            this.$notFound.classList.toggle('hide', checkNotFoundUrl(url));
+            this.renderUpdatedView(location.pathname + location.hash);
             if (!_Auth_js__WEBPACK_IMPORTED_MODULE_6__["default"].isLoggedIn) {
                 return;
             }
@@ -3783,6 +3787,7 @@ class View {
                     this.productManageView.renderProductManageTab();
                     break;
                 case _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.RECHARGE:
+                    console.log('renderrechareg');
                     this.rechargeView.renderRechargeTab();
                     break;
                 case _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PURCHASE_PRODUCT:
