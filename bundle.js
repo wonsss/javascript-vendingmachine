@@ -2103,8 +2103,6 @@ class Login extends HTMLElement {
             window.dispatchEvent(event);
         };
         this.emitRenderSignup = () => {
-            const url = _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.SIGNUP;
-            history.pushState({ url }, null, url);
             this.closeModal();
             const event = new CustomEvent('@render-signup', {});
             window.dispatchEvent(event);
@@ -2768,8 +2766,6 @@ class UserMenu extends HTMLElement {
     constructor() {
         super();
         this.handleLoginButton = () => {
-            const url = _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.LOGIN;
-            history.pushState({ url }, null, url);
             const event = new CustomEvent('@render-login', {});
             window.dispatchEvent(event);
         };
@@ -2799,8 +2795,6 @@ class UserMenu extends HTMLElement {
             this.menu.classList.toggle('hide');
         };
         this.emitRenderProfileEdit = () => {
-            const url = _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.EDIT_PROFILE;
-            history.pushState({ url }, null, url);
             this.menu.classList.add('hide');
             window.dispatchEvent(new CustomEvent('@render-profile-edit', {}));
         };
@@ -2891,9 +2885,6 @@ const PATH_ID = {
     RECHARGE: '/javascript-vendingmachine/#!/recharge',
     PURCHASE_PRODUCT: '/javascript-vendingmachine/#!/purchase-product',
     NOT_FOUND: '/javascript-vendingmachine/#!/not-found',
-    SIGNUP: '/javascript-vendingmachine/#!/signup',
-    LOGIN: '/javascript-vendingmachine/#!/login',
-    EDIT_PROFILE: '/javascript-vendingmachine/#!/edit-profile',
 };
 const ERROR_MESSAGE = {
     NAME_EMPTY: '상품명은 최소 한 글자 이상이어야 합니다.',
@@ -3760,14 +3751,8 @@ class View {
             this.$navTab.dispatchEvent(event);
         };
         this.renderTabs = (url) => __awaiter(this, void 0, void 0, function* () {
-            const checkNotFoundUrl = (url) => {
-                if (Object.values(_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID).includes(url)) {
-                    return true;
-                }
-                return false;
-            };
-            this.$notFound.classList.toggle('hide', checkNotFoundUrl(url));
-            this.renderUpdatedView(location.pathname + location.hash);
+            this.$notFound.classList.toggle('hide', url !== _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.NOT_FOUND);
+            this.renderUpdatedView(url);
             if (!_Auth_js__WEBPACK_IMPORTED_MODULE_6__["default"].isLoggedIn) {
                 return;
             }
@@ -3787,18 +3772,11 @@ class View {
                     this.productManageView.renderProductManageTab();
                     break;
                 case _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.RECHARGE:
-                    console.log('renderrechareg');
                     this.rechargeView.renderRechargeTab();
                     break;
                 case _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PURCHASE_PRODUCT:
                     this.purchaseView.renderPurchaseTab();
                     break;
-                case _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.LOGIN:
-                    (0,_components_renderer__WEBPACK_IMPORTED_MODULE_5__.renderComponent)('log-in');
-                case _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.SIGNUP:
-                    (0,_components_renderer__WEBPACK_IMPORTED_MODULE_5__.renderComponent)('sign-up');
-                case _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.EDIT_PROFILE:
-                    (0,_components_renderer__WEBPACK_IMPORTED_MODULE_5__.renderComponent)('profile-edit');
                 default:
                     break;
             }
