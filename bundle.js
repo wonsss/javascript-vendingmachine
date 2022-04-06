@@ -2799,6 +2799,7 @@ class UserMenu extends HTMLElement {
             this.menu.classList.toggle('hide');
         };
         this.emitRenderProfileEdit = () => {
+            // TODO
             const url = _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.EDIT_PROFILE;
             history.pushState({ url }, null, url);
             this.menu.classList.add('hide');
@@ -3761,7 +3762,7 @@ class View {
             this.$navTab.dispatchEvent(event);
         };
         this.renderTabs = (url) => __awaiter(this, void 0, void 0, function* () {
-            this.$notFound.classList.toggle('hide', url !== _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.NOT_FOUND);
+            this.$notFound.classList.toggle('hide', url === _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.NOT_FOUND);
             this.renderUpdatedView(url);
             if (!_Auth_js__WEBPACK_IMPORTED_MODULE_6__["default"].isLoggedIn) {
                 return;
