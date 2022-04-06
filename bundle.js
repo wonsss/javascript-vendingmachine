@@ -3318,7 +3318,7 @@ class Router {
         this.view = view;
         this.currentTab = localStorage.getItem(_constants__WEBPACK_IMPORTED_MODULE_0__.STORAGE_ID.CURRENT_TAB) || _constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT;
         history.replaceState({ url: this.currentTab }, null, this.currentTab);
-        this.routeLogin(this.currentTab);
+        // this.routeLogin(this.currentTab);
         window.addEventListener('popstate', (event) => {
             const url = event.state ? event.state.url : _constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.NOT_FOUND;
             this.tabRouter(url, true);
@@ -3794,9 +3794,6 @@ class View {
         this.$tabPurchaseProductButton = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#tab-purchase-product');
         this.$$tabButtons = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$$)('.tab-input');
         this.$userMenu = document.querySelector('user-menu');
-        // this.$purchaseProductContainer = <HTMLDivElement>(
-        //   document.getElementById('/javascript-vendingmachine/#!/purchase-product')
-        // );
         this.$tabProductManageButton.addEventListener('click', () => this.handleClickTabButton(_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PRODUCT_MANAGE));
         this.$tabRechargeButton.addEventListener('click', () => this.handleClickTabButton(_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.RECHARGE));
         this.$tabPurchaseProductButton.addEventListener('click', () => this.handleClickTabButton(_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PURCHASE_PRODUCT));
