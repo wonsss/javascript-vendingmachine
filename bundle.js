@@ -3303,14 +3303,13 @@ class Router {
     constructor(view) {
         this.routeLogin = (url) => {
             this.tabRouter(url, false);
-            (0,_components_renderer__WEBPACK_IMPORTED_MODULE_1__.renderUserPrivatePage)();
         };
         this.routeLogout = () => {
             localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_0__.STORAGE_ID.CURRENT_TAB, _constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT);
             this.tabRouter(_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT, false);
-            (0,_components_renderer__WEBPACK_IMPORTED_MODULE_1__.renderPublicPage)();
         };
         this.tabRouter = (url, isPopState = false) => {
+            this.view.renderTabs(url);
             if (!_Auth_js__WEBPACK_IMPORTED_MODULE_2__["default"].isLoggedIn) {
                 history.pushState({ url }, null, url);
                 (0,_components_renderer__WEBPACK_IMPORTED_MODULE_1__.renderPublicPage)();
@@ -3320,7 +3319,6 @@ class Router {
                 history.pushState({ url }, null, url);
             }
             (0,_components_renderer__WEBPACK_IMPORTED_MODULE_1__.renderUserPrivatePage)();
-            this.view.renderTabs(url);
         };
         this.view = view;
         this.currentTab = localStorage.getItem(_constants__WEBPACK_IMPORTED_MODULE_0__.STORAGE_ID.CURRENT_TAB) || _constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT;
@@ -3726,7 +3724,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _RechargeView__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./RechargeView */ "./src/ts/views/RechargeView.ts");
 /* harmony import */ var _PurchaseView__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./PurchaseView */ "./src/ts/views/PurchaseView.ts");
 /* harmony import */ var _components_renderer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/renderer */ "./src/ts/components/renderer.ts");
-/* harmony import */ var _Auth_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Auth.js */ "./src/ts/Auth.js");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -3736,7 +3733,6 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-
 
 
 
@@ -3758,10 +3754,6 @@ class View {
         this.renderTabs = (url) => __awaiter(this, void 0, void 0, function* () {
             this.$notFound.classList.toggle('hide', url !== _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.NOT_FOUND);
             this.renderUpdatedView(url);
-            localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_1__.STORAGE_ID.CURRENT_TAB, url);
-            if (!_Auth_js__WEBPACK_IMPORTED_MODULE_6__["default"].isLoggedIn) {
-                return;
-            }
             this.$$tabResultContainers.forEach((container, index) => {
                 if (container.id === url) {
                     container.classList.remove('hide');
