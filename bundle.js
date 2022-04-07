@@ -3306,6 +3306,7 @@ class Router {
             (0,_components_renderer__WEBPACK_IMPORTED_MODULE_1__.renderUserPrivatePage)();
         };
         this.routeLogout = () => {
+            localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_0__.STORAGE_ID.CURRENT_TAB, _constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT);
             this.tabRouter(_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT, false);
             (0,_components_renderer__WEBPACK_IMPORTED_MODULE_1__.renderPublicPage)();
         };
@@ -3322,9 +3323,7 @@ class Router {
             this.view.renderTabs(url);
         };
         this.view = view;
-        // this.currentTab = localStorage.getItem(STORAGE_ID.CURRENT_TAB) || PATH_ID.PURCHASE_PRODUCT;
         this.currentTab = localStorage.getItem(_constants__WEBPACK_IMPORTED_MODULE_0__.STORAGE_ID.CURRENT_TAB) || _constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT;
-        // history.replaceState({ url: this.currentTab }, null, this.currentTab);
         this.tabRouter(this.currentTab, false);
         window.addEventListener('popstate', (event) => {
             const url = event.state ? event.state.url : _constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.NOT_FOUND;
@@ -3334,7 +3333,6 @@ class Router {
             const url = event.detail;
             this.tabRouter(url, false);
         });
-        // auth.isLoggedIn ? renderUserPrivatePage() : renderPublicPage();
         // 웹컴포넌트에서 보낸 커스텀 이벤트
         window.addEventListener('@route-login', () => {
             this.routeLogin(_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PRODUCT_MANAGE);
@@ -3760,6 +3758,7 @@ class View {
         this.renderTabs = (url) => __awaiter(this, void 0, void 0, function* () {
             this.$notFound.classList.toggle('hide', url !== _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.NOT_FOUND);
             this.renderUpdatedView(url);
+            localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_1__.STORAGE_ID.CURRENT_TAB, url);
             if (!_Auth_js__WEBPACK_IMPORTED_MODULE_6__["default"].isLoggedIn) {
                 return;
             }
@@ -3767,7 +3766,6 @@ class View {
                 if (container.id === url) {
                     container.classList.remove('hide');
                     this.$$tabButtons[index].checked = true;
-                    localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_1__.STORAGE_ID.CURRENT_TAB, url);
                     return;
                 }
                 container.classList.add('hide');
