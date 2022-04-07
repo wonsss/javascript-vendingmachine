@@ -3310,9 +3310,15 @@ class Router {
             (0,_components_renderer__WEBPACK_IMPORTED_MODULE_1__.renderPublicPage)();
         };
         this.tabRouter = (url, isPopState = false) => {
+            if (!_Auth_js__WEBPACK_IMPORTED_MODULE_2__["default"].isLoggedIn) {
+                history.pushState({ url }, null, url);
+                (0,_components_renderer__WEBPACK_IMPORTED_MODULE_1__.renderPublicPage)();
+                return;
+            }
             if (!isPopState && url !== location.pathname + location.hash) {
                 history.pushState({ url }, null, url);
             }
+            (0,_components_renderer__WEBPACK_IMPORTED_MODULE_1__.renderUserPrivatePage)();
             this.view.renderTabs(url);
         };
         this.view = view;
@@ -3328,7 +3334,7 @@ class Router {
             const url = event.detail;
             this.tabRouter(url, false);
         });
-        _Auth_js__WEBPACK_IMPORTED_MODULE_2__["default"].isLoggedIn ? (0,_components_renderer__WEBPACK_IMPORTED_MODULE_1__.renderUserPrivatePage)() : (0,_components_renderer__WEBPACK_IMPORTED_MODULE_1__.renderPublicPage)();
+        // auth.isLoggedIn ? renderUserPrivatePage() : renderPublicPage();
         // 웹컴포넌트에서 보낸 커스텀 이벤트
         window.addEventListener('@route-login', () => {
             this.routeLogin(_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PRODUCT_MANAGE);
