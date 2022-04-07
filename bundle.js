@@ -2965,7 +2965,7 @@ const getCookie = (name) => {
     return matches ? decodeURIComponent(matches[1]) : undefined;
 };
 const setCookie = (name, value) => {
-    document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(value)}`;
+    document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(value)}; max-age=3600`;
 };
 const deleteCookie = (name) => {
     document.cookie = `${encodeURIComponent(name)}=; max-age=1000`;
