@@ -13,6 +13,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _domains_validator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./domains/validator */ "./src/ts/domains/validator.ts");
+/* harmony import */ var _cookie_ts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./cookie.ts */ "./src/ts/cookie.ts");
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
@@ -41,6 +42,7 @@ function _classApplyDescriptorSet(receiver, descriptor, value) { if (descriptor.
 
 
 
+
 var _isLoggedIn = /*#__PURE__*/new WeakMap();
 
 var _setUserAuth = /*#__PURE__*/new WeakMap();
@@ -61,12 +63,12 @@ var Auth = /*#__PURE__*/function () {
     _classPrivateFieldInitSpec(this, _setUserAuth, {
       writable: true,
       value: function value(userAuth) {
-        localStorage.setItem('userAuth', JSON.stringify(userAuth));
+        (0,_cookie_ts__WEBPACK_IMPORTED_MODULE_1__.setCookie)('userAuth', JSON.stringify(userAuth));
       }
     });
 
     _defineProperty(this, "getUserAuth", function () {
-      return JSON.parse(localStorage.getItem('userAuth'));
+      return (0,_cookie_ts__WEBPACK_IMPORTED_MODULE_1__.getCookie)('userAuth') ? JSON.parse((0,_cookie_ts__WEBPACK_IMPORTED_MODULE_1__.getCookie)('userAuth')) : undefined;
     });
 
     _classPrivateFieldInitSpec(this, _getUserTokenId, {
@@ -84,7 +86,7 @@ var Auth = /*#__PURE__*/function () {
     _defineProperty(this, "deleteUserAuth", function () {
       _classPrivateFieldSet(_this, _isLoggedIn, false);
 
-      localStorage.removeItem('userAuth');
+      (0,_cookie_ts__WEBPACK_IMPORTED_MODULE_1__.deleteCookie)('userAuth');
     });
 
     _defineProperty(this, "getUserData", /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
@@ -294,7 +296,7 @@ var Auth = /*#__PURE__*/function () {
                 data = _context4.sent;
                 userAuth = {
                   accessToken: data.accessToken,
-                  id: data.user.id
+                  id: String(data.user.id)
                 };
 
                 _classPrivateFieldGet(_this, _setUserAuth).call(_this, userAuth);
@@ -2940,6 +2942,33 @@ const STORAGE_ID = {
     MONEY: 'money',
     PRODUCTS: 'products',
     CURRENT_TAB: 'current-tab',
+};
+
+
+/***/ }),
+
+/***/ "./src/ts/cookie.ts":
+/*!**************************!*\
+  !*** ./src/ts/cookie.ts ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getCookie": () => (/* binding */ getCookie),
+/* harmony export */   "setCookie": () => (/* binding */ setCookie),
+/* harmony export */   "deleteCookie": () => (/* binding */ deleteCookie)
+/* harmony export */ });
+const getCookie = (name) => {
+    const matches = document.cookie.match(new RegExp(`${name}=([^;]*)`));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+};
+const setCookie = (name, value) => {
+    document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(value)}`;
+};
+const deleteCookie = (name) => {
+    document.cookie = `${encodeURIComponent(name)}=; max-age=1000`;
 };
 
 
