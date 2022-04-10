@@ -2077,8 +2077,7 @@ class Login extends HTMLElement {
         this.closeModalDimmer = (event) => {
             if (event.target === this.dimmer) {
                 this.closeModal();
-                const event = new CustomEvent('@route-logout', {});
-                window.dispatchEvent(event);
+                window.dispatchEvent(new CustomEvent('@route-logout', {}));
             }
         };
         this.closeModal = () => {
@@ -2466,8 +2465,7 @@ class Signup extends HTMLElement {
         this.closeModalDimmer = (event) => {
             if (event.target === this.dimmer) {
                 this.closeModal();
-                const event = new CustomEvent('@route-logout', {});
-                window.dispatchEvent(event);
+                window.dispatchEvent(new CustomEvent('@route-logout', {}));
             }
         };
         this.closeModal = () => {
@@ -3319,6 +3317,7 @@ class Router {
         };
         this.tabRouter = (url, isPopState = false) => {
             if (!_Auth_js__WEBPACK_IMPORTED_MODULE_1__["default"].isLoggedIn) {
+                this.view.renderPage(_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT);
                 this.renderPublicPage();
                 history.pushState({ url }, null, url);
                 return;
