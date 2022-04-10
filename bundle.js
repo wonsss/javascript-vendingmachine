@@ -3336,8 +3336,8 @@ class Router {
         }
         this.tabRouter(this.currentTab, false);
         window.addEventListener('popstate', (event) => {
-            const url = event.state ? event.state.url : location.pathname + location.hash;
-            this.tabRouter(url, true);
+            this.currentTab = event.state ? event.state.url : location.pathname + location.hash;
+            this.tabRouter(this.currentTab, true);
         });
         this.view.$navTab.addEventListener('@route-tab', (event) => {
             const url = event.detail;
@@ -3782,14 +3782,19 @@ class View {
                     break;
                 case _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.LOGIN:
                     console.log('login');
+                    new _PurchaseView__WEBPACK_IMPORTED_MODULE_4__["default"](this.vendingMachine).render();
+                    (0,_utils__WEBPACK_IMPORTED_MODULE_0__.renderComponent)('log-in');
                     break;
                 case _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.SIGNUP:
                     console.log('signup');
+                    new _PurchaseView__WEBPACK_IMPORTED_MODULE_4__["default"](this.vendingMachine).render();
+                    (0,_utils__WEBPACK_IMPORTED_MODULE_0__.renderComponent)('sign-up');
                     break;
                 default:
+                    console.log('notFound');
+                    this.$notFound.classList.remove('hide');
                     break;
             }
-            // this.$notFound.classList.toggle('hide', url !== PATH_ID.NOT_FOUND);
         };
         this.removeTabs = () => {
             this.$tabResult.replaceChildren();
