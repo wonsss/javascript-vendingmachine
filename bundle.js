@@ -2077,6 +2077,8 @@ class Login extends HTMLElement {
         this.closeModalDimmer = (event) => {
             if (event.target === this.dimmer) {
                 this.closeModal();
+                const event = new CustomEvent('@route-logout', {});
+                window.dispatchEvent(event);
             }
         };
         this.closeModal = () => {
@@ -2464,6 +2466,8 @@ class Signup extends HTMLElement {
         this.closeModalDimmer = (event) => {
             if (event.target === this.dimmer) {
                 this.closeModal();
+                const event = new CustomEvent('@route-logout', {});
+                window.dispatchEvent(event);
             }
         };
         this.closeModal = () => {
@@ -3307,19 +3311,19 @@ __webpack_require__.r(__webpack_exports__);
 
 class Router {
     constructor(view) {
-        this.routeLogin = (url) => {
-            this.tabRouter(url, false);
+        this.routeLogin = () => {
+            this.tabRouter(_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PRODUCT_MANAGE, false);
         };
         this.routeLogout = () => {
             this.tabRouter(_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT, false);
         };
         this.tabRouter = (url, isPopState = false) => {
-            this.view.renderPage(url);
             if (!_Auth_js__WEBPACK_IMPORTED_MODULE_1__["default"].isLoggedIn) {
                 this.renderPublicPage();
                 history.pushState({ url }, null, url);
                 return;
             }
+            this.view.renderPage(url);
             this.renderUserPrivatePage();
             if (!isPopState && url !== location.pathname + location.hash) {
                 history.pushState({ url }, null, url);
@@ -3348,9 +3352,7 @@ class Router {
             this.tabRouter(url, false);
         });
         // 웹컴포넌트에서 보낸 커스텀 이벤트
-        window.addEventListener('@route-login', () => {
-            this.routeLogin(_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PRODUCT_MANAGE);
-        });
+        window.addEventListener('@route-login', this.routeLogin);
         window.addEventListener('@route-logout', this.routeLogout);
     }
 }
@@ -3404,6 +3406,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
 /* harmony import */ var _components_ToastNotification__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/ToastNotification */ "./src/ts/components/ToastNotification.ts");
 /* harmony import */ var _template__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./template */ "./src/ts/views/template.ts");
+/* harmony import */ var _Auth_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Auth.js */ "./src/ts/Auth.js");
+
 
 
 
@@ -3411,6 +3415,9 @@ __webpack_require__.r(__webpack_exports__);
 class ProductManageView {
     constructor(vendingMachine) {
         this.render = () => {
+            if (!_Auth_js__WEBPACK_IMPORTED_MODULE_4__["default"].isLoggedIn) {
+                return;
+            }
             (0,_utils__WEBPACK_IMPORTED_MODULE_0__.renderTemplate)(_template__WEBPACK_IMPORTED_MODULE_3__.getProductManageTemplate);
             this.$productNameInput = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#product-name');
             this.$productPriceInput = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#product-price');
@@ -3685,6 +3692,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils */ "./src/ts/utils.ts");
 /* harmony import */ var _components_ToastNotification__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/ToastNotification */ "./src/ts/components/ToastNotification.ts");
 /* harmony import */ var _template__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./template */ "./src/ts/views/template.ts");
+/* harmony import */ var _Auth_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Auth.js */ "./src/ts/Auth.js");
+
 
 
 
@@ -3692,6 +3701,9 @@ __webpack_require__.r(__webpack_exports__);
 class RechargeView {
     constructor(vendingMachine) {
         this.render = () => {
+            if (!_Auth_js__WEBPACK_IMPORTED_MODULE_4__["default"].isLoggedIn) {
+                return;
+            }
             (0,_utils__WEBPACK_IMPORTED_MODULE_1__.renderTemplate)(_template__WEBPACK_IMPORTED_MODULE_3__.getRechargeTemplate);
             this.$rechargeForm = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.$)('#recharge-form');
             this.$rechargeInput = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.$)('#recharge-input', this.$rechargeForm);
