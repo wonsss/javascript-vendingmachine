@@ -573,7 +573,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#not-found {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  width: 100vw;\r\n  height: 100vh;\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  background-color: white;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/notFound.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,YAAY;EACZ,aAAa;EACb,eAAe;EACf,MAAM;EACN,OAAO;EACP,uBAAuB;AACzB","sourcesContent":["#not-found {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  width: 100vw;\r\n  height: 100vh;\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  background-color: white;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "#not-found {\r\n  width: 100vw;\r\n  height: 100vh;\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  text-align: center;\r\n  line-height: 100vh;\r\n  background-color: white;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/notFound.css"],"names":[],"mappings":"AAAA;EACE,YAAY;EACZ,aAAa;EACb,eAAe;EACf,MAAM;EACN,OAAO;EACP,kBAAkB;EAClB,kBAAkB;EAClB,uBAAuB;AACzB","sourcesContent":["#not-found {\r\n  width: 100vw;\r\n  height: 100vh;\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  text-align: center;\r\n  line-height: 100vh;\r\n  background-color: white;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3747,6 +3747,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ProductManageView__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductManageView */ "./src/ts/views/ProductManageView.ts");
 /* harmony import */ var _RechargeView__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./RechargeView */ "./src/ts/views/RechargeView.ts");
 /* harmony import */ var _PurchaseView__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./PurchaseView */ "./src/ts/views/PurchaseView.ts");
+/* harmony import */ var _template__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./template */ "./src/ts/views/template.ts");
+
 
 
 
@@ -3766,7 +3768,7 @@ class View {
             this.$navTab.dispatchEvent(event);
         };
         this.renderPage = (url) => {
-            this.$tabResult.replaceChildren();
+            this.removePage();
             switch (url) {
                 case _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PRODUCT_MANAGE:
                     new _ProductManageView__WEBPACK_IMPORTED_MODULE_2__["default"](this.vendingMachine).render();
@@ -3781,23 +3783,23 @@ class View {
                     this.$tabPurchaseProductButton.checked = true;
                     break;
                 case _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.LOGIN:
-                    console.log('login');
                     new _PurchaseView__WEBPACK_IMPORTED_MODULE_4__["default"](this.vendingMachine).render();
                     (0,_utils__WEBPACK_IMPORTED_MODULE_0__.renderComponent)('log-in');
                     break;
                 case _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.SIGNUP:
-                    console.log('signup');
                     new _PurchaseView__WEBPACK_IMPORTED_MODULE_4__["default"](this.vendingMachine).render();
                     (0,_utils__WEBPACK_IMPORTED_MODULE_0__.renderComponent)('sign-up');
                     break;
                 default:
-                    console.log('notFound');
-                    this.$notFound.classList.remove('hide');
+                    (0,_utils__WEBPACK_IMPORTED_MODULE_0__.renderTemplate)(_template__WEBPACK_IMPORTED_MODULE_5__.getNotFoundTemplate);
+                    return false;
                     break;
             }
         };
-        this.removeTabs = () => {
+        this.removePage = () => {
             this.$tabResult.replaceChildren();
+            (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('log-in') ? (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('log-in').remove() : false;
+            (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('sign-up') ? (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('sign-up').remove() : false;
         };
         this.vendingMachine = vendingMachine;
         this.$app = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#app');
@@ -3840,7 +3842,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "getProductManageTemplate": () => (/* binding */ getProductManageTemplate),
 /* harmony export */   "getRechargeTemplate": () => (/* binding */ getRechargeTemplate),
-/* harmony export */   "getPurchaseProduct": () => (/* binding */ getPurchaseProduct)
+/* harmony export */   "getPurchaseProduct": () => (/* binding */ getPurchaseProduct),
+/* harmony export */   "getNotFoundTemplate": () => (/* binding */ getNotFoundTemplate)
 /* harmony export */ });
 const getProductManageTemplate = `      
   <section class="tab-result-container" id="/javascript-vendingmachine/#!/product-manage">
@@ -4001,6 +4004,10 @@ const getPurchaseProduct = `
     </div>
   </section>
 `;
+const getNotFoundTemplate = `
+<div id="not-found">
+  <h1>죄송합니다. 요청하신 페이지를 찾을 수 없습니다.</h1>
+</div>`;
 
 
 /***/ })
