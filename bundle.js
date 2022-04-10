@@ -2336,7 +2336,8 @@ customElements.define('profile-edit', ProfileEdit);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Auth_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Auth.js */ "./src/ts/Auth.js");
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
-/* harmony import */ var _ToastNotification__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ToastNotification */ "./src/ts/components/ToastNotification.ts");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils */ "./src/ts/utils.ts");
+/* harmony import */ var _ToastNotification__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ToastNotification */ "./src/ts/components/ToastNotification.ts");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -2346,6 +2347,7 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+
 
 
 
@@ -2483,11 +2485,11 @@ class Signup extends HTMLElement {
                     return;
                 }
                 this.closeModal();
-                // renderComponent('log-in');
-                (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_2__.renderToastModal)('success', _constants__WEBPACK_IMPORTED_MODULE_1__.SUCCESS_MESSAGE.SIGNUP_COMPLETE);
+                (0,_utils__WEBPACK_IMPORTED_MODULE_2__.renderComponent)('log-in');
+                (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_3__.renderToastModal)('success', _constants__WEBPACK_IMPORTED_MODULE_1__.SUCCESS_MESSAGE.SIGNUP_COMPLETE);
             }
             catch (error) {
-                (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_2__.renderToastModal)('error', error.message);
+                (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_3__.renderToastModal)('error', error.message);
             }
         });
         this.attachShadow({ mode: 'open' });
