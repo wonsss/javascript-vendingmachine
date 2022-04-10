@@ -3308,7 +3308,6 @@ class Router {
         };
         this.routeLogout = () => {
             this.tabRouter(_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT, false);
-            localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_0__.STORAGE_ID.CURRENT_TAB, _constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT);
         };
         this.tabRouter = (url, isPopState = false) => {
             this.view.renderPage(url);
@@ -3321,7 +3320,6 @@ class Router {
             if (!isPopState && url !== location.pathname + location.hash) {
                 history.pushState({ url }, null, url);
             }
-            localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_0__.STORAGE_ID.CURRENT_TAB, url);
         };
         this.renderUserPrivatePage = () => {
             document.querySelector('.nav-tab').classList.remove('hide');
@@ -3332,19 +3330,17 @@ class Router {
             document.querySelector('user-menu').setAttribute('auth', 'logout');
         };
         this.view = view;
-        // this.currentTab = localStorage.getItem(STORAGE_ID.CURRENT_TAB) || PATH_ID.PURCHASE_PRODUCT;
         this.currentTab = location.pathname + location.hash;
-        console.log('@@@', location.pathname + location.hash);
+        if (!location.hash) {
+            this.currentTab = _constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT;
+        }
         this.tabRouter(this.currentTab, false);
         window.addEventListener('popstate', (event) => {
             const url = event.state ? event.state.url : location.pathname + location.hash;
-            // this.currentTab = location.pathname + location.hash;
-            console.log(url);
             this.tabRouter(url, true);
         });
         this.view.$navTab.addEventListener('@route-tab', (event) => {
             const url = event.detail;
-            console.log('메뉴버튼', url);
             this.tabRouter(url, false);
         });
         // 웹컴포넌트에서 보낸 커스텀 이벤트
