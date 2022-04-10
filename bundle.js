@@ -2109,6 +2109,8 @@ class Login extends HTMLElement {
             this.closeModal();
             const event = new CustomEvent('@render-signup', {});
             window.dispatchEvent(event);
+            const url = _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.SIGNUP;
+            history.pushState({ url }, null, url);
         };
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.appendChild(loginTemplate.content.cloneNode(true));
@@ -2777,6 +2779,8 @@ class UserMenu extends HTMLElement {
         this.handleLoginButton = () => {
             const event = new CustomEvent('@render-login', {});
             window.dispatchEvent(event);
+            const url = _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.LOGIN;
+            history.pushState({ url }, null, url);
         };
         this.checkLoginStatus = () => __awaiter(this, void 0, void 0, function* () {
             if (!_Auth_js__WEBPACK_IMPORTED_MODULE_0__["default"].getUserAuth()) {
