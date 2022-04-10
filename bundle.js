@@ -474,7 +474,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Roboto);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n  font-family: 'Roboto', sans-serif;\n  margin: 0;\n  display: flex;\n  justify-content: center;\n  background-color: var(--secondary-lighten);\n}\n\nh1 {\n  display: flex;\n  justify-content: center;\n}\n\nbutton {\n  background: var(--primary);\n  border-radius: 4px;\n  height: 36px;\n  border-style: none;\n  color: var(--white);\n}\n\nbutton:hover {\n  background: var(--primary-darken);\n  cursor: pointer;\n}\n\ninput {\n  padding: 0 8px;\n  border: 1px solid var(--secondary);\n  box-sizing: border-box;\n  border-radius: 4px;\n  height: 36px;\n  line-height: 36px;\n  font-weight: 400;\n  font-size: 16px;\n}\n\ninput::placeholder {\n  color: var(--secondary-darken);\n}\n\n.tab-result-container {\n  margin: 52px 0;\n}\n\ncaption {\n  font-weight: 600;\n  font-size: 20px;\n  margin: 48px 0 16px;\n}\n\ntable {\n  border-collapse: collapse;\n  width: 471px;\n}\n\ntr {\n  border: 1px solid var(--secondary-lighten);\n  border-left: 0;\n  border-right: 0;\n  text-align: center;\n}\n\ntd,\nth {\n  padding: 8px;\n  font-weight: 400;\n}\n\nth {\n  font-weight: 600;\n}\n\ncol {\n  width: 23%;\n}\n\n.hide {\n  display: none !important;\n}\n\n.short-button {\n  width: 56px;\n  margin-left: 16px;\n  font-size: 14px;\n  font-weight: 700;\n}\n\n.small-button {\n  background: var(--secondary-lighten);\n  color: var(--black);\n  width: 50px;\n}\n\n.small-button:hover {\n  background: var(--secondary);\n}\n\n.long-button {\n  background: var(--secondary-lighten);\n  color: var(--black);\n  width: 100px;\n  margin: 23px;\n}\n\n.long-button:hover {\n  background: var(--secondary);\n}\n\n.edit-confirm-button {\n  width: 100px;\n  height: 32px;\n}\n\n.paper-money-wrapper {\n  margin-top: 20px;\n}\n\n#app {\n  margin-top: 40px;\n  width: 500px;\n  background-color: var(--white);\n  box-shadow: var(--box-shadow);\n}\n\n.header-wrapper {\n  width: 100%;\n  position: relative;\n  margin: 20px 0;\n}\n\nuser-menu {\n  margin: 10px;\n  position: absolute;\n  right: 0;\n}\n", "",{"version":3,"sources":["webpack://./src/css/app.css"],"names":[],"mappings":"AAEA;EACE,iCAAiC;EACjC,SAAS;EACT,aAAa;EACb,uBAAuB;EACvB,0CAA0C;AAC5C;;AAEA;EACE,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,0BAA0B;EAC1B,kBAAkB;EAClB,YAAY;EACZ,kBAAkB;EAClB,mBAAmB;AACrB;;AAEA;EACE,iCAAiC;EACjC,eAAe;AACjB;;AAEA;EACE,cAAc;EACd,kCAAkC;EAClC,sBAAsB;EACtB,kBAAkB;EAClB,YAAY;EACZ,iBAAiB;EACjB,gBAAgB;EAChB,eAAe;AACjB;;AAEA;EACE,8BAA8B;AAChC;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,gBAAgB;EAChB,eAAe;EACf,mBAAmB;AACrB;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA;EACE,0CAA0C;EAC1C,cAAc;EACd,eAAe;EACf,kBAAkB;AACpB;;AAEA;;EAEE,YAAY;EACZ,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,UAAU;AACZ;;AAEA;EACE,wBAAwB;AAC1B;;AAEA;EACE,WAAW;EACX,iBAAiB;EACjB,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,oCAAoC;EACpC,mBAAmB;EACnB,WAAW;AACb;;AAEA;EACE,4BAA4B;AAC9B;;AAEA;EACE,oCAAoC;EACpC,mBAAmB;EACnB,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,4BAA4B;AAC9B;;AAEA;EACE,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;EAChB,YAAY;EACZ,8BAA8B;EAC9B,6BAA6B;AAC/B;;AAEA;EACE,WAAW;EACX,kBAAkB;EAClB,cAAc;AAChB;;AAEA;EACE,YAAY;EACZ,kBAAkB;EAClB,QAAQ;AACV","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Roboto');\n\nbody {\n  font-family: 'Roboto', sans-serif;\n  margin: 0;\n  display: flex;\n  justify-content: center;\n  background-color: var(--secondary-lighten);\n}\n\nh1 {\n  display: flex;\n  justify-content: center;\n}\n\nbutton {\n  background: var(--primary);\n  border-radius: 4px;\n  height: 36px;\n  border-style: none;\n  color: var(--white);\n}\n\nbutton:hover {\n  background: var(--primary-darken);\n  cursor: pointer;\n}\n\ninput {\n  padding: 0 8px;\n  border: 1px solid var(--secondary);\n  box-sizing: border-box;\n  border-radius: 4px;\n  height: 36px;\n  line-height: 36px;\n  font-weight: 400;\n  font-size: 16px;\n}\n\ninput::placeholder {\n  color: var(--secondary-darken);\n}\n\n.tab-result-container {\n  margin: 52px 0;\n}\n\ncaption {\n  font-weight: 600;\n  font-size: 20px;\n  margin: 48px 0 16px;\n}\n\ntable {\n  border-collapse: collapse;\n  width: 471px;\n}\n\ntr {\n  border: 1px solid var(--secondary-lighten);\n  border-left: 0;\n  border-right: 0;\n  text-align: center;\n}\n\ntd,\nth {\n  padding: 8px;\n  font-weight: 400;\n}\n\nth {\n  font-weight: 600;\n}\n\ncol {\n  width: 23%;\n}\n\n.hide {\n  display: none !important;\n}\n\n.short-button {\n  width: 56px;\n  margin-left: 16px;\n  font-size: 14px;\n  font-weight: 700;\n}\n\n.small-button {\n  background: var(--secondary-lighten);\n  color: var(--black);\n  width: 50px;\n}\n\n.small-button:hover {\n  background: var(--secondary);\n}\n\n.long-button {\n  background: var(--secondary-lighten);\n  color: var(--black);\n  width: 100px;\n  margin: 23px;\n}\n\n.long-button:hover {\n  background: var(--secondary);\n}\n\n.edit-confirm-button {\n  width: 100px;\n  height: 32px;\n}\n\n.paper-money-wrapper {\n  margin-top: 20px;\n}\n\n#app {\n  margin-top: 40px;\n  width: 500px;\n  background-color: var(--white);\n  box-shadow: var(--box-shadow);\n}\n\n.header-wrapper {\n  width: 100%;\n  position: relative;\n  margin: 20px 0;\n}\n\nuser-menu {\n  margin: 10px;\n  position: absolute;\n  right: 0;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  font-family: 'Roboto', sans-serif;\r\n  margin: 0;\r\n  display: flex;\r\n  justify-content: center;\r\n  background-color: var(--secondary-lighten);\r\n}\r\n\r\nh1 {\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\nbutton {\r\n  background: var(--primary);\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  border-style: none;\r\n  color: var(--white);\r\n}\r\n\r\nbutton:hover {\r\n  background: var(--primary-darken);\r\n  cursor: pointer;\r\n}\r\n\r\ninput {\r\n  padding: 0 8px;\r\n  border: 1px solid var(--secondary);\r\n  box-sizing: border-box;\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  line-height: 36px;\r\n  font-weight: 400;\r\n  font-size: 16px;\r\n}\r\n\r\ninput::placeholder {\r\n  color: var(--secondary-darken);\r\n}\r\n\r\n.tab-result-container {\r\n  margin: 52px 0;\r\n}\r\n\r\ncaption {\r\n  font-weight: 600;\r\n  font-size: 20px;\r\n  margin: 48px 0 16px;\r\n}\r\n\r\ntable {\r\n  border-collapse: collapse;\r\n  width: 471px;\r\n}\r\n\r\ntr {\r\n  border: 1px solid var(--secondary-lighten);\r\n  border-left: 0;\r\n  border-right: 0;\r\n  text-align: center;\r\n}\r\n\r\ntd,\r\nth {\r\n  padding: 8px;\r\n  font-weight: 400;\r\n}\r\n\r\nth {\r\n  font-weight: 600;\r\n}\r\n\r\ncol {\r\n  width: 23%;\r\n}\r\n\r\n.hide {\r\n  display: none !important;\r\n}\r\n\r\n.short-button {\r\n  width: 56px;\r\n  margin-left: 16px;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n}\r\n\r\n.small-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 50px;\r\n}\r\n\r\n.small-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.long-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 100px;\r\n  margin: 23px;\r\n}\r\n\r\n.long-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.edit-confirm-button {\r\n  width: 100px;\r\n  height: 32px;\r\n}\r\n\r\n.paper-money-wrapper {\r\n  margin-top: 20px;\r\n}\r\n\r\n#app {\r\n  margin-top: 40px;\r\n  width: 500px;\r\n  background-color: var(--white);\r\n  box-shadow: var(--box-shadow);\r\n}\r\n\r\n.header-wrapper {\r\n  width: 100%;\r\n  position: relative;\r\n  margin: 20px 0;\r\n}\r\n\r\nuser-menu {\r\n  margin: 10px;\r\n  position: absolute;\r\n  right: 0;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/app.css"],"names":[],"mappings":"AAEA;EACE,iCAAiC;EACjC,SAAS;EACT,aAAa;EACb,uBAAuB;EACvB,0CAA0C;AAC5C;;AAEA;EACE,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,0BAA0B;EAC1B,kBAAkB;EAClB,YAAY;EACZ,kBAAkB;EAClB,mBAAmB;AACrB;;AAEA;EACE,iCAAiC;EACjC,eAAe;AACjB;;AAEA;EACE,cAAc;EACd,kCAAkC;EAClC,sBAAsB;EACtB,kBAAkB;EAClB,YAAY;EACZ,iBAAiB;EACjB,gBAAgB;EAChB,eAAe;AACjB;;AAEA;EACE,8BAA8B;AAChC;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,gBAAgB;EAChB,eAAe;EACf,mBAAmB;AACrB;;AAEA;EACE,yBAAyB;EACzB,YAAY;AACd;;AAEA;EACE,0CAA0C;EAC1C,cAAc;EACd,eAAe;EACf,kBAAkB;AACpB;;AAEA;;EAEE,YAAY;EACZ,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,UAAU;AACZ;;AAEA;EACE,wBAAwB;AAC1B;;AAEA;EACE,WAAW;EACX,iBAAiB;EACjB,eAAe;EACf,gBAAgB;AAClB;;AAEA;EACE,oCAAoC;EACpC,mBAAmB;EACnB,WAAW;AACb;;AAEA;EACE,4BAA4B;AAC9B;;AAEA;EACE,oCAAoC;EACpC,mBAAmB;EACnB,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,4BAA4B;AAC9B;;AAEA;EACE,YAAY;EACZ,YAAY;AACd;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;EAChB,YAAY;EACZ,8BAA8B;EAC9B,6BAA6B;AAC/B;;AAEA;EACE,WAAW;EACX,kBAAkB;EAClB,cAAc;AAChB;;AAEA;EACE,YAAY;EACZ,kBAAkB;EAClB,QAAQ;AACV","sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Roboto');\r\n\r\nbody {\r\n  font-family: 'Roboto', sans-serif;\r\n  margin: 0;\r\n  display: flex;\r\n  justify-content: center;\r\n  background-color: var(--secondary-lighten);\r\n}\r\n\r\nh1 {\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\nbutton {\r\n  background: var(--primary);\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  border-style: none;\r\n  color: var(--white);\r\n}\r\n\r\nbutton:hover {\r\n  background: var(--primary-darken);\r\n  cursor: pointer;\r\n}\r\n\r\ninput {\r\n  padding: 0 8px;\r\n  border: 1px solid var(--secondary);\r\n  box-sizing: border-box;\r\n  border-radius: 4px;\r\n  height: 36px;\r\n  line-height: 36px;\r\n  font-weight: 400;\r\n  font-size: 16px;\r\n}\r\n\r\ninput::placeholder {\r\n  color: var(--secondary-darken);\r\n}\r\n\r\n.tab-result-container {\r\n  margin: 52px 0;\r\n}\r\n\r\ncaption {\r\n  font-weight: 600;\r\n  font-size: 20px;\r\n  margin: 48px 0 16px;\r\n}\r\n\r\ntable {\r\n  border-collapse: collapse;\r\n  width: 471px;\r\n}\r\n\r\ntr {\r\n  border: 1px solid var(--secondary-lighten);\r\n  border-left: 0;\r\n  border-right: 0;\r\n  text-align: center;\r\n}\r\n\r\ntd,\r\nth {\r\n  padding: 8px;\r\n  font-weight: 400;\r\n}\r\n\r\nth {\r\n  font-weight: 600;\r\n}\r\n\r\ncol {\r\n  width: 23%;\r\n}\r\n\r\n.hide {\r\n  display: none !important;\r\n}\r\n\r\n.short-button {\r\n  width: 56px;\r\n  margin-left: 16px;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n}\r\n\r\n.small-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 50px;\r\n}\r\n\r\n.small-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.long-button {\r\n  background: var(--secondary-lighten);\r\n  color: var(--black);\r\n  width: 100px;\r\n  margin: 23px;\r\n}\r\n\r\n.long-button:hover {\r\n  background: var(--secondary);\r\n}\r\n\r\n.edit-confirm-button {\r\n  width: 100px;\r\n  height: 32px;\r\n}\r\n\r\n.paper-money-wrapper {\r\n  margin-top: 20px;\r\n}\r\n\r\n#app {\r\n  margin-top: 40px;\r\n  width: 500px;\r\n  background-color: var(--white);\r\n  box-shadow: var(--box-shadow);\r\n}\r\n\r\n.header-wrapper {\r\n  width: 100%;\r\n  position: relative;\r\n  margin: 20px 0;\r\n}\r\n\r\nuser-menu {\r\n  margin: 10px;\r\n  position: absolute;\r\n  right: 0;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -519,7 +519,7 @@ ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_rechargeTab_css__
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_app_css__WEBPACK_IMPORTED_MODULE_6__["default"]);
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_notFound_css__WEBPACK_IMPORTED_MODULE_7__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n", "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "\r\n", "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -546,7 +546,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".nav-tab {\n  display: flex;\n  justify-content: center;\n  margin: 32px 0 0;\n}\n\n.tab-input {\n  width: 0;\n  height: 0;\n}\n\n.tab-label {\n  display: inline-block;\n  text-align: center;\n  font-size: 16px;\n  height: 36px;\n  width: 117px;\n  font-weight: 500;\n  line-height: 36px;\n  background-color: var(--secondary);\n  border-radius: 4px;\n  font-weight: 700;\n  color: var(--white);\n}\n\n.tab-input:checked + label {\n  background: var(--primary);\n}\n\n.tab-label:hover {\n  cursor: pointer;\n  background-color: var(--primary);\n}\n", "",{"version":3,"sources":["webpack://./src/css/nav.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,uBAAuB;EACvB,gBAAgB;AAClB;;AAEA;EACE,QAAQ;EACR,SAAS;AACX;;AAEA;EACE,qBAAqB;EACrB,kBAAkB;EAClB,eAAe;EACf,YAAY;EACZ,YAAY;EACZ,gBAAgB;EAChB,iBAAiB;EACjB,kCAAkC;EAClC,kBAAkB;EAClB,gBAAgB;EAChB,mBAAmB;AACrB;;AAEA;EACE,0BAA0B;AAC5B;;AAEA;EACE,eAAe;EACf,gCAAgC;AAClC","sourcesContent":[".nav-tab {\n  display: flex;\n  justify-content: center;\n  margin: 32px 0 0;\n}\n\n.tab-input {\n  width: 0;\n  height: 0;\n}\n\n.tab-label {\n  display: inline-block;\n  text-align: center;\n  font-size: 16px;\n  height: 36px;\n  width: 117px;\n  font-weight: 500;\n  line-height: 36px;\n  background-color: var(--secondary);\n  border-radius: 4px;\n  font-weight: 700;\n  color: var(--white);\n}\n\n.tab-input:checked + label {\n  background: var(--primary);\n}\n\n.tab-label:hover {\n  cursor: pointer;\n  background-color: var(--primary);\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".nav-tab {\r\n  display: flex;\r\n  justify-content: center;\r\n  margin: 32px 0 0;\r\n}\r\n\r\n.tab-input {\r\n  width: 0;\r\n  height: 0;\r\n}\r\n\r\n.tab-label {\r\n  display: inline-block;\r\n  text-align: center;\r\n  font-size: 16px;\r\n  height: 36px;\r\n  width: 117px;\r\n  font-weight: 500;\r\n  line-height: 36px;\r\n  background-color: var(--secondary);\r\n  border-radius: 4px;\r\n  font-weight: 700;\r\n  color: var(--white);\r\n}\r\n\r\n.tab-input:checked + label {\r\n  background: var(--primary);\r\n}\r\n\r\n.tab-label:hover {\r\n  cursor: pointer;\r\n  background-color: var(--primary);\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/nav.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,uBAAuB;EACvB,gBAAgB;AAClB;;AAEA;EACE,QAAQ;EACR,SAAS;AACX;;AAEA;EACE,qBAAqB;EACrB,kBAAkB;EAClB,eAAe;EACf,YAAY;EACZ,YAAY;EACZ,gBAAgB;EAChB,iBAAiB;EACjB,kCAAkC;EAClC,kBAAkB;EAClB,gBAAgB;EAChB,mBAAmB;AACrB;;AAEA;EACE,0BAA0B;AAC5B;;AAEA;EACE,eAAe;EACf,gCAAgC;AAClC","sourcesContent":[".nav-tab {\r\n  display: flex;\r\n  justify-content: center;\r\n  margin: 32px 0 0;\r\n}\r\n\r\n.tab-input {\r\n  width: 0;\r\n  height: 0;\r\n}\r\n\r\n.tab-label {\r\n  display: inline-block;\r\n  text-align: center;\r\n  font-size: 16px;\r\n  height: 36px;\r\n  width: 117px;\r\n  font-weight: 500;\r\n  line-height: 36px;\r\n  background-color: var(--secondary);\r\n  border-radius: 4px;\r\n  font-weight: 700;\r\n  color: var(--white);\r\n}\r\n\r\n.tab-input:checked + label {\r\n  background: var(--primary);\r\n}\r\n\r\n.tab-label:hover {\r\n  cursor: pointer;\r\n  background-color: var(--primary);\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -573,7 +573,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#not-found {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  top: 0;\n  left: 0;\n  background-color: white;\n}\n", "",{"version":3,"sources":["webpack://./src/css/notFound.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,YAAY;EACZ,aAAa;EACb,eAAe;EACf,MAAM;EACN,OAAO;EACP,uBAAuB;AACzB","sourcesContent":["#not-found {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  top: 0;\n  left: 0;\n  background-color: white;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "#not-found {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  width: 100vw;\r\n  height: 100vh;\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  background-color: white;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/notFound.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,YAAY;EACZ,aAAa;EACb,eAAe;EACf,MAAM;EACN,OAAO;EACP,uBAAuB;AACzB","sourcesContent":["#not-found {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  width: 100vw;\r\n  height: 100vh;\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  background-color: white;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -600,7 +600,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".tab-result-wrapper {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n.label-wrapper {\n  margin: 10px 0;\n}\n\n.product-manage-input {\n  width: 120px;\n}\n\n.edit-form {\n  display: flex;\n}\n\n.edit-input {\n  width: 84px;\n}\n", "",{"version":3,"sources":["webpack://./src/css/productManageTab.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,WAAW;AACb","sourcesContent":[".tab-result-wrapper {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n.label-wrapper {\n  margin: 10px 0;\n}\n\n.product-manage-input {\n  width: 120px;\n}\n\n.edit-form {\n  display: flex;\n}\n\n.edit-input {\n  width: 84px;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".tab-result-wrapper {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n\r\n.label-wrapper {\r\n  margin: 10px 0;\r\n}\r\n\r\n.product-manage-input {\r\n  width: 120px;\r\n}\r\n\r\n.edit-form {\r\n  display: flex;\r\n}\r\n\r\n.edit-input {\r\n  width: 84px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/productManageTab.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,YAAY;AACd;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,WAAW;AACb","sourcesContent":[".tab-result-wrapper {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n\r\n.label-wrapper {\r\n  margin: 10px 0;\r\n}\r\n\r\n.product-manage-input {\r\n  width: 120px;\r\n}\r\n\r\n.edit-form {\r\n  display: flex;\r\n}\r\n\r\n.edit-input {\r\n  width: 84px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -627,7 +627,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".long-input {\n  width: 300px;\n}\n\n.recharge-button {\n  width: 56px;\n}\n\n.holding-money-wrapper {\n  margin-top: 16px;\n}\n\n.change-table {\n  width: 237px;\n}\n", "",{"version":3,"sources":["webpack://./src/css/rechargeTab.css"],"names":[],"mappings":"AAAA;EACE,YAAY;AACd;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,YAAY;AACd","sourcesContent":[".long-input {\n  width: 300px;\n}\n\n.recharge-button {\n  width: 56px;\n}\n\n.holding-money-wrapper {\n  margin-top: 16px;\n}\n\n.change-table {\n  width: 237px;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".long-input {\r\n  width: 300px;\r\n}\r\n\r\n.recharge-button {\r\n  width: 56px;\r\n}\r\n\r\n.holding-money-wrapper {\r\n  margin-top: 16px;\r\n}\r\n\r\n.change-table {\r\n  width: 237px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/rechargeTab.css"],"names":[],"mappings":"AAAA;EACE,YAAY;AACd;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,YAAY;AACd","sourcesContent":[".long-input {\r\n  width: 300px;\r\n}\r\n\r\n.recharge-button {\r\n  width: 56px;\r\n}\r\n\r\n.holding-money-wrapper {\r\n  margin-top: 16px;\r\n}\r\n\r\n.change-table {\r\n  width: 237px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -654,7 +654,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --primary: #00bcd4;\n  --primary-lighten: #80deea;\n  --primary-darken: #009eb3;\n  --secondary: #b4b4b4;\n  --secondary-lighten: #f5f5f5;\n  --secondary-darken: #8b8b8b;\n  --menu: #cfcfcf;\n  --white: #fff;\n  --black: #000;\n  --dimmer: rgba(0, 0, 0, 0.5);\n  --box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12),\n    0px 1px 3px rgba(0, 0, 0, 0.2);\n  --thumbnail: rgb(0, 110, 255);\n  --thumbnail-darken: rgb(0, 85, 195);\n}\n", "",{"version":3,"sources":["webpack://./src/css/root.css"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,0BAA0B;EAC1B,yBAAyB;EACzB,oBAAoB;EACpB,4BAA4B;EAC5B,2BAA2B;EAC3B,eAAe;EACf,aAAa;EACb,aAAa;EACb,4BAA4B;EAC5B;kCACgC;EAChC,6BAA6B;EAC7B,mCAAmC;AACrC","sourcesContent":[":root {\n  --primary: #00bcd4;\n  --primary-lighten: #80deea;\n  --primary-darken: #009eb3;\n  --secondary: #b4b4b4;\n  --secondary-lighten: #f5f5f5;\n  --secondary-darken: #8b8b8b;\n  --menu: #cfcfcf;\n  --white: #fff;\n  --black: #000;\n  --dimmer: rgba(0, 0, 0, 0.5);\n  --box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12),\n    0px 1px 3px rgba(0, 0, 0, 0.2);\n  --thumbnail: rgb(0, 110, 255);\n  --thumbnail-darken: rgb(0, 85, 195);\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\r\n  --primary: #00bcd4;\r\n  --primary-lighten: #80deea;\r\n  --primary-darken: #009eb3;\r\n  --secondary: #b4b4b4;\r\n  --secondary-lighten: #f5f5f5;\r\n  --secondary-darken: #8b8b8b;\r\n  --menu: #cfcfcf;\r\n  --white: #fff;\r\n  --black: #000;\r\n  --dimmer: rgba(0, 0, 0, 0.5);\r\n  --box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12),\r\n    0px 1px 3px rgba(0, 0, 0, 0.2);\r\n  --thumbnail: rgb(0, 110, 255);\r\n  --thumbnail-darken: rgb(0, 85, 195);\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/root.css"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,0BAA0B;EAC1B,yBAAyB;EACzB,oBAAoB;EACpB,4BAA4B;EAC5B,2BAA2B;EAC3B,eAAe;EACf,aAAa;EACb,aAAa;EACb,4BAA4B;EAC5B;kCACgC;EAChC,6BAA6B;EAC7B,mCAAmC;AACrC","sourcesContent":[":root {\r\n  --primary: #00bcd4;\r\n  --primary-lighten: #80deea;\r\n  --primary-darken: #009eb3;\r\n  --secondary: #b4b4b4;\r\n  --secondary-lighten: #f5f5f5;\r\n  --secondary-darken: #8b8b8b;\r\n  --menu: #cfcfcf;\r\n  --white: #fff;\r\n  --black: #000;\r\n  --dimmer: rgba(0, 0, 0, 0.5);\r\n  --box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12),\r\n    0px 1px 3px rgba(0, 0, 0, 0.2);\r\n  --thumbnail: rgb(0, 110, 255);\r\n  --thumbnail-darken: rgb(0, 85, 195);\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1956,7 +1956,6 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-// import { loginAuth } from '../Auth.js';
 
 
 
@@ -2076,7 +2075,9 @@ class Login extends HTMLElement {
     constructor() {
         super();
         this.closeModalDimmer = (event) => {
-            event.target === this.shadowRoot.querySelector('.dimmer') ? this.closeModal() : false;
+            if (event.target === this.dimmer) {
+                this.closeModal();
+            }
         };
         this.closeModal = () => {
             this.remove();
@@ -2113,6 +2114,7 @@ class Login extends HTMLElement {
         this.shadowRoot.appendChild(loginTemplate.content.cloneNode(true));
         this.emailInput = this.shadowRoot.getElementById('email-input');
         this.passwordInput = this.shadowRoot.getElementById('password-input');
+        this.dimmer = this.shadowRoot.querySelector('.dimmer');
     }
     connectedCallback() {
         this.shadowRoot.querySelector('form').addEventListener('submit', this.login);
@@ -2151,7 +2153,6 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-// import { editProfileAuth, getUserData } from '../Auth.js';
 
 
 
@@ -2287,7 +2288,9 @@ class ProfileEdit extends HTMLElement {
             }
         });
         this.closeModalDimmer = (event) => {
-            event.target === this.shadowRoot.querySelector('.dimmer') ? this.closeModal() : false;
+            if (event.target === this.dimmer) {
+                this.closeModal();
+            }
         };
         this.closeModal = () => {
             this.remove();
@@ -2298,6 +2301,7 @@ class ProfileEdit extends HTMLElement {
         this.nameEditInput = this.shadowRoot.getElementById('name-edit-input');
         this.passwordEditInput = (this.shadowRoot.getElementById('password-edit-input'));
         this.passwordCheckEditInput = (this.shadowRoot.getElementById('password-check-edit-input'));
+        this.dimmer = this.shadowRoot.querySelector('.dimmer');
     }
     connectedCallback() {
         return __awaiter(this, void 0, void 0, function* () {
@@ -2329,7 +2333,7 @@ customElements.define('profile-edit', ProfileEdit);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Auth_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Auth.js */ "./src/ts/Auth.js");
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
-/* harmony import */ var _renderer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./renderer */ "./src/ts/components/renderer.ts");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils */ "./src/ts/utils.ts");
 /* harmony import */ var _ToastNotification__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ToastNotification */ "./src/ts/components/ToastNotification.ts");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -2456,7 +2460,9 @@ class Signup extends HTMLElement {
     constructor() {
         super();
         this.closeModalDimmer = (event) => {
-            event.target === this.shadowRoot.querySelector('.dimmer') ? this.closeModal() : false;
+            if (event.target === this.dimmer) {
+                this.closeModal();
+            }
         };
         this.closeModal = () => {
             this.remove();
@@ -2475,7 +2481,7 @@ class Signup extends HTMLElement {
                     return;
                 }
                 this.closeModal();
-                (0,_renderer__WEBPACK_IMPORTED_MODULE_2__.renderComponent)('log-in');
+                (0,_utils__WEBPACK_IMPORTED_MODULE_2__.renderComponent)('log-in');
                 (0,_ToastNotification__WEBPACK_IMPORTED_MODULE_3__.renderToastModal)('success', _constants__WEBPACK_IMPORTED_MODULE_1__.SUCCESS_MESSAGE.SIGNUP_COMPLETE);
             }
             catch (error) {
@@ -2488,6 +2494,7 @@ class Signup extends HTMLElement {
         this.nameInput = this.shadowRoot.getElementById('name-input');
         this.passwordInput = this.shadowRoot.getElementById('password-input');
         this.passwordCheckInput = (this.shadowRoot.getElementById('password-check-input'));
+        this.dimmer = this.shadowRoot.querySelector('.dimmer');
     }
     connectedCallback() {
         this.shadowRoot.querySelector('form').addEventListener('submit', this.signup);
@@ -2838,34 +2845,6 @@ customElements.define('user-menu', UserMenu);
 
 /***/ }),
 
-/***/ "./src/ts/components/renderer.ts":
-/*!***************************************!*\
-  !*** ./src/ts/components/renderer.ts ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "renderComponent": () => (/* binding */ renderComponent),
-/* harmony export */   "renderUserPrivatePage": () => (/* binding */ renderUserPrivatePage),
-/* harmony export */   "renderPublicPage": () => (/* binding */ renderPublicPage)
-/* harmony export */ });
-const renderComponent = (tagName) => {
-    document.body.appendChild(document.createElement(tagName));
-};
-const renderUserPrivatePage = () => {
-    document.querySelector('.nav-tab').classList.remove('hide');
-    document.querySelector('user-menu').setAttribute('auth', 'login');
-};
-const renderPublicPage = () => {
-    document.querySelector('.nav-tab').classList.add('hide');
-    document.querySelector('user-menu').setAttribute('auth', 'logout');
-};
-
-
-/***/ }),
-
 /***/ "./src/ts/constants.ts":
 /*!*****************************!*\
   !*** ./src/ts/constants.ts ***!
@@ -3041,12 +3020,6 @@ class Product {
         this._name = name;
         this._price = price;
         this._quantity = quantity;
-    }
-    set name(name) {
-        this._name = name;
-    }
-    set price(price) {
-        this._price = price;
     }
     set quantity(quantity) {
         this._quantity = quantity;
@@ -3323,9 +3296,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Router)
 /* harmony export */ });
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants */ "./src/ts/constants.ts");
-/* harmony import */ var _components_renderer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/renderer */ "./src/ts/components/renderer.ts");
-/* harmony import */ var _Auth_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Auth.js */ "./src/ts/Auth.js");
-
+/* harmony import */ var _Auth_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Auth.js */ "./src/ts/Auth.js");
 
 
 class Router {
@@ -3334,20 +3305,29 @@ class Router {
             this.tabRouter(url, false);
         };
         this.routeLogout = () => {
-            localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_0__.STORAGE_ID.CURRENT_TAB, _constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT);
             this.tabRouter(_constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT, false);
+            localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_0__.STORAGE_ID.CURRENT_TAB, _constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT);
         };
         this.tabRouter = (url, isPopState = false) => {
-            this.view.renderTabs(url);
-            if (!_Auth_js__WEBPACK_IMPORTED_MODULE_2__["default"].isLoggedIn) {
+            this.view.renderTab(url);
+            if (!_Auth_js__WEBPACK_IMPORTED_MODULE_1__["default"].isLoggedIn) {
+                this.renderPublicPage();
                 history.pushState({ url }, null, url);
-                (0,_components_renderer__WEBPACK_IMPORTED_MODULE_1__.renderPublicPage)();
                 return;
             }
+            this.renderUserPrivatePage();
             if (!isPopState && url !== location.pathname + location.hash) {
                 history.pushState({ url }, null, url);
             }
-            (0,_components_renderer__WEBPACK_IMPORTED_MODULE_1__.renderUserPrivatePage)();
+            localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_0__.STORAGE_ID.CURRENT_TAB, url);
+        };
+        this.renderUserPrivatePage = () => {
+            document.querySelector('.nav-tab').classList.remove('hide');
+            document.querySelector('user-menu').setAttribute('auth', 'login');
+        };
+        this.renderPublicPage = () => {
+            document.querySelector('.nav-tab').classList.add('hide');
+            document.querySelector('user-menu').setAttribute('auth', 'logout');
         };
         this.view = view;
         this.currentTab = localStorage.getItem(_constants__WEBPACK_IMPORTED_MODULE_0__.STORAGE_ID.CURRENT_TAB) || _constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT;
@@ -3382,12 +3362,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "$": () => (/* binding */ $),
 /* harmony export */   "$$": () => (/* binding */ $$),
-/* harmony export */   "getRandomNumber": () => (/* binding */ getRandomNumber)
+/* harmony export */   "getRandomNumber": () => (/* binding */ getRandomNumber),
+/* harmony export */   "renderComponent": () => (/* binding */ renderComponent),
+/* harmony export */   "renderTemplate": () => (/* binding */ renderTemplate)
 /* harmony export */ });
 const $ = (selector, baseElement = document) => baseElement.querySelector(selector);
 const $$ = (selector, baseElement = document) => baseElement.querySelectorAll(selector);
 const getRandomNumber = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+const renderComponent = (tagName) => {
+    document.body.appendChild(document.createElement(tagName));
+};
+const renderTemplate = (htmlString) => {
+    const $tabResult = document.getElementById('tab-result');
+    $tabResult.insertAdjacentHTML('beforeend', htmlString);
 };
 
 
@@ -3407,13 +3396,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils */ "./src/ts/utils.ts");
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
 /* harmony import */ var _components_ToastNotification__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/ToastNotification */ "./src/ts/components/ToastNotification.ts");
+/* harmony import */ var _template__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./template */ "./src/ts/views/template.ts");
+
 
 
 
 class ProductManageView {
     constructor(vendingMachine) {
-        this.renderProductManageTab = () => {
-            this.$currentProductTable.textContent = '';
+        this.render = () => {
+            (0,_utils__WEBPACK_IMPORTED_MODULE_0__.renderTemplate)(_template__WEBPACK_IMPORTED_MODULE_3__.getProductManageTemplate);
+            this.$productNameInput = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#product-name');
+            this.$productPriceInput = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#product-price');
+            this.$productQuantityInput = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#product-quantity');
+            this.$productManageForm = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#product-manage-form');
+            this.$currentProductTable = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#current-product-table');
+            this.$productManageForm.addEventListener('submit', this.handleSubmit);
+            this.$currentProductTable.addEventListener('click', this.handleModifierButton);
             const tableTemplate = this.vendingMachine.products
                 .map((product) => this.getProductTemplate(product))
                 .join('');
@@ -3466,32 +3464,31 @@ class ProductManageView {
         this.handleEdit = (target) => {
             const { name, price, quantity } = this.vendingMachine.getProduct(target.dataset.name);
             const editTemplate = this.getEditTemplate({ name, price, quantity });
-            const newTr = document.createElement('tr');
-            newTr.className = 'product-row';
-            newTr.dataset.name = name;
-            newTr.insertAdjacentHTML('beforeend', editTemplate);
-            const targetEdit = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)(`tr[data-name='${name}']`);
-            this.$currentProductTable.replaceChild(newTr, targetEdit);
+            const targetEdit = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)(`tr[data-name='${name}']`, this.$currentProductTable);
+            targetEdit.replaceChildren();
+            targetEdit.insertAdjacentHTML('beforeend', editTemplate);
             (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('.edit-confirm-button').addEventListener('click', () => this.handleConfirmEdit(name));
         };
         this.getEditTemplate = ({ name, price, quantity }) => {
             return `
-      <td class="product-row-name">
-        <input class="edit-input" id="edit-name-input" type="text" size="10" minlength="1" maxlength="10" value="${name}">
-      </td>
-      <td class="product-row-price">
-        <input class="edit-input" id="edit-price-input" type="number" step="10" min="100" max="100000" value="${price}">
-      </td>
-      <td class="product-row-quantity">
-        <input class="edit-input" id="edit-quantity-input" type="number" min="1" max="20" value="${quantity}">
-      </td>
-      <td>
-        <button class="small-button edit-confirm-button" data-name="${name}" >확인</button>
-      </td>
+      <tr class="product-row" dataset-name=${name} >
+        <td class="product-row-name">
+          <input class="edit-input" id="edit-name-input" type="text" size="10" minlength="1" maxlength="10" value="${name}">
+        </td>
+        <td class="product-row-price">
+          <input class="edit-input" id="edit-price-input" type="number" step="10" min="100" max="100000" value="${price}">
+        </td>
+        <td class="product-row-quantity">
+          <input class="edit-input" id="edit-quantity-input" type="number" min="1" max="20" value="${quantity}">
+        </td>
+        <td>
+          <button class="small-button edit-confirm-button" data-name="${name}" >확인</button>
+        </td>
+      </tr>
     `;
         };
         this.handleConfirmEdit = (targetName) => {
-            const targetEdit = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)(`tr[data-name='${targetName}']`);
+            const targetEdit = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)(`tr[data-name='${targetName}']`, this.$currentProductTable);
             const productToEdit = {
                 name: (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#edit-name-input').value,
                 price: +(0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#edit-price-input').value,
@@ -3524,15 +3521,7 @@ class ProductManageView {
             }
         };
         this.vendingMachine = vendingMachine;
-        this.$productNameInput = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#product-name');
-        this.$productPriceInput = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#product-price');
-        this.$productQuantityInput = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#product-quantity');
-        this.$productManageForm = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#product-manage-form');
-        this.$currentProductTable = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#current-product-table');
         this.$toastModal = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('toast-modal');
-        this.$productManageForm.addEventListener('submit', this.handleSubmit);
-        this.$currentProductTable.addEventListener('click', this.handleModifierButton);
-        this.renderProductManageTab();
     }
     resetProductManageForm() {
         this.$productNameInput.value = '';
@@ -3563,14 +3552,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils */ "./src/ts/utils.ts");
 /* harmony import */ var _components_ToastNotification__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/ToastNotification */ "./src/ts/components/ToastNotification.ts");
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
+/* harmony import */ var _template__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./template */ "./src/ts/views/template.ts");
+
 
 
 
 class PurchaseView {
     constructor(vendingMachine) {
-        this.renderPurchaseTab = () => {
+        this.render = () => {
+            (0,_utils__WEBPACK_IMPORTED_MODULE_0__.renderTemplate)(_template__WEBPACK_IMPORTED_MODULE_3__.getPurchaseProduct);
+            this.$insertMoneyForm = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#insert-money-form');
+            this.$insertMoneyInput = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#insert-money-input');
+            this.$currentInsertedMoney = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#current-inserted-money');
+            this.$purchasableProductTable = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#purchasable-product-table');
+            this.$coin500 = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#purchase-tab-coin-500');
+            this.$coin100 = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#purchase-tab-coin-100');
+            this.$coin50 = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#purchase-tab-coin-50');
+            this.$coin10 = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#purchase-tab-coin-10');
+            this.$refundButton = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#refund-button');
+            this.$insertMoneyForm.addEventListener('submit', this.handleInsertMoneyForm);
+            this.$purchasableProductTable.addEventListener('click', this.handlePurchaseButton);
+            this.$refundButton.addEventListener('click', this.handleRefundButton);
             this.renderPurchaseTable();
-            this.renderRefundTable();
             this.$insertMoneyInput.focus();
         };
         this.renderPurchaseTable = () => {
@@ -3609,7 +3612,6 @@ class PurchaseView {
                 (0,_components_ToastNotification__WEBPACK_IMPORTED_MODULE_1__.renderToastModal)('error', error.message);
             }
         };
-        this.renderRefundTable = () => { };
         this.handleInsertMoneyForm = (event) => {
             event.preventDefault();
             try {
@@ -3655,20 +3657,6 @@ class PurchaseView {
             }
         };
         this.vendingMachine = vendingMachine;
-        this.$insertMoneyForm = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#insert-money-form');
-        this.$insertMoneyInput = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#insert-money-input');
-        this.$currentInsertedMoney = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#current-inserted-money');
-        this.$purchasableProductTable = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#purchasable-product-table');
-        this.$coin500 = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#purchase-tab-coin-500');
-        this.$coin100 = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#purchase-tab-coin-100');
-        this.$coin50 = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#purchase-tab-coin-50');
-        this.$coin10 = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#purchase-tab-coin-10');
-        this.$refundButton = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#refund-button');
-        // 투입버튼 이벤트 바인딩
-        this.$insertMoneyForm.addEventListener('submit', this.handleInsertMoneyForm);
-        this.$purchasableProductTable.addEventListener('click', this.handlePurchaseButton);
-        // 반환버튼 이벤트 바인딩
-        this.$refundButton.addEventListener('click', this.handleRefundButton);
     }
 }
 
@@ -3689,12 +3677,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "./src/ts/constants.ts");
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils */ "./src/ts/utils.ts");
 /* harmony import */ var _components_ToastNotification__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/ToastNotification */ "./src/ts/components/ToastNotification.ts");
+/* harmony import */ var _template__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./template */ "./src/ts/views/template.ts");
+
 
 
 
 class RechargeView {
     constructor(vendingMachine) {
-        this.renderRechargeTab = () => {
+        this.render = () => {
+            (0,_utils__WEBPACK_IMPORTED_MODULE_1__.renderTemplate)(_template__WEBPACK_IMPORTED_MODULE_3__.getRechargeTemplate);
+            this.$rechargeForm = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.$)('#recharge-form');
+            this.$rechargeInput = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.$)('#recharge-input', this.$rechargeForm);
+            this.$currentHoldingMoney = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.$)('#current-holding-money');
+            this.$coin500 = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.$)('#coin-500');
+            this.$coin100 = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.$)('#coin-100');
+            this.$coin50 = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.$)('#coin-50');
+            this.$coin10 = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.$)('#coin-10');
+            this.$rechargeForm.addEventListener('submit', this.handleSubmit);
             this.renderHoldingMoney();
             this.renderCoinTable();
             this.$rechargeInput.focus();
@@ -3713,7 +3712,8 @@ class RechargeView {
             const moneyToRecharge = +this.$rechargeInput.value;
             try {
                 this.vendingMachine.rechargeMoney(moneyToRecharge);
-                this.renderRechargeTab();
+                this.renderHoldingMoney();
+                this.renderCoinTable();
                 this.$rechargeInput.value = '';
                 (0,_components_ToastNotification__WEBPACK_IMPORTED_MODULE_2__.renderToastModal)('success', _constants__WEBPACK_IMPORTED_MODULE_0__.SUCCESS_MESSAGE.MONEY_RECHARGED);
             }
@@ -3721,15 +3721,7 @@ class RechargeView {
                 (0,_components_ToastNotification__WEBPACK_IMPORTED_MODULE_2__.renderToastModal)('error', error.message);
             }
         };
-        this.$rechargeForm = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.$)('#recharge-form');
-        this.$rechargeInput = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.$)('#recharge-input', this.$rechargeForm);
-        this.$currentHoldingMoney = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.$)('#current-holding-money');
-        this.$coin500 = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.$)('#coin-500');
-        this.$coin100 = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.$)('#coin-100');
-        this.$coin50 = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.$)('#coin-50');
-        this.$coin10 = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.$)('#coin-10');
         this.vendingMachine = vendingMachine;
-        this.$rechargeForm.addEventListener('submit', this.handleSubmit);
     }
 }
 
@@ -3752,16 +3744,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ProductManageView__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductManageView */ "./src/ts/views/ProductManageView.ts");
 /* harmony import */ var _RechargeView__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./RechargeView */ "./src/ts/views/RechargeView.ts");
 /* harmony import */ var _PurchaseView__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./PurchaseView */ "./src/ts/views/PurchaseView.ts");
-/* harmony import */ var _components_renderer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/renderer */ "./src/ts/components/renderer.ts");
-var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 
 
 
@@ -3780,62 +3762,231 @@ class View {
             const event = new CustomEvent('@route-tab', { detail });
             this.$navTab.dispatchEvent(event);
         };
-        this.renderTabs = (url) => __awaiter(this, void 0, void 0, function* () {
-            this.$notFound.classList.toggle('hide', url !== _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.NOT_FOUND);
-            this.renderUpdatedView(url);
-            this.$$tabResultContainers.forEach((container, index) => {
-                if (container.id === url) {
-                    container.classList.remove('hide');
-                    this.$$tabButtons[index].checked = true;
-                    return;
-                }
-                container.classList.add('hide');
-            });
-        });
-        this.renderUpdatedView = (url) => {
+        this.renderTab = (url) => {
+            this.$tabResult.replaceChildren();
             switch (url) {
                 case _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PRODUCT_MANAGE:
-                    this.productManageView.renderProductManageTab();
+                    new _ProductManageView__WEBPACK_IMPORTED_MODULE_2__["default"](this.vendingMachine).render();
+                    this.$tabProductManageButton.checked = true;
                     break;
                 case _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.RECHARGE:
-                    this.rechargeView.renderRechargeTab();
+                    new _RechargeView__WEBPACK_IMPORTED_MODULE_3__["default"](this.vendingMachine).render();
+                    this.$tabRechargeButton.checked = true;
                     break;
                 case _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PURCHASE_PRODUCT:
-                    this.purchaseView.renderPurchaseTab();
+                    new _PurchaseView__WEBPACK_IMPORTED_MODULE_4__["default"](this.vendingMachine).render();
+                    this.$tabPurchaseProductButton.checked = true;
                     break;
                 default:
                     break;
             }
+            this.$notFound.classList.toggle('hide', url !== _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.NOT_FOUND);
+        };
+        this.removeTabs = () => {
+            this.$tabResult.replaceChildren();
         };
         this.vendingMachine = vendingMachine;
-        this.productManageView = new _ProductManageView__WEBPACK_IMPORTED_MODULE_2__["default"](this.vendingMachine);
-        this.rechargeView = new _RechargeView__WEBPACK_IMPORTED_MODULE_3__["default"](this.vendingMachine);
-        this.purchaseView = new _PurchaseView__WEBPACK_IMPORTED_MODULE_4__["default"](this.vendingMachine);
         this.$app = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#app');
+        this.$tabResult = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#tab-result');
         this.$notFound = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#not-found');
         this.$navTab = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('.nav-tab');
-        this.$$tabResultContainers = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$$)('.tab-result-container');
+        this.$$tabButtons = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$$)('.tab-input');
         this.$tabProductManageButton = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#tab-product-manage');
         this.$tabRechargeButton = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#tab-recharge');
         this.$tabPurchaseProductButton = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$)('#tab-purchase-product');
-        this.$$tabButtons = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.$$)('.tab-input');
         this.$userMenu = document.querySelector('user-menu');
         this.$tabProductManageButton.addEventListener('click', () => this.handleClickTabButton(_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PRODUCT_MANAGE));
         this.$tabRechargeButton.addEventListener('click', () => this.handleClickTabButton(_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.RECHARGE));
         this.$tabPurchaseProductButton.addEventListener('click', () => this.handleClickTabButton(_constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PURCHASE_PRODUCT));
         // 웹컴포넌트에서 보낸 커스텀 이벤트
         window.addEventListener('@render-login', () => {
-            (0,_components_renderer__WEBPACK_IMPORTED_MODULE_5__.renderComponent)('log-in');
+            (0,_utils__WEBPACK_IMPORTED_MODULE_0__.renderComponent)('log-in');
         });
         window.addEventListener('@render-signup', () => {
-            (0,_components_renderer__WEBPACK_IMPORTED_MODULE_5__.renderComponent)('sign-up');
+            (0,_utils__WEBPACK_IMPORTED_MODULE_0__.renderComponent)('sign-up');
         });
         window.addEventListener('@render-profile-edit', () => {
-            (0,_components_renderer__WEBPACK_IMPORTED_MODULE_5__.renderComponent)('profile-edit');
+            (0,_utils__WEBPACK_IMPORTED_MODULE_0__.renderComponent)('profile-edit');
         });
         this.$app.addEventListener('click', this.hideMenu);
     }
 }
+
+
+/***/ }),
+
+/***/ "./src/ts/views/template.ts":
+/*!**********************************!*\
+  !*** ./src/ts/views/template.ts ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getProductManageTemplate": () => (/* binding */ getProductManageTemplate),
+/* harmony export */   "getRechargeTemplate": () => (/* binding */ getRechargeTemplate),
+/* harmony export */   "getPurchaseProduct": () => (/* binding */ getPurchaseProduct)
+/* harmony export */ });
+const getProductManageTemplate = `      
+  <section class="tab-result-container" id="/javascript-vendingmachine/#!/product-manage">
+    <h2 hidden>상품 관리</h2>
+    <div class="tab-result-wrapper">
+      <form id="product-manage-form">
+        <div class="label-wrapper">
+          <label for="product-name">추가할 상품 정보를 입력해주세요.</label>
+        </div>
+        <input class="product-manage-input" id="product-name" placeholder="상품명" type="text" size="10" minlength="1" maxlength="10" required />
+        <input class="product-manage-input" id="product-price" placeholder="가격" type="number" step="10" min="100" max="100000" required />
+        <input class="product-manage-input" id="product-quantity" placeholder="수량" type="number" min="1" max="20" required />
+        <button class="short-button" id="add-button">추가</button>
+      </form>
+      <table>
+        <colgroup>
+          <col></col>
+          <col></col>
+          <col></col>
+        </colgroup>
+        <caption>
+          상품 현황
+        </caption>
+        <thead>
+          <tr>
+            <th>상품명</th>
+            <th>가격</th>
+            <th>수량</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="current-product-table"></tbody>
+      </table>
+    </div>
+  </section> 
+`;
+const getRechargeTemplate = `
+  <section class="tab-result-container" id="/javascript-vendingmachine/#!/recharge">
+    <h2 hidden>잔돈 충전</h2>
+    <div class="tab-result-wrapper">
+      <form id="recharge-form">
+        <div class="label-wrapper">
+          <label for="recharge-input">자판기가 보유할 금액을 입력해주세요</label>
+        </div>
+        <input class="long-input" id="recharge-input" placeholder="금액" type="number" step="10" max="100000" min="10" required />
+        <button class="short-button" id="recharge-button">충전</button>
+        <div class="holding-money-wrapper">현재 보유 금액: <span id="current-holding-money"></span>원</div>
+      </form>
+      <table class="change-table">
+        <colgroup>
+          <col style="width:30%"></col>
+          <col style="width:30%"></col>
+        </colgroup>
+        <caption>
+          자판기가 보유한 동전
+        </caption>
+        <thead>
+          <tr>
+            <th>동전</th>
+            <th>개수</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>500원</td>
+            <td><span id="coin-500"></span>개</td>
+          </tr>
+          <tr>
+            <td>100원</td>
+            <td><span id="coin-100"></span>개</td>
+          </tr>
+          <tr>
+            <td>50원</td>
+            <td><span id="coin-50"></span>개</td>
+          </tr>
+          <tr>
+            <td>10원</td>
+            <td><span id="coin-10"></span>개</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+`;
+const getPurchaseProduct = `
+  <section class="tab-result-container" id="/javascript-vendingmachine/#!/purchase-product">
+    <h2 hidden>상품 구매</h2>
+    <div class="tab-result-wrapper">
+      <div>
+        <form id="insert-money-form">
+          <div class="label-wrapper">
+            <label for="insert-money-input">상품을 구매할 금액을 투입해주세요</label>
+          </div>
+          <input class="long-input" id="insert-money-input" placeholder="금액" type="number" step="10" max="10000" min="10" required />
+          <button class="short-button" id="insert-button">투입</button>
+          <div class="holding-money-wrapper">투입한 금액: <span id="current-inserted-money">0</span>원</div>
+        </form>
+      </div>
+
+      <div>
+        <table>
+          <colgroup>
+            <col></col>
+            <col></col>
+            <col></col>
+          </colgroup>
+          <caption>
+            구매 가능 상품 현황
+          </caption>
+          <thead>
+            <tr>
+              <th>상품명</th>
+              <th>가격</th>
+              <th>수량</th>
+              <th>구매</th>
+            </tr>
+          </thead>
+          <tbody id="purchasable-product-table"></tbody>
+        </table>
+      </div>
+
+      <div>
+        <table class="change-table">
+          <colgroup>
+            <col style="width:30%"></col>
+            <col style="width:30%"></col>
+          </colgroup>
+          <caption>
+            잔돈 반환
+          </caption>
+          <thead>
+            <tr>
+              <th>동전</th>
+              <th>개수</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>500원</td>
+              <td><span id="purchase-tab-coin-500">0</span>개</td>
+            </tr>
+            <tr>
+              <td>100원</td>
+              <td><span id="purchase-tab-coin-100">0</span>개</td>
+            </tr>
+            <tr>
+              <td>50원</td>
+              <td><span id="purchase-tab-coin-50">0</span>개</td>
+            </tr>
+            <tr>
+              <td>10원</td>
+              <td><span id="purchase-tab-coin-10">0</span>개</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <button id="refund-button" class="long-button">반환</button>
+    </div>
+  </section>
+`;
 
 
 /***/ })
@@ -3923,11 +4074,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ts_domains_VendingMachine__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ts/domains/VendingMachine */ "./src/ts/domains/VendingMachine.ts");
 /* harmony import */ var _ts_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ts/router */ "./src/ts/router.ts");
 /* harmony import */ var _ts_Auth_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ts/Auth.js */ "./src/ts/Auth.js");
-/* harmony import */ var _ts_components_ToastNotification__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ts/components/ToastNotification */ "./src/ts/components/ToastNotification.ts");
-/* harmony import */ var _ts_components_Signup__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ts/components/Signup */ "./src/ts/components/Signup.ts");
-/* harmony import */ var _ts_components_Login__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ts/components/Login */ "./src/ts/components/Login.ts");
-/* harmony import */ var _ts_components_ProfileEdit__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ts/components/ProfileEdit */ "./src/ts/components/ProfileEdit.ts");
-/* harmony import */ var _ts_components_UserMenu__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./ts/components/UserMenu */ "./src/ts/components/UserMenu.ts");
+/* harmony import */ var _ts_components_ToastNotification_ts__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ts/components/ToastNotification.ts */ "./src/ts/components/ToastNotification.ts");
+/* harmony import */ var _ts_components_Signup_ts__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ts/components/Signup.ts */ "./src/ts/components/Signup.ts");
+/* harmony import */ var _ts_components_Login_ts__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ts/components/Login.ts */ "./src/ts/components/Login.ts");
+/* harmony import */ var _ts_components_ProfileEdit_ts__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ts/components/ProfileEdit.ts */ "./src/ts/components/ProfileEdit.ts");
+/* harmony import */ var _ts_components_UserMenu_ts__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./ts/components/UserMenu.ts */ "./src/ts/components/UserMenu.ts");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
