@@ -2865,6 +2865,8 @@ const PATH_ID = {
     PRODUCT_MANAGE: '/javascript-vendingmachine/#!/product-manage',
     RECHARGE: '/javascript-vendingmachine/#!/recharge',
     PURCHASE_PRODUCT: '/javascript-vendingmachine/#!/purchase-product',
+    LOGIN: '/javascript-vendingmachine/#!/login',
+    SIGNUP: '/javascript-vendingmachine/#!/signup',
     NOT_FOUND: '/javascript-vendingmachine/#!/not-found',
 };
 const ERROR_MESSAGE = {
@@ -3309,7 +3311,7 @@ class Router {
             localStorage.setItem(_constants__WEBPACK_IMPORTED_MODULE_0__.STORAGE_ID.CURRENT_TAB, _constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT);
         };
         this.tabRouter = (url, isPopState = false) => {
-            this.view.renderTab(url);
+            this.view.renderPage(url);
             if (!_Auth_js__WEBPACK_IMPORTED_MODULE_1__["default"].isLoggedIn) {
                 this.renderPublicPage();
                 history.pushState({ url }, null, url);
@@ -3330,14 +3332,19 @@ class Router {
             document.querySelector('user-menu').setAttribute('auth', 'logout');
         };
         this.view = view;
-        this.currentTab = localStorage.getItem(_constants__WEBPACK_IMPORTED_MODULE_0__.STORAGE_ID.CURRENT_TAB) || _constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.PURCHASE_PRODUCT;
+        // this.currentTab = localStorage.getItem(STORAGE_ID.CURRENT_TAB) || PATH_ID.PURCHASE_PRODUCT;
+        this.currentTab = location.pathname + location.hash;
+        console.log('@@@', location.pathname + location.hash);
         this.tabRouter(this.currentTab, false);
         window.addEventListener('popstate', (event) => {
-            const url = event.state ? event.state.url : _constants__WEBPACK_IMPORTED_MODULE_0__.PATH_ID.NOT_FOUND;
+            const url = event.state ? event.state.url : location.pathname + location.hash;
+            // this.currentTab = location.pathname + location.hash;
+            console.log(url);
             this.tabRouter(url, true);
         });
         this.view.$navTab.addEventListener('@route-tab', (event) => {
             const url = event.detail;
+            console.log('메뉴버튼', url);
             this.tabRouter(url, false);
         });
         // 웹컴포넌트에서 보낸 커스텀 이벤트
@@ -3762,7 +3769,7 @@ class View {
             const event = new CustomEvent('@route-tab', { detail });
             this.$navTab.dispatchEvent(event);
         };
-        this.renderTab = (url) => {
+        this.renderPage = (url) => {
             this.$tabResult.replaceChildren();
             switch (url) {
                 case _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.PRODUCT_MANAGE:
@@ -3777,10 +3784,16 @@ class View {
                     new _PurchaseView__WEBPACK_IMPORTED_MODULE_4__["default"](this.vendingMachine).render();
                     this.$tabPurchaseProductButton.checked = true;
                     break;
+                case _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.LOGIN:
+                    console.log('login');
+                    break;
+                case _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.SIGNUP:
+                    console.log('signup');
+                    break;
                 default:
                     break;
             }
-            this.$notFound.classList.toggle('hide', url !== _constants__WEBPACK_IMPORTED_MODULE_1__.PATH_ID.NOT_FOUND);
+            // this.$notFound.classList.toggle('hide', url !== PATH_ID.NOT_FOUND);
         };
         this.removeTabs = () => {
             this.$tabResult.replaceChildren();
